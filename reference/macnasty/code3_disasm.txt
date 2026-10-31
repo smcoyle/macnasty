@@ -1,0 +1,1058 @@
+0004: 0000        ORI.B  #0x0 (0),D0
+
+0008: 4e56        LINK    A6,#0
+000c: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0010: 3f3c        MOVE.W  #0x91 (145),-(A7)
+0014: 3f3c        MOVE.W  #0x1e (30),-(A7)
+0018: a893        _MoveTo
+001a: 487a        PEA     246(PC) [0x112 ; pstr='Welcome to Tumbleweed, Texas.']
+001e: a884        _DrawString
+0020: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0024: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0028: a893        _MoveTo
+002a: 487a        PEA     260(PC) [0x130 ; pstr='You have just inherited $150,000 and an old oil property from']
+002e: a884        _DrawString
+0030: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0034: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0038: a893        _MoveTo
+003a: 487a        PEA     306(PC) [0x16e ; pstr='your uncle Sawdust MacNasty who lived in Tumbleweed.  You have']
+003e: a884        _DrawString
+0040: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0044: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0048: a893        _MoveTo
+004a: 487a        PEA     354(PC) [0x1ae ; pstr='decided to move to Tumbleweed with your wife, the perpetually']
+004e: a884        _DrawString
+0050: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0054: 3f3c        MOVE.W  #0x6e (110),-(A7)
+0058: a893        _MoveTo
+005a: 487a        PEA     400(PC) [0x1ec ; pstr='bored ex-debutante Mona and become one of the town`s most']
+005e: a884        _DrawString
+0060: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0064: 3f3c        MOVE.W  #0x82 (130),-(A7)
+0068: a893        _MoveTo
+006a: 487a        PEA     442(PC) [0x226 ; pstr='powerful citizens.  You soon find that there has been a running']
+006e: a884        _DrawString
+0070: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0074: 3f3c        MOVE.W  #0x96 (150),-(A7)
+0078: a893        _MoveTo
+007a: 487a        PEA     490(PC) [0x266 ; pstr='feud between the MacNastys and the MacRascals for several gen-']
+007e: a884        _DrawString
+0080: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0084: 3f3c        MOVE.W  #0xaa (170),-(A7)
+0088: a893        _MoveTo
+008a: 487a        PEA     538(PC) [0x2a6 ; pstr='erations now and that Mac MacRascal, the town boss, wants to']
+008e: a884        _DrawString
+0090: 3f3c        MOVE.W  #0x28 (40),-(A7)
+0094: 3f3c        MOVE.W  #0xbe (190),-(A7)
+0098: a893        _MoveTo
+009a: 487a        PEA     584(PC) [0x2e4 ; pstr='carry it on against you.']
+009e: a884        _DrawString
+00a0: 3f3c        MOVE.W  #0xaa (170),-(A7)
+00a4: 3f3c        MOVE.W  #0xe1 (225),-(A7)
+00a8: a893        _MoveTo
+00aa: 486d        PEA     -850(A5)
+00ae: 3f3c        MOVE.W  #0x3e9 (1001),-(A7)
+00b2: 3f3c        MOVE.W  #0x1 (1),-(A7)
+00b6: 4ead        JSR     98(A5) [CODE_1+0x1c78]
+00ba: 486d        PEA     -850(A5)
+00be: a884        _DrawString
+00c0: 3f3c        MOVE.W  #0x96 (150),-(A7)
+00c4: 3f3c        MOVE.W  #0xf5 (245),-(A7)
+00c8: a893        _MoveTo
+00ca: 486d        PEA     -850(A5)
+00ce: 3f3c        MOVE.W  #0x3e9 (1001),-(A7)
+00d2: 3f3c        MOVE.W  #0x2 (2),-(A7)
+00d6: 4ead        JSR     98(A5) [CODE_1+0x1c78]
+00da: 486d        PEA     -850(A5)
+00de: a884        _DrawString
+00e0: 3f3c        MOVE.W  #0xa5 (165),-(A7)
+00e4: 3f3c        MOVE.W  #0x109 (265),-(A7)
+00e8: a893        _MoveTo
+00ea: 486d        PEA     -850(A5)
+00ee: 3f3c        MOVE.W  #0x3e9 (1001),-(A7)
+00f2: 3f3c        MOVE.W  #0x3 (3),-(A7)
+00f6: 4ead        JSR     98(A5) [CODE_1+0x1c78]
+00fa: 486d        PEA     -850(A5)
+00fe: a884        _DrawString
+0100: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0104: 2f2e        MOVE.L  8(A6),-(A7)
+0108: 4ead        JSR     58(A5) [CODE_1+0x1ef0]
+010c: 4e5e        UNLK    A6
+010e: 2e9f        MOVE.L  (A7)+,(A7)
+0110: 4e75        RTS
+0112: 1d57        MOVE.B  (A7),25964(A6)
+0116: 636f        BLS     0x0187
+0118: 6d65        BLT     0x017f
+011a: 2074        MOVEA.L  32(A4,D6.L),A0
+011e: 5475        ADDQ.W  #2,98(A5,D6.L)
+0122: 6c65        BGE     0x0189
+0124: 7765        DC.W    0x7765
+0126: 6564        BCS     0x018c
+0128: 2c20        MOVE.L  -(A0),D6
+012a: 5465        ADDQ.W  #2,-(A5)
+012c: 7861        MOVEQ   #97,D4
+012e: 732e        DC.W    0x732e
+0130: 3d59        MOVE.W  (A1)+,28533(A6)
+0134: 2068        MOVEA.L  24950(A0),A0
+0138: 6520        BCS     0x015a
+013a: 6a75        BPL     0x01b1
+013c: 7374        DC.W    0x7374
+013e: 2069        MOVEA.L  28264(A1),A0
+0142: 6572        BCS     0x01b6
+0144: 6974        BVS     0x01ba
+0146: 6564        BCS     0x01ac
+0148: 2024        MOVE.L  -(A4),D0
+014a: 3135        MOVE.W  44(A5,D3.W),-(A0)
+014e: 3030        MOVE.W  32(A0,D3.W),D0
+0152: 616e        BSR     0x01c2
+0154: 6420        BCC     0x0176
+0156: 616e        BSR     0x01c6
+0158: 206f        MOVEA.L  27748(A7),A0
+015c: 206f        MOVEA.L  26988(A7),A0
+0160: 2070        MOVEA.L  111(A0,D7.W),A0
+0164: 7065        MOVEQ   #101,D0
+0166: 7274        MOVEQ   #116,D1
+0168: 7920        DC.W    0x7920
+016a: 6672        BNE     0x01de
+016c: 6f6d        BLE     0x01db
+016e: 3e79        MOVEA.W  (0x6f757220).L,A7
+0174: 756e        DC.W    0x756e
+0176: 636c        BLS     0x01e4
+0178: 6520        BCS     0x019a
+017a: 5361        SUBQ.W  #1,-(A1)
+017c: 7764        DC.W    0x7764
+017e: 7573        DC.W    0x7573
+0180: 7420        MOVEQ   #32,D2
+0182: 4d61        DC.W    0x4d61
+0184: 634e        BLS     0x01d4
+0186: 6173        BSR     0x01fb
+0188: 7479        MOVEQ   #121,D2
+018a: 2077        MOVEA.L  111(A7,D6.L),A0
+018e: 206c        MOVEA.L  26998(A4),A0
+0192: 6564        BCS     0x01f8
+0194: 2069        MOVEA.L  28192(A1),A0
+0198: 5475        ADDQ.W  #2,98(A5,D6.L)
+019c: 6c65        BGE     0x0203
+019e: 7765        DC.W    0x7765
+01a0: 6564        BCS     0x0206
+01a2: 2e20        MOVE.L  -(A0),D7
+01a4: 2059        MOVEA.L  (A1)+,A0
+01a6: 6f75        BLE     0x021d
+01a8: 2068        MOVEA.L  24950(A0),A0
+01ac: 6500        BCS     0x3f12
+01b0: 6563        BCS     0x0215
+01b2: 6964        BVS     0x0218
+01b4: 6564        BCS     0x021a
+01b6: 2074        MOVEA.L  32(A4,D6.L),A0
+01ba: 6d6f        BLT     0x022b
+01bc: 7665        MOVEQ   #101,D3
+01be: 2074        MOVEA.L  32(A4,D6.L),A0
+01c2: 5475        ADDQ.W  #2,98(A5,D6.L)
+01c6: 6c65        BGE     0x022d
+01c8: 7765        DC.W    0x7765
+01ca: 6564        BCS     0x0230
+01cc: 2077        MOVEA.L  116(A7,D6.L),A0
+01d0: 6820        BVC     0x01f2
+01d2: 796f        DC.W    0x796f
+01d4: 7572        DC.W    0x7572
+01d6: 2077        MOVEA.L  102(A7,D6.L),A0
+01da: 652c        BCS     0x0208
+01dc: 2074        MOVEA.L  101(A4,D6.L),A0
+01e0: 2070        MOVEA.L  114(A0,D6.W),A0
+01e4: 7065        MOVEQ   #101,D0
+01e6: 7475        MOVEQ   #117,D2
+01e8: 616c        BSR     0x0256
+01ea: 6c79        BGE     0x0265
+01ec: 3962        MOVE.W  -(A2),28530(A4)
+01f0: 6564        BCS     0x0256
+01f2: 2065        MOVEA.L  -(A5),A0
+01f4: 782d        MOVEQ   #45,D4
+01f6: 6465        BCC     0x025d
+01f8: 6275        BHI     0x026f
+01fa: 7461        MOVEQ   #97,D2
+01fc: 6e74        BGT     0x0272
+01fe: 6520        BCS     0x0220
+0200: 4d6f        DC.W    0x4d6f
+0202: 6e61        BGT     0x0265
+0204: 2061        MOVEA.L  -(A1),A0
+0206: 6e64        BGT     0x026c
+0208: 2062        MOVEA.L  -(A2),A0
+020a: 6563        BCS     0x026f
+020c: 6f6d        BLE     0x027b
+020e: 6520        BCS     0x0230
+0210: 6f6e        BLE     0x0280
+0212: 6520        BCS     0x0234
+0214: 6f66        BLE     0x027c
+0216: 2074        MOVEA.L  101(A4,D6.L),A0
+021a: 2074        MOVEA.L  119(A4,D6.L),A0
+021e: 6e60        BGT     0x0280
+0220: 7320        DC.W    0x7320
+0222: 6d6f        BLT     0x0293
+0224: 7374        DC.W    0x7374
+0226: 3f70        MOVE.W  119(A0,D6.L),25970(A7)
+022c: 6675        BNE     0x02a3
+022e: 6c20        BGE     0x0250
+0230: 6369        BLS     0x029b
+0232: 7469        MOVEQ   #105,D2
+0234: 7a65        MOVEQ   #101,D5
+0236: 6e73        BGT     0x02ab
+0238: 2e20        MOVE.L  -(A0),D7
+023a: 2059        MOVEA.L  (A1)+,A0
+023c: 6f75        BLE     0x02b3
+023e: 2073        MOVEA.L  111(A3,D6.L),A0
+0242: 6e20        BGT     0x0264
+0244: 6669        BNE     0x02af
+0246: 6e64        BGT     0x02ac
+0248: 2074        MOVEA.L  97(A4,D6.L),A0
+024c: 7420        MOVEQ   #32,D2
+024e: 7468        MOVEQ   #104,D2
+0250: 6572        BCS     0x02c4
+0252: 6520        BCS     0x0274
+0254: 6861        BVC     0x02b7
+0256: 7320        DC.W    0x7320
+0258: 6265        BHI     0x02bf
+025a: 656e        BCS     0x02ca
+025c: 2061        MOVEA.L  -(A1),A0
+025e: 2072        MOVEA.L  110(A2,D7.W),A0
+0262: 6e69        BGT     0x02cd
+0264: 6e67        BGT     0x02cd
+0266: 3e66        MOVEA.W  -(A6),A7
+0268: 6575        BCS     0x02df
+026a: 6420        BCC     0x028c
+026c: 6265        BHI     0x02d3
+026e: 7477        MOVEQ   #119,D2
+0270: 6565        BCS     0x02d7
+0272: 6e20        BGT     0x0294
+0274: 7468        MOVEQ   #104,D2
+0276: 6520        BCS     0x0298
+0278: 4d61        DC.W    0x4d61
+027a: 634e        BLS     0x02ca
+027c: 6173        BSR     0x02f1
+027e: 7479        MOVEQ   #121,D2
+0280: 7320        DC.W    0x7320
+0282: 616e        BSR     0x02f2
+0284: 6420        BCC     0x02a6
+0286: 7468        MOVEQ   #104,D2
+0288: 6520        BCS     0x02aa
+028a: 4d61        DC.W    0x4d61
+028c: 6352        BLS     0x02e0
+028e: 6173        BSR     0x0303
+0290: 6361        BLS     0x02f3
+0292: 6c73        BGE     0x0307
+0294: 2066        MOVEA.L  -(A6),A0
+0296: 6f72        BLE     0x030a
+0298: 2073        MOVEA.L  118(A3,D6.W),A0
+029c: 6572        BCS     0x0310
+029e: 616c        BSR     0x030c
+02a0: 2067        MOVEA.L  -(A7),A0
+02a2: 656e        BCS     0x0312
+02a4: 2d00        MOVE.L  D0,-(A6)
+02a6: 3c65        MOVEA.W  -(A5),A6
+02a8: 7261        MOVEQ   #97,D1
+02aa: 7469        MOVEQ   #105,D2
+02ac: 6f6e        BLE     0x031c
+02ae: 7320        DC.W    0x7320
+02b0: 6e6f        BGT     0x0321
+02b2: 7720        DC.W    0x7720
+02b4: 616e        BSR     0x0324
+02b6: 6420        BCC     0x02d8
+02b8: 7468        MOVEQ   #104,D2
+02ba: 6174        BSR     0x0330
+02bc: 204d        MOVEA.L  A5,A0
+02be: 6163        BSR     0x0323
+02c0: 204d        MOVEA.L  A5,A0
+02c2: 6163        BSR     0x0327
+02c4: 5261        ADDQ.W  #1,-(A1)
+02c6: 7363        DC.W    0x7363
+02c8: 616c        BSR     0x0336
+02ca: 2c20        MOVE.L  -(A0),D6
+02cc: 7468        MOVEQ   #104,D2
+02ce: 6520        BCS     0x02f0
+02d0: 746f        MOVEQ   #111,D2
+02d2: 776e        DC.W    0x776e
+02d4: 2062        MOVEA.L  -(A2),A0
+02d6: 6f73        BLE     0x034b
+02d8: 732c        DC.W    0x732c
+02da: 2077        MOVEA.L  110(A7,D6.W),A0
+02de: 7473        MOVEQ   #115,D2
+02e0: 2074        MOVEA.L  0(A4,D6.L),A0
+02e4: 1863        MOVEA.B  -(A3),A4
+02e6: 6172        BSR     0x035a
+02e8: 7279        MOVEQ   #121,D1
+02ea: 2069        MOVEA.L  29728(A1),A0
+02ee: 6f6e        BLE     0x035e
+02f0: 2061        MOVEA.L  -(A1),A0
+02f2: 6761        BEQ     0x0355
+02f4: 696e        BVS     0x0364
+02f6: 7374        DC.W    0x7374
+02f8: 2079        MOVEA.L  (0x6f752e00).L,A0
+
+02fe: 4e56        LINK    A6,#0
+0302: 48e7        DC.W    0x48e7
+0304: 0020        ORI.B  #0xed (-19),-(A0)
+0308: f860        DC.W    0xf860
+030a: 4252        CLR.W   (A2)
+030c: 426a        CLR.W   2(A2)
+0310: 426a        CLR.W   4(A2)
+0314: 426a        CLR.W   6(A2)
+0318: 45ed        LEA     -1766(A5),A2
+031c: 4252        CLR.W   (A2)
+031e: 257c        MOVE.L  #0x32,2(A2)
+0326: 257c        MOVE.L  #0x32,6(A2)
+032e: 257c        MOVE.L  #0x32,10(A2)
+0336: 42aa        CLR.L   14(A2)
+033a: 257c        MOVE.L  #0x32,18(A2)
+0342: 257c        MOVE.L  #0x32,22(A2)
+034a: 257c        MOVE.L  #0x61a80,26(A2)
+0352: 257c        MOVE.L  #0x1b2920,30(A2)
+035a: 42aa        CLR.L   34(A2)
+035e: 42aa        CLR.L   38(A2)
+0362: 357c        MOVE.W  #0x1f4 (500),42(A2)
+0368: 45ed        LEA     -1722(A5),A2
+036c: 4252        CLR.W   (A2)
+036e: 42aa        CLR.L   2(A2)
+0372: 42aa        CLR.L   6(A2)
+0376: 42aa        CLR.L   10(A2)
+037a: 42aa        CLR.L   14(A2)
+037e: 42aa        CLR.L   18(A2)
+0382: 42aa        CLR.L   22(A2)
+0386: 257c        MOVE.L  #0x249f0,26(A2)
+038e: 257c        MOVE.L  #0x249f0,30(A2)
+0396: 42aa        CLR.L   34(A2)
+039a: 42aa        CLR.L   38(A2)
+039e: 426a        CLR.W   42(A2)
+03a2: 45ed        LEA     -1854(A5),A2
+03a6: 4252        CLR.W   (A2)
+03a8: 257c        MOVE.L  #0x3b6,2(A2)
+03b0: 257c        MOVE.L  #0x3b6,6(A2)
+03b8: 257c        MOVE.L  #0x3b6,10(A2)
+03c0: 257c        MOVE.L  #0x3e8,14(A2)
+03c8: 257c        MOVE.L  #0x3b6,18(A2)
+03d0: 257c        MOVE.L  #0x3b6,22(A2)
+03d8: 42aa        CLR.L   26(A2)
+03dc: 42aa        CLR.L   30(A2)
+03e0: 42aa        CLR.L   34(A2)
+03e4: 42aa        CLR.L   38(A2)
+03e8: 426a        CLR.W   42(A2)
+03ec: 45ed        LEA     -2028(A5),A2
+03f0: 4252        CLR.W   (A2)
+03f2: 426a        CLR.W   2(A2)
+03f6: 426a        CLR.W   4(A2)
+03fa: 426a        CLR.W   6(A2)
+03fe: 426a        CLR.W   8(A2)
+0402: 426a        CLR.W   10(A2)
+0406: 426a        CLR.W   12(A2)
+040a: 426a        CLR.W   14(A2)
+040e: 426a        CLR.W   16(A2)
+0412: 426a        CLR.W   18(A2)
+0416: 426a        CLR.W   20(A2)
+041a: 426a        CLR.W   22(A2)
+041e: 45ed        LEA     -2052(A5),A2
+0422: 4252        CLR.W   (A2)
+0424: 426a        CLR.W   2(A2)
+0428: 426a        CLR.W   4(A2)
+042c: 426a        CLR.W   6(A2)
+0430: 426a        CLR.W   8(A2)
+0434: 426a        CLR.W   10(A2)
+0438: 426a        CLR.W   12(A2)
+043c: 426a        CLR.W   14(A2)
+0440: 426a        CLR.W   16(A2)
+0444: 426a        CLR.W   18(A2)
+0448: 426a        CLR.W   20(A2)
+044c: 426a        CLR.W   22(A2)
+0450: 45ed        LEA     -868(A5),A2
+0454: 34bc        MOVE.W  #0x1cb (459),(A2)
+0458: 422a        CLR.B   2(A2)
+045c: 426a        CLR.W   4(A2)
+0460: 157c        MOVE.B  #0x1 (1),6(A2)
+0466: 157c        MOVE.B  #0x1 (1),7(A2)
+046c: 422a        CLR.B   8(A2)
+0470: 426a        CLR.W   10(A2)
+0474: 426a        CLR.W   12(A2)
+0478: 357c        MOVE.W  #0x2ee (750),14(A2)
+047e: 422a        CLR.B   16(A2)
+0482: 422a        CLR.B   17(A2)
+0486: 45ed        LEA     -886(A5),A2
+048a: 34bc        MOVE.W  #0x1cb (459),(A2)
+048e: 157c        MOVE.B  #0x1 (1),2(A2)
+0494: 357c        MOVE.W  #0x352 (850),4(A2)
+049a: 422a        CLR.B   6(A2)
+049e: 157c        MOVE.B  #0x1 (1),7(A2)
+04a4: 157c        MOVE.B  #0x1 (1),8(A2)
+04aa: 357c        MOVE.W  #0x2ca (714),10(A2)
+04b0: 357c        MOVE.W  #0x320 (800),12(A2)
+04b6: 357c        MOVE.W  #0x2ef (751),14(A2)
+04bc: 157c        MOVE.B  #0x1 (1),16(A2)
+04c2: 422a        CLR.B   17(A2)
+04c6: 45ed        LEA     -904(A5),A2
+04ca: 34bc        MOVE.W  #0x1d0 (464),(A2)
+04ce: 422a        CLR.B   2(A2)
+04d2: 426a        CLR.W   4(A2)
+04d6: 422a        CLR.B   6(A2)
+04da: 157c        MOVE.B  #0x1 (1),7(A2)
+04e0: 422a        CLR.B   8(A2)
+04e4: 426a        CLR.W   10(A2)
+04e8: 357c        MOVE.W  #0x321 (801),12(A2)
+04ee: 357c        MOVE.W  #0x2f0 (752),14(A2)
+04f4: 422a        CLR.B   16(A2)
+04f8: 422a        CLR.B   17(A2)
+04fc: 45ed        LEA     -922(A5),A2
+0500: 34bc        MOVE.W  #0x1c9 (457),(A2)
+0504: 422a        CLR.B   2(A2)
+0508: 426a        CLR.W   4(A2)
+050c: 422a        CLR.B   6(A2)
+0510: 157c        MOVE.B  #0x1 (1),7(A2)
+0516: 422a        CLR.B   8(A2)
+051a: 426a        CLR.W   10(A2)
+051e: 426a        CLR.W   12(A2)
+0522: 426a        CLR.W   14(A2)
+0526: 157c        MOVE.B  #0x1 (1),16(A2)
+052c: 422a        CLR.B   17(A2)
+0530: 45ed        LEA     -940(A5),A2
+0534: 34bc        MOVE.W  #0x1ca (458),(A2)
+0538: 157c        MOVE.B  #0x1 (1),2(A2)
+053e: 357c        MOVE.W  #0x353 (851),4(A2)
+0544: 157c        MOVE.B  #0x1 (1),6(A2)
+054a: 157c        MOVE.B  #0x1 (1),7(A2)
+0550: 157c        MOVE.B  #0x1 (1),8(A2)
+0556: 426a        CLR.W   10(A2)
+055a: 357c        MOVE.W  #0x32b (811),12(A2)
+0560: 357c        MOVE.W  #0x2f1 (753),14(A2)
+0566: 422a        CLR.B   16(A2)
+056a: 422a        CLR.B   17(A2)
+056e: 45ed        LEA     -958(A5),A2
+0572: 34bc        MOVE.W  #0x1d0 (464),(A2)
+0576: 157c        MOVE.B  #0x1 (1),2(A2)
+057c: 357c        MOVE.W  #0x352 (850),4(A2)
+0582: 422a        CLR.B   6(A2)
+0586: 422a        CLR.B   7(A2)
+058a: 157c        MOVE.B  #0x1 (1),8(A2)
+0590: 357c        MOVE.W  #0x2ce (718),10(A2)
+0596: 357c        MOVE.W  #0x320 (800),12(A2)
+059c: 357c        MOVE.W  #0x2f2 (754),14(A2)
+05a2: 422a        CLR.B   16(A2)
+05a6: 422a        CLR.B   17(A2)
+05aa: 45ed        LEA     -976(A5),A2
+05ae: 34bc        MOVE.W  #0x1d0 (464),(A2)
+05b2: 157c        MOVE.B  #0x1 (1),2(A2)
+05b8: 357c        MOVE.W  #0x352 (850),4(A2)
+05be: 422a        CLR.B   6(A2)
+05c2: 422a        CLR.B   7(A2)
+05c6: 157c        MOVE.B  #0x1 (1),8(A2)
+05cc: 357c        MOVE.W  #0x2c7 (711),10(A2)
+05d2: 426a        CLR.W   12(A2)
+05d6: 426a        CLR.W   14(A2)
+05da: 422a        CLR.B   16(A2)
+05de: 422a        CLR.B   17(A2)
+05e2: 45ed        LEA     -994(A5),A2
+05e6: 4252        CLR.W   (A2)
+05e8: 422a        CLR.B   2(A2)
+05ec: 426a        CLR.W   4(A2)
+05f0: 422a        CLR.B   6(A2)
+05f4: 422a        CLR.B   7(A2)
+05f8: 422a        CLR.B   8(A2)
+05fc: 426a        CLR.W   10(A2)
+0600: 426a        CLR.W   12(A2)
+0604: 426a        CLR.W   14(A2)
+0608: 422a        CLR.B   16(A2)
+060c: 422a        CLR.B   17(A2)
+0610: 45ed        LEA     -1012(A5),A2
+0614: 34bc        MOVE.W  #0x1c6 (454),(A2)
+0618: 157c        MOVE.B  #0x1 (1),2(A2)
+061e: 357c        MOVE.W  #0x355 (853),4(A2)
+0624: 422a        CLR.B   6(A2)
+0628: 422a        CLR.B   7(A2)
+062c: 422a        CLR.B   8(A2)
+0630: 426a        CLR.W   10(A2)
+0634: 426a        CLR.W   12(A2)
+0638: 357c        MOVE.W  #0x2f3 (755),14(A2)
+063e: 422a        CLR.B   16(A2)
+0642: 422a        CLR.B   17(A2)
+0646: 45ed        LEA     -1030(A5),A2
+064a: 34bc        MOVE.W  #0x1c5 (453),(A2)
+064e: 422a        CLR.B   2(A2)
+0652: 426a        CLR.W   4(A2)
+0656: 422a        CLR.B   6(A2)
+065a: 422a        CLR.B   7(A2)
+065e: 422a        CLR.B   8(A2)
+0662: 426a        CLR.W   10(A2)
+0666: 426a        CLR.W   12(A2)
+066a: 357c        MOVE.W  #0x2f3 (755),14(A2)
+0670: 422a        CLR.B   16(A2)
+0674: 157c        MOVE.B  #0x1 (1),17(A2)
+067a: 45ed        LEA     -1624(A5),A2
+067e: 34bc        MOVE.W  #0x1d4 (468),(A2)
+0682: 157c        MOVE.B  #0x1 (1),2(A2)
+0688: 357c        MOVE.W  #0x352 (850),4(A2)
+068e: 422a        CLR.B   6(A2)
+0692: 422a        CLR.B   7(A2)
+0696: 157c        MOVE.B  #0x1 (1),8(A2)
+069c: 357c        MOVE.W  #0x2d1 (721),10(A2)
+06a2: 426a        CLR.W   12(A2)
+06a6: 357c        MOVE.W  #0x303 (771),14(A2)
+06ac: 422a        CLR.B   16(A2)
+06b0: 422a        CLR.B   17(A2)
+06b4: 45ed        LEA     -1642(A5),A2
+06b8: 34bc        MOVE.W  #0x1cd (461),(A2)
+06bc: 157c        MOVE.B  #0x1 (1),2(A2)
+06c2: 357c        MOVE.W  #0x352 (850),4(A2)
+06c8: 422a        CLR.B   6(A2)
+06cc: 157c        MOVE.B  #0x1 (1),7(A2)
+06d2: 157c        MOVE.B  #0x1 (1),8(A2)
+06d8: 357c        MOVE.W  #0x2c2 (706),10(A2)
+06de: 357c        MOVE.W  #0x320 (800),12(A2)
+06e4: 357c        MOVE.W  #0x2ee (750),14(A2)
+06ea: 422a        CLR.B   16(A2)
+06ee: 422a        CLR.B   17(A2)
+06f2: 45ed        LEA     -1048(A5),A2
+06f6: 34bc        MOVE.W  #0x1c5 (453),(A2)
+06fa: 157c        MOVE.B  #0x1 (1),2(A2)
+0700: 357c        MOVE.W  #0x356 (854),4(A2)
+0706: 422a        CLR.B   6(A2)
+070a: 422a        CLR.B   7(A2)
+070e: 422a        CLR.B   8(A2)
+0712: 426a        CLR.W   10(A2)
+0716: 426a        CLR.W   12(A2)
+071a: 357c        MOVE.W  #0x2f5 (757),14(A2)
+0720: 422a        CLR.B   16(A2)
+0724: 422a        CLR.B   17(A2)
+0728: 45ed        LEA     -1066(A5),A2
+072c: 34bc        MOVE.W  #0x1c8 (456),(A2)
+0730: 422a        CLR.B   2(A2)
+0734: 426a        CLR.W   4(A2)
+0738: 422a        CLR.B   6(A2)
+073c: 157c        MOVE.B  #0x1 (1),7(A2)
+0742: 422a        CLR.B   8(A2)
+0746: 426a        CLR.W   10(A2)
+074a: 426a        CLR.W   12(A2)
+074e: 357c        MOVE.W  #0x2f3 (755),14(A2)
+0754: 157c        MOVE.B  #0x1 (1),16(A2)
+075a: 157c        MOVE.B  #0x1 (1),17(A2)
+0760: 45ed        LEA     -1084(A5),A2
+0764: 34bc        MOVE.W  #0x1c9 (457),(A2)
+0768: 157c        MOVE.B  #0x1 (1),2(A2)
+076e: 357c        MOVE.W  #0x352 (850),4(A2)
+0774: 422a        CLR.B   6(A2)
+0778: 422a        CLR.B   7(A2)
+077c: 157c        MOVE.B  #0x1 (1),8(A2)
+0782: 357c        MOVE.W  #0x2bd (701),10(A2)
+0788: 426a        CLR.W   12(A2)
+078c: 357c        MOVE.W  #0x2f6 (758),14(A2)
+0792: 422a        CLR.B   16(A2)
+0796: 422a        CLR.B   17(A2)
+079a: 45ed        LEA     -1102(A5),A2
+079e: 34bc        MOVE.W  #0x1c4 (452),(A2)
+07a2: 422a        CLR.B   2(A2)
+07a6: 426a        CLR.W   4(A2)
+07aa: 422a        CLR.B   6(A2)
+07ae: 157c        MOVE.B  #0x1 (1),7(A2)
+07b4: 422a        CLR.B   8(A2)
+07b8: 426a        CLR.W   10(A2)
+07bc: 426a        CLR.W   12(A2)
+07c0: 357c        MOVE.W  #0x2f7 (759),14(A2)
+07c6: 157c        MOVE.B  #0x1 (1),16(A2)
+07cc: 422a        CLR.B   17(A2)
+07d0: 45ed        LEA     -1120(A5),A2
+07d4: 34bc        MOVE.W  #0x1c8 (456),(A2)
+07d8: 422a        CLR.B   2(A2)
+07dc: 357c        MOVE.W  #0x354 (852),4(A2)
+07e2: 157c        MOVE.B  #0x1 (1),6(A2)
+07e8: 157c        MOVE.B  #0x1 (1),7(A2)
+07ee: 157c        MOVE.B  #0x1 (1),8(A2)
+07f4: 426a        CLR.W   10(A2)
+07f8: 357c        MOVE.W  #0x323 (803),12(A2)
+07fe: 357c        MOVE.W  #0x2f8 (760),14(A2)
+0804: 157c        MOVE.B  #0x1 (1),16(A2)
+080a: 422a        CLR.B   17(A2)
+080e: 45ed        LEA     -1138(A5),A2
+0812: 34bc        MOVE.W  #0x1c8 (456),(A2)
+0816: 422a        CLR.B   2(A2)
+081a: 357c        MOVE.W  #0x354 (852),4(A2)
+0820: 157c        MOVE.B  #0x1 (1),6(A2)
+0826: 157c        MOVE.B  #0x1 (1),7(A2)
+082c: 157c        MOVE.B  #0x1 (1),8(A2)
+0832: 426a        CLR.W   10(A2)
+0836: 426a        CLR.W   12(A2)
+083a: 357c        MOVE.W  #0x2f9 (761),14(A2)
+0840: 157c        MOVE.B  #0x1 (1),16(A2)
+0846: 422a        CLR.B   17(A2)
+084a: 45ed        LEA     -1156(A5),A2
+084e: 34bc        MOVE.W  #0x1ce (462),(A2)
+0852: 157c        MOVE.B  #0x1 (1),2(A2)
+0858: 357c        MOVE.W  #0x352 (850),4(A2)
+085e: 422a        CLR.B   6(A2)
+0862: 422a        CLR.B   7(A2)
+0866: 157c        MOVE.B  #0x1 (1),8(A2)
+086c: 357c        MOVE.W  #0x2c1 (705),10(A2)
+0872: 426a        CLR.W   12(A2)
+0876: 357c        MOVE.W  #0x2fa (762),14(A2)
+087c: 422a        CLR.B   16(A2)
+0880: 422a        CLR.B   17(A2)
+0884: 45ed        LEA     -1174(A5),A2
+0888: 4252        CLR.W   (A2)
+088a: 422a        CLR.B   2(A2)
+088e: 357c        MOVE.W  #0x358 (856),4(A2)
+0894: 422a        CLR.B   6(A2)
+0898: 422a        CLR.B   7(A2)
+089c: 422a        CLR.B   8(A2)
+08a0: 426a        CLR.W   10(A2)
+08a4: 357c        MOVE.W  #0x325 (805),12(A2)
+08aa: 357c        MOVE.W  #0x2ee (750),14(A2)
+08b0: 157c        MOVE.B  #0x1 (1),16(A2)
+08b6: 422a        CLR.B   17(A2)
+08ba: 45ed        LEA     -1192(A5),A2
+08be: 34bc        MOVE.W  #0x1d5 (469),(A2)
+08c2: 422a        CLR.B   2(A2)
+08c6: 426a        CLR.W   4(A2)
+08ca: 157c        MOVE.B  #0x1 (1),6(A2)
+08d0: 157c        MOVE.B  #0x1 (1),7(A2)
+08d6: 422a        CLR.B   8(A2)
+08da: 426a        CLR.W   10(A2)
+08de: 426a        CLR.W   12(A2)
+08e2: 357c        MOVE.W  #0x2f7 (759),14(A2)
+08e8: 422a        CLR.B   16(A2)
+08ec: 422a        CLR.B   17(A2)
+08f0: 45ed        LEA     -1210(A5),A2
+08f4: 34bc        MOVE.W  #0x1c2 (450),(A2)
+08f8: 157c        MOVE.B  #0x1 (1),2(A2)
+08fe: 357c        MOVE.W  #0x352 (850),4(A2)
+0904: 422a        CLR.B   6(A2)
+0908: 422a        CLR.B   7(A2)
+090c: 157c        MOVE.B  #0x1 (1),8(A2)
+0912: 357c        MOVE.W  #0x2c6 (710),10(A2)
+0918: 426a        CLR.W   12(A2)
+091c: 357c        MOVE.W  #0x2fc (764),14(A2)
+0922: 422a        CLR.B   16(A2)
+0926: 422a        CLR.B   17(A2)
+092a: 45ed        LEA     -1228(A5),A2
+092e: 34bc        MOVE.W  #0x1c4 (452),(A2)
+0932: 157c        MOVE.B  #0x1 (1),2(A2)
+0938: 357c        MOVE.W  #0x35a (858),4(A2)
+093e: 157c        MOVE.B  #0x1 (1),6(A2)
+0944: 157c        MOVE.B  #0x1 (1),7(A2)
+094a: 422a        CLR.B   8(A2)
+094e: 426a        CLR.W   10(A2)
+0952: 426a        CLR.W   12(A2)
+0956: 357c        MOVE.W  #0x2fe (766),14(A2)
+095c: 422a        CLR.B   16(A2)
+0960: 422a        CLR.B   17(A2)
+0964: 45ed        LEA     -1246(A5),A2
+0968: 34bc        MOVE.W  #0x1c2 (450),(A2)
+096c: 422a        CLR.B   2(A2)
+0970: 426a        CLR.W   4(A2)
+0974: 422a        CLR.B   6(A2)
+0978: 422a        CLR.B   7(A2)
+097c: 422a        CLR.B   8(A2)
+0980: 426a        CLR.W   10(A2)
+0984: 426a        CLR.W   12(A2)
+0988: 357c        MOVE.W  #0x2fd (765),14(A2)
+098e: 157c        MOVE.B  #0x1 (1),16(A2)
+0994: 422a        CLR.B   17(A2)
+0998: 45ed        LEA     -1264(A5),A2
+099c: 34bc        MOVE.W  #0x1d2 (466),(A2)
+09a0: 422a        CLR.B   2(A2)
+09a4: 357c        MOVE.W  #0x353 (851),4(A2)
+09aa: 157c        MOVE.B  #0x1 (1),6(A2)
+09b0: 157c        MOVE.B  #0x1 (1),7(A2)
+09b6: 157c        MOVE.B  #0x1 (1),8(A2)
+09bc: 426a        CLR.W   10(A2)
+09c0: 357c        MOVE.W  #0x327 (807),12(A2)
+09c6: 357c        MOVE.W  #0x2ff (767),14(A2)
+09cc: 422a        CLR.B   16(A2)
+09d0: 422a        CLR.B   17(A2)
+09d4: 45ed        LEA     -1282(A5),A2
+09d8: 4252        CLR.W   (A2)
+09da: 422a        CLR.B   2(A2)
+09de: 426a        CLR.W   4(A2)
+09e2: 422a        CLR.B   6(A2)
+09e6: 157c        MOVE.B  #0x1 (1),7(A2)
+09ec: 157c        MOVE.B  #0x1 (1),8(A2)
+09f2: 426a        CLR.W   10(A2)
+09f6: 426a        CLR.W   12(A2)
+09fa: 357c        MOVE.W  #0x300 (768),14(A2)
+0a00: 157c        MOVE.B  #0x1 (1),16(A2)
+0a06: 422a        CLR.B   17(A2)
+0a0a: 45ed        LEA     -1300(A5),A2
+0a0e: 34bc        MOVE.W  #0x1d2 (466),(A2)
+0a12: 422a        CLR.B   2(A2)
+0a16: 426a        CLR.W   4(A2)
+0a1a: 422a        CLR.B   6(A2)
+0a1e: 422a        CLR.B   7(A2)
+0a22: 422a        CLR.B   8(A2)
+0a26: 426a        CLR.W   10(A2)
+0a2a: 426a        CLR.W   12(A2)
+0a2e: 357c        MOVE.W  #0x301 (769),14(A2)
+0a34: 422a        CLR.B   16(A2)
+0a38: 422a        CLR.B   17(A2)
+0a3c: 45ed        LEA     -1318(A5),A2
+0a40: 4252        CLR.W   (A2)
+0a42: 422a        CLR.B   2(A2)
+0a46: 426a        CLR.W   4(A2)
+0a4a: 422a        CLR.B   6(A2)
+0a4e: 422a        CLR.B   7(A2)
+0a52: 422a        CLR.B   8(A2)
+0a56: 426a        CLR.W   10(A2)
+0a5a: 357c        MOVE.W  #0x325 (805),12(A2)
+0a60: 357c        MOVE.W  #0x302 (770),14(A2)
+0a66: 157c        MOVE.B  #0x1 (1),16(A2)
+0a6c: 422a        CLR.B   17(A2)
+0a70: 45ed        LEA     -1336(A5),A2
+0a74: 34bc        MOVE.W  #0x1cc (460),(A2)
+0a78: 422a        CLR.B   2(A2)
+0a7c: 426a        CLR.W   4(A2)
+0a80: 422a        CLR.B   6(A2)
+0a84: 422a        CLR.B   7(A2)
+0a88: 422a        CLR.B   8(A2)
+0a8c: 426a        CLR.W   10(A2)
+0a90: 426a        CLR.W   12(A2)
+0a94: 357c        MOVE.W  #0x2f3 (755),14(A2)
+0a9a: 422a        CLR.B   16(A2)
+0a9e: 422a        CLR.B   17(A2)
+0aa2: 45ed        LEA     -1354(A5),A2
+0aa6: 34bc        MOVE.W  #0x1c2 (450),(A2)
+0aaa: 157c        MOVE.B  #0x1 (1),2(A2)
+0ab0: 357c        MOVE.W  #0x352 (850),4(A2)
+0ab6: 422a        CLR.B   6(A2)
+0aba: 422a        CLR.B   7(A2)
+0abe: 157c        MOVE.B  #0x1 (1),8(A2)
+0ac4: 357c        MOVE.W  #0x2cc (716),10(A2)
+0aca: 426a        CLR.W   12(A2)
+0ace: 357c        MOVE.W  #0x2fa (762),14(A2)
+0ad4: 422a        CLR.B   16(A2)
+0ad8: 422a        CLR.B   17(A2)
+0adc: 45ed        LEA     -1372(A5),A2
+0ae0: 34bc        MOVE.W  #0x1c3 (451),(A2)
+0ae4: 157c        MOVE.B  #0x1 (1),2(A2)
+0aea: 357c        MOVE.W  #0x35b (859),4(A2)
+0af0: 422a        CLR.B   6(A2)
+0af4: 422a        CLR.B   7(A2)
+0af8: 422a        CLR.B   8(A2)
+0afc: 426a        CLR.W   10(A2)
+0b00: 426a        CLR.W   12(A2)
+0b04: 357c        MOVE.W  #0x303 (771),14(A2)
+0b0a: 422a        CLR.B   16(A2)
+0b0e: 422a        CLR.B   17(A2)
+0b12: 45ed        LEA     -1390(A5),A2
+0b16: 34bc        MOVE.W  #0x1cc (460),(A2)
+0b1a: 157c        MOVE.B  #0x1 (1),2(A2)
+0b20: 357c        MOVE.W  #0x352 (850),4(A2)
+0b26: 422a        CLR.B   6(A2)
+0b2a: 422a        CLR.B   7(A2)
+0b2e: 157c        MOVE.B  #0x1 (1),8(A2)
+0b34: 357c        MOVE.W  #0x2cc (716),10(A2)
+0b3a: 426a        CLR.W   12(A2)
+0b3e: 357c        MOVE.W  #0x303 (771),14(A2)
+0b44: 422a        CLR.B   16(A2)
+0b48: 422a        CLR.B   17(A2)
+0b4c: 45ed        LEA     -1408(A5),A2
+0b50: 34bc        MOVE.W  #0x1cf (463),(A2)
+0b54: 422a        CLR.B   2(A2)
+0b58: 426a        CLR.W   4(A2)
+0b5c: 422a        CLR.B   6(A2)
+0b60: 422a        CLR.B   7(A2)
+0b64: 422a        CLR.B   8(A2)
+0b68: 426a        CLR.W   10(A2)
+0b6c: 426a        CLR.W   12(A2)
+0b70: 357c        MOVE.W  #0x303 (771),14(A2)
+0b76: 422a        CLR.B   16(A2)
+0b7a: 422a        CLR.B   17(A2)
+0b7e: 45ed        LEA     -1426(A5),A2
+0b82: 34bc        MOVE.W  #0x1c7 (455),(A2)
+0b86: 157c        MOVE.B  #0x1 (1),2(A2)
+0b8c: 357c        MOVE.W  #0x35c (860),4(A2)
+0b92: 422a        CLR.B   6(A2)
+0b96: 422a        CLR.B   7(A2)
+0b9a: 157c        MOVE.B  #0x1 (1),8(A2)
+0ba0: 426a        CLR.W   10(A2)
+0ba4: 426a        CLR.W   12(A2)
+0ba8: 357c        MOVE.W  #0x2fc (764),14(A2)
+0bae: 157c        MOVE.B  #0x1 (1),16(A2)
+0bb4: 422a        CLR.B   17(A2)
+0bb8: 45ed        LEA     -1444(A5),A2
+0bbc: 34bc        MOVE.W  #0x1c6 (454),(A2)
+0bc0: 422a        CLR.B   2(A2)
+0bc4: 426a        CLR.W   4(A2)
+0bc8: 422a        CLR.B   6(A2)
+0bcc: 157c        MOVE.B  #0x1 (1),7(A2)
+0bd2: 422a        CLR.B   8(A2)
+0bd6: 426a        CLR.W   10(A2)
+0bda: 426a        CLR.W   12(A2)
+0bde: 357c        MOVE.W  #0x2f4 (756),14(A2)
+0be4: 157c        MOVE.B  #0x1 (1),16(A2)
+0bea: 422a        CLR.B   17(A2)
+0bee: 45ed        LEA     -1462(A5),A2
+0bf2: 34bc        MOVE.W  #0x1ca (458),(A2)
+0bf6: 422a        CLR.B   2(A2)
+0bfa: 426a        CLR.W   4(A2)
+0bfe: 157c        MOVE.B  #0x1 (1),6(A2)
+0c04: 157c        MOVE.B  #0x1 (1),7(A2)
+0c0a: 422a        CLR.B   8(A2)
+0c0e: 426a        CLR.W   10(A2)
+0c12: 426a        CLR.W   12(A2)
+0c16: 357c        MOVE.W  #0x2f4 (756),14(A2)
+0c1c: 157c        MOVE.B  #0x1 (1),16(A2)
+0c22: 422a        CLR.B   17(A2)
+0c26: 45ed        LEA     -1480(A5),A2
+0c2a: 34bc        MOVE.W  #0x1c7 (455),(A2)
+0c2e: 422a        CLR.B   2(A2)
+0c32: 426a        CLR.W   4(A2)
+0c36: 422a        CLR.B   6(A2)
+0c3a: 422a        CLR.B   7(A2)
+0c3e: 422a        CLR.B   8(A2)
+0c42: 426a        CLR.W   10(A2)
+0c46: 426a        CLR.W   12(A2)
+0c4a: 357c        MOVE.W  #0x305 (773),14(A2)
+0c50: 422a        CLR.B   16(A2)
+0c54: 422a        CLR.B   17(A2)
+0c58: 45ed        LEA     -1498(A5),A2
+0c5c: 34bc        MOVE.W  #0x1d4 (468),(A2)
+0c60: 157c        MOVE.B  #0x1 (1),2(A2)
+0c66: 357c        MOVE.W  #0x35d (861),4(A2)
+0c6c: 422a        CLR.B   6(A2)
+0c70: 422a        CLR.B   7(A2)
+0c74: 422a        CLR.B   8(A2)
+0c78: 426a        CLR.W   10(A2)
+0c7c: 426a        CLR.W   12(A2)
+0c80: 357c        MOVE.W  #0x303 (771),14(A2)
+0c86: 422a        CLR.B   16(A2)
+0c8a: 422a        CLR.B   17(A2)
+0c8e: 45ed        LEA     -1516(A5),A2
+0c92: 34bc        MOVE.W  #0x1d1 (465),(A2)
+0c96: 157c        MOVE.B  #0x1 (1),2(A2)
+0c9c: 357c        MOVE.W  #0x352 (850),4(A2)
+0ca2: 157c        MOVE.B  #0x1 (1),6(A2)
+0ca8: 157c        MOVE.B  #0x1 (1),7(A2)
+0cae: 157c        MOVE.B  #0x1 (1),8(A2)
+0cb4: 357c        MOVE.W  #0x2cd (717),10(A2)
+0cba: 426a        CLR.W   12(A2)
+0cbe: 357c        MOVE.W  #0x2fb (763),14(A2)
+0cc4: 422a        CLR.B   16(A2)
+0cc8: 422a        CLR.B   17(A2)
+0ccc: 45ed        LEA     -1534(A5),A2
+0cd0: 4252        CLR.W   (A2)
+0cd2: 157c        MOVE.B  #0x1 (1),2(A2)
+0cd8: 357c        MOVE.W  #0x352 (850),4(A2)
+0cde: 422a        CLR.B   6(A2)
+0ce2: 422a        CLR.B   7(A2)
+0ce6: 157c        MOVE.B  #0x1 (1),8(A2)
+0cec: 357c        MOVE.W  #0x2cc (716),10(A2)
+0cf2: 426a        CLR.W   12(A2)
+0cf6: 357c        MOVE.W  #0x2fb (763),14(A2)
+0cfc: 157c        MOVE.B  #0x1 (1),16(A2)
+0d02: 422a        CLR.B   17(A2)
+0d06: 45ed        LEA     -1552(A5),A2
+0d0a: 34bc        MOVE.W  #0x1cd (461),(A2)
+0d0e: 422a        CLR.B   2(A2)
+0d12: 426a        CLR.W   4(A2)
+0d16: 157c        MOVE.B  #0x1 (1),6(A2)
+0d1c: 157c        MOVE.B  #0x1 (1),7(A2)
+0d22: 157c        MOVE.B  #0x1 (1),8(A2)
+0d28: 426a        CLR.W   10(A2)
+0d2c: 357c        MOVE.W  #0x32a (810),12(A2)
+0d32: 357c        MOVE.W  #0x304 (772),14(A2)
+0d38: 422a        CLR.B   16(A2)
+0d3c: 422a        CLR.B   17(A2)
+0d40: 45ed        LEA     -1570(A5),A2
+0d44: 34bc        MOVE.W  #0x1d3 (467),(A2)
+0d48: 422a        CLR.B   2(A2)
+0d4c: 426a        CLR.W   4(A2)
+0d50: 422a        CLR.B   6(A2)
+0d54: 157c        MOVE.B  #0x1 (1),7(A2)
+0d5a: 157c        MOVE.B  #0x1 (1),8(A2)
+0d60: 426a        CLR.W   10(A2)
+0d64: 357c        MOVE.W  #0x2f1 (753),12(A2)
+0d6a: 357c        MOVE.W  #0x2ee (750),14(A2)
+0d70: 422a        CLR.B   16(A2)
+0d74: 422a        CLR.B   17(A2)
+0d78: 45ed        LEA     -1588(A5),A2
+0d7c: 34bc        MOVE.W  #0x1d3 (467),(A2)
+0d80: 422a        CLR.B   2(A2)
+0d84: 426a        CLR.W   4(A2)
+0d88: 422a        CLR.B   6(A2)
+0d8c: 422a        CLR.B   7(A2)
+0d90: 422a        CLR.B   8(A2)
+0d94: 426a        CLR.W   10(A2)
+0d98: 426a        CLR.W   12(A2)
+0d9c: 357c        MOVE.W  #0x2fb (763),14(A2)
+0da2: 422a        CLR.B   16(A2)
+0da6: 422a        CLR.B   17(A2)
+0daa: 45ed        LEA     -1606(A5),A2
+0dae: 4252        CLR.W   (A2)
+0db0: 422a        CLR.B   2(A2)
+0db4: 426a        CLR.W   4(A2)
+0db8: 422a        CLR.B   6(A2)
+0dbc: 422a        CLR.B   7(A2)
+0dc0: 422a        CLR.B   8(A2)
+0dc4: 426a        CLR.W   10(A2)
+0dc8: 426a        CLR.W   12(A2)
+0dcc: 357c        MOVE.W  #0x2fb (763),14(A2)
+0dd2: 422a        CLR.B   16(A2)
+0dd6: 422a        CLR.B   17(A2)
+0dda: 4cdf        DC.W    0x4cdf
+0ddc: 0400        SUBI.B  #0x5e (94),D0
+0de0: 4e75        RTS
+
+0de2: 4e56        LINK    A6,#0
+0de6: 48e7        DC.W    0x48e7
+0de8: 1000        MOVE.B  D0,D0
+0dea: 2f07        MOVE.L  D7,-(A7)
+0dec: 7001        MOVEQ   #1,D0
+0dee: 7e05        MOVEQ   #5,D7
+0df0: 9e40        SUB.W   D0,D7
+0df2: 6d00        BLT     0x0e2c
+0df6: 3b40        MOVE.W  D0,-2260(A5)
+0dfa: 302d        MOVE.W  -2260(A5),D0
+0dfe: e548        DC.W    0xe548
+0e00: 598f        SUBQ.L  #4,A7
+0e02: 3f2d        MOVE.W  -2260(A5),-(A7)
+0e06: 2600        MOVE.L  D0,D3
+0e08: a9bf        _GetRMenu
+0e0a: 43ed        LEA     -246(A5),A1
+0e0e: 239f        MOVE.L  (A7)+,0(A1,D3.W)
+0e12: 302d        MOVE.W  -2260(A5),D0
+0e16: e548        DC.W    0xe548
+0e18: 41ed        LEA     -246(A5),A0
+0e1c: 2f30        MOVE.L  0(A0,D0.W),-(A7)
+0e20: 4267        CLR.W   -(A7)
+0e22: a935        _InsertMenu
+0e24: 526d        ADDQ.W  #1,-2260(A5)
+0e28: 51cf        DBF   D7,0x0dfa
+0e2c: 2e1f        MOVE.L  (A7)+,D7
+0e2e: a937        _DrawMenuBar
+0e30: 4cdf        DC.W    0x4cdf
+0e32: 0008        ORI.B  #0x5e (94),A0
+0e36: 4e75        RTS
+0e38: 0000        ORI.B  #0x0 (0),D0
+
+0e3c: 4e56        LINK    A6,#0
+0e40: 4ead        JSR     106(A5) [CODE_1+0x5f8]
+0e44: 4ead        JSR     114(A5) [CODE_1+0x94e]
+0e48: 4ead        JSR     114(A5) [CODE_1+0x94e]
+0e4c: 4ead        JSR     114(A5) [CODE_1+0x94e]
+0e50: 4ead        JSR     114(A5) [CODE_1+0x94e]
+0e54: 4e5e        UNLK    A6
+0e56: 4e75        RTS
+0e58: 0000        ORI.B  #0x0 (0),D0
+
+0e5c: 4e56        LINK    A6,#0
+0e60: 3f3c        MOVE.W  #0xffff (-1),-(A7)
+0e64: 4267        CLR.W   -(A7)
+0e66: 201f        MOVE.L  (A7)+,D0
+0e68: a032        A_TRAP_0xa032
+0e6a: 4ead        JSR     202(A5) [CODE_3+0xe3c]
+0e6e: 486d        PEA     -4(A5)
+0e72: a86e        _InitGraf
+0e74: a8fe        _InitFonts
+0e76: a912        _InitWindows
+0e78: a930        _InitMenus
+0e7a: a9cc        A_TRAP_0xa9cc
+0e7c: 42a7        CLR.L   -(A7)
+0e7e: a97b        _InitDialogs
+0e80: a850        _InitCursor
+0e82: 4ead        JSR     194(A5) [CODE_3+0xde2]
+0e86: 4ead        JSR     186(A5) [CODE_3+0x2fe]
+0e8a: 422d        CLR.B   -243(A5)
+0e8e: 426d        CLR.W   -324(A5)
+0e92: 3b7c        MOVE.W  #0x12c (300),-326(A5)
+0e98: 422d        CLR.B   -254(A5)
+0e9c: 422d        CLR.B   -252(A5)
+0ea0: 422d        CLR.B   -246(A5)
+0ea4: 422d        CLR.B   -247(A5)
+0ea8: 422d        CLR.B   -248(A5)
+0eac: 422d        CLR.B   -249(A5)
+0eb0: 422d        CLR.B   -250(A5)
+0eb4: 422d        CLR.B   -251(A5)
+0eb8: 426d        CLR.W   -1944(A5)
+0ebc: 426d        CLR.W   -328(A5)
+0ec0: 422d        CLR.B   -253(A5)
+0ec4: 426d        CLR.W   -330(A5)
+0ec8: 426d        CLR.W   -332(A5)
+0ecc: 422d        CLR.B   -337(A5)
+0ed0: 426d        CLR.W   -334(A5)
+0ed4: 426d        CLR.W   -336(A5)
+0ed8: 426d        CLR.W   -2252(A5)
+0edc: 426d        CLR.W   -2254(A5)
+0ee0: 42ad        CLR.L   -314(A5)
+0ee4: 426d        CLR.W   -2448(A5)
+0ee8: 426d        CLR.W   -2448(A5)
+0eec: 422d        CLR.B   -2451(A5)
+0ef0: 426d        CLR.W   -2460(A5)
+0ef4: 426d        CLR.W   -2458(A5)
+0ef8: 426d        CLR.W   -2476(A5)
+0efc: 426d        CLR.W   -2474(A5)
+0f00: 426d        CLR.W   -2466(A5)
+0f04: 426d        CLR.W   -2468(A5)
+0f08: 426d        CLR.W   -2470(A5)
+0f0c: 426d        CLR.W   -2472(A5)
+0f10: 426d        CLR.W   -2478(A5)
+0f14: 426d        CLR.W   -2480(A5)
+0f18: 426d        CLR.W   -2484(A5)
+0f1c: 426d        CLR.W   -2486(A5)
+0f20: 426d        CLR.W   -2488(A5)
+0f24: 422d        CLR.B   -2452(A5)
+0f28: 422d        CLR.B   -2453(A5)
+0f2c: 422d        CLR.B   -2454(A5)
+0f30: 422d        CLR.B   -2489(A5)
+0f34: 422d        CLR.B   -2490(A5)
+0f38: 422d        CLR.B   -2491(A5)
+0f3c: 3b7c        MOVE.W  #0x41 (65),-2466(A5)
+0f42: 3b7c        MOVE.W  #0x28 (40),-2472(A5)
+0f48: 3b7c        MOVE.W  #0x96 (150),-2468(A5)
+0f4e: 3b7c        MOVE.W  #0x55 (85),-2478(A5)
+0f54: 3b7c        MOVE.W  #0xeb (235),-2470(A5)
+0f5a: 3b7c        MOVE.W  #0x82 (130),-2480(A5)
+0f60: 3b7c        MOVE.W  #0xaa (170),-2484(A5)
+0f66: 3b7c        MOVE.W  #0xcd (205),-2486(A5)
+0f6c: 3b7c        MOVE.W  #0x109 (265),-2488(A5)
+0f72: 2b7c        MOVE.L  #0x2710,-322(A5)
+0f7a: 422d        CLR.B   -2493(A5)
+0f7e: 422d        CLR.B   -2495(A5)
+0f82: 422d        CLR.B   -2496(A5)
+0f86: 422d        CLR.B   -2497(A5)
+0f8a: 422d        CLR.B   -2498(A5)
+0f8e: 422d        CLR.B   -2499(A5)
+0f92: 422d        CLR.B   -2500(A5)
+0f96: 426d        CLR.W   -2482(A5)
+0f9a: 422d        CLR.B   -2494(A5)
+0f9e: 426d        CLR.W   -1988(A5)
+0fa2: 426d        CLR.W   -1986(A5)
+0fa6: 426d        CLR.W   -1984(A5)
+0faa: 422d        CLR.B   -1982(A5)
+0fae: 422d        CLR.B   -1981(A5)
+0fb2: 426d        CLR.W   -1996(A5)
+0fb6: 426d        CLR.W   -1994(A5)
+0fba: 426d        CLR.W   -1992(A5)
+0fbe: 422d        CLR.B   -1990(A5)
+0fc2: 422d        CLR.B   -1989(A5)
+0fc6: 426d        CLR.W   -2004(A5)
+0fca: 426d        CLR.W   -2002(A5)
+0fce: 426d        CLR.W   -2000(A5)
+0fd2: 422d        CLR.B   -1998(A5)
+0fd6: 422d        CLR.B   -1997(A5)
+0fda: 2b7c        MOVE.L  #0x1388,-2504(A5)
+0fe2: 2b7c        MOVE.L  #0x1388,-2508(A5)
+0fea: 2b7c        MOVE.L  #0x4e20,-2512(A5)
+0ff2: 426d        CLR.W   -2514(A5)
+0ff6: 3b7c        MOVE.W  #0xa (10),-2516(A5)
+0ffc: 4ead        JSR     162(A5) [CODE_2+0x8]
+1000: 486d        PEA     -1944(A5)
+1004: 4ead        JSR     178(A5) [CODE_3+0x8]
+1008: 487a        PEA     18(PC) [0x101c ; pstr='Copyright 1987 by George Lott']
+100c: 486d        PEA     -850(A5)
+1010: 3f3c        MOVE.W  #0xff (255),-(A7)
+1014: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1018: 4e5e        UNLK    A6
+101a: 4e75        RTS
+101c: 1d43        MOVE.B  D3,28528(A6)
+1020: 7972        DC.W    0x7972
+1022: 6967        BVS     0x108b
+1024: 6874        BVC     0x109a
+1026: 2031        MOVE.L  56(A1,D3.L),D0
+102a: 3720        MOVE.W  -(A0),-(A3)
+102c: 6279        BHI     0x10a7
+102e: 2047        MOVEA.L  D7,A0
+1030: 656f        BCS     0x10a1
+1032: 7267        MOVEQ   #103,D1
+1034: 6520        BCS     0x1056
+1036: 4c6f        DC.W    0x4c6f
+1038: 7474        MOVEQ   #116,D2

@@ -1,0 +1,3265 @@
+0004: 0000        ORI.B  #0x0 (0),D0
+
+0008: 4e56        LINK    A6,#0
+000c: 487a        PEA     18(PC) [0x20 ; pstr='Copyright 1987 by George Lott']
+0010: 486d        PEA     -850(A5)
+0014: 3f3c        MOVE.W  #0xff (255),-(A7)
+0018: 4ead        JSR     154(A5) [CODE_1+0x11a]
+001c: 4e5e        UNLK    A6
+001e: 4e75        RTS
+0020: 1d43        MOVE.B  D3,28528(A6)
+0024: 7972        DC.W    0x7972
+0026: 6967        BVS     0x008f
+0028: 6874        BVC     0x009e
+002a: 2031        MOVE.L  56(A1,D3.L),D0
+002e: 3720        MOVE.W  -(A0),-(A3)
+0030: 6279        BHI     0x00ab
+0032: 2047        MOVEA.L  D7,A0
+0034: 656f        BCS     0x00a5
+0036: 7267        MOVEQ   #103,D1
+0038: 6520        BCS     0x005a
+003a: 4c6f        DC.W    0x4c6f
+003c: 7474        MOVEQ   #116,D2
+003e: 0000        ORI.B  #0x0 (0),D0
+
+0042: 4e56        LINK    A6,#0
+0046: 0c6e        CMPI.W  #0x2ee (750),8(A6)
+004c: 5cc0        SGE     D0
+004e: 4400        DC.W    0x4400
+0050: 0c6e        CMPI.W  #0x305 (773),8(A6)
+0056: 5fc1        SLE     D1
+0058: 4401        DC.W    0x4401
+005a: c001        AND.B   D1,D0
+005c: 6700        BEQ     0x0202
+0060: 302e        MOVE.W  8(A6),D0
+0064: 0c40        CMPI.W  #0x2ee (750),D0
+0068: 6600        BNE     0x0076
+006c: 487a        PEA     654(PC) [0x2fc ; pstr='ambitious']
+0070: a884        _DrawString
+0072: 6000        BRA     0x01fe
+0076: 0c40        CMPI.W  #0x2ef (751),D0
+007a: 6600        BNE     0x0088
+007e: 487a        PEA     646(PC) [0x306 ; pstr='loose morals']
+0082: a884        _DrawString
+0084: 6000        BRA     0x01fe
+0088: 0c40        CMPI.W  #0x2f0 (752),D0
+008c: 6600        BNE     0x009a
+0090: 487a        PEA     642(PC) [0x314 ; pstr='sportsman']
+0094: a884        _DrawString
+0096: 6000        BRA     0x01fe
+009a: 0c40        CMPI.W  #0x2f1 (753),D0
+009e: 6600        BNE     0x00ac
+00a2: 487a        PEA     634(PC) [0x31e ; pstr='cuts corners']
+00a6: a884        _DrawString
+00a8: 6000        BRA     0x01fe
+00ac: 0c40        CMPI.W  #0x2f2 (754),D0
+00b0: 6600        BNE     0x00be
+00b4: 487a        PEA     630(PC) [0x32c ; pstr='very smart']
+00b8: a884        _DrawString
+00ba: 6000        BRA     0x01fe
+00be: 0c40        CMPI.W  #0x2f3 (755),D0
+00c2: 6600        BNE     0x00d0
+00c6: 487a        PEA     624(PC) [0x338 ; pstr='good at job']
+00ca: a884        _DrawString
+00cc: 6000        BRA     0x01fe
+00d0: 0c40        CMPI.W  #0x2f4 (756),D0
+00d4: 6600        BNE     0x00e2
+00d8: 487a        PEA     618(PC) [0x344 ; pstr='easy going']
+00dc: a884        _DrawString
+00de: 6000        BRA     0x01fe
+00e2: 0c40        CMPI.W  #0x2f5 (757),D0
+00e6: 6600        BNE     0x00f4
+00ea: 487a        PEA     612(PC) [0x350 ; pstr='drinks heavily']
+00ee: a884        _DrawString
+00f0: 6000        BRA     0x01fe
+00f4: 0c40        CMPI.W  #0x2f6 (758),D0
+00f8: 6600        BNE     0x0106
+00fc: 487a        PEA     610(PC) [0x360 ; pstr='hard to deal with']
+0100: a884        _DrawString
+0102: 6000        BRA     0x01fe
+0106: 0c40        CMPI.W  #0x2f7 (759),D0
+010a: 6600        BNE     0x0118
+010e: 487a        PEA     610(PC) [0x372 ; pstr='tough']
+0112: a884        _DrawString
+0114: 6000        BRA     0x01fe
+0118: 0c40        CMPI.W  #0x2f8 (760),D0
+011c: 6600        BNE     0x012a
+0120: 487a        PEA     598(PC) [0x378 ; pstr='sexy']
+0124: a884        _DrawString
+0126: 6000        BRA     0x01fe
+012a: 0c40        CMPI.W  #0x2f9 (761),D0
+012e: 6600        BNE     0x013c
+0132: 487a        PEA     586(PC) [0x37e ; pstr='long suffering spouse']
+0136: a884        _DrawString
+0138: 6000        BRA     0x01fe
+013c: 0c40        CMPI.W  #0x2fa (762),D0
+0140: 6600        BNE     0x014e
+0144: 487a        PEA     590(PC) [0x394 ; pstr='fair and impartial']
+0148: a884        _DrawString
+014a: 6000        BRA     0x01fe
+014e: 0c40        CMPI.W  #0x2fb (763),D0
+0152: 6600        BNE     0x0160
+0156: 487a        PEA     592(PC) [0x3a8 ; pstr='pillar of society']
+015a: a884        _DrawString
+015c: 6000        BRA     0x01fe
+0160: 0c40        CMPI.W  #0x2fc (764),D0
+0164: 6600        BNE     0x0172
+0168: 487a        PEA     592(PC) [0x3ba ; pstr='sweet girl']
+016c: a884        _DrawString
+016e: 6000        BRA     0x01fe
+0172: 0c40        CMPI.W  #0x2fd (765),D0
+0176: 6600        BNE     0x0184
+017a: 487a        PEA     586(PC) [0x3c6 ; pstr='hardworker']
+017e: a884        _DrawString
+0180: 6000        BRA     0x01fe
+0184: 0c40        CMPI.W  #0x2fe (766),D0
+0188: 6600        BNE     0x0196
+018c: 487a        PEA     580(PC) [0x3d2 ; pstr='hot temper']
+0190: a884        _DrawString
+0192: 6000        BRA     0x01fe
+0196: 0c40        CMPI.W  #0x2ff (767),D0
+019a: 6600        BNE     0x01a8
+019e: 487a        PEA     574(PC) [0x3de ; pstr='unscrupulous']
+01a2: a884        _DrawString
+01a4: 6000        BRA     0x01fe
+01a8: 0c40        CMPI.W  #0x300 (768),D0
+01ac: 6600        BNE     0x01ba
+01b0: 487a        PEA     570(PC) [0x3ec ; pstr='nymphomaniac']
+01b4: a884        _DrawString
+01b6: 6000        BRA     0x01fe
+01ba: 0c40        CMPI.W  #0x301 (769),D0
+01be: 6600        BNE     0x01cc
+01c2: 487a        PEA     566(PC) [0x3fa ; pstr='town boss']
+01c6: a884        _DrawString
+01c8: 6000        BRA     0x01fe
+01cc: 0c40        CMPI.W  #0x302 (770),D0
+01d0: 6600        BNE     0x01de
+01d4: 487a        PEA     558(PC) [0x404 ; pstr='snob']
+01d8: a884        _DrawString
+01da: 6000        BRA     0x01fe
+01de: 0c40        CMPI.W  #0x303 (771),D0
+01e2: 6600        BNE     0x01f0
+01e6: 487a        PEA     546(PC) [0x40a ; pstr='honest']
+01ea: a884        _DrawString
+01ec: 6000        BRA     0x01fe
+01f0: 0c40        CMPI.W  #0x304 (772),D0
+01f4: 6600        BNE     0x01fe
+01f8: 487a        PEA     536(PC) [0x412 ; pstr='fixer']
+01fc: a884        _DrawString
+01fe: 6000        BRA     0x02f4
+0202: 0c6e        CMPI.W  #0x320 (800),8(A6)
+0208: 5cc0        SGE     D0
+020a: 4400        DC.W    0x4400
+020c: 0c6e        CMPI.W  #0x32b (811),8(A6)
+0212: 5fc1        SLE     D1
+0214: 4401        DC.W    0x4401
+0216: c001        AND.B   D1,D0
+0218: 6700        BEQ     0x02f4
+021c: 302e        MOVE.W  8(A6),D0
+0220: 0c40        CMPI.W  #0x320 (800),D0
+0224: 6600        BNE     0x0232
+0228: 487a        PEA     494(PC) [0x418 ; pstr='has lover']
+022c: a884        _DrawString
+022e: 6000        BRA     0x02f4
+0232: 0c40        CMPI.W  #0x321 (801),D0
+0236: 6600        BNE     0x0244
+023a: 487a        PEA     486(PC) [0x422 ; pstr='spendthrift']
+023e: a884        _DrawString
+0240: 6000        BRA     0x02f4
+0244: 0c40        CMPI.W  #0x322 (802),D0
+0248: 6600        BNE     0x0256
+024c: 487a        PEA     480(PC) [0x42e ; pstr='alcoholic']
+0250: a884        _DrawString
+0252: 6000        BRA     0x02f4
+0256: 0c40        CMPI.W  #0x323 (803),D0
+025a: 6600        BNE     0x0268
+025e: 487a        PEA     472(PC) [0x438 ; pstr='thrown off pro tour']
+0262: a884        _DrawString
+0264: 6000        BRA     0x02f4
+0268: 0c40        CMPI.W  #0x324 (804),D0
+026c: 6600        BNE     0x027a
+0270: 487a        PEA     474(PC) [0x44c ; pstr='ladies man']
+0274: a884        _DrawString
+0276: 6000        BRA     0x02f4
+027a: 0c40        CMPI.W  #0x325 (805),D0
+027e: 6600        BNE     0x028c
+0282: 487a        PEA     468(PC) [0x458 ; pstr='frigid']
+0286: a884        _DrawString
+0288: 6000        BRA     0x02f4
+028c: 0c40        CMPI.W  #0x326 (806),D0
+0290: 6600        BNE     0x029e
+0294: 487a        PEA     458(PC) [0x460 ; pstr='impotent']
+0298: a884        _DrawString
+029a: 6000        BRA     0x02f4
+029e: 0c40        CMPI.W  #0x327 (807),D0
+02a2: 6600        BNE     0x02b0
+02a6: 487a        PEA     450(PC) [0x46a ; pstr='married wife for her money.']
+02aa: a884        _DrawString
+02ac: 6000        BRA     0x02f4
+02b0: 0c40        CMPI.W  #0x328 (808),D0
+02b4: 6600        BNE     0x02c2
+02b8: 487a        PEA     460(PC) [0x486 ; pstr='would do anything for money.']
+02bc: a884        _DrawString
+02be: 6000        BRA     0x02f4
+02c2: 0c40        CMPI.W  #0x329 (809),D0
+02c6: 6600        BNE     0x02d4
+02ca: 487a        PEA     472(PC) [0x4a4 ; pstr='nymphomaniac']
+02ce: a884        _DrawString
+02d0: 6000        BRA     0x02f4
+02d4: 0c40        CMPI.W  #0x32a (810),D0
+02d8: 6600        BNE     0x02e6
+02dc: 487a        PEA     468(PC) [0x4b2 ; pstr='fixes juries.']
+02e0: a884        _DrawString
+02e2: 6000        BRA     0x02f4
+02e6: 0c40        CMPI.W  #0x32b (811),D0
+02ea: 6600        BNE     0x02f4
+02ee: 487a        PEA     464(PC) [0x4c0 ; pstr='many affairs.']
+02f2: a884        _DrawString
+02f4: 4e5e        UNLK    A6
+02f6: 205f        MOVEA.L  (A7)+,A0
+02f8: 548f        ADDQ.L  #2,A7
+02fa: 4ed0        JMP     (A0)
+02fc: 0961        DC.W    0x0961
+02fe: 6d62        BLT     0x0362
+0300: 6974        BVS     0x0376
+0302: 696f        BVS     0x0373
+0304: 7573        DC.W    0x7573
+0306: 0c6c        CMPI.W  #0x6f6f (28527),29541(A4)
+030c: 206d        MOVEA.L  28530(A5),A0
+0310: 616c        BSR     0x037e
+0312: 7300        DC.W    0x7300
+0314: 0973        DC.W    0x0973
+0316: 706f        MOVEQ   #111,D0
+0318: 7274        MOVEQ   #116,D1
+031a: 736d        DC.W    0x736d
+031c: 616e        BSR     0x038c
+031e: 0c63        CMPI.W  #0x7574 (30068),-(A3)
+0322: 7320        DC.W    0x7320
+0324: 636f        BLS     0x0395
+0326: 726e        MOVEQ   #110,D1
+0328: 6572        BCS     0x039c
+032a: 7300        DC.W    0x7300
+032c: 0a76        EORI.W  #0x6572 (25970),32(A6,D7.L)
+0332: 736d        DC.W    0x736d
+0334: 6172        BSR     0x03a8
+0336: 7400        MOVEQ   #0,D2
+0338: 0b67        DC.W    0x0b67
+033a: 6f6f        BLE     0x03ab
+033c: 6420        BCC     0x035e
+033e: 6174        BSR     0x03b4
+0340: 206a        MOVEA.L  28514(A2),A0
+0344: 0a65        EORI.W  #0x6173 (24947),-(A5)
+0348: 7920        DC.W    0x7920
+034a: 676f        BEQ     0x03bb
+034c: 696e        BVS     0x03bc
+034e: 6700        BEQ     0x11b4
+0352: 7269        MOVEQ   #105,D1
+0354: 6e6b        BGT     0x03c1
+0356: 7320        DC.W    0x7320
+0358: 6865        BVC     0x03bf
+035a: 6176        BSR     0x03d2
+035c: 696c        BVS     0x03ca
+035e: 7900        DC.W    0x7900
+0360: 1168        MOVE.B  24946(A0),25632(A0)
+0366: 746f        MOVEQ   #111,D2
+0368: 2064        MOVEA.L  -(A4),A0
+036a: 6561        BCS     0x03cd
+036c: 6c20        BGE     0x038e
+036e: 7769        DC.W    0x7769
+0370: 7468        MOVEQ   #104,D2
+0372: 0574        DC.W    0x0574
+0374: 6f75        BLE     0x03eb
+0376: 6768        BEQ     0x03e0
+0378: 0473        SUBI.W  #0x6578 (25976),0(A3,D7.L)
+037e: 156c        MOVE.B  28526(A4),26400(A2)
+0384: 7375        DC.W    0x7375
+0386: 6666        BNE     0x03ee
+0388: 6572        BCS     0x03fc
+038a: 696e        BVS     0x03fa
+038c: 6720        BEQ     0x03ae
+038e: 7370        DC.W    0x7370
+0390: 6f75        BLE     0x0407
+0392: 7365        DC.W    0x7365
+0394: 1266        MOVEA.B  -(A6),A1
+0396: 6169        BSR     0x0401
+0398: 7220        MOVEQ   #32,D1
+039a: 616e        BSR     0x040a
+039c: 6420        BCC     0x03be
+039e: 696d        BVS     0x040d
+03a0: 7061        MOVEQ   #97,D0
+03a2: 7274        MOVEQ   #116,D1
+03a4: 6961        BVS     0x0407
+03a6: 6c00        BGE     0x1518
+03aa: 696c        BVS     0x0418
+03ac: 6c61        BGE     0x040f
+03ae: 7220        MOVEQ   #32,D1
+03b0: 6f66        BLE     0x0418
+03b2: 2073        MOVEA.L  99(A3,D6.L),A0
+03b6: 6965        BVS     0x041d
+03b8: 7479        MOVEQ   #121,D2
+03ba: 0a73        EORI.W  #0x7765 (30565),116(A3,D6.W)
+03c0: 2067        MOVEA.L  -(A7),A0
+03c2: 6972        BVS     0x0436
+03c4: 6c00        BGE     0x0e2e
+03c8: 6172        BSR     0x043c
+03ca: 6477        BCC     0x0443
+03cc: 6f72        BLE     0x0440
+03ce: 6b65        BMI     0x0435
+03d0: 7200        MOVEQ   #0,D1
+03d2: 0a68        EORI.W  #0x6f74 (28532),8308(A0)
+03d8: 656d        BCS     0x0447
+03da: 7065        MOVEQ   #101,D0
+03dc: 7200        MOVEQ   #0,D1
+03de: 0c75        CMPI.W  #0x6e73 (28275),114(A5,D6.W)
+03e4: 7570        DC.W    0x7570
+03e6: 756c        DC.W    0x756c
+03e8: 6f75        BLE     0x045f
+03ea: 7300        DC.W    0x7300
+03ec: 0c6e        CMPI.W  #0x796d (31085),28776(A6)
+03f2: 6f6d        BLE     0x0461
+03f4: 616e        BSR     0x0464
+03f6: 6961        BVS     0x0459
+03f8: 6300        BLS     0x0d6e
+03fc: 6f77        BLE     0x0475
+03fe: 6e20        BGT     0x0420
+0400: 626f        BHI     0x0471
+0402: 7373        DC.W    0x7373
+0404: 0473        SUBI.W  #0x6e6f (28271),0(A3,D6.W)
+040a: 0668        ADDI.W  #0x6f6e (28526),25971(A0)
+0410: 7400        MOVEQ   #0,D2
+0412: 0566        DC.W    0x0566
+0414: 6978        BVS     0x048e
+0416: 6572        BCS     0x048a
+0418: 0968        DC.W    0x0968
+041a: 6173        BSR     0x048f
+041c: 206c        MOVEA.L  28534(A4),A0
+0420: 6572        BCS     0x0494
+0422: 0b73        DC.W    0x0b73
+0424: 7065        MOVEQ   #101,D0
+0426: 6e64        BGT     0x048c
+0428: 7468        MOVEQ   #104,D2
+042a: 7269        MOVEQ   #105,D1
+042c: 6674        BNE     0x04a2
+042e: 0961        DC.W    0x0961
+0430: 6c63        BGE     0x0495
+0432: 6f68        BLE     0x049c
+0434: 6f6c        BLE     0x04a2
+0436: 6963        BVS     0x049b
+0438: 1374        MOVE.B  114(A4,D6.L),28535(A1)
+043e: 6e20        BGT     0x0460
+0440: 6f66        BLE     0x04a8
+0442: 6620        BNE     0x0464
+0444: 7072        MOVEQ   #114,D0
+0446: 6f20        BLE     0x0468
+0448: 746f        MOVEQ   #111,D2
+044a: 7572        DC.W    0x7572
+044c: 0a6c        EORI.W  #0x6164 (24932),26981(A4)
+0452: 7320        DC.W    0x7320
+0454: 6d61        BLT     0x04b7
+0456: 6e00        BGT     0x0abe
+045a: 7269        MOVEQ   #105,D1
+045c: 6769        BEQ     0x04c7
+045e: 6400        BCC     0x0cc9
+0462: 6d70        BLT     0x04d4
+0464: 6f74        BLE     0x04da
+0466: 656e        BCS     0x04d6
+0468: 7400        MOVEQ   #0,D2
+046a: 1b6d        MOVE.B  24946(A5),29289(A5)
+0470: 6564        BCS     0x04d6
+0472: 2077        MOVEA.L  102(A7,D6.L),A0
+0476: 6520        BCS     0x0498
+0478: 666f        BNE     0x04e9
+047a: 7220        MOVEQ   #32,D1
+047c: 6865        BVC     0x04e3
+047e: 7220        MOVEQ   #32,D1
+0480: 6d6f        BLT     0x04f1
+0482: 6e65        BGT     0x04e9
+0484: 792e        DC.W    0x792e
+0486: 1c77        MOVEA.B  117(A7,D6.L),A6
+048a: 6c64        BGE     0x04f0
+048c: 2064        MOVEA.L  -(A4),A0
+048e: 6f20        BLE     0x04b0
+0490: 616e        BSR     0x0500
+0492: 7974        DC.W    0x7974
+0494: 6869        BVC     0x04ff
+0496: 6e67        BGT     0x04ff
+0498: 2066        MOVEA.L  -(A6),A0
+049a: 6f72        BLE     0x050e
+049c: 206d        MOVEA.L  28526(A5),A0
+04a0: 6579        BCS     0x051b
+04a2: 2e00        MOVE.L  D0,D7
+04a4: 0c6e        CMPI.W  #0x796d (31085),28776(A6)
+04aa: 6f6d        BLE     0x0519
+04ac: 616e        BSR     0x051c
+04ae: 6961        BVS     0x0511
+04b0: 6300        BLS     0x1218
+04b4: 6978        BVS     0x052e
+04b6: 6573        BCS     0x052b
+04b8: 206a        MOVEA.L  30066(A2),A0
+04bc: 6965        BVS     0x0523
+04be: 732e        DC.W    0x732e
+04c0: 0d6d        DC.W    0x0d6d
+04c2: 616e        BSR     0x0532
+04c4: 7920        DC.W    0x7920
+04c6: 6166        BSR     0x052e
+04c8: 6661        BNE     0x052b
+04ca: 6972        BVS     0x053e
+04cc: 732e        DC.W    0x732e
+04ce: 0000        ORI.B  #0x0 (0),D0
+
+04d2: 4e56        LINK    A6,#-18
+04d6: 206e        MOVEA.L  8(A6),A0
+04da: 43ee        LEA     -18(A6),A1
+04de: 22d8        MOVE.L  (A0)+,(A1)+
+04e0: 22d8        MOVE.L  (A0)+,(A1)+
+04e2: 22d8        MOVE.L  (A0)+,(A1)+
+04e4: 22d8        MOVE.L  (A0)+,(A1)+
+04e6: 32d8        MOVE.W  (A0)+,(A1)+
+04e8: 302e        MOVE.W  12(A6),D0
+04ec: 0c40        CMPI.W  #0x352 (850),D0
+04f0: 6600        BNE     0x0816
+04f4: 487a        PEA     1038(PC) [0x904 ; pstr='lover is ']
+04f8: a884        _DrawString
+04fa: 302e        MOVE.W  -8(A6),D0
+04fe: 0c40        CMPI.W  #0x2bc (700),D0
+0502: 6600        BNE     0x0510
+0506: 487a        PEA     1030(PC) [0x90e ; pstr='Al Able']
+050a: a884        _DrawString
+050c: 6000        BRA     0x0812
+0510: 0c40        CMPI.W  #0x2bd (701),D0
+0514: 6600        BNE     0x0522
+0518: 487a        PEA     1020(PC) [0x916 ; pstr='Anna Able']
+051c: a884        _DrawString
+051e: 6000        BRA     0x0812
+0522: 0c40        CMPI.W  #0x2be (702),D0
+0526: 6600        BNE     0x0534
+052a: 487a        PEA     1012(PC) [0x920 ; pstr='Bob Baker']
+052e: a884        _DrawString
+0530: 6000        BRA     0x0812
+0534: 0c40        CMPI.W  #0x2bf (703),D0
+0538: 6600        BNE     0x0546
+053c: 487a        PEA     1004(PC) [0x92a ; pstr='Betty Baker']
+0540: a884        _DrawString
+0542: 6000        BRA     0x0812
+0546: 0c40        CMPI.W  #0x2c0 (704),D0
+054a: 6600        BNE     0x0558
+054e: 487a        PEA     998(PC) [0x936 ; pstr='Charles Cook']
+0552: a884        _DrawString
+0554: 6000        BRA     0x0812
+0558: 0c40        CMPI.W  #0x2c1 (705),D0
+055c: 6600        BNE     0x056a
+0560: 487a        PEA     994(PC) [0x944 ; pstr='Cathy Cook']
+0564: a884        _DrawString
+0566: 6000        BRA     0x0812
+056a: 0c40        CMPI.W  #0x2c2 (706),D0
+056e: 6600        BNE     0x057c
+0572: 487a        PEA     988(PC) [0x950 ; pstr='Dan Davis']
+0576: a884        _DrawString
+0578: 6000        BRA     0x0812
+057c: 0c40        CMPI.W  #0x2c3 (707),D0
+0580: 6600        BNE     0x058e
+0584: 487a        PEA     980(PC) [0x95a ; pstr='Dottie Davis']
+0588: a884        _DrawString
+058a: 6000        BRA     0x0812
+058e: 0c40        CMPI.W  #0x2c4 (708),D0
+0592: 6600        BNE     0x05a0
+0596: 487a        PEA     976(PC) [0x968 ; pstr='Ed Ellis']
+059a: a884        _DrawString
+059c: 6000        BRA     0x0812
+05a0: 0c40        CMPI.W  #0x2c5 (709),D0
+05a4: 6600        BNE     0x05b2
+05a8: 487a        PEA     968(PC) [0x972 ; pstr='Ellen Ellis']
+05ac: a884        _DrawString
+05ae: 6000        BRA     0x0812
+05b2: 0c40        CMPI.W  #0x2c6 (710),D0
+05b6: 6600        BNE     0x05c4
+05ba: 487a        PEA     962(PC) [0x97e ; pstr='Fred Fox']
+05be: a884        _DrawString
+05c0: 6000        BRA     0x0812
+05c4: 0c40        CMPI.W  #0x2c7 (711),D0
+05c8: 6600        BNE     0x05d6
+05cc: 487a        PEA     954(PC) [0x988 ; pstr='Fay Fox']
+05d0: a884        _DrawString
+05d2: 6000        BRA     0x0812
+05d6: 0c40        CMPI.W  #0x2c8 (712),D0
+05da: 6600        BNE     0x05e8
+05de: 487a        PEA     944(PC) [0x990 ; pstr='Glen Giles']
+05e2: a884        _DrawString
+05e4: 6000        BRA     0x0812
+05e8: 0c40        CMPI.W  #0x2c9 (713),D0
+05ec: 6600        BNE     0x05fa
+05f0: 487a        PEA     938(PC) [0x99c ; pstr='Gail Giles']
+05f4: a884        _DrawString
+05f6: 6000        BRA     0x0812
+05fa: 0c40        CMPI.W  #0x2ca (714),D0
+05fe: 6600        BNE     0x060c
+0602: 487a        PEA     932(PC) [0x9a8 ; pstr='Harry Hall']
+0606: a884        _DrawString
+0608: 6000        BRA     0x0812
+060c: 0c40        CMPI.W  #0x2cb (715),D0
+0610: 6600        BNE     0x061e
+0614: 487a        PEA     926(PC) [0x9b4 ; pstr='Holly Hall']
+0618: a884        _DrawString
+061a: 6000        BRA     0x0812
+061e: 0c40        CMPI.W  #0x2cc (716),D0
+0622: 6600        BNE     0x0630
+0626: 487a        PEA     920(PC) [0x9c0 ; pstr='Irwin Idle']
+062a: a884        _DrawString
+062c: 6000        BRA     0x0812
+0630: 0c40        CMPI.W  #0x2cd (717),D0
+0634: 6600        BNE     0x0642
+0638: 487a        PEA     914(PC) [0x9cc ; pstr='Inger Idle']
+063c: a884        _DrawString
+063e: 6000        BRA     0x0812
+0642: 0c40        CMPI.W  #0x2ce (718),D0
+0646: 6600        BNE     0x0654
+064a: 487a        PEA     908(PC) [0x9d8 ; pstr='John Jones']
+064e: a884        _DrawString
+0650: 6000        BRA     0x0812
+0654: 0c40        CMPI.W  #0x2cf (719),D0
+0658: 6600        BNE     0x0666
+065c: 487a        PEA     902(PC) [0x9e4 ; pstr='Janet Jones']
+0660: a884        _DrawString
+0662: 6000        BRA     0x0812
+0666: 0c40        CMPI.W  #0x2d0 (720),D0
+066a: 6600        BNE     0x0678
+066e: 487a        PEA     896(PC) [0x9f0 ; pstr='Kirk King']
+0672: a884        _DrawString
+0674: 6000        BRA     0x0812
+0678: 0c40        CMPI.W  #0x2d1 (721),D0
+067c: 6600        BNE     0x068a
+0680: 487a        PEA     888(PC) [0x9fa ; pstr='Karen King']
+0684: a884        _DrawString
+0686: 6000        BRA     0x0812
+068a: 0c40        CMPI.W  #0x2d2 (722),D0
+068e: 6600        BNE     0x069c
+0692: 487a        PEA     882(PC) [0xa06 ; pstr='Leon Long']
+0696: a884        _DrawString
+0698: 6000        BRA     0x0812
+069c: 0c40        CMPI.W  #0x2d3 (723),D0
+06a0: 6600        BNE     0x06ae
+06a4: 487a        PEA     874(PC) [0xa10 ; pstr='Lily Long']
+06a8: a884        _DrawString
+06aa: 6000        BRA     0x0812
+06ae: 0c40        CMPI.W  #0x2d4 (724),D0
+06b2: 6600        BNE     0x06c0
+06b6: 487a        PEA     866(PC) [0xa1a ; pstr='Max MacNasty']
+06ba: a884        _DrawString
+06bc: 6000        BRA     0x0812
+06c0: 0c40        CMPI.W  #0x2d5 (725),D0
+06c4: 6600        BNE     0x06d2
+06c8: 487a        PEA     862(PC) [0xa28 ; pstr='Mona MacNasty']
+06cc: a884        _DrawString
+06ce: 6000        BRA     0x0812
+06d2: 0c40        CMPI.W  #0x2d6 (726),D0
+06d6: 6600        BNE     0x06e4
+06da: 487a        PEA     858(PC) [0xa36 ; pstr='Mac MacRascal']
+06de: a884        _DrawString
+06e0: 6000        BRA     0x0812
+06e4: 0c40        CMPI.W  #0x2d7 (727),D0
+06e8: 6600        BNE     0x06f6
+06ec: 487a        PEA     854(PC) [0xa44 ; pstr='Marta MacRascal']
+06f0: a884        _DrawString
+06f2: 6000        BRA     0x0812
+06f6: 0c40        CMPI.W  #0x2d8 (728),D0
+06fa: 6600        BNE     0x0708
+06fe: 487a        PEA     852(PC) [0xa54 ; pstr='Nate Ness']
+0702: a884        _DrawString
+0704: 6000        BRA     0x0812
+0708: 0c40        CMPI.W  #0x2d9 (729),D0
+070c: 6600        BNE     0x071a
+0710: 487a        PEA     844(PC) [0xa5e ; pstr='Nina Ness']
+0714: a884        _DrawString
+0716: 6000        BRA     0x0812
+071a: 0c40        CMPI.W  #0x2da (730),D0
+071e: 6600        BNE     0x072c
+0722: 487a        PEA     836(PC) [0xa68 ; pstr='Oscar Oaks']
+0726: a884        _DrawString
+0728: 6000        BRA     0x0812
+072c: 0c40        CMPI.W  #0x2db (731),D0
+0730: 6600        BNE     0x073e
+0734: 487a        PEA     830(PC) [0xa74 ; pstr='Olga Oaks']
+0738: a884        _DrawString
+073a: 6000        BRA     0x0812
+073e: 0c40        CMPI.W  #0x2dc (732),D0
+0742: 6600        BNE     0x0750
+0746: 487a        PEA     822(PC) [0xa7e ; pstr='Perry Parks']
+074a: a884        _DrawString
+074c: 6000        BRA     0x0812
+0750: 0c40        CMPI.W  #0x2dd (733),D0
+0754: 6600        BNE     0x0762
+0758: 487a        PEA     816(PC) [0xa8a ; pstr='Patty Parks']
+075c: a884        _DrawString
+075e: 6000        BRA     0x0812
+0762: 0c40        CMPI.W  #0x2de (734),D0
+0766: 6600        BNE     0x0774
+076a: 487a        PEA     810(PC) [0xa96 ; pstr='Ray Ryan']
+076e: a884        _DrawString
+0770: 6000        BRA     0x0812
+0774: 0c40        CMPI.W  #0x2df (735),D0
+0778: 6600        BNE     0x0786
+077c: 487a        PEA     802(PC) [0xaa0 ; pstr='Rita Ryan']
+0780: a884        _DrawString
+0782: 6000        BRA     0x0812
+0786: 0c40        CMPI.W  #0x2e0 (736),D0
+078a: 6600        BNE     0x0798
+078e: 487a        PEA     794(PC) [0xaaa ; pstr='Sam Smith']
+0792: a884        _DrawString
+0794: 6000        BRA     0x0812
+0798: 0c40        CMPI.W  #0x2e1 (737),D0
+079c: 6600        BNE     0x07aa
+07a0: 487a        PEA     786(PC) [0xab4 ; pstr='Sue Smith']
+07a4: a884        _DrawString
+07a6: 6000        BRA     0x0812
+07aa: 0c40        CMPI.W  #0x2e2 (738),D0
+07ae: 6600        BNE     0x07bc
+07b2: 487a        PEA     778(PC) [0xabe ; pstr='Ted Taft']
+07b6: a884        _DrawString
+07b8: 6000        BRA     0x0812
+07bc: 0c40        CMPI.W  #0x2e3 (739),D0
+07c0: 6600        BNE     0x07ce
+07c4: 487a        PEA     770(PC) [0xac8 ; pstr='Tina Taft']
+07c8: a884        _DrawString
+07ca: 6000        BRA     0x0812
+07ce: 0c40        CMPI.W  #0x2e4 (740),D0
+07d2: 6600        BNE     0x07e0
+07d6: 487a        PEA     762(PC) [0xad2 ; pstr='Van Vail']
+07da: a884        _DrawString
+07dc: 6000        BRA     0x0812
+07e0: 0c40        CMPI.W  #0x2e5 (741),D0
+07e4: 6600        BNE     0x07f2
+07e8: 487a        PEA     754(PC) [0xadc ; pstr='Vera Vail']
+07ec: a884        _DrawString
+07ee: 6000        BRA     0x0812
+07f2: 0c40        CMPI.W  #0x2e6 (742),D0
+07f6: 6600        BNE     0x0804
+07fa: 487a        PEA     746(PC) [0xae6 ; pstr='Ward Wade']
+07fe: a884        _DrawString
+0800: 6000        BRA     0x0812
+0804: 0c40        CMPI.W  #0x2e7 (743),D0
+0808: 6600        BNE     0x0812
+080c: 487a        PEA     738(PC) [0xaf0 ; pstr='Willa Wade']
+0810: a884        _DrawString
+0812: 6000        BRA     0x08fc
+0816: 0c40        CMPI.W  #0x353 (851),D0
+081a: 6600        BNE     0x0828
+081e: 487a        PEA     732(PC) [0xafc ; pstr='uses fraudulent business practices.']
+0822: a884        _DrawString
+0824: 6000        BRA     0x08fc
+0828: 0c40        CMPI.W  #0x354 (852),D0
+082c: 6600        BNE     0x083a
+0830: 487a        PEA     750(PC) [0xb20 ; pstr='has numerous lovers.']
+0834: a884        _DrawString
+0836: 6000        BRA     0x08fc
+083a: 0c40        CMPI.W  #0x355 (853),D0
+083e: 6600        BNE     0x084c
+0842: 487a        PEA     754(PC) [0xb36 ; pstr='has a criminal record under another identity.']
+0846: a884        _DrawString
+0848: 6000        BRA     0x08fc
+084c: 0c40        CMPI.W  #0x356 (854),D0
+0850: 6600        BNE     0x085e
+0854: 487a        PEA     782(PC) [0xb64 ; pstr='caused injury in hit and run.']
+0858: a884        _DrawString
+085a: 6000        BRA     0x08fc
+085e: 0c40        CMPI.W  #0x357 (855),D0
+0862: 6600        BNE     0x0870
+0866: 487a        PEA     794(PC) [0xb82 ; pstr='frustrated']
+086a: a884        _DrawString
+086c: 6000        BRA     0x08fc
+0870: 0c40        CMPI.W  #0x358 (856),D0
+0874: 6600        BNE     0x0882
+0878: 487a        PEA     788(PC) [0xb8e ; pstr='extremely horny']
+087c: a884        _DrawString
+087e: 6000        BRA     0x08fc
+0882: 0c40        CMPI.W  #0x359 (857),D0
+0886: 6600        BNE     0x0894
+088a: 487a        PEA     786(PC) [0xb9e ; pstr='killed a man.']
+088e: a884        _DrawString
+0890: 6000        BRA     0x08fc
+0894: 0c40        CMPI.W  #0x35a (858),D0
+0898: 6600        BNE     0x08a6
+089c: 487a        PEA     782(PC) [0xbac ; pstr='beat a handcuffed prisoner.']
+08a0: a884        _DrawString
+08a2: 6000        BRA     0x08fc
+08a6: 0c40        CMPI.W  #0x35b (859),D0
+08aa: 6600        BNE     0x08b8
+08ae: 487a        PEA     792(PC) [0xbc8 ; pstr='cheated on professional exam.']
+08b2: a884        _DrawString
+08b4: 6000        BRA     0x08fc
+08b8: 0c40        CMPI.W  #0x35c (860),D0
+08bc: 6600        BNE     0x08ca
+08c0: 487a        PEA     804(PC) [0xbe6 ; pstr='ex topless dancer']
+08c4: a884        _DrawString
+08c6: 6000        BRA     0x08fc
+08ca: 0c40        CMPI.W  #0x35d (861),D0
+08ce: 6600        BNE     0x08dc
+08d2: 487a        PEA     804(PC) [0xbf8 ; pstr='former prostitute']
+08d6: a884        _DrawString
+08d8: 6000        BRA     0x08fc
+08dc: 0c40        CMPI.W  #0x35e (862),D0
+08e0: 6600        BNE     0x08ee
+08e4: 487a        PEA     804(PC) [0xc0a ; pstr='sells drugs for extra money.']
+08e8: a884        _DrawString
+08ea: 6000        BRA     0x08fc
+08ee: 0c40        CMPI.W  #0x35f (863),D0
+08f2: 6600        BNE     0x08fc
+08f6: 487a        PEA     816(PC) [0xc28 ; pstr='is a dope addict.']
+08fa: a884        _DrawString
+08fc: 4e5e        UNLK    A6
+08fe: 205f        MOVEA.L  (A7)+,A0
+0900: 5c8f        ADDQ.L  #6,A7
+0902: 4ed0        JMP     (A0)
+0904: 096c        DC.W    0x096c
+0906: 6f76        BLE     0x097e
+0908: 6572        BCS     0x097c
+090a: 2069        MOVEA.L  29472(A1),A0
+090e: 0741        DC.W    0x0741
+0910: 6c20        BGE     0x0932
+0912: 4162        DC.W    0x4162
+0914: 6c65        BGE     0x097b
+0916: 0941        DC.W    0x0941
+0918: 6e6e        BGT     0x0988
+091a: 6120        BSR     0x093c
+091c: 4162        DC.W    0x4162
+091e: 6c65        BGE     0x0985
+0920: 0942        DC.W    0x0942
+0922: 6f62        BLE     0x0986
+0924: 2042        MOVEA.L  D2,A0
+0926: 616b        BSR     0x0993
+0928: 6572        BCS     0x099c
+092a: 0b42        DC.W    0x0b42
+092c: 6574        BCS     0x09a2
+092e: 7479        MOVEQ   #121,D2
+0930: 2042        MOVEA.L  D2,A0
+0932: 616b        BSR     0x099f
+0934: 6572        BCS     0x09a8
+0936: 0c43        CMPI.W  #0x6861 (26721),D3
+093a: 726c        MOVEQ   #108,D1
+093c: 6573        BCS     0x09b1
+093e: 2043        MOVEA.L  D3,A0
+0940: 6f6f        BLE     0x09b1
+0942: 6b00        BMI     0x1387
+0946: 6174        BSR     0x09bc
+0948: 6879        BVC     0x09c3
+094a: 2043        MOVEA.L  D3,A0
+094c: 6f6f        BLE     0x09bd
+094e: 6b00        BMI     0x1294
+0952: 616e        BSR     0x09c2
+0954: 2044        MOVEA.L  D4,A0
+0956: 6176        BSR     0x09ce
+0958: 6973        BVS     0x09cd
+095a: 0c44        CMPI.W  #0x6f74 (28532),D4
+095e: 7469        MOVEQ   #105,D2
+0960: 6520        BCS     0x0982
+0962: 4461        DC.W    0x4461
+0964: 7669        MOVEQ   #105,D3
+0966: 7300        DC.W    0x7300
+0968: 0845        DC.W    0x0845
+096a: 6420        BCC     0x098c
+096c: 456c        DC.W    0x456c
+096e: 6c69        BGE     0x09d9
+0970: 7300        DC.W    0x7300
+0972: 0b45        DC.W    0x0b45
+0974: 6c6c        BGE     0x09e2
+0976: 656e        BCS     0x09e6
+0978: 2045        MOVEA.L  D5,A0
+097a: 6c6c        BGE     0x09e8
+097c: 6973        BVS     0x09f1
+097e: 0846        DC.W    0x0846
+0980: 7265        MOVEQ   #101,D1
+0982: 6420        BCC     0x09a4
+0984: 466f        DC.W    0x466f
+0986: 7800        MOVEQ   #0,D4
+0988: 0746        DC.W    0x0746
+098a: 6179        BSR     0x0a05
+098c: 2046        MOVEA.L  D6,A0
+098e: 6f78        BLE     0x0a08
+0990: 0a47        EORI.W  #0x6c65 (27749),D7
+0994: 6e20        BGT     0x09b6
+0996: 4769        DC.W    0x4769
+0998: 6c65        BGE     0x09ff
+099a: 7300        DC.W    0x7300
+099c: 0a47        EORI.W  #0x6169 (24937),D7
+09a0: 6c20        BGE     0x09c2
+09a2: 4769        DC.W    0x4769
+09a4: 6c65        BGE     0x0a0b
+09a6: 7300        DC.W    0x7300
+09a8: 0a48        EORI.W  #0x6172 (24946),A0
+09ac: 7279        MOVEQ   #121,D1
+09ae: 2048        MOVEA.L  A0,A0
+09b0: 616c        BSR     0x0a1e
+09b2: 6c00        BGE     0x13fc
+09b6: 6f6c        BLE     0x0a24
+09b8: 6c79        BGE     0x0a33
+09ba: 2048        MOVEA.L  A0,A0
+09bc: 616c        BSR     0x0a2a
+09be: 6c00        BGE     0x1409
+09c2: 7277        MOVEQ   #119,D1
+09c4: 696e        BVS     0x0a34
+09c6: 2049        MOVEA.L  A1,A0
+09c8: 646c        BCC     0x0a36
+09ca: 6500        BCS     0x1415
+09ce: 6e67        BGT     0x0a37
+09d0: 6572        BCS     0x0a44
+09d2: 2049        MOVEA.L  A1,A0
+09d4: 646c        BCC     0x0a42
+09d6: 6500        BCS     0x1422
+09da: 6f68        BLE     0x0a44
+09dc: 6e20        BGT     0x09fe
+09de: 4a6f        TST.W   28261(A7)
+09e2: 7300        DC.W    0x7300
+09e4: 0b4a        DC.W    0x0b4a
+09e6: 616e        BSR     0x0a56
+09e8: 6574        BCS     0x0a5e
+09ea: 204a        MOVEA.L  A2,A0
+09ec: 6f6e        BLE     0x0a5c
+09ee: 6573        BCS     0x0a63
+09f0: 094b        DC.W    0x094b
+09f2: 6972        BVS     0x0a66
+09f4: 6b20        BMI     0x0a16
+09f6: 4b69        DC.W    0x4b69
+09f8: 6e67        BGT     0x0a61
+09fa: 0a4b        EORI.W  #0x6172 (24946),A3
+09fe: 656e        BCS     0x0a6e
+0a00: 204b        MOVEA.L  A3,A0
+0a02: 696e        BVS     0x0a72
+0a04: 6700        BEQ     0x1352
+0a08: 656f        BCS     0x0a79
+0a0a: 6e20        BGT     0x0a2c
+0a0c: 4c6f        DC.W    0x4c6f
+0a0e: 6e67        BGT     0x0a77
+0a10: 094c        DC.W    0x094c
+0a12: 696c        BVS     0x0a80
+0a14: 7920        DC.W    0x7920
+0a16: 4c6f        DC.W    0x4c6f
+0a18: 6e67        BGT     0x0a81
+0a1a: 0c4d        CMPI.W  #0x6178 (24952),A5
+0a1e: 204d        MOVEA.L  A5,A0
+0a20: 6163        BSR     0x0a85
+0a22: 4e61        DC.W    0x4e61
+0a24: 7374        DC.W    0x7374
+0a26: 7900        DC.W    0x7900
+0a28: 0d4d        DC.W    0x0d4d
+0a2a: 6f6e        BLE     0x0a9a
+0a2c: 6120        BSR     0x0a4e
+0a2e: 4d61        DC.W    0x4d61
+0a30: 634e        BLS     0x0a80
+0a32: 6173        BSR     0x0aa7
+0a34: 7479        MOVEQ   #121,D2
+0a36: 0d4d        DC.W    0x0d4d
+0a38: 6163        BSR     0x0a9d
+0a3a: 204d        MOVEA.L  A5,A0
+0a3c: 6163        BSR     0x0aa1
+0a3e: 5261        ADDQ.W  #1,-(A1)
+0a40: 7363        DC.W    0x7363
+0a42: 616c        BSR     0x0ab0
+0a44: 0f4d        DC.W    0x0f4d
+0a46: 6172        BSR     0x0aba
+0a48: 7461        MOVEQ   #97,D2
+0a4a: 204d        MOVEA.L  A5,A0
+0a4c: 6163        BSR     0x0ab1
+0a4e: 5261        ADDQ.W  #1,-(A1)
+0a50: 7363        DC.W    0x7363
+0a52: 616c        BSR     0x0ac0
+0a54: 094e        DC.W    0x094e
+0a56: 6174        BSR     0x0acc
+0a58: 6520        BCS     0x0a7a
+0a5a: 4e65        DC.W    0x4e65
+0a5c: 7373        DC.W    0x7373
+0a5e: 094e        DC.W    0x094e
+0a60: 696e        BVS     0x0ad0
+0a62: 6120        BSR     0x0a84
+0a64: 4e65        DC.W    0x4e65
+0a66: 7373        DC.W    0x7373
+0a68: 0a4f        EORI.W  #0x7363 (29539),A7
+0a6c: 6172        BSR     0x0ae0
+0a6e: 204f        MOVEA.L  A7,A0
+0a70: 616b        BSR     0x0add
+0a72: 7300        DC.W    0x7300
+0a74: 094f        DC.W    0x094f
+0a76: 6c67        BGE     0x0adf
+0a78: 6120        BSR     0x0a9a
+0a7a: 4f61        DC.W    0x4f61
+0a7c: 6b73        BMI     0x0af1
+0a7e: 0b50        DC.W    0x0b50
+0a80: 6572        BCS     0x0af4
+0a82: 7279        MOVEQ   #121,D1
+0a84: 2050        MOVEA.L  (A0),A0
+0a86: 6172        BSR     0x0afa
+0a88: 6b73        BMI     0x0afd
+0a8a: 0b50        DC.W    0x0b50
+0a8c: 6174        BSR     0x0b02
+0a8e: 7479        MOVEQ   #121,D2
+0a90: 2050        MOVEA.L  (A0),A0
+0a92: 6172        BSR     0x0b06
+0a94: 6b73        BMI     0x0b09
+0a96: 0852        DC.W    0x0852
+0a98: 6179        BSR     0x0b13
+0a9a: 2052        MOVEA.L  (A2),A0
+0a9c: 7961        DC.W    0x7961
+0a9e: 6e00        BGT     0x13f2
+0aa2: 6974        BVS     0x0b18
+0aa4: 6120        BSR     0x0ac6
+0aa6: 5279        ADDQ.W  #1,(0x616e0953).L
+0aac: 616d        BSR     0x0b1b
+0aae: 2053        MOVEA.L  (A3),A0
+0ab0: 6d69        BLT     0x0b1b
+0ab2: 7468        MOVEQ   #104,D2
+0ab4: 0953        DC.W    0x0953
+0ab6: 7565        DC.W    0x7565
+0ab8: 2053        MOVEA.L  (A3),A0
+0aba: 6d69        BLT     0x0b25
+0abc: 7468        MOVEQ   #104,D2
+0abe: 0854        DC.W    0x0854
+0ac0: 6564        BCS     0x0b26
+0ac2: 2054        MOVEA.L  (A4),A0
+0ac4: 6166        BSR     0x0b2c
+0ac6: 7400        MOVEQ   #0,D2
+0ac8: 0954        DC.W    0x0954
+0aca: 696e        BVS     0x0b3a
+0acc: 6120        BSR     0x0aee
+0ace: 5461        ADDQ.W  #2,-(A1)
+0ad0: 6674        BNE     0x0b46
+0ad2: 0856        DC.W    0x0856
+0ad4: 616e        BSR     0x0b44
+0ad6: 2056        MOVEA.L  (A6),A0
+0ad8: 6169        BSR     0x0b43
+0ada: 6c00        BGE     0x1432
+0ade: 6572        BCS     0x0b52
+0ae0: 6120        BSR     0x0b02
+0ae2: 5661        ADDQ.W  #3,-(A1)
+0ae4: 696c        BVS     0x0b52
+0ae6: 0957        DC.W    0x0957
+0ae8: 6172        BSR     0x0b5c
+0aea: 6420        BCC     0x0b0c
+0aec: 5761        SUBQ.W  #3,-(A1)
+0aee: 6465        BCC     0x0b55
+0af0: 0a57        EORI.W  #0x696c (26988),(A7)
+0af4: 6c61        BGE     0x0b57
+0af6: 2057        MOVEA.L  (A7),A0
+0af8: 6164        BSR     0x0b5e
+0afa: 6500        BCS     0x2e71
+0afe: 7365        DC.W    0x7365
+0b00: 7320        DC.W    0x7320
+0b02: 6672        BNE     0x0b76
+0b04: 6175        BSR     0x0b7b
+0b06: 6475        BCC     0x0b7d
+0b08: 6c65        BGE     0x0b6f
+0b0a: 6e74        BGT     0x0b80
+0b0c: 2062        MOVEA.L  -(A2),A0
+0b0e: 7573        DC.W    0x7573
+0b10: 696e        BVS     0x0b80
+0b12: 6573        BCS     0x0b87
+0b14: 7320        DC.W    0x7320
+0b16: 7072        MOVEQ   #114,D0
+0b18: 6163        BSR     0x0b7d
+0b1a: 7469        MOVEQ   #105,D2
+0b1c: 6365        BLS     0x0b83
+0b1e: 732e        DC.W    0x732e
+0b20: 1468        MOVEA.B  24947(A0),A2
+0b24: 206e        MOVEA.L  30061(A6),A0
+0b28: 6572        BCS     0x0b9c
+0b2a: 6f75        BLE     0x0ba1
+0b2c: 7320        DC.W    0x7320
+0b2e: 6c6f        BGE     0x0b9f
+0b30: 7665        MOVEQ   #101,D3
+0b32: 7273        MOVEQ   #115,D1
+0b34: 2e00        MOVE.L  D0,D7
+0b36: 2d68        MOVE.L  24947(A0),8289(A6)
+0b3c: 2063        MOVEA.L  -(A3),A0
+0b3e: 7269        MOVEQ   #105,D1
+0b40: 6d69        BLT     0x0bab
+0b42: 6e61        BGT     0x0ba5
+0b44: 6c20        BGE     0x0b66
+0b46: 7265        MOVEQ   #101,D1
+0b48: 636f        BLS     0x0bb9
+0b4a: 7264        MOVEQ   #100,D1
+0b4c: 2075        MOVEA.L  100(A5,D6.L),A0
+0b50: 6572        BCS     0x0bc4
+0b52: 2061        MOVEA.L  -(A1),A0
+0b54: 6e6f        BGT     0x0bc5
+0b56: 7468        MOVEQ   #104,D2
+0b58: 6572        BCS     0x0bcc
+0b5a: 2069        MOVEA.L  25701(A1),A0
+0b5e: 6e74        BGT     0x0bd4
+0b60: 6974        BVS     0x0bd6
+0b62: 792e        DC.W    0x792e
+0b64: 1d63        MOVE.B  -(A3),24949(A6)
+0b68: 7365        DC.W    0x7365
+0b6a: 6420        BCC     0x0b8c
+0b6c: 696e        BVS     0x0bdc
+0b6e: 6a75        BPL     0x0be5
+0b70: 7279        MOVEQ   #121,D1
+0b72: 2069        MOVEA.L  28192(A1),A0
+0b76: 6869        BVC     0x0be1
+0b78: 7420        MOVEQ   #32,D2
+0b7a: 616e        BSR     0x0bea
+0b7c: 6420        BCC     0x0b9e
+0b7e: 7275        MOVEQ   #117,D1
+0b80: 6e2e        BGT     0x0bb0
+0b82: 0a66        EORI.W  #0x7275 (29301),-(A6)
+0b86: 7374        DC.W    0x7374
+0b88: 7261        MOVEQ   #97,D1
+0b8a: 7465        MOVEQ   #101,D2
+0b8c: 6400        BCC     0x1af3
+0b90: 7874        MOVEQ   #116,D4
+0b92: 7265        MOVEQ   #101,D1
+0b94: 6d65        BLT     0x0bfb
+0b96: 6c79        BGE     0x0c11
+0b98: 2068        MOVEA.L  28530(A0),A0
+0b9c: 6e79        BGT     0x0c17
+0b9e: 0d6b        DC.W    0x0d6b
+0ba0: 696c        BVS     0x0c0e
+0ba2: 6c65        BGE     0x0c09
+0ba4: 6420        BCC     0x0bc6
+0ba6: 6120        BSR     0x0bc8
+0ba8: 6d61        BLT     0x0c0b
+0baa: 6e2e        BGT     0x0bda
+0bac: 1b62        MOVE.B  -(A2),25953(A5)
+0bb0: 7420        MOVEQ   #32,D2
+0bb2: 6120        BSR     0x0bd4
+0bb4: 6861        BVC     0x0c17
+0bb6: 6e64        BGT     0x0c1c
+0bb8: 6375        BLS     0x0c2f
+0bba: 6666        BNE     0x0c22
+0bbc: 6564        BCS     0x0c22
+0bbe: 2070        MOVEA.L  105(A0,D7.W),A0
+0bc2: 736f        DC.W    0x736f
+0bc4: 6e65        BGT     0x0c2b
+0bc6: 722e        MOVEQ   #46,D1
+0bc8: 1d63        MOVE.B  -(A3),26725(A6)
+0bcc: 6174        BSR     0x0c42
+0bce: 6564        BCS     0x0c34
+0bd0: 206f        MOVEA.L  28192(A7),A0
+0bd4: 7072        MOVEQ   #114,D0
+0bd6: 6f66        BLE     0x0c3e
+0bd8: 6573        BCS     0x0c4d
+0bda: 7369        DC.W    0x7369
+0bdc: 6f6e        BLE     0x0c4c
+0bde: 616c        BSR     0x0c4c
+0be0: 2065        MOVEA.L  -(A5),A0
+0be2: 7861        MOVEQ   #97,D4
+0be4: 6d2e        BLT     0x0c14
+0be6: 1165        MOVE.B  -(A5),30752(A0)
+0bea: 746f        MOVEQ   #111,D2
+0bec: 706c        MOVEQ   #108,D0
+0bee: 6573        BCS     0x0c63
+0bf0: 7320        DC.W    0x7320
+0bf2: 6461        BCC     0x0c55
+0bf4: 6e63        BGT     0x0c59
+0bf6: 6572        BCS     0x0c6a
+0bf8: 1166        MOVE.B  -(A6),28530(A0)
+0bfc: 6d65        BLT     0x0c63
+0bfe: 7220        MOVEQ   #32,D1
+0c00: 7072        MOVEQ   #114,D0
+0c02: 6f73        BLE     0x0c77
+0c04: 7469        MOVEQ   #105,D2
+0c06: 7475        MOVEQ   #117,D2
+0c08: 7465        MOVEQ   #101,D2
+0c0a: 1c73        MOVEA.B  108(A3,D6.W),A6
+0c0e: 6c73        BGE     0x0c83
+0c10: 2064        MOVEA.L  -(A4),A0
+0c12: 7275        MOVEQ   #117,D1
+0c14: 6773        BEQ     0x0c89
+0c16: 2066        MOVEA.L  -(A6),A0
+0c18: 6f72        BLE     0x0c8c
+0c1a: 2065        MOVEA.L  -(A5),A0
+0c1c: 7874        MOVEQ   #116,D4
+0c1e: 7261        MOVEQ   #97,D1
+0c20: 206d        MOVEA.L  28526(A5),A0
+0c24: 6579        BCS     0x0c9f
+0c26: 2e00        MOVE.L  D0,D7
+0c28: 1169        MOVE.B  29472(A1),24864(A0)
+0c2e: 646f        BCC     0x0c9f
+0c30: 7065        MOVEQ   #101,D0
+0c32: 2061        MOVEA.L  -(A1),A0
+0c34: 6464        BCC     0x0c9a
+0c36: 6963        BVS     0x0c9b
+0c38: 742e        MOVEQ   #46,D2
+0c3a: 0000        ORI.B  #0x0 (0),D0
+
+0c3e: 4e56        LINK    A6,#0
+0c42: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0c46: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c4a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c4e: a893        _MoveTo
+0c50: 487a        PEA     1118(PC) [0x10b0 ; pstr='Private Detective report:  ']
+0c54: a884        _DrawString
+0c56: 3f3c        MOVE.W  #0x64 (100),-(A7)
+0c5a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0c5e: a893        _MoveTo
+0c60: 302e        MOVE.W  8(A6),D0
+0c64: 0c40        CMPI.W  #0x2bc (700),D0
+0c68: 6600        BNE     0x0c7c
+0c6c: 3f2d        MOVE.W  -864(A5),-(A7)
+0c70: 486d        PEA     -868(A5)
+0c74: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0c78: 6000        BRA     0x1080
+0c7c: 0c40        CMPI.W  #0x2bd (701),D0
+0c80: 6600        BNE     0x0c94
+0c84: 3f2d        MOVE.W  -882(A5),-(A7)
+0c88: 486d        PEA     -886(A5)
+0c8c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0c90: 6000        BRA     0x1080
+0c94: 0c40        CMPI.W  #0x2be (702),D0
+0c98: 6600        BNE     0x0cac
+0c9c: 3f2d        MOVE.W  -900(A5),-(A7)
+0ca0: 486d        PEA     -904(A5)
+0ca4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0ca8: 6000        BRA     0x1080
+0cac: 0c40        CMPI.W  #0x2bf (703),D0
+0cb0: 6600        BNE     0x0cc4
+0cb4: 3f2d        MOVE.W  -918(A5),-(A7)
+0cb8: 486d        PEA     -922(A5)
+0cbc: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0cc0: 6000        BRA     0x1080
+0cc4: 0c40        CMPI.W  #0x2c0 (704),D0
+0cc8: 6600        BNE     0x0cdc
+0ccc: 3f2d        MOVE.W  -936(A5),-(A7)
+0cd0: 486d        PEA     -940(A5)
+0cd4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0cd8: 6000        BRA     0x1080
+0cdc: 0c40        CMPI.W  #0x2c1 (705),D0
+0ce0: 6600        BNE     0x0cf4
+0ce4: 3f2d        MOVE.W  -954(A5),-(A7)
+0ce8: 486d        PEA     -958(A5)
+0cec: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0cf0: 6000        BRA     0x1080
+0cf4: 0c40        CMPI.W  #0x2c2 (706),D0
+0cf8: 6600        BNE     0x0d0c
+0cfc: 3f2d        MOVE.W  -972(A5),-(A7)
+0d00: 486d        PEA     -976(A5)
+0d04: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d08: 6000        BRA     0x1080
+0d0c: 0c40        CMPI.W  #0x2c3 (707),D0
+0d10: 6600        BNE     0x0d24
+0d14: 3f2d        MOVE.W  -990(A5),-(A7)
+0d18: 486d        PEA     -994(A5)
+0d1c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d20: 6000        BRA     0x1080
+0d24: 0c40        CMPI.W  #0x2c4 (708),D0
+0d28: 6600        BNE     0x0d3c
+0d2c: 3f2d        MOVE.W  -1008(A5),-(A7)
+0d30: 486d        PEA     -1012(A5)
+0d34: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d38: 6000        BRA     0x1080
+0d3c: 0c40        CMPI.W  #0x2c5 (709),D0
+0d40: 6600        BNE     0x0d54
+0d44: 3f2d        MOVE.W  -1026(A5),-(A7)
+0d48: 486d        PEA     -1030(A5)
+0d4c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d50: 6000        BRA     0x1080
+0d54: 0c40        CMPI.W  #0x2c6 (710),D0
+0d58: 6600        BNE     0x0d6c
+0d5c: 3f2d        MOVE.W  -1620(A5),-(A7)
+0d60: 486d        PEA     -1624(A5)
+0d64: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d68: 6000        BRA     0x1080
+0d6c: 0c40        CMPI.W  #0x2c7 (711),D0
+0d70: 6600        BNE     0x0d84
+0d74: 3f2d        MOVE.W  -1638(A5),-(A7)
+0d78: 486d        PEA     -1642(A5)
+0d7c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d80: 6000        BRA     0x1080
+0d84: 0c40        CMPI.W  #0x2c8 (712),D0
+0d88: 6600        BNE     0x0d9c
+0d8c: 3f2d        MOVE.W  -1044(A5),-(A7)
+0d90: 486d        PEA     -1048(A5)
+0d94: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0d98: 6000        BRA     0x1080
+0d9c: 0c40        CMPI.W  #0x2c9 (713),D0
+0da0: 6600        BNE     0x0db4
+0da4: 3f2d        MOVE.W  -1062(A5),-(A7)
+0da8: 486d        PEA     -1066(A5)
+0dac: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0db0: 6000        BRA     0x1080
+0db4: 0c40        CMPI.W  #0x2ca (714),D0
+0db8: 6600        BNE     0x0dcc
+0dbc: 3f2d        MOVE.W  -1080(A5),-(A7)
+0dc0: 486d        PEA     -1084(A5)
+0dc4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0dc8: 6000        BRA     0x1080
+0dcc: 0c40        CMPI.W  #0x2cb (715),D0
+0dd0: 6600        BNE     0x0de4
+0dd4: 3f2d        MOVE.W  -1098(A5),-(A7)
+0dd8: 486d        PEA     -1102(A5)
+0ddc: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0de0: 6000        BRA     0x1080
+0de4: 0c40        CMPI.W  #0x2cc (716),D0
+0de8: 6600        BNE     0x0dfc
+0dec: 3f2d        MOVE.W  -1116(A5),-(A7)
+0df0: 486d        PEA     -1120(A5)
+0df4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0df8: 6000        BRA     0x1080
+0dfc: 0c40        CMPI.W  #0x2cd (717),D0
+0e00: 6600        BNE     0x0e14
+0e04: 3f2d        MOVE.W  -1134(A5),-(A7)
+0e08: 486d        PEA     -1138(A5)
+0e0c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e10: 6000        BRA     0x1080
+0e14: 0c40        CMPI.W  #0x2ce (718),D0
+0e18: 6600        BNE     0x0e2c
+0e1c: 3f2d        MOVE.W  -1152(A5),-(A7)
+0e20: 486d        PEA     -1156(A5)
+0e24: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e28: 6000        BRA     0x1080
+0e2c: 0c40        CMPI.W  #0x2cf (719),D0
+0e30: 6600        BNE     0x0e44
+0e34: 3f2d        MOVE.W  -1170(A5),-(A7)
+0e38: 486d        PEA     -1174(A5)
+0e3c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e40: 6000        BRA     0x1080
+0e44: 0c40        CMPI.W  #0x2d0 (720),D0
+0e48: 6600        BNE     0x0e5c
+0e4c: 3f2d        MOVE.W  -1188(A5),-(A7)
+0e50: 486d        PEA     -1192(A5)
+0e54: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e58: 6000        BRA     0x1080
+0e5c: 0c40        CMPI.W  #0x2d1 (721),D0
+0e60: 6600        BNE     0x0e74
+0e64: 3f2d        MOVE.W  -1206(A5),-(A7)
+0e68: 486d        PEA     -1210(A5)
+0e6c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e70: 6000        BRA     0x1080
+0e74: 0c40        CMPI.W  #0x2d2 (722),D0
+0e78: 6600        BNE     0x0e8c
+0e7c: 3f2d        MOVE.W  -1224(A5),-(A7)
+0e80: 486d        PEA     -1228(A5)
+0e84: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0e88: 6000        BRA     0x1080
+0e8c: 0c40        CMPI.W  #0x2d3 (723),D0
+0e90: 6600        BNE     0x0ea4
+0e94: 3f2d        MOVE.W  -1242(A5),-(A7)
+0e98: 486d        PEA     -1246(A5)
+0e9c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0ea0: 6000        BRA     0x1080
+0ea4: 0c40        CMPI.W  #0x2d4 (724),D0
+0ea8: 6600        BNE     0x0ebc
+0eac: 3f2d        MOVE.W  -1260(A5),-(A7)
+0eb0: 486d        PEA     -1264(A5)
+0eb4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0eb8: 6000        BRA     0x1080
+0ebc: 0c40        CMPI.W  #0x2d5 (725),D0
+0ec0: 6600        BNE     0x0ed4
+0ec4: 3f2d        MOVE.W  -1278(A5),-(A7)
+0ec8: 486d        PEA     -1282(A5)
+0ecc: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0ed0: 6000        BRA     0x1080
+0ed4: 0c40        CMPI.W  #0x2d6 (726),D0
+0ed8: 6600        BNE     0x0eec
+0edc: 3f2d        MOVE.W  -1296(A5),-(A7)
+0ee0: 486d        PEA     -1300(A5)
+0ee4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0ee8: 6000        BRA     0x1080
+0eec: 0c40        CMPI.W  #0x2d7 (727),D0
+0ef0: 6600        BNE     0x0f04
+0ef4: 3f2d        MOVE.W  -1314(A5),-(A7)
+0ef8: 486d        PEA     -1318(A5)
+0efc: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f00: 6000        BRA     0x1080
+0f04: 0c40        CMPI.W  #0x2d8 (728),D0
+0f08: 6600        BNE     0x0f1c
+0f0c: 3f2d        MOVE.W  -1332(A5),-(A7)
+0f10: 486d        PEA     -1336(A5)
+0f14: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f18: 6000        BRA     0x1080
+0f1c: 0c40        CMPI.W  #0x2d9 (729),D0
+0f20: 6600        BNE     0x0f34
+0f24: 3f2d        MOVE.W  -1350(A5),-(A7)
+0f28: 486d        PEA     -1354(A5)
+0f2c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f30: 6000        BRA     0x1080
+0f34: 0c40        CMPI.W  #0x2da (730),D0
+0f38: 6600        BNE     0x0f4c
+0f3c: 3f2d        MOVE.W  -1368(A5),-(A7)
+0f40: 486d        PEA     -1372(A5)
+0f44: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f48: 6000        BRA     0x1080
+0f4c: 0c40        CMPI.W  #0x2db (731),D0
+0f50: 6600        BNE     0x0f64
+0f54: 3f2d        MOVE.W  -1386(A5),-(A7)
+0f58: 486d        PEA     -1390(A5)
+0f5c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f60: 6000        BRA     0x1080
+0f64: 0c40        CMPI.W  #0x2dc (732),D0
+0f68: 6600        BNE     0x0f7c
+0f6c: 3f2d        MOVE.W  -1404(A5),-(A7)
+0f70: 486d        PEA     -1408(A5)
+0f74: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f78: 6000        BRA     0x1080
+0f7c: 0c40        CMPI.W  #0x2dd (733),D0
+0f80: 6600        BNE     0x0f94
+0f84: 3f2d        MOVE.W  -1422(A5),-(A7)
+0f88: 486d        PEA     -1426(A5)
+0f8c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0f90: 6000        BRA     0x1080
+0f94: 0c40        CMPI.W  #0x2de (734),D0
+0f98: 6600        BNE     0x0fac
+0f9c: 3f2d        MOVE.W  -1440(A5),-(A7)
+0fa0: 486d        PEA     -1444(A5)
+0fa4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0fa8: 6000        BRA     0x1080
+0fac: 0c40        CMPI.W  #0x2df (735),D0
+0fb0: 6600        BNE     0x0fc4
+0fb4: 3f2d        MOVE.W  -1458(A5),-(A7)
+0fb8: 486d        PEA     -1462(A5)
+0fbc: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0fc0: 6000        BRA     0x1080
+0fc4: 0c40        CMPI.W  #0x2e0 (736),D0
+0fc8: 6600        BNE     0x0fdc
+0fcc: 3f2d        MOVE.W  -1476(A5),-(A7)
+0fd0: 486d        PEA     -1480(A5)
+0fd4: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0fd8: 6000        BRA     0x1080
+0fdc: 0c40        CMPI.W  #0x2e1 (737),D0
+0fe0: 6600        BNE     0x0ff4
+0fe4: 3f2d        MOVE.W  -1494(A5),-(A7)
+0fe8: 486d        PEA     -1498(A5)
+0fec: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+0ff0: 6000        BRA     0x1080
+0ff4: 0c40        CMPI.W  #0x2e2 (738),D0
+0ff8: 6600        BNE     0x100c
+0ffc: 3f2d        MOVE.W  -1512(A5),-(A7)
+1000: 486d        PEA     -1516(A5)
+1004: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1008: 6000        BRA     0x1080
+100c: 0c40        CMPI.W  #0x2e3 (739),D0
+1010: 6600        BNE     0x1024
+1014: 3f2d        MOVE.W  -1530(A5),-(A7)
+1018: 486d        PEA     -1534(A5)
+101c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1020: 6000        BRA     0x1080
+1024: 0c40        CMPI.W  #0x2e4 (740),D0
+1028: 6600        BNE     0x103c
+102c: 3f2d        MOVE.W  -1548(A5),-(A7)
+1030: 486d        PEA     -1552(A5)
+1034: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1038: 6000        BRA     0x1080
+103c: 0c40        CMPI.W  #0x2e5 (741),D0
+1040: 6600        BNE     0x1054
+1044: 3f2d        MOVE.W  -1566(A5),-(A7)
+1048: 486d        PEA     -1570(A5)
+104c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1050: 6000        BRA     0x1080
+1054: 0c40        CMPI.W  #0x2e6 (742),D0
+1058: 6600        BNE     0x106c
+105c: 3f2d        MOVE.W  -1584(A5),-(A7)
+1060: 486d        PEA     -1588(A5)
+1064: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1068: 6000        BRA     0x1080
+106c: 0c40        CMPI.W  #0x2e7 (743),D0
+1070: 6600        BNE     0x1080
+1074: 3f2d        MOVE.W  -1602(A5),-(A7)
+1078: 486d        PEA     -1606(A5)
+107c: 4ead        JSR     234(A5) [CODE_4+0x4d2]
+1080: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1084: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1088: a893        _MoveTo
+108a: 487a        PEA     64(PC) [0x10cc ; pstr='The fee for this work is $500.  Please remit immediately.']
+108e: a884        _DrawString
+1090: 202d        MOVE.L  -1696(A5),D0
+1094: 0480        SUBI.L  #0x1f4,D0
+109a: 2b40        MOVE.L  D0,-1696(A5)
+109e: 1b7c        MOVE.B  #0x1 (1),-244(A5)
+10a4: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+10a8: 4e5e        UNLK    A6
+10aa: 205f        MOVEA.L  (A7)+,A0
+10ac: 548f        ADDQ.L  #2,A7
+10ae: 4ed0        JMP     (A0)
+10b0: 1b50        MOVE.B  (A0),29289(A5)
+10b4: 7661        MOVEQ   #97,D3
+10b6: 7465        MOVEQ   #101,D2
+10b8: 2044        MOVEA.L  D4,A0
+10ba: 6574        BCS     0x1130
+10bc: 6563        BCS     0x1121
+10be: 7469        MOVEQ   #105,D2
+10c0: 7665        MOVEQ   #101,D3
+10c2: 2072        MOVEA.L  112(A2,D6.W),A0
+10c6: 6f72        BLE     0x113a
+10c8: 743a        MOVEQ   #58,D2
+10ca: 2020        MOVE.L  -(A0),D0
+10cc: 3954        MOVE.W  (A4),26725(A4)
+10d0: 2066        MOVEA.L  -(A6),A0
+10d2: 6565        BCS     0x1139
+10d4: 2066        MOVEA.L  -(A6),A0
+10d6: 6f72        BLE     0x114a
+10d8: 2074        MOVEA.L  105(A4,D6.L),A0
+10dc: 7320        DC.W    0x7320
+10de: 776f        DC.W    0x776f
+10e0: 726b        MOVEQ   #107,D1
+10e2: 2069        MOVEA.L  29472(A1),A0
+10e6: 2435        MOVE.L  48(A5,D3.W),D2
+10ea: 2e20        MOVE.L  -(A0),D7
+10ec: 2050        MOVEA.L  (A0),A0
+10ee: 6c65        BGE     0x1155
+10f0: 6173        BSR     0x1165
+10f2: 6520        BCS     0x1114
+10f4: 7265        MOVEQ   #101,D1
+10f6: 6d69        BLT     0x1161
+10f8: 7420        MOVEQ   #32,D2
+10fa: 696d        BVS     0x1169
+10fc: 6d65        BLT     0x1163
+10fe: 6469        BCC     0x1169
+1100: 6174        BSR     0x1176
+1102: 656c        BCS     0x1170
+1104: 792e        DC.W    0x792e
+1106: 0000        ORI.B  #0x0 (0),D0
+
+110a: 4e56        LINK    A6,#0
+110e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1112: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1116: 3f3c        MOVE.W  #0x32 (50),-(A7)
+111a: a893        _MoveTo
+111c: 302e        MOVE.W  8(A6),D0
+1120: 0c40        CMPI.W  #0x2bc (700),D0
+1124: 6600        BNE     0x1176
+1128: 487a        PEA     3782(PC) [0x1ff0 ; pstr='Al Able']
+112c: a884        _DrawString
+112e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1132: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1136: a893        _MoveTo
+1138: 487a        PEA     3774(PC) [0x1ff8 ; pstr='Reputation:  ']
+113c: a884        _DrawString
+113e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1142: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1146: a893        _MoveTo
+1148: 3f2d        MOVE.W  -854(A5),-(A7)
+114c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1150: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1154: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1158: a893        _MoveTo
+115a: 487a        PEA     3754(PC) [0x2006 ; pstr='Rumor(s):  ']
+115e: a884        _DrawString
+1160: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1164: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1168: a893        _MoveTo
+116a: 3f2d        MOVE.W  -856(A5),-(A7)
+116e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1172: 6000        BRA     0x1fe4
+1176: 0c40        CMPI.W  #0x2bd (701),D0
+117a: 6600        BNE     0x11cc
+117e: 487a        PEA     3730(PC) [0x2012 ; pstr='Anna Able']
+1182: a884        _DrawString
+1184: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1188: 3f3c        MOVE.W  #0x46 (70),-(A7)
+118c: a893        _MoveTo
+118e: 487a        PEA     3724(PC) [0x201c ; pstr='Reputation:  ']
+1192: a884        _DrawString
+1194: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1198: 3f3c        MOVE.W  #0x5a (90),-(A7)
+119c: a893        _MoveTo
+119e: 3f2d        MOVE.W  -872(A5),-(A7)
+11a2: 4ead        JSR     226(A5) [CODE_4+0x42]
+11a6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+11aa: 3f3c        MOVE.W  #0x6e (110),-(A7)
+11ae: a893        _MoveTo
+11b0: 487a        PEA     3704(PC) [0x202a ; pstr='Rumor(s):  ']
+11b4: a884        _DrawString
+11b6: 3f3c        MOVE.W  #0x64 (100),-(A7)
+11ba: 3f3c        MOVE.W  #0x82 (130),-(A7)
+11be: a893        _MoveTo
+11c0: 3f2d        MOVE.W  -874(A5),-(A7)
+11c4: 4ead        JSR     226(A5) [CODE_4+0x42]
+11c8: 6000        BRA     0x1fe4
+11cc: 0c40        CMPI.W  #0x2be (702),D0
+11d0: 6600        BNE     0x1222
+11d4: 487a        PEA     3680(PC) [0x2036 ; pstr='Bob Baker']
+11d8: a884        _DrawString
+11da: 3f3c        MOVE.W  #0x32 (50),-(A7)
+11de: 3f3c        MOVE.W  #0x46 (70),-(A7)
+11e2: a893        _MoveTo
+11e4: 487a        PEA     3674(PC) [0x2040 ; pstr='Reputation:  ']
+11e8: a884        _DrawString
+11ea: 3f3c        MOVE.W  #0x64 (100),-(A7)
+11ee: 3f3c        MOVE.W  #0x5a (90),-(A7)
+11f2: a893        _MoveTo
+11f4: 3f2d        MOVE.W  -890(A5),-(A7)
+11f8: 4ead        JSR     226(A5) [CODE_4+0x42]
+11fc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1200: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1204: a893        _MoveTo
+1206: 487a        PEA     3654(PC) [0x204e ; pstr='Rumor(s):  ']
+120a: a884        _DrawString
+120c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1210: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1214: a893        _MoveTo
+1216: 3f2d        MOVE.W  -892(A5),-(A7)
+121a: 4ead        JSR     226(A5) [CODE_4+0x42]
+121e: 6000        BRA     0x1fe4
+1222: 0c40        CMPI.W  #0x2bf (703),D0
+1226: 6600        BNE     0x1278
+122a: 487a        PEA     3630(PC) [0x205a ; pstr='Betty Baker']
+122e: a884        _DrawString
+1230: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1234: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1238: a893        _MoveTo
+123a: 487a        PEA     3626(PC) [0x2066 ; pstr='Reputation:  ']
+123e: a884        _DrawString
+1240: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1244: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1248: a893        _MoveTo
+124a: 3f2d        MOVE.W  -908(A5),-(A7)
+124e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1252: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1256: 3f3c        MOVE.W  #0x6e (110),-(A7)
+125a: a893        _MoveTo
+125c: 487a        PEA     3606(PC) [0x2074 ; pstr='Rumor(s):  ']
+1260: a884        _DrawString
+1262: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1266: 3f3c        MOVE.W  #0x82 (130),-(A7)
+126a: a893        _MoveTo
+126c: 3f2d        MOVE.W  -910(A5),-(A7)
+1270: 4ead        JSR     226(A5) [CODE_4+0x42]
+1274: 6000        BRA     0x1fe4
+1278: 0c40        CMPI.W  #0x2c0 (704),D0
+127c: 6600        BNE     0x12ce
+1280: 487a        PEA     3582(PC) [0x2080 ; pstr='Charles Cook']
+1284: a884        _DrawString
+1286: 3f3c        MOVE.W  #0x32 (50),-(A7)
+128a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+128e: a893        _MoveTo
+1290: 487a        PEA     3580(PC) [0x208e ; pstr='Reputation:  ']
+1294: a884        _DrawString
+1296: 3f3c        MOVE.W  #0x64 (100),-(A7)
+129a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+129e: a893        _MoveTo
+12a0: 3f2d        MOVE.W  -926(A5),-(A7)
+12a4: 4ead        JSR     226(A5) [CODE_4+0x42]
+12a8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12ac: 3f3c        MOVE.W  #0x6e (110),-(A7)
+12b0: a893        _MoveTo
+12b2: 487a        PEA     3560(PC) [0x209c ; pstr='Rumor(s):  ']
+12b6: a884        _DrawString
+12b8: 3f3c        MOVE.W  #0x64 (100),-(A7)
+12bc: 3f3c        MOVE.W  #0x82 (130),-(A7)
+12c0: a893        _MoveTo
+12c2: 3f2d        MOVE.W  -928(A5),-(A7)
+12c6: 4ead        JSR     226(A5) [CODE_4+0x42]
+12ca: 6000        BRA     0x1fe4
+12ce: 0c40        CMPI.W  #0x2c1 (705),D0
+12d2: 6600        BNE     0x1324
+12d6: 487a        PEA     3536(PC) [0x20a8 ; pstr='Cathy Cook']
+12da: a884        _DrawString
+12dc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12e0: 3f3c        MOVE.W  #0x46 (70),-(A7)
+12e4: a893        _MoveTo
+12e6: 487a        PEA     3532(PC) [0x20b4 ; pstr='Reputation:  ']
+12ea: a884        _DrawString
+12ec: 3f3c        MOVE.W  #0x64 (100),-(A7)
+12f0: 3f3c        MOVE.W  #0x5a (90),-(A7)
+12f4: a893        _MoveTo
+12f6: 3f2d        MOVE.W  -944(A5),-(A7)
+12fa: 4ead        JSR     226(A5) [CODE_4+0x42]
+12fe: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1302: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1306: a893        _MoveTo
+1308: 487a        PEA     3512(PC) [0x20c2 ; pstr='Rumor(s):  ']
+130c: a884        _DrawString
+130e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1312: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1316: a893        _MoveTo
+1318: 3f2d        MOVE.W  -946(A5),-(A7)
+131c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1320: 6000        BRA     0x1fe4
+1324: 0c40        CMPI.W  #0x2c2 (706),D0
+1328: 6600        BNE     0x137a
+132c: 487a        PEA     3488(PC) [0x20ce ; pstr='Dan Davis']
+1330: a884        _DrawString
+1332: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1336: 3f3c        MOVE.W  #0x46 (70),-(A7)
+133a: a893        _MoveTo
+133c: 487a        PEA     3482(PC) [0x20d8 ; pstr='Reputation:  ']
+1340: a884        _DrawString
+1342: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1346: 3f3c        MOVE.W  #0x5a (90),-(A7)
+134a: a893        _MoveTo
+134c: 3f2d        MOVE.W  -962(A5),-(A7)
+1350: 4ead        JSR     226(A5) [CODE_4+0x42]
+1354: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1358: 3f3c        MOVE.W  #0x6e (110),-(A7)
+135c: a893        _MoveTo
+135e: 487a        PEA     3462(PC) [0x20e6 ; pstr='Rumor(s):  ']
+1362: a884        _DrawString
+1364: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1368: 3f3c        MOVE.W  #0x82 (130),-(A7)
+136c: a893        _MoveTo
+136e: 3f2d        MOVE.W  -964(A5),-(A7)
+1372: 4ead        JSR     226(A5) [CODE_4+0x42]
+1376: 6000        BRA     0x1fe4
+137a: 0c40        CMPI.W  #0x2c3 (707),D0
+137e: 6600        BNE     0x13d0
+1382: 487a        PEA     3438(PC) [0x20f2 ; pstr='Dottie Davis']
+1386: a884        _DrawString
+1388: 3f3c        MOVE.W  #0x32 (50),-(A7)
+138c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1390: a893        _MoveTo
+1392: 487a        PEA     3436(PC) [0x2100 ; pstr='Reputation:  ']
+1396: a884        _DrawString
+1398: 3f3c        MOVE.W  #0x64 (100),-(A7)
+139c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+13a0: a893        _MoveTo
+13a2: 3f2d        MOVE.W  -980(A5),-(A7)
+13a6: 4ead        JSR     226(A5) [CODE_4+0x42]
+13aa: 3f3c        MOVE.W  #0x32 (50),-(A7)
+13ae: 3f3c        MOVE.W  #0x6e (110),-(A7)
+13b2: a893        _MoveTo
+13b4: 487a        PEA     3416(PC) [0x210e ; pstr='Rumor(s):  ']
+13b8: a884        _DrawString
+13ba: 3f3c        MOVE.W  #0x64 (100),-(A7)
+13be: 3f3c        MOVE.W  #0x82 (130),-(A7)
+13c2: a893        _MoveTo
+13c4: 3f2d        MOVE.W  -982(A5),-(A7)
+13c8: 4ead        JSR     226(A5) [CODE_4+0x42]
+13cc: 6000        BRA     0x1fe4
+13d0: 0c40        CMPI.W  #0x2c4 (708),D0
+13d4: 6600        BNE     0x1426
+13d8: 487a        PEA     3392(PC) [0x211a ; pstr='Ed Ellis']
+13dc: a884        _DrawString
+13de: 3f3c        MOVE.W  #0x32 (50),-(A7)
+13e2: 3f3c        MOVE.W  #0x46 (70),-(A7)
+13e6: a893        _MoveTo
+13e8: 487a        PEA     3386(PC) [0x2124 ; pstr='Reputation:  ']
+13ec: a884        _DrawString
+13ee: 3f3c        MOVE.W  #0x64 (100),-(A7)
+13f2: 3f3c        MOVE.W  #0x5a (90),-(A7)
+13f6: a893        _MoveTo
+13f8: 3f2d        MOVE.W  -998(A5),-(A7)
+13fc: 4ead        JSR     226(A5) [CODE_4+0x42]
+1400: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1404: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1408: a893        _MoveTo
+140a: 487a        PEA     3366(PC) [0x2132 ; pstr='Rumor(s):  ']
+140e: a884        _DrawString
+1410: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1414: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1418: a893        _MoveTo
+141a: 3f2d        MOVE.W  -1000(A5),-(A7)
+141e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1422: 6000        BRA     0x1fe4
+1426: 0c40        CMPI.W  #0x2c5 (709),D0
+142a: 6600        BNE     0x147c
+142e: 487a        PEA     3342(PC) [0x213e ; pstr='Ellen Ellis']
+1432: a884        _DrawString
+1434: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1438: 3f3c        MOVE.W  #0x46 (70),-(A7)
+143c: a893        _MoveTo
+143e: 487a        PEA     3338(PC) [0x214a ; pstr='Reputation:  ']
+1442: a884        _DrawString
+1444: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1448: 3f3c        MOVE.W  #0x5a (90),-(A7)
+144c: a893        _MoveTo
+144e: 3f2d        MOVE.W  -1016(A5),-(A7)
+1452: 4ead        JSR     226(A5) [CODE_4+0x42]
+1456: 3f3c        MOVE.W  #0x32 (50),-(A7)
+145a: 3f3c        MOVE.W  #0x6e (110),-(A7)
+145e: a893        _MoveTo
+1460: 487a        PEA     3318(PC) [0x2158 ; pstr='Rumor(s):  ']
+1464: a884        _DrawString
+1466: 3f3c        MOVE.W  #0x64 (100),-(A7)
+146a: 3f3c        MOVE.W  #0x82 (130),-(A7)
+146e: a893        _MoveTo
+1470: 3f2d        MOVE.W  -1018(A5),-(A7)
+1474: 4ead        JSR     226(A5) [CODE_4+0x42]
+1478: 6000        BRA     0x1fe4
+147c: 0c40        CMPI.W  #0x2c6 (710),D0
+1480: 6600        BNE     0x14d2
+1484: 487a        PEA     3294(PC) [0x2164 ; pstr='Fred Fox']
+1488: a884        _DrawString
+148a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+148e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1492: a893        _MoveTo
+1494: 487a        PEA     3288(PC) [0x216e ; pstr='Reputation:  ']
+1498: a884        _DrawString
+149a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+149e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+14a2: a893        _MoveTo
+14a4: 3f2d        MOVE.W  -1610(A5),-(A7)
+14a8: 4ead        JSR     226(A5) [CODE_4+0x42]
+14ac: 3f3c        MOVE.W  #0x32 (50),-(A7)
+14b0: 3f3c        MOVE.W  #0x6e (110),-(A7)
+14b4: a893        _MoveTo
+14b6: 487a        PEA     3268(PC) [0x217c ; pstr='Rumor(s):  ']
+14ba: a884        _DrawString
+14bc: 3f3c        MOVE.W  #0x64 (100),-(A7)
+14c0: 3f3c        MOVE.W  #0x82 (130),-(A7)
+14c4: a893        _MoveTo
+14c6: 3f2d        MOVE.W  -1612(A5),-(A7)
+14ca: 4ead        JSR     226(A5) [CODE_4+0x42]
+14ce: 6000        BRA     0x1fe4
+14d2: 0c40        CMPI.W  #0x2c7 (711),D0
+14d6: 6600        BNE     0x1528
+14da: 487a        PEA     3244(PC) [0x2188 ; pstr='Fay Fox']
+14de: a884        _DrawString
+14e0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+14e4: 3f3c        MOVE.W  #0x46 (70),-(A7)
+14e8: a893        _MoveTo
+14ea: 487a        PEA     3236(PC) [0x2190 ; pstr='Reputation:  ']
+14ee: a884        _DrawString
+14f0: 3f3c        MOVE.W  #0x64 (100),-(A7)
+14f4: 3f3c        MOVE.W  #0x5a (90),-(A7)
+14f8: a893        _MoveTo
+14fa: 3f2d        MOVE.W  -1628(A5),-(A7)
+14fe: 4ead        JSR     226(A5) [CODE_4+0x42]
+1502: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1506: 3f3c        MOVE.W  #0x6e (110),-(A7)
+150a: a893        _MoveTo
+150c: 487a        PEA     3216(PC) [0x219e ; pstr='Rumor(s):  ']
+1510: a884        _DrawString
+1512: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1516: 3f3c        MOVE.W  #0x82 (130),-(A7)
+151a: a893        _MoveTo
+151c: 3f2d        MOVE.W  -1630(A5),-(A7)
+1520: 4ead        JSR     226(A5) [CODE_4+0x42]
+1524: 6000        BRA     0x1fe4
+1528: 0c40        CMPI.W  #0x2c8 (712),D0
+152c: 6600        BNE     0x157e
+1530: 487a        PEA     3192(PC) [0x21aa ; pstr='Glen Giles']
+1534: a884        _DrawString
+1536: 3f3c        MOVE.W  #0x32 (50),-(A7)
+153a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+153e: a893        _MoveTo
+1540: 487a        PEA     3188(PC) [0x21b6 ; pstr='Reputation:  ']
+1544: a884        _DrawString
+1546: 3f3c        MOVE.W  #0x64 (100),-(A7)
+154a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+154e: a893        _MoveTo
+1550: 3f2d        MOVE.W  -1034(A5),-(A7)
+1554: 4ead        JSR     226(A5) [CODE_4+0x42]
+1558: 3f3c        MOVE.W  #0x32 (50),-(A7)
+155c: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1560: a893        _MoveTo
+1562: 487a        PEA     3168(PC) [0x21c4 ; pstr='Rumor(s):  ']
+1566: a884        _DrawString
+1568: 3f3c        MOVE.W  #0x64 (100),-(A7)
+156c: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1570: a893        _MoveTo
+1572: 3f2d        MOVE.W  -1036(A5),-(A7)
+1576: 4ead        JSR     226(A5) [CODE_4+0x42]
+157a: 6000        BRA     0x1fe4
+157e: 0c40        CMPI.W  #0x2c9 (713),D0
+1582: 6600        BNE     0x15d4
+1586: 487a        PEA     3144(PC) [0x21d0 ; pstr='Gail Giles']
+158a: a884        _DrawString
+158c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1590: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1594: a893        _MoveTo
+1596: 487a        PEA     3140(PC) [0x21dc ; pstr='Reputation:  ']
+159a: a884        _DrawString
+159c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+15a0: 3f3c        MOVE.W  #0x5a (90),-(A7)
+15a4: a893        _MoveTo
+15a6: 3f2d        MOVE.W  -1052(A5),-(A7)
+15aa: 4ead        JSR     226(A5) [CODE_4+0x42]
+15ae: 3f3c        MOVE.W  #0x32 (50),-(A7)
+15b2: 3f3c        MOVE.W  #0x6e (110),-(A7)
+15b6: a893        _MoveTo
+15b8: 487a        PEA     3120(PC) [0x21ea ; pstr='Rumor(s):  ']
+15bc: a884        _DrawString
+15be: 3f3c        MOVE.W  #0x64 (100),-(A7)
+15c2: 3f3c        MOVE.W  #0x82 (130),-(A7)
+15c6: a893        _MoveTo
+15c8: 3f2d        MOVE.W  -1054(A5),-(A7)
+15cc: 4ead        JSR     226(A5) [CODE_4+0x42]
+15d0: 6000        BRA     0x1fe4
+15d4: 0c40        CMPI.W  #0x2ca (714),D0
+15d8: 6600        BNE     0x162a
+15dc: 487a        PEA     3096(PC) [0x21f6 ; pstr='Harry Hall']
+15e0: a884        _DrawString
+15e2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+15e6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+15ea: a893        _MoveTo
+15ec: 487a        PEA     3092(PC) [0x2202 ; pstr='Reputation:  ']
+15f0: a884        _DrawString
+15f2: 3f3c        MOVE.W  #0x64 (100),-(A7)
+15f6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+15fa: a893        _MoveTo
+15fc: 3f2d        MOVE.W  -1070(A5),-(A7)
+1600: 4ead        JSR     226(A5) [CODE_4+0x42]
+1604: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1608: 3f3c        MOVE.W  #0x6e (110),-(A7)
+160c: a893        _MoveTo
+160e: 487a        PEA     3072(PC) [0x2210 ; pstr='Rumor(s):  ']
+1612: a884        _DrawString
+1614: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1618: 3f3c        MOVE.W  #0x82 (130),-(A7)
+161c: a893        _MoveTo
+161e: 3f2d        MOVE.W  -1072(A5),-(A7)
+1622: 4ead        JSR     226(A5) [CODE_4+0x42]
+1626: 6000        BRA     0x1fe4
+162a: 0c40        CMPI.W  #0x2cb (715),D0
+162e: 6600        BNE     0x1680
+1632: 487a        PEA     3048(PC) [0x221c ; pstr='Holly Hall']
+1636: a884        _DrawString
+1638: 3f3c        MOVE.W  #0x32 (50),-(A7)
+163c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1640: a893        _MoveTo
+1642: 487a        PEA     3044(PC) [0x2228 ; pstr='Reputation:  ']
+1646: a884        _DrawString
+1648: 3f3c        MOVE.W  #0x64 (100),-(A7)
+164c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1650: a893        _MoveTo
+1652: 3f2d        MOVE.W  -1088(A5),-(A7)
+1656: 4ead        JSR     226(A5) [CODE_4+0x42]
+165a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+165e: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1662: a893        _MoveTo
+1664: 487a        PEA     3024(PC) [0x2236 ; pstr='Rumor(s):  ']
+1668: a884        _DrawString
+166a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+166e: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1672: a893        _MoveTo
+1674: 3f2d        MOVE.W  -1090(A5),-(A7)
+1678: 4ead        JSR     226(A5) [CODE_4+0x42]
+167c: 6000        BRA     0x1fe4
+1680: 0c40        CMPI.W  #0x2cc (716),D0
+1684: 6600        BNE     0x16d6
+1688: 487a        PEA     3000(PC) [0x2242 ; pstr='Irwin Idle']
+168c: a884        _DrawString
+168e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1692: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1696: a893        _MoveTo
+1698: 487a        PEA     2996(PC) [0x224e ; pstr='Reputation:  ']
+169c: a884        _DrawString
+169e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+16a2: 3f3c        MOVE.W  #0x5a (90),-(A7)
+16a6: a893        _MoveTo
+16a8: 3f2d        MOVE.W  -1106(A5),-(A7)
+16ac: 4ead        JSR     226(A5) [CODE_4+0x42]
+16b0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+16b4: 3f3c        MOVE.W  #0x6e (110),-(A7)
+16b8: a893        _MoveTo
+16ba: 487a        PEA     2976(PC) [0x225c ; pstr='Rumor(s):  ']
+16be: a884        _DrawString
+16c0: 3f3c        MOVE.W  #0x64 (100),-(A7)
+16c4: 3f3c        MOVE.W  #0x82 (130),-(A7)
+16c8: a893        _MoveTo
+16ca: 3f2d        MOVE.W  -1108(A5),-(A7)
+16ce: 4ead        JSR     226(A5) [CODE_4+0x42]
+16d2: 6000        BRA     0x1fe4
+16d6: 0c40        CMPI.W  #0x2cd (717),D0
+16da: 6600        BNE     0x172c
+16de: 487a        PEA     2952(PC) [0x2268 ; pstr='Inger Idle']
+16e2: a884        _DrawString
+16e4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+16e8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+16ec: a893        _MoveTo
+16ee: 487a        PEA     2948(PC) [0x2274 ; pstr='Reputation:  ']
+16f2: a884        _DrawString
+16f4: 3f3c        MOVE.W  #0x64 (100),-(A7)
+16f8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+16fc: a893        _MoveTo
+16fe: 3f2d        MOVE.W  -1124(A5),-(A7)
+1702: 4ead        JSR     226(A5) [CODE_4+0x42]
+1706: 3f3c        MOVE.W  #0x32 (50),-(A7)
+170a: 3f3c        MOVE.W  #0x6e (110),-(A7)
+170e: a893        _MoveTo
+1710: 487a        PEA     2928(PC) [0x2282 ; pstr='Rumor(s):  ']
+1714: a884        _DrawString
+1716: 3f3c        MOVE.W  #0x64 (100),-(A7)
+171a: 3f3c        MOVE.W  #0x82 (130),-(A7)
+171e: a893        _MoveTo
+1720: 3f2d        MOVE.W  -1126(A5),-(A7)
+1724: 4ead        JSR     226(A5) [CODE_4+0x42]
+1728: 6000        BRA     0x1fe4
+172c: 0c40        CMPI.W  #0x2ce (718),D0
+1730: 6600        BNE     0x1782
+1734: 487a        PEA     2904(PC) [0x228e ; pstr='John Jones']
+1738: a884        _DrawString
+173a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+173e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1742: a893        _MoveTo
+1744: 487a        PEA     2900(PC) [0x229a ; pstr='Reputation:  ']
+1748: a884        _DrawString
+174a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+174e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1752: a893        _MoveTo
+1754: 3f2d        MOVE.W  -1142(A5),-(A7)
+1758: 4ead        JSR     226(A5) [CODE_4+0x42]
+175c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1760: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1764: a893        _MoveTo
+1766: 487a        PEA     2880(PC) [0x22a8 ; pstr='Rumor(s):  ']
+176a: a884        _DrawString
+176c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1770: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1774: a893        _MoveTo
+1776: 3f2d        MOVE.W  -1144(A5),-(A7)
+177a: 4ead        JSR     226(A5) [CODE_4+0x42]
+177e: 6000        BRA     0x1fe4
+1782: 0c40        CMPI.W  #0x2cf (719),D0
+1786: 6600        BNE     0x17d8
+178a: 487a        PEA     2856(PC) [0x22b4 ; pstr='Janet Jones']
+178e: a884        _DrawString
+1790: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1794: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1798: a893        _MoveTo
+179a: 487a        PEA     2852(PC) [0x22c0 ; pstr='Reputation:  ']
+179e: a884        _DrawString
+17a0: 3f3c        MOVE.W  #0x64 (100),-(A7)
+17a4: 3f3c        MOVE.W  #0x5a (90),-(A7)
+17a8: a893        _MoveTo
+17aa: 3f2d        MOVE.W  -1160(A5),-(A7)
+17ae: 4ead        JSR     226(A5) [CODE_4+0x42]
+17b2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17b6: 3f3c        MOVE.W  #0x6e (110),-(A7)
+17ba: a893        _MoveTo
+17bc: 487a        PEA     2832(PC) [0x22ce ; pstr='Rumor(s):  ']
+17c0: a884        _DrawString
+17c2: 3f3c        MOVE.W  #0x64 (100),-(A7)
+17c6: 3f3c        MOVE.W  #0x82 (130),-(A7)
+17ca: a893        _MoveTo
+17cc: 3f2d        MOVE.W  -1162(A5),-(A7)
+17d0: 4ead        JSR     226(A5) [CODE_4+0x42]
+17d4: 6000        BRA     0x1fe4
+17d8: 0c40        CMPI.W  #0x2d0 (720),D0
+17dc: 6600        BNE     0x182e
+17e0: 487a        PEA     2808(PC) [0x22da ; pstr='Kirk King']
+17e4: a884        _DrawString
+17e6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17ea: 3f3c        MOVE.W  #0x46 (70),-(A7)
+17ee: a893        _MoveTo
+17f0: 487a        PEA     2802(PC) [0x22e4 ; pstr='Reputation:  ']
+17f4: a884        _DrawString
+17f6: 3f3c        MOVE.W  #0x64 (100),-(A7)
+17fa: 3f3c        MOVE.W  #0x5a (90),-(A7)
+17fe: a893        _MoveTo
+1800: 3f2d        MOVE.W  -1178(A5),-(A7)
+1804: 4ead        JSR     226(A5) [CODE_4+0x42]
+1808: 3f3c        MOVE.W  #0x32 (50),-(A7)
+180c: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1810: a893        _MoveTo
+1812: 487a        PEA     2782(PC) [0x22f2 ; pstr='Rumor(s):  ']
+1816: a884        _DrawString
+1818: 3f3c        MOVE.W  #0x64 (100),-(A7)
+181c: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1820: a893        _MoveTo
+1822: 3f2d        MOVE.W  -1180(A5),-(A7)
+1826: 4ead        JSR     226(A5) [CODE_4+0x42]
+182a: 6000        BRA     0x1fe4
+182e: 0c40        CMPI.W  #0x2d1 (721),D0
+1832: 6600        BNE     0x1884
+1836: 487a        PEA     2758(PC) [0x22fe ; pstr='Karen King']
+183a: a884        _DrawString
+183c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1840: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1844: a893        _MoveTo
+1846: 487a        PEA     2754(PC) [0x230a ; pstr='Reputation:  ']
+184a: a884        _DrawString
+184c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1850: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1854: a893        _MoveTo
+1856: 3f2d        MOVE.W  -1196(A5),-(A7)
+185a: 4ead        JSR     226(A5) [CODE_4+0x42]
+185e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1862: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1866: a893        _MoveTo
+1868: 487a        PEA     2734(PC) [0x2318 ; pstr='Rumor(s):  ']
+186c: a884        _DrawString
+186e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1872: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1876: a893        _MoveTo
+1878: 3f2d        MOVE.W  -1198(A5),-(A7)
+187c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1880: 6000        BRA     0x1fe4
+1884: 0c40        CMPI.W  #0x2d2 (722),D0
+1888: 6600        BNE     0x18da
+188c: 487a        PEA     2710(PC) [0x2324 ; pstr='Leon Long']
+1890: a884        _DrawString
+1892: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1896: 3f3c        MOVE.W  #0x46 (70),-(A7)
+189a: a893        _MoveTo
+189c: 487a        PEA     2704(PC) [0x232e ; pstr='Reputation:  ']
+18a0: a884        _DrawString
+18a2: 3f3c        MOVE.W  #0x64 (100),-(A7)
+18a6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+18aa: a893        _MoveTo
+18ac: 3f2d        MOVE.W  -1214(A5),-(A7)
+18b0: 4ead        JSR     226(A5) [CODE_4+0x42]
+18b4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+18b8: 3f3c        MOVE.W  #0x6e (110),-(A7)
+18bc: a893        _MoveTo
+18be: 487a        PEA     2684(PC) [0x233c ; pstr='Rumor(s):  ']
+18c2: a884        _DrawString
+18c4: 3f3c        MOVE.W  #0x64 (100),-(A7)
+18c8: 3f3c        MOVE.W  #0x82 (130),-(A7)
+18cc: a893        _MoveTo
+18ce: 3f2d        MOVE.W  -1216(A5),-(A7)
+18d2: 4ead        JSR     226(A5) [CODE_4+0x42]
+18d6: 6000        BRA     0x1fe4
+18da: 0c40        CMPI.W  #0x2d3 (723),D0
+18de: 6600        BNE     0x1930
+18e2: 487a        PEA     2660(PC) [0x2348 ; pstr='Lily Long']
+18e6: a884        _DrawString
+18e8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+18ec: 3f3c        MOVE.W  #0x46 (70),-(A7)
+18f0: a893        _MoveTo
+18f2: 487a        PEA     2654(PC) [0x2352 ; pstr='Reputation:  ']
+18f6: a884        _DrawString
+18f8: 3f3c        MOVE.W  #0x64 (100),-(A7)
+18fc: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1900: a893        _MoveTo
+1902: 3f2d        MOVE.W  -1232(A5),-(A7)
+1906: 4ead        JSR     226(A5) [CODE_4+0x42]
+190a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+190e: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1912: a893        _MoveTo
+1914: 487a        PEA     2634(PC) [0x2360 ; pstr='Rumor(s):  ']
+1918: a884        _DrawString
+191a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+191e: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1922: a893        _MoveTo
+1924: 3f2d        MOVE.W  -1234(A5),-(A7)
+1928: 4ead        JSR     226(A5) [CODE_4+0x42]
+192c: 6000        BRA     0x1fe4
+1930: 0c40        CMPI.W  #0x2d4 (724),D0
+1934: 6600        BNE     0x1986
+1938: 487a        PEA     2610(PC) [0x236c ; pstr='Max MacNasty']
+193c: a884        _DrawString
+193e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1942: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1946: a893        _MoveTo
+1948: 487a        PEA     2608(PC) [0x237a ; pstr='Reputation:  ']
+194c: a884        _DrawString
+194e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1952: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1956: a893        _MoveTo
+1958: 3f2d        MOVE.W  -1250(A5),-(A7)
+195c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1960: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1964: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1968: a893        _MoveTo
+196a: 487a        PEA     2588(PC) [0x2388 ; pstr='Rumor(s):  ']
+196e: a884        _DrawString
+1970: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1974: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1978: a893        _MoveTo
+197a: 3f2d        MOVE.W  -1252(A5),-(A7)
+197e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1982: 6000        BRA     0x1fe4
+1986: 0c40        CMPI.W  #0x2d5 (725),D0
+198a: 6600        BNE     0x19dc
+198e: 487a        PEA     2564(PC) [0x2394 ; pstr='Mona MacNasty']
+1992: a884        _DrawString
+1994: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1998: 3f3c        MOVE.W  #0x46 (70),-(A7)
+199c: a893        _MoveTo
+199e: 487a        PEA     2562(PC) [0x23a2 ; pstr='Reputation:  ']
+19a2: a884        _DrawString
+19a4: 3f3c        MOVE.W  #0x64 (100),-(A7)
+19a8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+19ac: a893        _MoveTo
+19ae: 3f2d        MOVE.W  -1268(A5),-(A7)
+19b2: 4ead        JSR     226(A5) [CODE_4+0x42]
+19b6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19ba: 3f3c        MOVE.W  #0x6e (110),-(A7)
+19be: a893        _MoveTo
+19c0: 487a        PEA     2542(PC) [0x23b0 ; pstr='Rumor(s):  ']
+19c4: a884        _DrawString
+19c6: 3f3c        MOVE.W  #0x64 (100),-(A7)
+19ca: 3f3c        MOVE.W  #0x82 (130),-(A7)
+19ce: a893        _MoveTo
+19d0: 3f2d        MOVE.W  -1270(A5),-(A7)
+19d4: 4ead        JSR     226(A5) [CODE_4+0x42]
+19d8: 6000        BRA     0x1fe4
+19dc: 0c40        CMPI.W  #0x2d6 (726),D0
+19e0: 6600        BNE     0x1a32
+19e4: 487a        PEA     2518(PC) [0x23bc ; pstr='Mac MacRascal']
+19e8: a884        _DrawString
+19ea: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19ee: 3f3c        MOVE.W  #0x46 (70),-(A7)
+19f2: a893        _MoveTo
+19f4: 487a        PEA     2516(PC) [0x23ca ; pstr='Reputation:  ']
+19f8: a884        _DrawString
+19fa: 3f3c        MOVE.W  #0x64 (100),-(A7)
+19fe: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1a02: a893        _MoveTo
+1a04: 3f2d        MOVE.W  -1286(A5),-(A7)
+1a08: 4ead        JSR     226(A5) [CODE_4+0x42]
+1a0c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a10: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1a14: a893        _MoveTo
+1a16: 487a        PEA     2496(PC) [0x23d8 ; pstr='Rumor(s):  ']
+1a1a: a884        _DrawString
+1a1c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1a20: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1a24: a893        _MoveTo
+1a26: 3f2d        MOVE.W  -1288(A5),-(A7)
+1a2a: 4ead        JSR     226(A5) [CODE_4+0x42]
+1a2e: 6000        BRA     0x1fe4
+1a32: 0c40        CMPI.W  #0x2d7 (727),D0
+1a36: 6600        BNE     0x1a88
+1a3a: 487a        PEA     2472(PC) [0x23e4 ; pstr='Marta MacRascal']
+1a3e: a884        _DrawString
+1a40: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a44: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1a48: a893        _MoveTo
+1a4a: 487a        PEA     2472(PC) [0x23f4 ; pstr='Reputation:  ']
+1a4e: a884        _DrawString
+1a50: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1a54: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1a58: a893        _MoveTo
+1a5a: 3f2d        MOVE.W  -1304(A5),-(A7)
+1a5e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1a62: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a66: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1a6a: a893        _MoveTo
+1a6c: 487a        PEA     2452(PC) [0x2402 ; pstr='Rumor(s):  ']
+1a70: a884        _DrawString
+1a72: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1a76: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1a7a: a893        _MoveTo
+1a7c: 3f2d        MOVE.W  -1306(A5),-(A7)
+1a80: 4ead        JSR     226(A5) [CODE_4+0x42]
+1a84: 6000        BRA     0x1fe4
+1a88: 0c40        CMPI.W  #0x2d8 (728),D0
+1a8c: 6600        BNE     0x1ade
+1a90: 487a        PEA     2428(PC) [0x240e ; pstr='Nate Ness']
+1a94: a884        _DrawString
+1a96: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a9a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1a9e: a893        _MoveTo
+1aa0: 487a        PEA     2422(PC) [0x2418 ; pstr='Reputation:  ']
+1aa4: a884        _DrawString
+1aa6: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1aaa: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1aae: a893        _MoveTo
+1ab0: 3f2d        MOVE.W  -1322(A5),-(A7)
+1ab4: 4ead        JSR     226(A5) [CODE_4+0x42]
+1ab8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1abc: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1ac0: a893        _MoveTo
+1ac2: 487a        PEA     2402(PC) [0x2426 ; pstr='Rumor(s):  ']
+1ac6: a884        _DrawString
+1ac8: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1acc: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1ad0: a893        _MoveTo
+1ad2: 3f2d        MOVE.W  -1324(A5),-(A7)
+1ad6: 4ead        JSR     226(A5) [CODE_4+0x42]
+1ada: 6000        BRA     0x1fe4
+1ade: 0c40        CMPI.W  #0x2d9 (729),D0
+1ae2: 6600        BNE     0x1b34
+1ae6: 487a        PEA     2378(PC) [0x2432 ; pstr='Nina Ness']
+1aea: a884        _DrawString
+1aec: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1af0: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1af4: a893        _MoveTo
+1af6: 487a        PEA     2372(PC) [0x243c ; pstr='Reputation:  ']
+1afa: a884        _DrawString
+1afc: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1b00: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1b04: a893        _MoveTo
+1b06: 3f2d        MOVE.W  -1340(A5),-(A7)
+1b0a: 4ead        JSR     226(A5) [CODE_4+0x42]
+1b0e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b12: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1b16: a893        _MoveTo
+1b18: 487a        PEA     2352(PC) [0x244a ; pstr='Rumor(s):  ']
+1b1c: a884        _DrawString
+1b1e: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1b22: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1b26: a893        _MoveTo
+1b28: 3f2d        MOVE.W  -1342(A5),-(A7)
+1b2c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1b30: 6000        BRA     0x1fe4
+1b34: 0c40        CMPI.W  #0x2da (730),D0
+1b38: 6600        BNE     0x1b8a
+1b3c: 487a        PEA     2328(PC) [0x2456 ; pstr='Oscar Oaks']
+1b40: a884        _DrawString
+1b42: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b46: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1b4a: a893        _MoveTo
+1b4c: 487a        PEA     2324(PC) [0x2462 ; pstr='Reputation:  ']
+1b50: a884        _DrawString
+1b52: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1b56: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1b5a: a893        _MoveTo
+1b5c: 3f2d        MOVE.W  -1358(A5),-(A7)
+1b60: 4ead        JSR     226(A5) [CODE_4+0x42]
+1b64: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b68: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1b6c: a893        _MoveTo
+1b6e: 487a        PEA     2304(PC) [0x2470 ; pstr='Rumor(s):  ']
+1b72: a884        _DrawString
+1b74: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1b78: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1b7c: a893        _MoveTo
+1b7e: 3f2d        MOVE.W  -1360(A5),-(A7)
+1b82: 4ead        JSR     226(A5) [CODE_4+0x42]
+1b86: 6000        BRA     0x1fe4
+1b8a: 0c40        CMPI.W  #0x2db (731),D0
+1b8e: 6600        BNE     0x1be0
+1b92: 487a        PEA     2280(PC) [0x247c ; pstr='Olga Oaks']
+1b96: a884        _DrawString
+1b98: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b9c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1ba0: a893        _MoveTo
+1ba2: 487a        PEA     2274(PC) [0x2486 ; pstr='Reputation:  ']
+1ba6: a884        _DrawString
+1ba8: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1bac: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1bb0: a893        _MoveTo
+1bb2: 3f2d        MOVE.W  -1376(A5),-(A7)
+1bb6: 4ead        JSR     226(A5) [CODE_4+0x42]
+1bba: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bbe: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1bc2: a893        _MoveTo
+1bc4: 487a        PEA     2254(PC) [0x2494 ; pstr='Rumor(s):  ']
+1bc8: a884        _DrawString
+1bca: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1bce: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1bd2: a893        _MoveTo
+1bd4: 3f2d        MOVE.W  -1378(A5),-(A7)
+1bd8: 4ead        JSR     226(A5) [CODE_4+0x42]
+1bdc: 6000        BRA     0x1fe4
+1be0: 0c40        CMPI.W  #0x2dc (732),D0
+1be4: 6600        BNE     0x1c36
+1be8: 487a        PEA     2230(PC) [0x24a0 ; pstr='Perry Parks']
+1bec: a884        _DrawString
+1bee: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bf2: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1bf6: a893        _MoveTo
+1bf8: 487a        PEA     2226(PC) [0x24ac ; pstr='Reputation:  ']
+1bfc: a884        _DrawString
+1bfe: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1c02: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1c06: a893        _MoveTo
+1c08: 3f2d        MOVE.W  -1394(A5),-(A7)
+1c0c: 4ead        JSR     226(A5) [CODE_4+0x42]
+1c10: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c14: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1c18: a893        _MoveTo
+1c1a: 487a        PEA     2206(PC) [0x24ba ; pstr='Rumor(s):  ']
+1c1e: a884        _DrawString
+1c20: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1c24: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1c28: a893        _MoveTo
+1c2a: 3f2d        MOVE.W  -1396(A5),-(A7)
+1c2e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1c32: 6000        BRA     0x1fe4
+1c36: 0c40        CMPI.W  #0x2dd (733),D0
+1c3a: 6600        BNE     0x1c8c
+1c3e: 487a        PEA     2182(PC) [0x24c6 ; pstr='Patty Parks']
+1c42: a884        _DrawString
+1c44: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c48: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1c4c: a893        _MoveTo
+1c4e: 487a        PEA     2178(PC) [0x24d2 ; pstr='Reputation:  ']
+1c52: a884        _DrawString
+1c54: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1c58: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1c5c: a893        _MoveTo
+1c5e: 3f2d        MOVE.W  -1412(A5),-(A7)
+1c62: 4ead        JSR     226(A5) [CODE_4+0x42]
+1c66: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c6a: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1c6e: a893        _MoveTo
+1c70: 487a        PEA     2158(PC) [0x24e0 ; pstr='Rumor(s):  ']
+1c74: a884        _DrawString
+1c76: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1c7a: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1c7e: a893        _MoveTo
+1c80: 3f2d        MOVE.W  -1414(A5),-(A7)
+1c84: 4ead        JSR     226(A5) [CODE_4+0x42]
+1c88: 6000        BRA     0x1fe4
+1c8c: 0c40        CMPI.W  #0x2de (734),D0
+1c90: 6600        BNE     0x1ce2
+1c94: 487a        PEA     2134(PC) [0x24ec ; pstr='Ray Ryan']
+1c98: a884        _DrawString
+1c9a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c9e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1ca2: a893        _MoveTo
+1ca4: 487a        PEA     2128(PC) [0x24f6 ; pstr='Reputation:  ']
+1ca8: a884        _DrawString
+1caa: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1cae: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1cb2: a893        _MoveTo
+1cb4: 3f2d        MOVE.W  -1430(A5),-(A7)
+1cb8: 4ead        JSR     226(A5) [CODE_4+0x42]
+1cbc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1cc0: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1cc4: a893        _MoveTo
+1cc6: 487a        PEA     2108(PC) [0x2504 ; pstr='Rumor(s):  ']
+1cca: a884        _DrawString
+1ccc: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1cd0: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1cd4: a893        _MoveTo
+1cd6: 3f2d        MOVE.W  -1432(A5),-(A7)
+1cda: 4ead        JSR     226(A5) [CODE_4+0x42]
+1cde: 6000        BRA     0x1fe4
+1ce2: 0c40        CMPI.W  #0x2df (735),D0
+1ce6: 6600        BNE     0x1d38
+1cea: 487a        PEA     2084(PC) [0x2510 ; pstr='Rita Ryan']
+1cee: a884        _DrawString
+1cf0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1cf4: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1cf8: a893        _MoveTo
+1cfa: 487a        PEA     2078(PC) [0x251a ; pstr='Reputation:  ']
+1cfe: a884        _DrawString
+1d00: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1d04: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1d08: a893        _MoveTo
+1d0a: 3f2d        MOVE.W  -1448(A5),-(A7)
+1d0e: 4ead        JSR     226(A5) [CODE_4+0x42]
+1d12: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d16: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1d1a: a893        _MoveTo
+1d1c: 487a        PEA     2058(PC) [0x2528 ; pstr='Rumor(s):  ']
+1d20: a884        _DrawString
+1d22: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1d26: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1d2a: a893        _MoveTo
+1d2c: 3f2d        MOVE.W  -1450(A5),-(A7)
+1d30: 4ead        JSR     226(A5) [CODE_4+0x42]
+1d34: 6000        BRA     0x1fe4
+1d38: 0c40        CMPI.W  #0x2e0 (736),D0
+1d3c: 6600        BNE     0x1d8e
+1d40: 487a        PEA     2034(PC) [0x2534 ; pstr='Sam Smith']
+1d44: a884        _DrawString
+1d46: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d4a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1d4e: a893        _MoveTo
+1d50: 487a        PEA     2028(PC) [0x253e ; pstr='Reputation:  ']
+1d54: a884        _DrawString
+1d56: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1d5a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1d5e: a893        _MoveTo
+1d60: 3f2d        MOVE.W  -1466(A5),-(A7)
+1d64: 4ead        JSR     226(A5) [CODE_4+0x42]
+1d68: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d6c: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1d70: a893        _MoveTo
+1d72: 487a        PEA     2008(PC) [0x254c ; pstr='Rumor(s):  ']
+1d76: a884        _DrawString
+1d78: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1d7c: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1d80: a893        _MoveTo
+1d82: 3f2d        MOVE.W  -1468(A5),-(A7)
+1d86: 4ead        JSR     226(A5) [CODE_4+0x42]
+1d8a: 6000        BRA     0x1fe4
+1d8e: 0c40        CMPI.W  #0x2e1 (737),D0
+1d92: 6600        BNE     0x1de4
+1d96: 487a        PEA     1984(PC) [0x2558 ; pstr='Sue Smith']
+1d9a: a884        _DrawString
+1d9c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1da0: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1da4: a893        _MoveTo
+1da6: 487a        PEA     1978(PC) [0x2562 ; pstr='Reputation:  ']
+1daa: a884        _DrawString
+1dac: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1db0: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1db4: a893        _MoveTo
+1db6: 3f2d        MOVE.W  -1484(A5),-(A7)
+1dba: 4ead        JSR     226(A5) [CODE_4+0x42]
+1dbe: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1dc2: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1dc6: a893        _MoveTo
+1dc8: 487a        PEA     1958(PC) [0x2570 ; pstr='Rumor(s):  ']
+1dcc: a884        _DrawString
+1dce: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1dd2: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1dd6: a893        _MoveTo
+1dd8: 3f2d        MOVE.W  -1486(A5),-(A7)
+1ddc: 4ead        JSR     226(A5) [CODE_4+0x42]
+1de0: 6000        BRA     0x1fe4
+1de4: 0c40        CMPI.W  #0x2e2 (738),D0
+1de8: 6600        BNE     0x1e3a
+1dec: 487a        PEA     1934(PC) [0x257c ; pstr='Ted Taft']
+1df0: a884        _DrawString
+1df2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1df6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1dfa: a893        _MoveTo
+1dfc: 487a        PEA     1928(PC) [0x2586 ; pstr='Reputation:  ']
+1e00: a884        _DrawString
+1e02: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1e06: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1e0a: a893        _MoveTo
+1e0c: 3f2d        MOVE.W  -1502(A5),-(A7)
+1e10: 4ead        JSR     226(A5) [CODE_4+0x42]
+1e14: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1e18: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1e1c: a893        _MoveTo
+1e1e: 487a        PEA     1908(PC) [0x2594 ; pstr='Rumor(s):  ']
+1e22: a884        _DrawString
+1e24: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1e28: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1e2c: a893        _MoveTo
+1e2e: 3f2d        MOVE.W  -1504(A5),-(A7)
+1e32: 4ead        JSR     226(A5) [CODE_4+0x42]
+1e36: 6000        BRA     0x1fe4
+1e3a: 0c40        CMPI.W  #0x2e3 (739),D0
+1e3e: 6600        BNE     0x1e90
+1e42: 487a        PEA     1884(PC) [0x25a0 ; pstr='Tina Taft']
+1e46: a884        _DrawString
+1e48: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1e4c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1e50: a893        _MoveTo
+1e52: 487a        PEA     1878(PC) [0x25aa ; pstr='Reputation:  ']
+1e56: a884        _DrawString
+1e58: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1e5c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1e60: a893        _MoveTo
+1e62: 3f2d        MOVE.W  -1520(A5),-(A7)
+1e66: 4ead        JSR     226(A5) [CODE_4+0x42]
+1e6a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1e6e: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1e72: a893        _MoveTo
+1e74: 487a        PEA     1858(PC) [0x25b8 ; pstr='Rumor(s):  ']
+1e78: a884        _DrawString
+1e7a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1e7e: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1e82: a893        _MoveTo
+1e84: 3f2d        MOVE.W  -1522(A5),-(A7)
+1e88: 4ead        JSR     226(A5) [CODE_4+0x42]
+1e8c: 6000        BRA     0x1fe4
+1e90: 0c40        CMPI.W  #0x2e4 (740),D0
+1e94: 6600        BNE     0x1ee6
+1e98: 487a        PEA     1834(PC) [0x25c4 ; pstr='Van Vail']
+1e9c: a884        _DrawString
+1e9e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ea2: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1ea6: a893        _MoveTo
+1ea8: 487a        PEA     1828(PC) [0x25ce ; pstr='Reputation:  ']
+1eac: a884        _DrawString
+1eae: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1eb2: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1eb6: a893        _MoveTo
+1eb8: 3f2d        MOVE.W  -1538(A5),-(A7)
+1ebc: 4ead        JSR     226(A5) [CODE_4+0x42]
+1ec0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ec4: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1ec8: a893        _MoveTo
+1eca: 487a        PEA     1808(PC) [0x25dc ; pstr='Rumor(s):  ']
+1ece: a884        _DrawString
+1ed0: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1ed4: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1ed8: a893        _MoveTo
+1eda: 3f2d        MOVE.W  -1540(A5),-(A7)
+1ede: 4ead        JSR     226(A5) [CODE_4+0x42]
+1ee2: 6000        BRA     0x1fe4
+1ee6: 0c40        CMPI.W  #0x2e5 (741),D0
+1eea: 6600        BNE     0x1f3c
+1eee: 487a        PEA     1784(PC) [0x25e8 ; pstr='Vera Vail']
+1ef2: a884        _DrawString
+1ef4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ef8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1efc: a893        _MoveTo
+1efe: 487a        PEA     1778(PC) [0x25f2 ; pstr='Reputation:  ']
+1f02: a884        _DrawString
+1f04: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1f08: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1f0c: a893        _MoveTo
+1f0e: 3f2d        MOVE.W  -1556(A5),-(A7)
+1f12: 4ead        JSR     226(A5) [CODE_4+0x42]
+1f16: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1f1a: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1f1e: a893        _MoveTo
+1f20: 487a        PEA     1758(PC) [0x2600 ; pstr='Rumor(s):  ']
+1f24: a884        _DrawString
+1f26: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1f2a: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1f2e: a893        _MoveTo
+1f30: 3f2d        MOVE.W  -1558(A5),-(A7)
+1f34: 4ead        JSR     226(A5) [CODE_4+0x42]
+1f38: 6000        BRA     0x1fe4
+1f3c: 0c40        CMPI.W  #0x2e6 (742),D0
+1f40: 6600        BNE     0x1f92
+1f44: 487a        PEA     1734(PC) [0x260c ; pstr='Ward Wade']
+1f48: a884        _DrawString
+1f4a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1f4e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1f52: a893        _MoveTo
+1f54: 487a        PEA     1728(PC) [0x2616 ; pstr='Reputation:  ']
+1f58: a884        _DrawString
+1f5a: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1f5e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1f62: a893        _MoveTo
+1f64: 3f2d        MOVE.W  -1574(A5),-(A7)
+1f68: 4ead        JSR     226(A5) [CODE_4+0x42]
+1f6c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1f70: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1f74: a893        _MoveTo
+1f76: 487a        PEA     1708(PC) [0x2624 ; pstr='Rumor(s):  ']
+1f7a: a884        _DrawString
+1f7c: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1f80: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1f84: a893        _MoveTo
+1f86: 3f2d        MOVE.W  -1576(A5),-(A7)
+1f8a: 4ead        JSR     226(A5) [CODE_4+0x42]
+1f8e: 6000        BRA     0x1fe4
+1f92: 0c40        CMPI.W  #0x2e7 (743),D0
+1f96: 6600        BNE     0x1fe4
+1f9a: 487a        PEA     1684(PC) [0x2630 ; pstr='Willa Wade']
+1f9e: a884        _DrawString
+1fa0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1fa4: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1fa8: a893        _MoveTo
+1faa: 487a        PEA     1680(PC) [0x263c ; pstr='Reputation:  ']
+1fae: a884        _DrawString
+1fb0: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1fb4: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1fb8: a893        _MoveTo
+1fba: 3f2d        MOVE.W  -1592(A5),-(A7)
+1fbe: 4ead        JSR     226(A5) [CODE_4+0x42]
+1fc2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1fc6: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1fca: a893        _MoveTo
+1fcc: 487a        PEA     1660(PC) [0x264a ; pstr='Rumor(s):  ']
+1fd0: a884        _DrawString
+1fd2: 3f3c        MOVE.W  #0x64 (100),-(A7)
+1fd6: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1fda: a893        _MoveTo
+1fdc: 3f2d        MOVE.W  -1594(A5),-(A7)
+1fe0: 4ead        JSR     226(A5) [CODE_4+0x42]
+1fe4: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1fe8: 4e5e        UNLK    A6
+1fea: 205f        MOVEA.L  (A7)+,A0
+1fec: 548f        ADDQ.L  #2,A7
+1fee: 4ed0        JMP     (A0)
+1ff0: 0741        DC.W    0x0741
+1ff2: 6c20        BGE     0x2014
+1ff4: 4162        DC.W    0x4162
+1ff6: 6c65        BGE     0x205d
+1ff8: 0d52        DC.W    0x0d52
+1ffa: 6570        BCS     0x206c
+1ffc: 7574        DC.W    0x7574
+1ffe: 6174        BSR     0x2074
+2000: 696f        BVS     0x2071
+2002: 6e3a        BGT     0x203e
+2004: 2020        MOVE.L  -(A0),D0
+2006: 0b52        DC.W    0x0b52
+2008: 756d        DC.W    0x756d
+200a: 6f72        BLE     0x207e
+200c: 2873        MOVEA.L  58(A3,D2.L),A4
+2010: 2020        MOVE.L  -(A0),D0
+2012: 0941        DC.W    0x0941
+2014: 6e6e        BGT     0x2084
+2016: 6120        BSR     0x2038
+2018: 4162        DC.W    0x4162
+201a: 6c65        BGE     0x2081
+201c: 0d52        DC.W    0x0d52
+201e: 6570        BCS     0x2090
+2020: 7574        DC.W    0x7574
+2022: 6174        BSR     0x2098
+2024: 696f        BVS     0x2095
+2026: 6e3a        BGT     0x2062
+2028: 2020        MOVE.L  -(A0),D0
+202a: 0b52        DC.W    0x0b52
+202c: 756d        DC.W    0x756d
+202e: 6f72        BLE     0x20a2
+2030: 2873        MOVEA.L  58(A3,D2.L),A4
+2034: 2020        MOVE.L  -(A0),D0
+2036: 0942        DC.W    0x0942
+2038: 6f62        BLE     0x209c
+203a: 2042        MOVEA.L  D2,A0
+203c: 616b        BSR     0x20a9
+203e: 6572        BCS     0x20b2
+2040: 0d52        DC.W    0x0d52
+2042: 6570        BCS     0x20b4
+2044: 7574        DC.W    0x7574
+2046: 6174        BSR     0x20bc
+2048: 696f        BVS     0x20b9
+204a: 6e3a        BGT     0x2086
+204c: 2020        MOVE.L  -(A0),D0
+204e: 0b52        DC.W    0x0b52
+2050: 756d        DC.W    0x756d
+2052: 6f72        BLE     0x20c6
+2054: 2873        MOVEA.L  58(A3,D2.L),A4
+2058: 2020        MOVE.L  -(A0),D0
+205a: 0b42        DC.W    0x0b42
+205c: 6574        BCS     0x20d2
+205e: 7479        MOVEQ   #121,D2
+2060: 2042        MOVEA.L  D2,A0
+2062: 616b        BSR     0x20cf
+2064: 6572        BCS     0x20d8
+2066: 0d52        DC.W    0x0d52
+2068: 6570        BCS     0x20da
+206a: 7574        DC.W    0x7574
+206c: 6174        BSR     0x20e2
+206e: 696f        BVS     0x20df
+2070: 6e3a        BGT     0x20ac
+2072: 2020        MOVE.L  -(A0),D0
+2074: 0b52        DC.W    0x0b52
+2076: 756d        DC.W    0x756d
+2078: 6f72        BLE     0x20ec
+207a: 2873        MOVEA.L  58(A3,D2.L),A4
+207e: 2020        MOVE.L  -(A0),D0
+2080: 0c43        CMPI.W  #0x6861 (26721),D3
+2084: 726c        MOVEQ   #108,D1
+2086: 6573        BCS     0x20fb
+2088: 2043        MOVEA.L  D3,A0
+208a: 6f6f        BLE     0x20fb
+208c: 6b00        BMI     0x2de0
+2090: 6570        BCS     0x2102
+2092: 7574        DC.W    0x7574
+2094: 6174        BSR     0x210a
+2096: 696f        BVS     0x2107
+2098: 6e3a        BGT     0x20d4
+209a: 2020        MOVE.L  -(A0),D0
+209c: 0b52        DC.W    0x0b52
+209e: 756d        DC.W    0x756d
+20a0: 6f72        BLE     0x2114
+20a2: 2873        MOVEA.L  58(A3,D2.L),A4
+20a6: 2020        MOVE.L  -(A0),D0
+20a8: 0a43        EORI.W  #0x6174 (24948),D3
+20ac: 6879        BVC     0x2127
+20ae: 2043        MOVEA.L  D3,A0
+20b0: 6f6f        BLE     0x2121
+20b2: 6b00        BMI     0x2e06
+20b6: 6570        BCS     0x2128
+20b8: 7574        DC.W    0x7574
+20ba: 6174        BSR     0x2130
+20bc: 696f        BVS     0x212d
+20be: 6e3a        BGT     0x20fa
+20c0: 2020        MOVE.L  -(A0),D0
+20c2: 0b52        DC.W    0x0b52
+20c4: 756d        DC.W    0x756d
+20c6: 6f72        BLE     0x213a
+20c8: 2873        MOVEA.L  58(A3,D2.L),A4
+20cc: 2020        MOVE.L  -(A0),D0
+20ce: 0944        DC.W    0x0944
+20d0: 616e        BSR     0x2140
+20d2: 2044        MOVEA.L  D4,A0
+20d4: 6176        BSR     0x214c
+20d6: 6973        BVS     0x214b
+20d8: 0d52        DC.W    0x0d52
+20da: 6570        BCS     0x214c
+20dc: 7574        DC.W    0x7574
+20de: 6174        BSR     0x2154
+20e0: 696f        BVS     0x2151
+20e2: 6e3a        BGT     0x211e
+20e4: 2020        MOVE.L  -(A0),D0
+20e6: 0b52        DC.W    0x0b52
+20e8: 756d        DC.W    0x756d
+20ea: 6f72        BLE     0x215e
+20ec: 2873        MOVEA.L  58(A3,D2.L),A4
+20f0: 2020        MOVE.L  -(A0),D0
+20f2: 0c44        CMPI.W  #0x6f74 (28532),D4
+20f6: 7469        MOVEQ   #105,D2
+20f8: 6520        BCS     0x211a
+20fa: 4461        DC.W    0x4461
+20fc: 7669        MOVEQ   #105,D3
+20fe: 7300        DC.W    0x7300
+2100: 0d52        DC.W    0x0d52
+2102: 6570        BCS     0x2174
+2104: 7574        DC.W    0x7574
+2106: 6174        BSR     0x217c
+2108: 696f        BVS     0x2179
+210a: 6e3a        BGT     0x2146
+210c: 2020        MOVE.L  -(A0),D0
+210e: 0b52        DC.W    0x0b52
+2110: 756d        DC.W    0x756d
+2112: 6f72        BLE     0x2186
+2114: 2873        MOVEA.L  58(A3,D2.L),A4
+2118: 2020        MOVE.L  -(A0),D0
+211a: 0845        DC.W    0x0845
+211c: 6420        BCC     0x213e
+211e: 456c        DC.W    0x456c
+2120: 6c69        BGE     0x218b
+2122: 7300        DC.W    0x7300
+2124: 0d52        DC.W    0x0d52
+2126: 6570        BCS     0x2198
+2128: 7574        DC.W    0x7574
+212a: 6174        BSR     0x21a0
+212c: 696f        BVS     0x219d
+212e: 6e3a        BGT     0x216a
+2130: 2020        MOVE.L  -(A0),D0
+2132: 0b52        DC.W    0x0b52
+2134: 756d        DC.W    0x756d
+2136: 6f72        BLE     0x21aa
+2138: 2873        MOVEA.L  58(A3,D2.L),A4
+213c: 2020        MOVE.L  -(A0),D0
+213e: 0b45        DC.W    0x0b45
+2140: 6c6c        BGE     0x21ae
+2142: 656e        BCS     0x21b2
+2144: 2045        MOVEA.L  D5,A0
+2146: 6c6c        BGE     0x21b4
+2148: 6973        BVS     0x21bd
+214a: 0d52        DC.W    0x0d52
+214c: 6570        BCS     0x21be
+214e: 7574        DC.W    0x7574
+2150: 6174        BSR     0x21c6
+2152: 696f        BVS     0x21c3
+2154: 6e3a        BGT     0x2190
+2156: 2020        MOVE.L  -(A0),D0
+2158: 0b52        DC.W    0x0b52
+215a: 756d        DC.W    0x756d
+215c: 6f72        BLE     0x21d0
+215e: 2873        MOVEA.L  58(A3,D2.L),A4
+2162: 2020        MOVE.L  -(A0),D0
+2164: 0846        DC.W    0x0846
+2166: 7265        MOVEQ   #101,D1
+2168: 6420        BCC     0x218a
+216a: 466f        DC.W    0x466f
+216c: 7800        MOVEQ   #0,D4
+216e: 0d52        DC.W    0x0d52
+2170: 6570        BCS     0x21e2
+2172: 7574        DC.W    0x7574
+2174: 6174        BSR     0x21ea
+2176: 696f        BVS     0x21e7
+2178: 6e3a        BGT     0x21b4
+217a: 2020        MOVE.L  -(A0),D0
+217c: 0b52        DC.W    0x0b52
+217e: 756d        DC.W    0x756d
+2180: 6f72        BLE     0x21f4
+2182: 2873        MOVEA.L  58(A3,D2.L),A4
+2186: 2020        MOVE.L  -(A0),D0
+2188: 0746        DC.W    0x0746
+218a: 6179        BSR     0x2205
+218c: 2046        MOVEA.L  D6,A0
+218e: 6f78        BLE     0x2208
+2190: 0d52        DC.W    0x0d52
+2192: 6570        BCS     0x2204
+2194: 7574        DC.W    0x7574
+2196: 6174        BSR     0x220c
+2198: 696f        BVS     0x2209
+219a: 6e3a        BGT     0x21d6
+219c: 2020        MOVE.L  -(A0),D0
+219e: 0b52        DC.W    0x0b52
+21a0: 756d        DC.W    0x756d
+21a2: 6f72        BLE     0x2216
+21a4: 2873        MOVEA.L  58(A3,D2.L),A4
+21a8: 2020        MOVE.L  -(A0),D0
+21aa: 0a47        EORI.W  #0x6c65 (27749),D7
+21ae: 6e20        BGT     0x21d0
+21b0: 4769        DC.W    0x4769
+21b2: 6c65        BGE     0x2219
+21b4: 7300        DC.W    0x7300
+21b6: 0d52        DC.W    0x0d52
+21b8: 6570        BCS     0x222a
+21ba: 7574        DC.W    0x7574
+21bc: 6174        BSR     0x2232
+21be: 696f        BVS     0x222f
+21c0: 6e3a        BGT     0x21fc
+21c2: 2020        MOVE.L  -(A0),D0
+21c4: 0b52        DC.W    0x0b52
+21c6: 756d        DC.W    0x756d
+21c8: 6f72        BLE     0x223c
+21ca: 2873        MOVEA.L  58(A3,D2.L),A4
+21ce: 2020        MOVE.L  -(A0),D0
+21d0: 0a47        EORI.W  #0x6169 (24937),D7
+21d4: 6c20        BGE     0x21f6
+21d6: 4769        DC.W    0x4769
+21d8: 6c65        BGE     0x223f
+21da: 7300        DC.W    0x7300
+21dc: 0d52        DC.W    0x0d52
+21de: 6570        BCS     0x2250
+21e0: 7574        DC.W    0x7574
+21e2: 6174        BSR     0x2258
+21e4: 696f        BVS     0x2255
+21e6: 6e3a        BGT     0x2222
+21e8: 2020        MOVE.L  -(A0),D0
+21ea: 0b52        DC.W    0x0b52
+21ec: 756d        DC.W    0x756d
+21ee: 6f72        BLE     0x2262
+21f0: 2873        MOVEA.L  58(A3,D2.L),A4
+21f4: 2020        MOVE.L  -(A0),D0
+21f6: 0a48        EORI.W  #0x6172 (24946),A0
+21fa: 7279        MOVEQ   #121,D1
+21fc: 2048        MOVEA.L  A0,A0
+21fe: 616c        BSR     0x226c
+2200: 6c00        BGE     0x2f54
+2204: 6570        BCS     0x2276
+2206: 7574        DC.W    0x7574
+2208: 6174        BSR     0x227e
+220a: 696f        BVS     0x227b
+220c: 6e3a        BGT     0x2248
+220e: 2020        MOVE.L  -(A0),D0
+2210: 0b52        DC.W    0x0b52
+2212: 756d        DC.W    0x756d
+2214: 6f72        BLE     0x2288
+2216: 2873        MOVEA.L  58(A3,D2.L),A4
+221a: 2020        MOVE.L  -(A0),D0
+221c: 0a48        EORI.W  #0x6f6c (28524),A0
+2220: 6c79        BGE     0x229b
+2222: 2048        MOVEA.L  A0,A0
+2224: 616c        BSR     0x2292
+2226: 6c00        BGE     0x2f7a
+222a: 6570        BCS     0x229c
+222c: 7574        DC.W    0x7574
+222e: 6174        BSR     0x22a4
+2230: 696f        BVS     0x22a1
+2232: 6e3a        BGT     0x226e
+2234: 2020        MOVE.L  -(A0),D0
+2236: 0b52        DC.W    0x0b52
+2238: 756d        DC.W    0x756d
+223a: 6f72        BLE     0x22ae
+223c: 2873        MOVEA.L  58(A3,D2.L),A4
+2240: 2020        MOVE.L  -(A0),D0
+2242: 0a49        EORI.W  #0x7277 (29303),A1
+2246: 696e        BVS     0x22b6
+2248: 2049        MOVEA.L  A1,A0
+224a: 646c        BCC     0x22b8
+224c: 6500        BCS     0x2fa0
+2250: 6570        BCS     0x22c2
+2252: 7574        DC.W    0x7574
+2254: 6174        BSR     0x22ca
+2256: 696f        BVS     0x22c7
+2258: 6e3a        BGT     0x2294
+225a: 2020        MOVE.L  -(A0),D0
+225c: 0b52        DC.W    0x0b52
+225e: 756d        DC.W    0x756d
+2260: 6f72        BLE     0x22d4
+2262: 2873        MOVEA.L  58(A3,D2.L),A4
+2266: 2020        MOVE.L  -(A0),D0
+2268: 0a49        EORI.W  #0x6e67 (28263),A1
+226c: 6572        BCS     0x22e0
+226e: 2049        MOVEA.L  A1,A0
+2270: 646c        BCC     0x22de
+2272: 6500        BCS     0x2fc6
+2276: 6570        BCS     0x22e8
+2278: 7574        DC.W    0x7574
+227a: 6174        BSR     0x22f0
+227c: 696f        BVS     0x22ed
+227e: 6e3a        BGT     0x22ba
+2280: 2020        MOVE.L  -(A0),D0
+2282: 0b52        DC.W    0x0b52
+2284: 756d        DC.W    0x756d
+2286: 6f72        BLE     0x22fa
+2288: 2873        MOVEA.L  58(A3,D2.L),A4
+228c: 2020        MOVE.L  -(A0),D0
+228e: 0a4a        EORI.W  #0x6f68 (28520),A2
+2292: 6e20        BGT     0x22b4
+2294: 4a6f        TST.W   28261(A7)
+2298: 7300        DC.W    0x7300
+229a: 0d52        DC.W    0x0d52
+229c: 6570        BCS     0x230e
+229e: 7574        DC.W    0x7574
+22a0: 6174        BSR     0x2316
+22a2: 696f        BVS     0x2313
+22a4: 6e3a        BGT     0x22e0
+22a6: 2020        MOVE.L  -(A0),D0
+22a8: 0b52        DC.W    0x0b52
+22aa: 756d        DC.W    0x756d
+22ac: 6f72        BLE     0x2320
+22ae: 2873        MOVEA.L  58(A3,D2.L),A4
+22b2: 2020        MOVE.L  -(A0),D0
+22b4: 0b4a        DC.W    0x0b4a
+22b6: 616e        BSR     0x2326
+22b8: 6574        BCS     0x232e
+22ba: 204a        MOVEA.L  A2,A0
+22bc: 6f6e        BLE     0x232c
+22be: 6573        BCS     0x2333
+22c0: 0d52        DC.W    0x0d52
+22c2: 6570        BCS     0x2334
+22c4: 7574        DC.W    0x7574
+22c6: 6174        BSR     0x233c
+22c8: 696f        BVS     0x2339
+22ca: 6e3a        BGT     0x2306
+22cc: 2020        MOVE.L  -(A0),D0
+22ce: 0b52        DC.W    0x0b52
+22d0: 756d        DC.W    0x756d
+22d2: 6f72        BLE     0x2346
+22d4: 2873        MOVEA.L  58(A3,D2.L),A4
+22d8: 2020        MOVE.L  -(A0),D0
+22da: 094b        DC.W    0x094b
+22dc: 6972        BVS     0x2350
+22de: 6b20        BMI     0x2300
+22e0: 4b69        DC.W    0x4b69
+22e2: 6e67        BGT     0x234b
+22e4: 0d52        DC.W    0x0d52
+22e6: 6570        BCS     0x2358
+22e8: 7574        DC.W    0x7574
+22ea: 6174        BSR     0x2360
+22ec: 696f        BVS     0x235d
+22ee: 6e3a        BGT     0x232a
+22f0: 2020        MOVE.L  -(A0),D0
+22f2: 0b52        DC.W    0x0b52
+22f4: 756d        DC.W    0x756d
+22f6: 6f72        BLE     0x236a
+22f8: 2873        MOVEA.L  58(A3,D2.L),A4
+22fc: 2020        MOVE.L  -(A0),D0
+22fe: 0a4b        EORI.W  #0x6172 (24946),A3
+2302: 656e        BCS     0x2372
+2304: 204b        MOVEA.L  A3,A0
+2306: 696e        BVS     0x2376
+2308: 6700        BEQ     0x305c
+230c: 6570        BCS     0x237e
+230e: 7574        DC.W    0x7574
+2310: 6174        BSR     0x2386
+2312: 696f        BVS     0x2383
+2314: 6e3a        BGT     0x2350
+2316: 2020        MOVE.L  -(A0),D0
+2318: 0b52        DC.W    0x0b52
+231a: 756d        DC.W    0x756d
+231c: 6f72        BLE     0x2390
+231e: 2873        MOVEA.L  58(A3,D2.L),A4
+2322: 2020        MOVE.L  -(A0),D0
+2324: 094c        DC.W    0x094c
+2326: 656f        BCS     0x2397
+2328: 6e20        BGT     0x234a
+232a: 4c6f        DC.W    0x4c6f
+232c: 6e67        BGT     0x2395
+232e: 0d52        DC.W    0x0d52
+2330: 6570        BCS     0x23a2
+2332: 7574        DC.W    0x7574
+2334: 6174        BSR     0x23aa
+2336: 696f        BVS     0x23a7
+2338: 6e3a        BGT     0x2374
+233a: 2020        MOVE.L  -(A0),D0
+233c: 0b52        DC.W    0x0b52
+233e: 756d        DC.W    0x756d
+2340: 6f72        BLE     0x23b4
+2342: 2873        MOVEA.L  58(A3,D2.L),A4
+2346: 2020        MOVE.L  -(A0),D0
+2348: 094c        DC.W    0x094c
+234a: 696c        BVS     0x23b8
+234c: 7920        DC.W    0x7920
+234e: 4c6f        DC.W    0x4c6f
+2350: 6e67        BGT     0x23b9
+2352: 0d52        DC.W    0x0d52
+2354: 6570        BCS     0x23c6
+2356: 7574        DC.W    0x7574
+2358: 6174        BSR     0x23ce
+235a: 696f        BVS     0x23cb
+235c: 6e3a        BGT     0x2398
+235e: 2020        MOVE.L  -(A0),D0
+2360: 0b52        DC.W    0x0b52
+2362: 756d        DC.W    0x756d
+2364: 6f72        BLE     0x23d8
+2366: 2873        MOVEA.L  58(A3,D2.L),A4
+236a: 2020        MOVE.L  -(A0),D0
+236c: 0c4d        CMPI.W  #0x6178 (24952),A5
+2370: 204d        MOVEA.L  A5,A0
+2372: 6163        BSR     0x23d7
+2374: 4e61        DC.W    0x4e61
+2376: 7374        DC.W    0x7374
+2378: 7900        DC.W    0x7900
+237a: 0d52        DC.W    0x0d52
+237c: 6570        BCS     0x23ee
+237e: 7574        DC.W    0x7574
+2380: 6174        BSR     0x23f6
+2382: 696f        BVS     0x23f3
+2384: 6e3a        BGT     0x23c0
+2386: 2020        MOVE.L  -(A0),D0
+2388: 0b52        DC.W    0x0b52
+238a: 756d        DC.W    0x756d
+238c: 6f72        BLE     0x2400
+238e: 2873        MOVEA.L  58(A3,D2.L),A4
+2392: 2020        MOVE.L  -(A0),D0
+2394: 0d4d        DC.W    0x0d4d
+2396: 6f6e        BLE     0x2406
+2398: 6120        BSR     0x23ba
+239a: 4d61        DC.W    0x4d61
+239c: 634e        BLS     0x23ec
+239e: 6173        BSR     0x2413
+23a0: 7479        MOVEQ   #121,D2
+23a2: 0d52        DC.W    0x0d52
+23a4: 6570        BCS     0x2416
+23a6: 7574        DC.W    0x7574
+23a8: 6174        BSR     0x241e
+23aa: 696f        BVS     0x241b
+23ac: 6e3a        BGT     0x23e8
+23ae: 2020        MOVE.L  -(A0),D0
+23b0: 0b52        DC.W    0x0b52
+23b2: 756d        DC.W    0x756d
+23b4: 6f72        BLE     0x2428
+23b6: 2873        MOVEA.L  58(A3,D2.L),A4
+23ba: 2020        MOVE.L  -(A0),D0
+23bc: 0d4d        DC.W    0x0d4d
+23be: 6163        BSR     0x2423
+23c0: 204d        MOVEA.L  A5,A0
+23c2: 6163        BSR     0x2427
+23c4: 5261        ADDQ.W  #1,-(A1)
+23c6: 7363        DC.W    0x7363
+23c8: 616c        BSR     0x2436
+23ca: 0d52        DC.W    0x0d52
+23cc: 6570        BCS     0x243e
+23ce: 7574        DC.W    0x7574
+23d0: 6174        BSR     0x2446
+23d2: 696f        BVS     0x2443
+23d4: 6e3a        BGT     0x2410
+23d6: 2020        MOVE.L  -(A0),D0
+23d8: 0b52        DC.W    0x0b52
+23da: 756d        DC.W    0x756d
+23dc: 6f72        BLE     0x2450
+23de: 2873        MOVEA.L  58(A3,D2.L),A4
+23e2: 2020        MOVE.L  -(A0),D0
+23e4: 0f4d        DC.W    0x0f4d
+23e6: 6172        BSR     0x245a
+23e8: 7461        MOVEQ   #97,D2
+23ea: 204d        MOVEA.L  A5,A0
+23ec: 6163        BSR     0x2451
+23ee: 5261        ADDQ.W  #1,-(A1)
+23f0: 7363        DC.W    0x7363
+23f2: 616c        BSR     0x2460
+23f4: 0d52        DC.W    0x0d52
+23f6: 6570        BCS     0x2468
+23f8: 7574        DC.W    0x7574
+23fa: 6174        BSR     0x2470
+23fc: 696f        BVS     0x246d
+23fe: 6e3a        BGT     0x243a
+2400: 2020        MOVE.L  -(A0),D0
+2402: 0b52        DC.W    0x0b52
+2404: 756d        DC.W    0x756d
+2406: 6f72        BLE     0x247a
+2408: 2873        MOVEA.L  58(A3,D2.L),A4
+240c: 2020        MOVE.L  -(A0),D0
+240e: 094e        DC.W    0x094e
+2410: 6174        BSR     0x2486
+2412: 6520        BCS     0x2434
+2414: 4e65        DC.W    0x4e65
+2416: 7373        DC.W    0x7373
+2418: 0d52        DC.W    0x0d52
+241a: 6570        BCS     0x248c
+241c: 7574        DC.W    0x7574
+241e: 6174        BSR     0x2494
+2420: 696f        BVS     0x2491
+2422: 6e3a        BGT     0x245e
+2424: 2020        MOVE.L  -(A0),D0
+2426: 0b52        DC.W    0x0b52
+2428: 756d        DC.W    0x756d
+242a: 6f72        BLE     0x249e
+242c: 2873        MOVEA.L  58(A3,D2.L),A4
+2430: 2020        MOVE.L  -(A0),D0
+2432: 094e        DC.W    0x094e
+2434: 696e        BVS     0x24a4
+2436: 6120        BSR     0x2458
+2438: 4e65        DC.W    0x4e65
+243a: 7373        DC.W    0x7373
+243c: 0d52        DC.W    0x0d52
+243e: 6570        BCS     0x24b0
+2440: 7574        DC.W    0x7574
+2442: 6174        BSR     0x24b8
+2444: 696f        BVS     0x24b5
+2446: 6e3a        BGT     0x2482
+2448: 2020        MOVE.L  -(A0),D0
+244a: 0b52        DC.W    0x0b52
+244c: 756d        DC.W    0x756d
+244e: 6f72        BLE     0x24c2
+2450: 2873        MOVEA.L  58(A3,D2.L),A4
+2454: 2020        MOVE.L  -(A0),D0
+2456: 0a4f        EORI.W  #0x7363 (29539),A7
+245a: 6172        BSR     0x24ce
+245c: 204f        MOVEA.L  A7,A0
+245e: 616b        BSR     0x24cb
+2460: 7300        DC.W    0x7300
+2462: 0d52        DC.W    0x0d52
+2464: 6570        BCS     0x24d6
+2466: 7574        DC.W    0x7574
+2468: 6174        BSR     0x24de
+246a: 696f        BVS     0x24db
+246c: 6e3a        BGT     0x24a8
+246e: 2020        MOVE.L  -(A0),D0
+2470: 0b52        DC.W    0x0b52
+2472: 756d        DC.W    0x756d
+2474: 6f72        BLE     0x24e8
+2476: 2873        MOVEA.L  58(A3,D2.L),A4
+247a: 2020        MOVE.L  -(A0),D0
+247c: 094f        DC.W    0x094f
+247e: 6c67        BGE     0x24e7
+2480: 6120        BSR     0x24a2
+2482: 4f61        DC.W    0x4f61
+2484: 6b73        BMI     0x24f9
+2486: 0d52        DC.W    0x0d52
+2488: 6570        BCS     0x24fa
+248a: 7574        DC.W    0x7574
+248c: 6174        BSR     0x2502
+248e: 696f        BVS     0x24ff
+2490: 6e3a        BGT     0x24cc
+2492: 2020        MOVE.L  -(A0),D0
+2494: 0b52        DC.W    0x0b52
+2496: 756d        DC.W    0x756d
+2498: 6f72        BLE     0x250c
+249a: 2873        MOVEA.L  58(A3,D2.L),A4
+249e: 2020        MOVE.L  -(A0),D0
+24a0: 0b50        DC.W    0x0b50
+24a2: 6572        BCS     0x2516
+24a4: 7279        MOVEQ   #121,D1
+24a6: 2050        MOVEA.L  (A0),A0
+24a8: 6172        BSR     0x251c
+24aa: 6b73        BMI     0x251f
+24ac: 0d52        DC.W    0x0d52
+24ae: 6570        BCS     0x2520
+24b0: 7574        DC.W    0x7574
+24b2: 6174        BSR     0x2528
+24b4: 696f        BVS     0x2525
+24b6: 6e3a        BGT     0x24f2
+24b8: 2020        MOVE.L  -(A0),D0
+24ba: 0b52        DC.W    0x0b52
+24bc: 756d        DC.W    0x756d
+24be: 6f72        BLE     0x2532
+24c0: 2873        MOVEA.L  58(A3,D2.L),A4
+24c4: 2020        MOVE.L  -(A0),D0
+24c6: 0b50        DC.W    0x0b50
+24c8: 6174        BSR     0x253e
+24ca: 7479        MOVEQ   #121,D2
+24cc: 2050        MOVEA.L  (A0),A0
+24ce: 6172        BSR     0x2542
+24d0: 6b73        BMI     0x2545
+24d2: 0d52        DC.W    0x0d52
+24d4: 6570        BCS     0x2546
+24d6: 7574        DC.W    0x7574
+24d8: 6174        BSR     0x254e
+24da: 696f        BVS     0x254b
+24dc: 6e3a        BGT     0x2518
+24de: 2020        MOVE.L  -(A0),D0
+24e0: 0b52        DC.W    0x0b52
+24e2: 756d        DC.W    0x756d
+24e4: 6f72        BLE     0x2558
+24e6: 2873        MOVEA.L  58(A3,D2.L),A4
+24ea: 2020        MOVE.L  -(A0),D0
+24ec: 0852        DC.W    0x0852
+24ee: 6179        BSR     0x2569
+24f0: 2052        MOVEA.L  (A2),A0
+24f2: 7961        DC.W    0x7961
+24f4: 6e00        BGT     0x3248
+24f8: 6570        BCS     0x256a
+24fa: 7574        DC.W    0x7574
+24fc: 6174        BSR     0x2572
+24fe: 696f        BVS     0x256f
+2500: 6e3a        BGT     0x253c
+2502: 2020        MOVE.L  -(A0),D0
+2504: 0b52        DC.W    0x0b52
+2506: 756d        DC.W    0x756d
+2508: 6f72        BLE     0x257c
+250a: 2873        MOVEA.L  58(A3,D2.L),A4
+250e: 2020        MOVE.L  -(A0),D0
+2510: 0952        DC.W    0x0952
+2512: 6974        BVS     0x2588
+2514: 6120        BSR     0x2536
+2516: 5279        ADDQ.W  #1,(0x616e0d52).L
+251c: 6570        BCS     0x258e
+251e: 7574        DC.W    0x7574
+2520: 6174        BSR     0x2596
+2522: 696f        BVS     0x2593
+2524: 6e3a        BGT     0x2560
+2526: 2020        MOVE.L  -(A0),D0
+2528: 0b52        DC.W    0x0b52
+252a: 756d        DC.W    0x756d
+252c: 6f72        BLE     0x25a0
+252e: 2873        MOVEA.L  58(A3,D2.L),A4
+2532: 2020        MOVE.L  -(A0),D0
+2534: 0953        DC.W    0x0953
+2536: 616d        BSR     0x25a5
+2538: 2053        MOVEA.L  (A3),A0
+253a: 6d69        BLT     0x25a5
+253c: 7468        MOVEQ   #104,D2
+253e: 0d52        DC.W    0x0d52
+2540: 6570        BCS     0x25b2
+2542: 7574        DC.W    0x7574
+2544: 6174        BSR     0x25ba
+2546: 696f        BVS     0x25b7
+2548: 6e3a        BGT     0x2584
+254a: 2020        MOVE.L  -(A0),D0
+254c: 0b52        DC.W    0x0b52
+254e: 756d        DC.W    0x756d
+2550: 6f72        BLE     0x25c4
+2552: 2873        MOVEA.L  58(A3,D2.L),A4
+2556: 2020        MOVE.L  -(A0),D0
+2558: 0953        DC.W    0x0953
+255a: 7565        DC.W    0x7565
+255c: 2053        MOVEA.L  (A3),A0
+255e: 6d69        BLT     0x25c9
+2560: 7468        MOVEQ   #104,D2
+2562: 0d52        DC.W    0x0d52
+2564: 6570        BCS     0x25d6
+2566: 7574        DC.W    0x7574
+2568: 6174        BSR     0x25de
+256a: 696f        BVS     0x25db
+256c: 6e3a        BGT     0x25a8
+256e: 2020        MOVE.L  -(A0),D0
+2570: 0b52        DC.W    0x0b52
+2572: 756d        DC.W    0x756d
+2574: 6f72        BLE     0x25e8
+2576: 2873        MOVEA.L  58(A3,D2.L),A4
+257a: 2020        MOVE.L  -(A0),D0
+257c: 0854        DC.W    0x0854
+257e: 6564        BCS     0x25e4
+2580: 2054        MOVEA.L  (A4),A0
+2582: 6166        BSR     0x25ea
+2584: 7400        MOVEQ   #0,D2
+2586: 0d52        DC.W    0x0d52
+2588: 6570        BCS     0x25fa
+258a: 7574        DC.W    0x7574
+258c: 6174        BSR     0x2602
+258e: 696f        BVS     0x25ff
+2590: 6e3a        BGT     0x25cc
+2592: 2020        MOVE.L  -(A0),D0
+2594: 0b52        DC.W    0x0b52
+2596: 756d        DC.W    0x756d
+2598: 6f72        BLE     0x260c
+259a: 2873        MOVEA.L  58(A3,D2.L),A4
+259e: 2020        MOVE.L  -(A0),D0
+25a0: 0954        DC.W    0x0954
+25a2: 696e        BVS     0x2612
+25a4: 6120        BSR     0x25c6
+25a6: 5461        ADDQ.W  #2,-(A1)
+25a8: 6674        BNE     0x261e
+25aa: 0d52        DC.W    0x0d52
+25ac: 6570        BCS     0x261e
+25ae: 7574        DC.W    0x7574
+25b0: 6174        BSR     0x2626
+25b2: 696f        BVS     0x2623
+25b4: 6e3a        BGT     0x25f0
+25b6: 2020        MOVE.L  -(A0),D0
+25b8: 0b52        DC.W    0x0b52
+25ba: 756d        DC.W    0x756d
+25bc: 6f72        BLE     0x2630
+25be: 2873        MOVEA.L  58(A3,D2.L),A4
+25c2: 2020        MOVE.L  -(A0),D0
+25c4: 0856        DC.W    0x0856
+25c6: 616e        BSR     0x2636
+25c8: 2056        MOVEA.L  (A6),A0
+25ca: 6169        BSR     0x2635
+25cc: 6c00        BGE     0x3320
+25d0: 6570        BCS     0x2642
+25d2: 7574        DC.W    0x7574
+25d4: 6174        BSR     0x264a
+25d6: 696f        BVS     0x2647
+25d8: 6e3a        BGT     0x2614
+25da: 2020        MOVE.L  -(A0),D0
+25dc: 0b52        DC.W    0x0b52
+25de: 756d        DC.W    0x756d
+25e0: 6f72        BLE     0x2654
+25e2: 2873        MOVEA.L  58(A3,D2.L),A4
+25e6: 2020        MOVE.L  -(A0),D0
+25e8: 0956        DC.W    0x0956
+25ea: 6572        BCS     0x265e
+25ec: 6120        BSR     0x260e
+25ee: 5661        ADDQ.W  #3,-(A1)
+25f0: 696c        BVS     0x265e
+25f2: 0d52        DC.W    0x0d52
+25f4: 6570        BCS     0x2666
+25f6: 7574        DC.W    0x7574
+25f8: 6174        BSR     0x266e
+25fa: 696f        BVS     0x266b
+25fc: 6e3a        BGT     0x2638
+25fe: 2020        MOVE.L  -(A0),D0
+2600: 0b52        DC.W    0x0b52
+2602: 756d        DC.W    0x756d
+2604: 6f72        BLE     0x2678
+2606: 2873        MOVEA.L  58(A3,D2.L),A4
+260a: 2020        MOVE.L  -(A0),D0
+260c: 0957        DC.W    0x0957
+260e: 6172        BSR     0x2682
+2610: 6420        BCC     0x2632
+2612: 5761        SUBQ.W  #3,-(A1)
+2614: 6465        BCC     0x267b
+2616: 0d52        DC.W    0x0d52
+2618: 6570        BCS     0x268a
+261a: 7574        DC.W    0x7574
+261c: 6174        BSR     0x2692
+261e: 696f        BVS     0x268f
+2620: 6e3a        BGT     0x265c
+2622: 2020        MOVE.L  -(A0),D0
+2624: 0b52        DC.W    0x0b52
+2626: 756d        DC.W    0x756d
+2628: 6f72        BLE     0x269c
+262a: 2873        MOVEA.L  58(A3,D2.L),A4
+262e: 2020        MOVE.L  -(A0),D0
+2630: 0a57        EORI.W  #0x696c (26988),(A7)
+2634: 6c61        BGE     0x2697
+2636: 2057        MOVEA.L  (A7),A0
+2638: 6164        BSR     0x269e
+263a: 6500        BCS     0x338e
+263e: 6570        BCS     0x26b0
+2640: 7574        DC.W    0x7574
+2642: 6174        BSR     0x26b8
+2644: 696f        BVS     0x26b5
+2646: 6e3a        BGT     0x2682
+2648: 2020        MOVE.L  -(A0),D0
+264a: 0b52        DC.W    0x0b52
+264c: 756d        DC.W    0x756d
+264e: 6f72        BLE     0x26c2
+2650: 2873        MOVEA.L  58(A3,D2.L),A4
+2654: 2020        MOVE.L  -(A0),D0

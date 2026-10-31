@@ -1,0 +1,3748 @@
+0004: 0000        ORI.B  #0x0 (0),D0
+
+0008: 4e56        LINK    A6,#0
+000c: 487a        PEA     18(PC) [0x20 ; pstr='Copyright 1987 by George Lott']
+0010: 486d        PEA     -850(A5)
+0014: 3f3c        MOVE.W  #0xff (255),-(A7)
+0018: 4ead        JSR     154(A5) [CODE_1+0x11a]
+001c: 4e5e        UNLK    A6
+001e: 4e75        RTS
+0020: 1d43        MOVE.B  D3,28528(A6)
+0024: 7972        DC.W    0x7972
+0026: 6967        BVS     0x008f
+0028: 6874        BVC     0x009e
+002a: 2031        MOVE.L  56(A1,D3.L),D0
+002e: 3720        MOVE.W  -(A0),-(A3)
+0030: 6279        BHI     0x00ab
+0032: 2047        MOVEA.L  D7,A0
+0034: 656f        BCS     0x00a5
+0036: 7267        MOVEQ   #103,D1
+0038: 6520        BCS     0x005a
+003a: 4c6f        DC.W    0x4c6f
+003c: 7474        MOVEQ   #116,D2
+003e: 0000        ORI.B  #0x0 (0),D0
+
+0042: 4e56        LINK    A6,#0
+0046: 422d        CLR.B   -2455(A5)
+004a: 1b7c        MOVE.B  #0x1 (1),-2451(A5)
+0050: 3b7c        MOVE.W  #0x1 (1),-2460(A5)
+0056: 302d        MOVE.W  -2458(A5),D0
+005a: 5240        ADDQ.W  #1,D0
+005c: 3b40        MOVE.W  D0,-2458(A5)
+0060: 42ad        CLR.L   -314(A5)
+0064: 598f        SUBQ.L  #4,A7
+0066: a975        _TickCount
+0068: 201f        MOVE.L  (A7)+,D0
+006a: 7205        MOVEQ   #5,D1
+006c: 4ead        JSR     146(A5) [CODE_1+0x60]
+0070: 2b40        MOVE.L  D0,-314(A5)
+0074: 0c6d        CMPI.W  #0x1 (1),-2476(A5)
+007a: 57c0        SEQ     D0
+007c: 4400        DC.W    0x4400
+007e: 0c6d        CMPI.W  #0x2 (2),-2476(A5)
+0084: 57c1        SEQ     D1
+0086: 4401        DC.W    0x4401
+0088: 8001        OR.B   D1,D0
+008a: 6700        BEQ     0x00a0
+008e: 0cad        CMPI.L  #0x2,-314(A5)
+0096: 6c00        BGE     0x00a0
+009a: 1b7c        MOVE.B  #0x1 (1),-2455(A5)
+00a0: 0c6d        CMPI.W  #0x3 (3),-2476(A5)
+00a6: 6600        BNE     0x00bc
+00aa: 0cad        CMPI.L  #0x4,-314(A5)
+00b2: 6c00        BGE     0x00bc
+00b6: 1b7c        MOVE.B  #0x1 (1),-2455(A5)
+00bc: 302d        MOVE.W  -2458(A5),D0
+00c0: 0c40        CMPI.W  #0x1 (1),D0
+00c4: 6600        BNE     0x056a
+00c8: 598f        SUBQ.L  #4,A7
+00ca: 3f3c        MOVE.W  #0x1b5f (7007),-(A7)
+00ce: 42a7        CLR.L   -(A7)
+00d0: 2f3c        MOVE.L  #0xffffffff,-(A7)
+00d6: a97c        _GetNewDialog
+00d8: 2b5f        MOVE.L  (A7)+,-286(A5)
+00dc: 2f2d        MOVE.L  -286(A5),-(A7)
+00e0: 3f3c        MOVE.W  #0x3 (3),-(A7)
+00e4: 486d        PEA     -2256(A5)
+00e8: 486d        PEA     -2218(A5)
+00ec: 486d        PEA     -2234(A5)
+00f0: a98d        _GetDItem
+00f2: 302d        MOVE.W  -2476(A5),D0
+00f6: 0c40        CMPI.W  #0x1 (1),D0
+00fa: 6600        BNE     0x0112
+00fe: 487a        PEA     2584(PC) [0xb18 ; pstr='You have been given the opportunity to buy a fine']
+0102: 486d        PEA     -850(A5)
+0106: 3f3c        MOVE.W  #0xff (255),-(A7)
+010a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+010e: 6000        BRA     0x0146
+0112: 0c40        CMPI.W  #0x2 (2),D0
+0116: 6600        BNE     0x012e
+011a: 487a        PEA     2606(PC) [0xb4a ; pstr='Once again you can get into the horse racing business']
+011e: 486d        PEA     -850(A5)
+0122: 3f3c        MOVE.W  #0xff (255),-(A7)
+0126: 4ead        JSR     154(A5) [CODE_1+0x11a]
+012a: 6000        BRA     0x0146
+012e: 0c40        CMPI.W  #0x3 (3),D0
+0132: 6600        BNE     0x0146
+0136: 487a        PEA     2632(PC) [0xb80 ; pstr='Here`s another chance to get a horse, this time']
+013a: 486d        PEA     -850(A5)
+013e: 3f3c        MOVE.W  #0xff (255),-(A7)
+0142: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0146: 2f2d        MOVE.L  -2218(A5),-(A7)
+014a: 486d        PEA     -850(A5)
+014e: a98f        _SetIText
+0150: 2f2d        MOVE.L  -286(A5),-(A7)
+0154: 3f3c        MOVE.W  #0x4 (4),-(A7)
+0158: 486d        PEA     -2256(A5)
+015c: 486d        PEA     -2218(A5)
+0160: 486d        PEA     -2234(A5)
+0164: a98d        _GetDItem
+0166: 302d        MOVE.W  -2476(A5),D0
+016a: 0c40        CMPI.W  #0x1 (1),D0
+016e: 6600        BNE     0x0186
+0172: 487a        PEA     2620(PC) [0xbb0 ; pstr='race horse named Faster Than Light to run against']
+0176: 486d        PEA     -850(A5)
+017a: 3f3c        MOVE.W  #0xff (255),-(A7)
+017e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0182: 6000        BRA     0x01ba
+0186: 0c40        CMPI.W  #0x2 (2),D0
+018a: 6600        BNE     0x01a2
+018e: 487a        PEA     2642(PC) [0xbe2 ; pstr='with a fine specimen named Lightning to race against']
+0192: 486d        PEA     -850(A5)
+0196: 3f3c        MOVE.W  #0xff (255),-(A7)
+019a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+019e: 6000        BRA     0x01ba
+01a2: 0c40        CMPI.W  #0x3 (3),D0
+01a6: 6600        BNE     0x01ba
+01aa: 487a        PEA     2668(PC) [0xc18 ; pstr='your old frat brother J. Marmaduke Dirty gave a']
+01ae: 486d        PEA     -850(A5)
+01b2: 3f3c        MOVE.W  #0xff (255),-(A7)
+01b6: 4ead        JSR     154(A5) [CODE_1+0x11a]
+01ba: 2f2d        MOVE.L  -2218(A5),-(A7)
+01be: 486d        PEA     -850(A5)
+01c2: a98f        _SetIText
+01c4: 2f2d        MOVE.L  -286(A5),-(A7)
+01c8: 3f3c        MOVE.W  #0x5 (5),-(A7)
+01cc: 486d        PEA     -2256(A5)
+01d0: 486d        PEA     -2218(A5)
+01d4: 486d        PEA     -2234(A5)
+01d8: a98d        _GetDItem
+01da: 302d        MOVE.W  -2476(A5),D0
+01de: 0c40        CMPI.W  #0x1 (1),D0
+01e2: 6600        BNE     0x01fa
+01e6: 487a        PEA     2656(PC) [0xc48 ; pstr='MacRascal`s Black Beauty.  It will probably cost you']
+01ea: 486d        PEA     -850(A5)
+01ee: 3f3c        MOVE.W  #0xff (255),-(A7)
+01f2: 4ead        JSR     154(A5) [CODE_1+0x11a]
+01f6: 6000        BRA     0x022e
+01fa: 0c40        CMPI.W  #0x2 (2),D0
+01fe: 6600        BNE     0x0216
+0202: 487a        PEA     2682(PC) [0xc7e ; pstr='MacRascal`s Dominator.  Cost will be $20,000']
+0206: 486d        PEA     -850(A5)
+020a: 3f3c        MOVE.W  #0xff (255),-(A7)
+020e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0212: 6000        BRA     0x022e
+0216: 0c40        CMPI.W  #0x3 (3),D0
+021a: 6600        BNE     0x022e
+021e: 487a        PEA     2700(PC) [0xcac ; pstr='champ from the other side of the state a temporary']
+0222: 486d        PEA     -850(A5)
+0226: 3f3c        MOVE.W  #0xff (255),-(A7)
+022a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+022e: 2f2d        MOVE.L  -2218(A5),-(A7)
+0232: 486d        PEA     -850(A5)
+0236: a98f        _SetIText
+0238: 2f2d        MOVE.L  -286(A5),-(A7)
+023c: 3f3c        MOVE.W  #0x6 (6),-(A7)
+0240: 486d        PEA     -2256(A5)
+0244: 486d        PEA     -2218(A5)
+0248: 486d        PEA     -2234(A5)
+024c: a98d        _GetDItem
+024e: 302d        MOVE.W  -2476(A5),D0
+0252: 0c40        CMPI.W  #0x1 (1),D0
+0256: 6600        BNE     0x026e
+025a: 487a        PEA     2692(PC) [0xce0 ; pstr='$15,000 to run the horse and $25,000 for the bet,']
+025e: 486d        PEA     -850(A5)
+0262: 3f3c        MOVE.W  #0xff (255),-(A7)
+0266: 4ead        JSR     154(A5) [CODE_1+0x11a]
+026a: 6000        BRA     0x02a2
+026e: 0c40        CMPI.W  #0x2 (2),D0
+0272: 6600        BNE     0x028a
+0276: 487a        PEA     2714(PC) [0xd12 ; pstr='to buy and run the horse and $25,000 for the bet.']
+027a: 486d        PEA     -850(A5)
+027e: 3f3c        MOVE.W  #0xff (255),-(A7)
+0282: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0286: 6000        BRA     0x02a2
+028a: 0c40        CMPI.W  #0x3 (3),D0
+028e: 6600        BNE     0x02a2
+0292: 487a        PEA     2736(PC) [0xd44 ; pstr='poison and poised as a veterinary specialist so that']
+0296: 486d        PEA     -850(A5)
+029a: 3f3c        MOVE.W  #0xff (255),-(A7)
+029e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+02a2: 2f2d        MOVE.L  -2218(A5),-(A7)
+02a6: 486d        PEA     -850(A5)
+02aa: a98f        _SetIText
+02ac: 2f2d        MOVE.L  -286(A5),-(A7)
+02b0: 3f3c        MOVE.W  #0x7 (7),-(A7)
+02b4: 486d        PEA     -2256(A5)
+02b8: 486d        PEA     -2218(A5)
+02bc: 486d        PEA     -2234(A5)
+02c0: a98d        _GetDItem
+02c2: 302d        MOVE.W  -2476(A5),D0
+02c6: 0c40        CMPI.W  #0x1 (1),D0
+02ca: 6600        BNE     0x02e2
+02ce: 487a        PEA     2730(PC) [0xd7a ; pstr='but MacRascal is giving 4 to 1 odds, so you can make']
+02d2: 486d        PEA     -850(A5)
+02d6: 3f3c        MOVE.W  #0xff (255),-(A7)
+02da: 4ead        JSR     154(A5) [CODE_1+0x11a]
+02de: 6000        BRA     0x0316
+02e2: 0c40        CMPI.W  #0x2 (2),D0
+02e6: 6600        BNE     0x02fe
+02ea: 487a        PEA     2756(PC) [0xdb0 ; pstr='The odds this time are only 3 to one, so you can make']
+02ee: 486d        PEA     -850(A5)
+02f2: 3f3c        MOVE.W  #0xff (255),-(A7)
+02f6: 4ead        JSR     154(A5) [CODE_1+0x11a]
+02fa: 6000        BRA     0x0316
+02fe: 0c40        CMPI.W  #0x3 (3),D0
+0302: 6600        BNE     0x0316
+0306: 487a        PEA     2782(PC) [0xde6 ; pstr='you will be able to buy the horse for only $2000 and']
+030a: 486d        PEA     -850(A5)
+030e: 3f3c        MOVE.W  #0xff (255),-(A7)
+0312: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0316: 2f2d        MOVE.L  -2218(A5),-(A7)
+031a: 486d        PEA     -850(A5)
+031e: a98f        _SetIText
+0320: 2f2d        MOVE.L  -286(A5),-(A7)
+0324: 3f3c        MOVE.W  #0x8 (8),-(A7)
+0328: 486d        PEA     -2256(A5)
+032c: 486d        PEA     -2218(A5)
+0330: 486d        PEA     -2234(A5)
+0334: a98d        _GetDItem
+0336: 302d        MOVE.W  -2476(A5),D0
+033a: 0c40        CMPI.W  #0x1 (1),D0
+033e: 6600        BNE     0x0356
+0342: 487a        PEA     2776(PC) [0xe1c ; pstr='$85,000 on the deal after expenses are covered.']
+0346: 486d        PEA     -850(A5)
+034a: 3f3c        MOVE.W  #0xff (255),-(A7)
+034e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0352: 6000        BRA     0x038a
+0356: 0c40        CMPI.W  #0x2 (2),D0
+035a: 6600        BNE     0x0372
+035e: 487a        PEA     2796(PC) [0xe4c ; pstr='$55,000 on the deal after expenses are covered.']
+0362: 486d        PEA     -850(A5)
+0366: 3f3c        MOVE.W  #0xff (255),-(A7)
+036a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+036e: 6000        BRA     0x038a
+0372: 0c40        CMPI.W  #0x3 (3),D0
+0376: 6600        BNE     0x038a
+037a: 487a        PEA     2816(PC) [0xe7c ; pstr='the funny thing is that they think they are cheating']
+037e: 486d        PEA     -850(A5)
+0382: 3f3c        MOVE.W  #0xff (255),-(A7)
+0386: 4ead        JSR     154(A5) [CODE_1+0x11a]
+038a: 2f2d        MOVE.L  -2218(A5),-(A7)
+038e: 486d        PEA     -850(A5)
+0392: a98f        _SetIText
+0394: 2f2d        MOVE.L  -286(A5),-(A7)
+0398: 3f3c        MOVE.W  #0x9 (9),-(A7)
+039c: 486d        PEA     -2256(A5)
+03a0: 486d        PEA     -2218(A5)
+03a4: 486d        PEA     -2234(A5)
+03a8: a98d        _GetDItem
+03aa: 302d        MOVE.W  -2476(A5),D0
+03ae: 0c40        CMPI.W  #0x1 (1),D0
+03b2: 6700        BEQ     0x03be
+03b6: 0c40        CMPI.W  #0x2 (2),D0
+03ba: 6600        BNE     0x03d2
+03be: 487a        PEA     2802(PC) [0xeb2 ; pstr='Do you want the deal or not?']
+03c2: 486d        PEA     -850(A5)
+03c6: 3f3c        MOVE.W  #0xff (255),-(A7)
+03ca: 4ead        JSR     154(A5) [CODE_1+0x11a]
+03ce: 6000        BRA     0x03ea
+03d2: 0c40        CMPI.W  #0x3 (3),D0
+03d6: 6600        BNE     0x03ea
+03da: 487a        PEA     2804(PC) [0xed0 ; pstr='you. The odds are 3 to 1 and your bet is $40,000.']
+03de: 486d        PEA     -850(A5)
+03e2: 3f3c        MOVE.W  #0xff (255),-(A7)
+03e6: 4ead        JSR     154(A5) [CODE_1+0x11a]
+03ea: 2f2d        MOVE.L  -2218(A5),-(A7)
+03ee: 486d        PEA     -850(A5)
+03f2: a98f        _SetIText
+03f4: 2f2d        MOVE.L  -286(A5),-(A7)
+03f8: 3f3c        MOVE.W  #0xa (10),-(A7)
+03fc: 486d        PEA     -2256(A5)
+0400: 486d        PEA     -2218(A5)
+0404: 486d        PEA     -2234(A5)
+0408: a98d        _GetDItem
+040a: 0c6d        CMPI.W  #0x3 (3),-2476(A5)
+0410: 6600        BNE     0x042e
+0414: 487a        PEA     2796(PC) [0xf02 ; pstr='Do you want to deal or not?']
+0418: 486d        PEA     -850(A5)
+041c: 3f3c        MOVE.W  #0xff (255),-(A7)
+0420: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0424: 2f2d        MOVE.L  -2218(A5),-(A7)
+0428: 486d        PEA     -850(A5)
+042c: a98f        _SetIText
+042e: 2f2d        MOVE.L  -286(A5),-(A7)
+0432: a915        _ShowWindow
+0434: 42a7        CLR.L   -(A7)
+0436: 486d        PEA     -2446(A5)
+043a: a991        _ModalDialog
+043c: 302d        MOVE.W  -2446(A5),D0
+0440: 0c40        CMPI.W  #0x1 (1),D0
+0444: 6600        BNE     0x04da
+0448: 302d        MOVE.W  -2476(A5),D0
+044c: 0c40        CMPI.W  #0x1 (1),D0
+0450: 6600        BNE     0x0466
+0454: 202d        MOVE.L  -1696(A5),D0
+0458: 0480        SUBI.L  #0x3a98,D0
+045e: 2b40        MOVE.L  D0,-1696(A5)
+0462: 6000        BRA     0x0496
+0466: 0c40        CMPI.W  #0x2 (2),D0
+046a: 6600        BNE     0x0480
+046e: 202d        MOVE.L  -1696(A5),D0
+0472: 0480        SUBI.L  #0x61a8,D0
+0478: 2b40        MOVE.L  D0,-1696(A5)
+047c: 6000        BRA     0x0496
+0480: 0c40        CMPI.W  #0x3 (3),D0
+0484: 6600        BNE     0x0496
+0488: 202d        MOVE.L  -1696(A5),D0
+048c: 0480        SUBI.L  #0x7d0,D0
+0492: 2b40        MOVE.L  D0,-1696(A5)
+0496: 2f2d        MOVE.L  -286(A5),-(A7)
+049a: a983        _DisposDialog
+049c: 42ad        CLR.L   -286(A5)
+04a0: 302d        MOVE.W  -2476(A5),D0
+04a4: 0c40        CMPI.W  #0x1 (1),D0
+04a8: 6600        BNE     0x04b6
+04ac: 1b7c        MOVE.B  #0x1 (1),-2452(A5)
+04b2: 6000        BRA     0x04d6
+04b6: 0c40        CMPI.W  #0x2 (2),D0
+04ba: 6600        BNE     0x04c8
+04be: 1b7c        MOVE.B  #0x1 (1),-2453(A5)
+04c4: 6000        BRA     0x04d6
+04c8: 0c40        CMPI.W  #0x3 (3),D0
+04cc: 6600        BNE     0x04d6
+04d0: 1b7c        MOVE.B  #0x1 (1),-2454(A5)
+04d6: 6000        BRA     0x0566
+04da: 0c40        CMPI.W  #0x2 (2),D0
+04de: 6600        BNE     0x0566
+04e2: 422d        CLR.B   -2451(A5)
+04e6: 426d        CLR.W   -2460(A5)
+04ea: 302d        MOVE.W  -2476(A5),D0
+04ee: 0c40        CMPI.W  #0x1 (1),D0
+04f2: 6600        BNE     0x0514
+04f6: 4a2d        TST.B   -2452(A5)
+04fa: 6600        BNE     0x050a
+04fe: 302d        MOVE.W  -2466(A5),D0
+0502: 0640        ADDI.W  #0xf (15),D0
+0506: 3b40        MOVE.W  D0,-2466(A5)
+050a: 1b7c        MOVE.B  #0x1 (1),-2452(A5)
+0510: 6000        BRA     0x055c
+0514: 0c40        CMPI.W  #0x2 (2),D0
+0518: 6600        BNE     0x053a
+051c: 4a2d        TST.B   -2453(A5)
+0520: 6600        BNE     0x0530
+0524: 302d        MOVE.W  -2468(A5),D0
+0528: 0640        ADDI.W  #0xf (15),D0
+052c: 3b40        MOVE.W  D0,-2468(A5)
+0530: 1b7c        MOVE.B  #0x1 (1),-2453(A5)
+0536: 6000        BRA     0x055c
+053a: 0c40        CMPI.W  #0x3 (3),D0
+053e: 6600        BNE     0x055c
+0542: 4a2d        TST.B   -2454(A5)
+0546: 6600        BNE     0x0556
+054a: 302d        MOVE.W  -2470(A5),D0
+054e: 0640        ADDI.W  #0xf (15),D0
+0552: 3b40        MOVE.W  D0,-2470(A5)
+0556: 1b7c        MOVE.B  #0x1 (1),-2454(A5)
+055c: 2f2d        MOVE.L  -286(A5),-(A7)
+0560: a983        _DisposDialog
+0562: 42ad        CLR.L   -286(A5)
+0566: 6000        BRA     0x0b14
+056a: 0c40        CMPI.W  #0x3 (3),D0
+056e: 6600        BNE     0x0b14
+0572: 422d        CLR.B   -2451(A5)
+0576: 426d        CLR.W   -2460(A5)
+057a: 598f        SUBQ.L  #4,A7
+057c: 3f3c        MOVE.W  #0x1b5f (7007),-(A7)
+0580: 42a7        CLR.L   -(A7)
+0582: 2f3c        MOVE.L  #0xffffffff,-(A7)
+0588: a97c        _GetNewDialog
+058a: 2b5f        MOVE.L  (A7)+,-286(A5)
+058e: 2f2d        MOVE.L  -286(A5),-(A7)
+0592: 3f3c        MOVE.W  #0x5 (5),-(A7)
+0596: 486d        PEA     -2256(A5)
+059a: 486d        PEA     -2218(A5)
+059e: 486d        PEA     -2234(A5)
+05a2: a98d        _GetDItem
+05a4: 302d        MOVE.W  -2476(A5),D0
+05a8: 0c40        CMPI.W  #0x1 (1),D0
+05ac: 6600        BNE     0x05c4
+05b0: 487a        PEA     2412(PC) [0xf1e ; pstr='Faster Than Light has run up $10,000 in stable and']
+05b4: 486d        PEA     -850(A5)
+05b8: 3f3c        MOVE.W  #0xff (255),-(A7)
+05bc: 4ead        JSR     154(A5) [CODE_1+0x11a]
+05c0: 6000        BRA     0x05f8
+05c4: 0c40        CMPI.W  #0x2 (2),D0
+05c8: 6600        BNE     0x05e0
+05cc: 487a        PEA     2436(PC) [0xf52 ; pstr='Yep, once again stable and training fees are high.']
+05d0: 486d        PEA     -850(A5)
+05d4: 3f3c        MOVE.W  #0xff (255),-(A7)
+05d8: 4ead        JSR     154(A5) [CODE_1+0x11a]
+05dc: 6000        BRA     0x05f8
+05e0: 0c40        CMPI.W  #0x3 (3),D0
+05e4: 6600        BNE     0x05f8
+05e8: 487a        PEA     2460(PC) [0xf86 ; pstr='You were able to keep stable and training fees down']
+05ec: 486d        PEA     -850(A5)
+05f0: 3f3c        MOVE.W  #0xff (255),-(A7)
+05f4: 4ead        JSR     154(A5) [CODE_1+0x11a]
+05f8: 2f2d        MOVE.L  -2218(A5),-(A7)
+05fc: 486d        PEA     -850(A5)
+0600: a98f        _SetIText
+0602: 2f2d        MOVE.L  -286(A5),-(A7)
+0606: 3f3c        MOVE.W  #0x6 (6),-(A7)
+060a: 486d        PEA     -2256(A5)
+060e: 486d        PEA     -2218(A5)
+0612: 486d        PEA     -2234(A5)
+0616: a98d        _GetDItem
+0618: 302d        MOVE.W  -2476(A5),D0
+061c: 0c40        CMPI.W  #0x1 (1),D0
+0620: 6600        BNE     0x0638
+0624: 487a        PEA     2452(PC) [0xfba ; pstr='training fees.  Also, the $25,000 for the bet with']
+0628: 486d        PEA     -850(A5)
+062c: 3f3c        MOVE.W  #0xff (255),-(A7)
+0630: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0634: 6000        BRA     0x066c
+0638: 0c40        CMPI.W  #0x2 (2),D0
+063c: 6600        BNE     0x0654
+0640: 487a        PEA     2476(PC) [0xfee ; pstr='They cost $11,000 and the bet once again is $25,000.']
+0644: 486d        PEA     -850(A5)
+0648: 3f3c        MOVE.W  #0xff (255),-(A7)
+064c: 4ead        JSR     154(A5) [CODE_1+0x11a]
+0650: 6000        BRA     0x066c
+0654: 0c40        CMPI.W  #0x3 (3),D0
+0658: 6600        BNE     0x066c
+065c: 487a        PEA     2502(PC) [0x1024 ; pstr='to only $5,000 by buying the horse at the last']
+0660: 486d        PEA     -850(A5)
+0664: 3f3c        MOVE.W  #0xff (255),-(A7)
+0668: 4ead        JSR     154(A5) [CODE_1+0x11a]
+066c: 2f2d        MOVE.L  -2218(A5),-(A7)
+0670: 486d        PEA     -850(A5)
+0674: a98f        _SetIText
+0676: 2f2d        MOVE.L  -286(A5),-(A7)
+067a: 3f3c        MOVE.W  #0x7 (7),-(A7)
+067e: 486d        PEA     -2256(A5)
+0682: 486d        PEA     -2218(A5)
+0686: 486d        PEA     -2234(A5)
+068a: a98d        _GetDItem
+068c: 302d        MOVE.W  -2476(A5),D0
+0690: 0c40        CMPI.W  #0x1 (1),D0
+0694: 6600        BNE     0x06ac
+0698: 487a        PEA     2490(PC) [0x1054 ; pstr='MacRascal is now due. Do you want to continue or not?']
+069c: 486d        PEA     -850(A5)
+06a0: 3f3c        MOVE.W  #0xff (255),-(A7)
+06a4: 4ead        JSR     154(A5) [CODE_1+0x11a]
+06a8: 6000        BRA     0x06e0
+06ac: 0c40        CMPI.W  #0x2 (2),D0
+06b0: 6600        BNE     0x06c8
+06b4: 487a        PEA     2516(PC) [0x108a ; pstr='Do you want to continue or not?']
+06b8: 486d        PEA     -850(A5)
+06bc: 3f3c        MOVE.W  #0xff (255),-(A7)
+06c0: 4ead        JSR     154(A5) [CODE_1+0x11a]
+06c4: 6000        BRA     0x06e0
+06c8: 0c40        CMPI.W  #0x3 (3),D0
+06cc: 6600        BNE     0x06e0
+06d0: 487a        PEA     2520(PC) [0x10aa ; pstr='minute.  The bet is $40,000.  Do you want to']
+06d4: 486d        PEA     -850(A5)
+06d8: 3f3c        MOVE.W  #0xff (255),-(A7)
+06dc: 4ead        JSR     154(A5) [CODE_1+0x11a]
+06e0: 2f2d        MOVE.L  -2218(A5),-(A7)
+06e4: 486d        PEA     -850(A5)
+06e8: a98f        _SetIText
+06ea: 2f2d        MOVE.L  -286(A5),-(A7)
+06ee: 3f3c        MOVE.W  #0x8 (8),-(A7)
+06f2: 486d        PEA     -2256(A5)
+06f6: 486d        PEA     -2218(A5)
+06fa: 486d        PEA     -2234(A5)
+06fe: a98d        _GetDItem
+0700: 0c6d        CMPI.W  #0x3 (3),-2476(A5)
+0706: 6600        BNE     0x0724
+070a: 487a        PEA     2508(PC) [0x10d8 ; pstr='continue or not?']
+070e: 486d        PEA     -850(A5)
+0712: 3f3c        MOVE.W  #0xff (255),-(A7)
+0716: 4ead        JSR     154(A5) [CODE_1+0x11a]
+071a: 2f2d        MOVE.L  -2218(A5),-(A7)
+071e: 486d        PEA     -850(A5)
+0722: a98f        _SetIText
+0724: 2f2d        MOVE.L  -286(A5),-(A7)
+0728: a915        _ShowWindow
+072a: 42a7        CLR.L   -(A7)
+072c: 486d        PEA     -2446(A5)
+0730: a991        _ModalDialog
+0732: 302d        MOVE.W  -2446(A5),D0
+0736: 0c40        CMPI.W  #0x1 (1),D0
+073a: 6600        BNE     0x09ea
+073e: 302d        MOVE.W  -2476(A5),D0
+0742: 0c40        CMPI.W  #0x1 (1),D0
+0746: 6600        BNE     0x075c
+074a: 202d        MOVE.L  -1696(A5),D0
+074e: 0480        SUBI.L  #0x88b8,D0
+0754: 2b40        MOVE.L  D0,-1696(A5)
+0758: 6000        BRA     0x078c
+075c: 0c40        CMPI.W  #0x2 (2),D0
+0760: 6600        BNE     0x0776
+0764: 202d        MOVE.L  -1696(A5),D0
+0768: 0480        SUBI.L  #0x8ca0,D0
+076e: 2b40        MOVE.L  D0,-1696(A5)
+0772: 6000        BRA     0x078c
+0776: 0c40        CMPI.W  #0x3 (3),D0
+077a: 6600        BNE     0x078c
+077e: 202d        MOVE.L  -1696(A5),D0
+0782: 0480        SUBI.L  #0xafc8,D0
+0788: 2b40        MOVE.L  D0,-1696(A5)
+078c: 2f2d        MOVE.L  -286(A5),-(A7)
+0790: a983        _DisposDialog
+0792: 42ad        CLR.L   -286(A5)
+0796: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+079a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+079e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+07a2: a893        _MoveTo
+07a4: 4a2d        TST.B   -2455(A5)
+07a8: 6700        BEQ     0x08f2
+07ac: 302d        MOVE.W  -2476(A5),D0
+07b0: 0c40        CMPI.W  #0x1 (1),D0
+07b4: 6600        BNE     0x07c2
+07b8: 487a        PEA     2352(PC) [0x10ea ; pstr='Faster Than Light won the race with a last minute']
+07bc: a884        _DrawString
+07be: 6000        BRA     0x07e2
+07c2: 0c40        CMPI.W  #0x2 (2),D0
+07c6: 6600        BNE     0x07d4
+07ca: 487a        PEA     2384(PC) [0x111c ; pstr='Lightning won, running ahead throughout most of']
+07ce: a884        _DrawString
+07d0: 6000        BRA     0x07e2
+07d4: 0c40        CMPI.W  #0x3 (3),D0
+07d8: 6600        BNE     0x07e2
+07dc: 487a        PEA     2414(PC) [0x114c ; pstr='Old Gray won the race and you won $120,000 from']
+07e0: a884        _DrawString
+07e2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+07e6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+07ea: a893        _MoveTo
+07ec: 302d        MOVE.W  -2476(A5),D0
+07f0: 0c40        CMPI.W  #0x1 (1),D0
+07f4: 6600        BNE     0x0802
+07f8: 487a        PEA     2434(PC) [0x117c ; pstr='burst of speed.  You won $100,000 from MacRascal.']
+07fc: a884        _DrawString
+07fe: 6000        BRA     0x0822
+0802: 0c40        CMPI.W  #0x2 (2),D0
+0806: 6600        BNE     0x0814
+080a: 487a        PEA     2466(PC) [0x11ae ; pstr='race.  You won $75,000 and sold the horse for']
+080e: a884        _DrawString
+0810: 6000        BRA     0x0822
+0814: 0c40        CMPI.W  #0x3 (3),D0
+0818: 6600        BNE     0x0822
+081c: 487a        PEA     2494(PC) [0x11dc ; pstr='MacRascal and sold the horse for $100,000.']
+0820: a884        _DrawString
+0822: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0826: 3f3c        MOVE.W  #0x5a (90),-(A7)
+082a: a893        _MoveTo
+082c: 302d        MOVE.W  -2476(A5),D0
+0830: 0c40        CMPI.W  #0x1 (1),D0
+0834: 6600        BNE     0x0842
+0838: 487a        PEA     2510(PC) [0x1208 ; pstr='It was a claimer race so you had to sell Faster but']
+083c: a884        _DrawString
+083e: 6000        BRA     0x0850
+0842: 0c40        CMPI.W  #0x2 (2),D0
+0846: 6600        BNE     0x0850
+084a: 487a        PEA     2544(PC) [0x123c ; pstr='$60,000.']
+084e: a884        _DrawString
+0850: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0854: 3f3c        MOVE.W  #0x6e (110),-(A7)
+0858: a893        _MoveTo
+085a: 0c6d        CMPI.W  #0x1 (1),-2476(A5)
+0860: 6600        BNE     0x086a
+0864: 487a        PEA     2528(PC) [0x1246 ; pstr='you got $50,000 for him.']
+0868: a884        _DrawString
+086a: 302d        MOVE.W  -2476(A5),D0
+086e: 0c40        CMPI.W  #0x1 (1),D0
+0872: 6600        BNE     0x0896
+0876: 202d        MOVE.L  -1696(A5),D0
+087a: 0680        ADDI.L  #0x2ab98,D0
+0880: 2b40        MOVE.L  D0,-1696(A5)
+0884: 202d        MOVE.L  -1740(A5),D0
+0888: 0480        SUBI.L  #0x186a0,D0
+088e: 2b40        MOVE.L  D0,-1740(A5)
+0892: 6000        BRA     0x08e2
+0896: 0c40        CMPI.W  #0x2 (2),D0
+089a: 6600        BNE     0x08be
+089e: 202d        MOVE.L  -1696(A5),D0
+08a2: 0680        ADDI.L  #0x20f58,D0
+08a8: 2b40        MOVE.L  D0,-1696(A5)
+08ac: 202d        MOVE.L  -1740(A5),D0
+08b0: 0480        SUBI.L  #0x124f8,D0
+08b6: 2b40        MOVE.L  D0,-1740(A5)
+08ba: 6000        BRA     0x08e2
+08be: 0c40        CMPI.W  #0x3 (3),D0
+08c2: 6600        BNE     0x08e2
+08c6: 202d        MOVE.L  -1696(A5),D0
+08ca: 0680        ADDI.L  #0x35b60,D0
+08d0: 2b40        MOVE.L  D0,-1696(A5)
+08d4: 202d        MOVE.L  -1740(A5),D0
+08d8: 0480        SUBI.L  #0x1d4c0,D0
+08de: 2b40        MOVE.L  D0,-1740(A5)
+08e2: 302d        MOVE.W  -1680(A5),D0
+08e6: 0640        ADDI.W  #0xc8 (200),D0
+08ea: 3b40        MOVE.W  D0,-1680(A5)
+08ee: 6000        BRA     0x09ca
+08f2: 302d        MOVE.W  -2476(A5),D0
+08f6: 0c40        CMPI.W  #0x1 (1),D0
+08fa: 6600        BNE     0x0908
+08fe: 487a        PEA     2400(PC) [0x1260 ; pstr='Faster wasn`t.  He wasn`t even close.  You were']
+0902: a884        _DrawString
+0904: 6000        BRA     0x0928
+0908: 0c40        CMPI.W  #0x2 (2),D0
+090c: 6600        BNE     0x091a
+0910: 487a        PEA     2430(PC) [0x1290 ; pstr='Lightning was as slow as molasses and you lost.']
+0914: a884        _DrawString
+0916: 6000        BRA     0x0928
+091a: 0c40        CMPI.W  #0x3 (3),D0
+091e: 6600        BNE     0x0928
+0922: 487a        PEA     2460(PC) [0x12c0 ; pstr='Apparently, the fellows who sold you Old Gray']
+0926: a884        _DrawString
+0928: 3f3c        MOVE.W  #0x32 (50),-(A7)
+092c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0930: a893        _MoveTo
+0932: 302d        MOVE.W  -2476(A5),D0
+0936: 0c40        CMPI.W  #0x1 (1),D0
+093a: 6600        BNE     0x0948
+093e: 487a        PEA     2478(PC) [0x12ee ; pstr='lucky to be able to sell him to a glue factory for']
+0942: a884        _DrawString
+0944: 6000        BRA     0x0968
+0948: 0c40        CMPI.W  #0x2 (2),D0
+094c: 6600        BNE     0x095a
+0950: 487a        PEA     2512(PC) [0x1322 ; pstr='You got $500 for him.']
+0954: a884        _DrawString
+0956: 6000        BRA     0x0968
+095a: 0c40        CMPI.W  #0x3 (3),D0
+095e: 6600        BNE     0x0968
+0962: 487a        PEA     2516(PC) [0x1338 ; pstr='did get the better of the deal.  You gave him to']
+0966: a884        _DrawString
+0968: 3f3c        MOVE.W  #0x32 (50),-(A7)
+096c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0970: a893        _MoveTo
+0972: 302d        MOVE.W  -2476(A5),D0
+0976: 0c40        CMPI.W  #0x1 (1),D0
+097a: 6600        BNE     0x0988
+097e: 487a        PEA     2538(PC) [0x136a ; pstr='$100.']
+0982: a884        _DrawString
+0984: 6000        BRA     0x0996
+0988: 0c40        CMPI.W  #0x3 (3),D0
+098c: 6600        BNE     0x0996
+0990: 487a        PEA     2526(PC) [0x1370 ; pstr='the Marines for target practice.']
+0994: a884        _DrawString
+0996: 302d        MOVE.W  -2476(A5),D0
+099a: 0c40        CMPI.W  #0x1 (1),D0
+099e: 6600        BNE     0x09b4
+09a2: 202d        MOVE.L  -1696(A5),D0
+09a6: 0680        ADDI.L  #0x64,D0
+09ac: 2b40        MOVE.L  D0,-1696(A5)
+09b0: 6000        BRA     0x09ca
+09b4: 0c40        CMPI.W  #0x2 (2),D0
+09b8: 6600        BNE     0x09ca
+09bc: 202d        MOVE.L  -1696(A5),D0
+09c0: 0680        ADDI.L  #0x1f4,D0
+09c6: 2b40        MOVE.L  D0,-1696(A5)
+09ca: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+09ce: 302d        MOVE.W  -1680(A5),D0
+09d2: 0440        SUBI.W  #0x32 (50),D0
+09d6: 3b40        MOVE.W  D0,-1680(A5)
+09da: 302d        MOVE.W  -1724(A5),D0
+09de: 0640        ADDI.W  #0x64 (100),D0
+09e2: 3b40        MOVE.W  D0,-1724(A5)
+09e6: 6000        BRA     0x0b14
+09ea: 0c40        CMPI.W  #0x2 (2),D0
+09ee: 6600        BNE     0x0b14
+09f2: 2f2d        MOVE.L  -286(A5),-(A7)
+09f6: a983        _DisposDialog
+09f8: 42ad        CLR.L   -286(A5)
+09fc: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0a00: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a04: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a08: a893        _MoveTo
+0a0a: 302d        MOVE.W  -2476(A5),D0
+0a0e: 0c40        CMPI.W  #0x1 (1),D0
+0a12: 6600        BNE     0x0a20
+0a16: 487a        PEA     2426(PC) [0x1392 ; pstr='You got $5,000 when you sold Faster Than Light.']
+0a1a: a884        _DrawString
+0a1c: 6000        BRA     0x0a40
+0a20: 0c40        CMPI.W  #0x2 (2),D0
+0a24: 6600        BNE     0x0a32
+0a28: 487a        PEA     2456(PC) [0x13c2 ; pstr='You got $8,000 when you sold Lightning.']
+0a2c: a884        _DrawString
+0a2e: 6000        BRA     0x0a40
+0a32: 0c40        CMPI.W  #0x3 (3),D0
+0a36: 6600        BNE     0x0a40
+0a3a: 487a        PEA     2478(PC) [0x13ea ; pstr='You got $10,000 when you sold Old Gray.']
+0a3e: a884        _DrawString
+0a40: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a44: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0a48: a893        _MoveTo
+0a4a: 4a2d        TST.B   -2455(A5)
+0a4e: 6700        BEQ     0x0a8c
+0a52: 302d        MOVE.W  -2476(A5),D0
+0a56: 0c40        CMPI.W  #0x1 (1),D0
+0a5a: 6600        BNE     0x0a68
+0a5e: 487a        PEA     2482(PC) [0x1412 ; pstr='Faster won the race with a last minute burst of speed.']
+0a62: a884        _DrawString
+0a64: 6000        BRA     0x0a88
+0a68: 0c40        CMPI.W  #0x2 (2),D0
+0a6c: 6600        BNE     0x0a7a
+0a70: 487a        PEA     2520(PC) [0x144a ; pstr='Lightning was ahead through the whole race.']
+0a74: a884        _DrawString
+0a76: 6000        BRA     0x0a88
+0a7a: 0c40        CMPI.W  #0x3 (3),D0
+0a7e: 6600        BNE     0x0a88
+0a82: 487a        PEA     2546(PC) [0x1476 ; pstr='Old Gray won easily.']
+0a86: a884        _DrawString
+0a88: 6000        BRA     0x0ac2
+0a8c: 302d        MOVE.W  -2476(A5),D0
+0a90: 0c40        CMPI.W  #0x1 (1),D0
+0a94: 6600        BNE     0x0aa2
+0a98: 487a        PEA     2546(PC) [0x148c ; pstr='Faster lost the race.']
+0a9c: a884        _DrawString
+0a9e: 6000        BRA     0x0ac2
+0aa2: 0c40        CMPI.W  #0x2 (2),D0
+0aa6: 6600        BNE     0x0ab4
+0aaa: 487a        PEA     2550(PC) [0x14a2 ; pstr='Lightning never did better than the middle of the pack.']
+0aae: a884        _DrawString
+0ab0: 6000        BRA     0x0ac2
+0ab4: 0c40        CMPI.W  #0x3 (3),D0
+0ab8: 6600        BNE     0x0ac2
+0abc: 487a        PEA     2588(PC) [0x14da ; pstr='Old Gray lost.']
+0ac0: a884        _DrawString
+0ac2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0ac6: 302d        MOVE.W  -2476(A5),D0
+0aca: 0c40        CMPI.W  #0x1 (1),D0
+0ace: 6600        BNE     0x0ae4
+0ad2: 202d        MOVE.L  -1696(A5),D0
+0ad6: 0680        ADDI.L  #0x1388,D0
+0adc: 2b40        MOVE.L  D0,-1696(A5)
+0ae0: 6000        BRA     0x0b14
+0ae4: 0c40        CMPI.W  #0x2 (2),D0
+0ae8: 6600        BNE     0x0afe
+0aec: 202d        MOVE.L  -1696(A5),D0
+0af0: 0680        ADDI.L  #0x1f40,D0
+0af6: 2b40        MOVE.L  D0,-1696(A5)
+0afa: 6000        BRA     0x0b14
+0afe: 0c40        CMPI.W  #0x3 (3),D0
+0b02: 6600        BNE     0x0b14
+0b06: 202d        MOVE.L  -1696(A5),D0
+0b0a: 0680        ADDI.L  #0x2710,D0
+0b10: 2b40        MOVE.L  D0,-1696(A5)
+0b14: 4e5e        UNLK    A6
+0b16: 4e75        RTS
+0b18: 3159        MOVE.W  (A1)+,28533(A0)
+0b1c: 2068        MOVEA.L  24950(A0),A0
+0b20: 6520        BCS     0x0b42
+0b22: 6265        BHI     0x0b89
+0b24: 656e        BCS     0x0b94
+0b26: 2067        MOVEA.L  -(A7),A0
+0b28: 6976        BVS     0x0ba0
+0b2a: 656e        BCS     0x0b9a
+0b2c: 2074        MOVEA.L  101(A4,D6.L),A0
+0b30: 206f        MOVEA.L  28784(A7),A0
+0b34: 6f72        BLE     0x0ba8
+0b36: 7475        MOVEQ   #117,D2
+0b38: 6e69        BGT     0x0ba3
+0b3a: 7479        MOVEQ   #121,D2
+0b3c: 2074        MOVEA.L  32(A4,D6.L),A0
+0b40: 6275        BHI     0x0bb7
+0b42: 7920        DC.W    0x7920
+0b44: 6120        BSR     0x0b66
+0b46: 6669        BNE     0x0bb1
+0b48: 6e65        BGT     0x0baf
+0b4a: 354f        MOVE.W  A7,28259(A2)
+0b4e: 6520        BCS     0x0b70
+0b50: 6167        BSR     0x0bb9
+0b52: 6169        BSR     0x0bbd
+0b54: 6e20        BGT     0x0b76
+0b56: 796f        DC.W    0x796f
+0b58: 7520        DC.W    0x7520
+0b5a: 6361        BLS     0x0bbd
+0b5c: 6e20        BGT     0x0b7e
+0b5e: 6765        BEQ     0x0bc5
+0b60: 7420        MOVEQ   #32,D2
+0b62: 696e        BVS     0x0bd2
+0b64: 746f        MOVEQ   #111,D2
+0b66: 2074        MOVEA.L  101(A4,D6.L),A0
+0b6a: 2068        MOVEA.L  28530(A0),A0
+0b6e: 7365        DC.W    0x7365
+0b70: 2072        MOVEA.L  99(A2,D6.W),A0
+0b74: 696e        BVS     0x0be4
+0b76: 6720        BEQ     0x0b98
+0b78: 6275        BHI     0x0bef
+0b7a: 7369        DC.W    0x7369
+0b7c: 6e65        BGT     0x0be3
+0b7e: 7373        DC.W    0x7373
+0b80: 2f48        MOVE.L  A0,25970(A7)
+0b84: 6560        BCS     0x0be6
+0b86: 7320        DC.W    0x7320
+0b88: 616e        BSR     0x0bf8
+0b8a: 6f74        BLE     0x0c00
+0b8c: 6865        BVC     0x0bf3
+0b8e: 7220        MOVEQ   #32,D1
+0b90: 6368        BLS     0x0bfa
+0b92: 616e        BSR     0x0c02
+0b94: 6365        BLS     0x0bfb
+0b96: 2074        MOVEA.L  32(A4,D6.L),A0
+0b9a: 6765        BEQ     0x0c01
+0b9c: 7420        MOVEQ   #32,D2
+0b9e: 6120        BSR     0x0bc0
+0ba0: 686f        BVC     0x0c11
+0ba2: 7273        MOVEQ   #115,D1
+0ba4: 652c        BCS     0x0bd2
+0ba6: 2074        MOVEA.L  105(A4,D6.L),A0
+0baa: 7320        DC.W    0x7320
+0bac: 7469        MOVEQ   #105,D2
+0bae: 6d65        BLT     0x0c15
+0bb0: 3172        MOVE.W  99(A2,D6.W),25888(A0)
+0bb6: 686f        BVC     0x0c27
+0bb8: 7273        MOVEQ   #115,D1
+0bba: 6520        BCS     0x0bdc
+0bbc: 6e61        BGT     0x0c1f
+0bbe: 6d65        BLT     0x0c25
+0bc0: 6420        BCC     0x0be2
+0bc2: 4661        DC.W    0x4661
+0bc4: 7374        DC.W    0x7374
+0bc6: 6572        BCS     0x0c3a
+0bc8: 2054        MOVEA.L  (A4),A0
+0bca: 6861        BVC     0x0c2d
+0bcc: 6e20        BGT     0x0bee
+0bce: 4c69        DC.W    0x4c69
+0bd0: 6768        BEQ     0x0c3a
+0bd2: 7420        MOVEQ   #32,D2
+0bd4: 746f        MOVEQ   #111,D2
+0bd6: 2072        MOVEA.L  110(A2,D7.W),A0
+0bda: 2061        MOVEA.L  -(A1),A0
+0bdc: 6761        BEQ     0x0c3f
+0bde: 696e        BVS     0x0c4e
+0be0: 7374        DC.W    0x7374
+0be2: 3477        MOVEA.W  116(A7,D6.L),A2
+0be6: 6820        BVC     0x0c08
+0be8: 6120        BSR     0x0c0a
+0bea: 6669        BNE     0x0c55
+0bec: 6e65        BGT     0x0c53
+0bee: 2073        MOVEA.L  101(A3,D7.W),A0
+0bf2: 6369        BLS     0x0c5d
+0bf4: 6d65        BLT     0x0c5b
+0bf6: 6e20        BGT     0x0c18
+0bf8: 6e61        BGT     0x0c5b
+0bfa: 6d65        BLT     0x0c61
+0bfc: 6420        BCC     0x0c1e
+0bfe: 4c69        DC.W    0x4c69
+0c00: 6768        BEQ     0x0c6a
+0c02: 746e        MOVEQ   #110,D2
+0c04: 696e        BVS     0x0c74
+0c06: 6720        BEQ     0x0c28
+0c08: 746f        MOVEQ   #111,D2
+0c0a: 2072        MOVEA.L  99(A2,D6.W),A0
+0c0e: 6520        BCS     0x0c30
+0c10: 6167        BSR     0x0c79
+0c12: 6169        BSR     0x0c7d
+0c14: 6e73        BGT     0x0c89
+0c16: 7400        MOVEQ   #0,D2
+0c18: 2f79        MOVE.L  (0x6f757220).L,28524(A7)
+0c20: 6420        BCC     0x0c42
+0c22: 6672        BNE     0x0c96
+0c24: 6174        BSR     0x0c9a
+0c26: 2062        MOVEA.L  -(A2),A0
+0c28: 726f        MOVEQ   #111,D1
+0c2a: 7468        MOVEQ   #104,D2
+0c2c: 6572        BCS     0x0ca0
+0c2e: 204a        MOVEA.L  A2,A0
+0c30: 2e20        MOVE.L  -(A0),D7
+0c32: 4d61        DC.W    0x4d61
+0c34: 726d        MOVEQ   #109,D1
+0c36: 6164        BSR     0x0c9c
+0c38: 756b        DC.W    0x756b
+0c3a: 6520        BCS     0x0c5c
+0c3c: 4469        DC.W    0x4469
+0c3e: 7274        MOVEQ   #116,D1
+0c40: 7920        DC.W    0x7920
+0c42: 6761        BEQ     0x0ca5
+0c44: 7665        MOVEQ   #101,D3
+0c46: 2061        MOVEA.L  -(A1),A0
+0c48: 344d        MOVEA.W  A5,A2
+0c4a: 6163        BSR     0x0caf
+0c4c: 5261        ADDQ.W  #1,-(A1)
+0c4e: 7363        DC.W    0x7363
+0c50: 616c        BSR     0x0cbe
+0c52: 6073        BRA     0x0cc7
+0c54: 2042        MOVEA.L  D2,A0
+0c56: 6c61        BGE     0x0cb9
+0c58: 636b        BLS     0x0cc5
+0c5a: 2042        MOVEA.L  D2,A0
+0c5c: 6561        BCS     0x0cbf
+0c5e: 7574        DC.W    0x7574
+0c60: 792e        DC.W    0x792e
+0c62: 2020        MOVE.L  -(A0),D0
+0c64: 4974        DC.W    0x4974
+0c66: 2077        MOVEA.L  108(A7,D6.L),A0
+0c6a: 6c20        BGE     0x0c8c
+0c6c: 7072        MOVEQ   #114,D0
+0c6e: 6f62        BLE     0x0cd2
+0c70: 6162        BSR     0x0cd4
+0c72: 6c79        BGE     0x0ced
+0c74: 2063        MOVEA.L  -(A3),A0
+0c76: 6f73        BLE     0x0ceb
+0c78: 7420        MOVEQ   #32,D2
+0c7a: 796f        DC.W    0x796f
+0c7c: 7500        DC.W    0x7500
+0c7e: 2c4d        MOVEA.L  A5,A6
+0c80: 6163        BSR     0x0ce5
+0c82: 5261        ADDQ.W  #1,-(A1)
+0c84: 7363        DC.W    0x7363
+0c86: 616c        BSR     0x0cf4
+0c88: 6073        BRA     0x0cfd
+0c8a: 2044        MOVEA.L  D4,A0
+0c8c: 6f6d        BLE     0x0cfb
+0c8e: 696e        BVS     0x0cfe
+0c90: 6174        BSR     0x0d06
+0c92: 6f72        BLE     0x0d06
+0c94: 2e20        MOVE.L  -(A0),D7
+0c96: 2043        MOVEA.L  D3,A0
+0c98: 6f73        BLE     0x0d0d
+0c9a: 7420        MOVEQ   #32,D2
+0c9c: 7769        DC.W    0x7769
+0c9e: 6c6c        BGE     0x0d0c
+0ca0: 2062        MOVEA.L  -(A2),A0
+0ca2: 6520        BCS     0x0cc4
+0ca4: 2432        MOVE.L  44(A2,D3.W),D2
+0ca8: 3030        MOVE.W  0(A0,D3.W),D0
+0cac: 3263        MOVEA.W  -(A3),A1
+0cae: 6861        BVC     0x0d11
+0cb0: 6d70        BLT     0x0d22
+0cb2: 2066        MOVEA.L  -(A6),A0
+0cb4: 726f        MOVEQ   #111,D1
+0cb6: 6d20        BLT     0x0cd8
+0cb8: 7468        MOVEQ   #104,D2
+0cba: 6520        BCS     0x0cdc
+0cbc: 6f74        BLE     0x0d32
+0cbe: 6865        BVC     0x0d25
+0cc0: 7220        MOVEQ   #32,D1
+0cc2: 7369        DC.W    0x7369
+0cc4: 6465        BCC     0x0d2b
+0cc6: 206f        MOVEA.L  26144(A7),A0
+0cca: 7468        MOVEQ   #104,D2
+0ccc: 6520        BCS     0x0cee
+0cce: 7374        DC.W    0x7374
+0cd0: 6174        BSR     0x0d46
+0cd2: 6520        BCS     0x0cf4
+0cd4: 6120        BSR     0x0cf6
+0cd6: 7465        MOVEQ   #101,D2
+0cd8: 6d70        BLT     0x0d4a
+0cda: 6f72        BLE     0x0d4e
+0cdc: 6172        BSR     0x0d50
+0cde: 7900        DC.W    0x7900
+0ce0: 3124        MOVE.W  -(A4),-(A0)
+0ce2: 3135        MOVE.W  48(A5,D2.L),-(A0)
+0ce6: 3030        MOVE.W  116(A0,D2.W),D0
+0cea: 6f20        BLE     0x0d0c
+0cec: 7275        MOVEQ   #117,D1
+0cee: 6e20        BGT     0x0d10
+0cf0: 7468        MOVEQ   #104,D2
+0cf2: 6520        BCS     0x0d14
+0cf4: 686f        BVC     0x0d65
+0cf6: 7273        MOVEQ   #115,D1
+0cf8: 6520        BCS     0x0d1a
+0cfa: 616e        BSR     0x0d6a
+0cfc: 6420        BCC     0x0d1e
+0cfe: 2432        MOVE.L  44(A2,D3.W),D2
+0d02: 3030        MOVE.W  32(A0,D3.W),D0
+0d06: 666f        BNE     0x0d77
+0d08: 7220        MOVEQ   #32,D1
+0d0a: 7468        MOVEQ   #104,D2
+0d0c: 6520        BCS     0x0d2e
+0d0e: 6265        BHI     0x0d75
+0d10: 742c        MOVEQ   #44,D2
+0d12: 3174        MOVE.W  32(A4,D6.L),25205(A0)
+0d18: 7920        DC.W    0x7920
+0d1a: 616e        BSR     0x0d8a
+0d1c: 6420        BCC     0x0d3e
+0d1e: 7275        MOVEQ   #117,D1
+0d20: 6e20        BGT     0x0d42
+0d22: 7468        MOVEQ   #104,D2
+0d24: 6520        BCS     0x0d46
+0d26: 686f        BVC     0x0d97
+0d28: 7273        MOVEQ   #115,D1
+0d2a: 6520        BCS     0x0d4c
+0d2c: 616e        BSR     0x0d9c
+0d2e: 6420        BCC     0x0d50
+0d30: 2432        MOVE.L  44(A2,D3.W),D2
+0d34: 3030        MOVE.W  32(A0,D3.W),D0
+0d38: 666f        BNE     0x0da9
+0d3a: 7220        MOVEQ   #32,D1
+0d3c: 7468        MOVEQ   #104,D2
+0d3e: 6520        BCS     0x0d60
+0d40: 6265        BHI     0x0da7
+0d42: 742e        MOVEQ   #46,D2
+0d44: 3470        MOVEA.W  105(A0,D6.L),A2
+0d48: 736f        DC.W    0x736f
+0d4a: 6e20        BGT     0x0d6c
+0d4c: 616e        BSR     0x0dbc
+0d4e: 6420        BCC     0x0d70
+0d50: 706f        MOVEQ   #111,D0
+0d52: 6973        BVS     0x0dc7
+0d54: 6564        BCS     0x0dba
+0d56: 2061        MOVEA.L  -(A1),A0
+0d58: 7320        DC.W    0x7320
+0d5a: 6120        BSR     0x0d7c
+0d5c: 7665        MOVEQ   #101,D3
+0d5e: 7465        MOVEQ   #101,D2
+0d60: 7269        MOVEQ   #105,D1
+0d62: 6e61        BGT     0x0dc5
+0d64: 7279        MOVEQ   #121,D1
+0d66: 2073        MOVEA.L  101(A3,D7.W),A0
+0d6a: 6369        BLS     0x0dd5
+0d6c: 616c        BSR     0x0dda
+0d6e: 6973        BVS     0x0de3
+0d70: 7420        MOVEQ   #32,D2
+0d72: 736f        DC.W    0x736f
+0d74: 2074        MOVEA.L  97(A4,D6.L),A0
+0d78: 7400        MOVEQ   #0,D2
+0d7a: 3462        MOVEA.W  -(A2),A2
+0d7c: 7574        DC.W    0x7574
+0d7e: 204d        MOVEA.L  A5,A0
+0d80: 6163        BSR     0x0de5
+0d82: 5261        ADDQ.W  #1,-(A1)
+0d84: 7363        DC.W    0x7363
+0d86: 616c        BSR     0x0df4
+0d88: 2069        MOVEA.L  29472(A1),A0
+0d8c: 6769        BEQ     0x0df7
+0d8e: 7669        MOVEQ   #105,D3
+0d90: 6e67        BGT     0x0df9
+0d92: 2034        MOVE.L  116(A4,D2.W),D0
+0d96: 6f20        BLE     0x0db8
+0d98: 3120        MOVE.W  -(A0),-(A0)
+0d9a: 6f64        BLE     0x0e00
+0d9c: 6473        BCC     0x0e11
+0d9e: 2c20        MOVE.L  -(A0),D6
+0da0: 736f        DC.W    0x736f
+0da2: 2079        MOVEA.L  (0x6f752063).L,A0
+0da8: 616e        BSR     0x0e18
+0daa: 206d        MOVEA.L  24939(A5),A0
+0dae: 6500        BCS     0x4304
+0db2: 6865        BVC     0x0e19
+0db4: 206f        MOVEA.L  25700(A7),A0
+0db8: 7320        DC.W    0x7320
+0dba: 7468        MOVEQ   #104,D2
+0dbc: 6973        BVS     0x0e31
+0dbe: 2074        MOVEA.L  109(A4,D6.L),A0
+0dc2: 6520        BCS     0x0de4
+0dc4: 6172        BSR     0x0e38
+0dc6: 6520        BCS     0x0de8
+0dc8: 6f6e        BLE     0x0e38
+0dca: 6c79        BGE     0x0e45
+0dcc: 2033        MOVE.L  116(A3,D2.W),D0
+0dd0: 6f20        BLE     0x0df2
+0dd2: 6f6e        BLE     0x0e42
+0dd4: 652c        BCS     0x0e02
+0dd6: 2073        MOVEA.L  32(A3,D6.L),A0
+0dda: 796f        DC.W    0x796f
+0ddc: 7520        DC.W    0x7520
+0dde: 6361        BLS     0x0e41
+0de0: 6e20        BGT     0x0e02
+0de2: 6d61        BLT     0x0e45
+0de4: 6b65        BMI     0x0e4b
+0de6: 3479        MOVEA.W  (0x6f752077).L,A2
+0dec: 696c        BVS     0x0e5a
+0dee: 6c20        BGE     0x0e10
+0df0: 6265        BHI     0x0e57
+0df2: 2061        MOVEA.L  -(A1),A0
+0df4: 626c        BHI     0x0e62
+0df6: 6520        BCS     0x0e18
+0df8: 746f        MOVEQ   #111,D2
+0dfa: 2062        MOVEA.L  -(A2),A0
+0dfc: 7579        DC.W    0x7579
+0dfe: 2074        MOVEA.L  101(A4,D6.L),A0
+0e02: 2068        MOVEA.L  28530(A0),A0
+0e06: 7365        DC.W    0x7365
+0e08: 2066        MOVEA.L  -(A6),A0
+0e0a: 6f72        BLE     0x0e7e
+0e0c: 206f        MOVEA.L  28268(A7),A0
+0e10: 7920        DC.W    0x7920
+0e12: 2432        MOVE.L  48(A2,D3.W),D2
+0e16: 3020        MOVE.W  -(A0),D0
+0e18: 616e        BSR     0x0e88
+0e1a: 6400        BCC     0x3d40
+0e1e: 3835        MOVE.W  48(A5,D2.L),D4
+0e22: 3030        MOVE.W  111(A0,D2.W),D0
+0e26: 6e20        BGT     0x0e48
+0e28: 7468        MOVEQ   #104,D2
+0e2a: 6520        BCS     0x0e4c
+0e2c: 6465        BCC     0x0e93
+0e2e: 616c        BSR     0x0e9c
+0e30: 2061        MOVEA.L  -(A1),A0
+0e32: 6674        BNE     0x0ea8
+0e34: 6572        BCS     0x0ea8
+0e36: 2065        MOVEA.L  -(A5),A0
+0e38: 7870        MOVEQ   #112,D4
+0e3a: 656e        BCS     0x0eaa
+0e3c: 7365        DC.W    0x7365
+0e3e: 7320        DC.W    0x7320
+0e40: 6172        BSR     0x0eb4
+0e42: 6520        BCS     0x0e64
+0e44: 636f        BLS     0x0eb5
+0e46: 7665        MOVEQ   #101,D3
+0e48: 7265        MOVEQ   #101,D1
+0e4a: 642e        BCC     0x0e7a
+0e4c: 2f24        MOVE.L  -(A4),-(A7)
+0e4e: 3535        MOVE.W  48(A5,D2.L),-(A2)
+0e52: 3030        MOVE.W  111(A0,D2.W),D0
+0e56: 6e20        BGT     0x0e78
+0e58: 7468        MOVEQ   #104,D2
+0e5a: 6520        BCS     0x0e7c
+0e5c: 6465        BCC     0x0ec3
+0e5e: 616c        BSR     0x0ecc
+0e60: 2061        MOVEA.L  -(A1),A0
+0e62: 6674        BNE     0x0ed8
+0e64: 6572        BCS     0x0ed8
+0e66: 2065        MOVEA.L  -(A5),A0
+0e68: 7870        MOVEQ   #112,D4
+0e6a: 656e        BCS     0x0eda
+0e6c: 7365        DC.W    0x7365
+0e6e: 7320        DC.W    0x7320
+0e70: 6172        BSR     0x0ee4
+0e72: 6520        BCS     0x0e94
+0e74: 636f        BLS     0x0ee5
+0e76: 7665        MOVEQ   #101,D3
+0e78: 7265        MOVEQ   #101,D1
+0e7a: 642e        BCC     0x0eaa
+0e7c: 3474        MOVEA.W  101(A4,D6.L),A2
+0e80: 2066        MOVEA.L  -(A6),A0
+0e82: 756e        DC.W    0x756e
+0e84: 6e79        BGT     0x0eff
+0e86: 2074        MOVEA.L  105(A4,D6.L),A0
+0e8a: 6e67        BGT     0x0ef3
+0e8c: 2069        MOVEA.L  29472(A1),A0
+0e90: 7468        MOVEQ   #104,D2
+0e92: 6174        BSR     0x0f08
+0e94: 2074        MOVEA.L  101(A4,D6.L),A0
+0e98: 7920        DC.W    0x7920
+0e9a: 7468        MOVEQ   #104,D2
+0e9c: 696e        BVS     0x0f0c
+0e9e: 6b20        BMI     0x0ec0
+0ea0: 7468        MOVEQ   #104,D2
+0ea2: 6579        BCS     0x0f1d
+0ea4: 2061        MOVEA.L  -(A1),A0
+0ea6: 7265        MOVEQ   #101,D1
+0ea8: 2063        MOVEA.L  -(A3),A0
+0eaa: 6865        BVC     0x0f11
+0eac: 6174        BSR     0x0f22
+0eae: 696e        BVS     0x0f1e
+0eb0: 6700        BEQ     0x2af6
+0eb4: 6f20        BLE     0x0ed6
+0eb6: 796f        DC.W    0x796f
+0eb8: 7520        DC.W    0x7520
+0eba: 7761        DC.W    0x7761
+0ebc: 6e74        BGT     0x0f32
+0ebe: 2074        MOVEA.L  101(A4,D6.L),A0
+0ec2: 2064        MOVEA.L  -(A4),A0
+0ec4: 6561        BCS     0x0f27
+0ec6: 6c20        BGE     0x0ee8
+0ec8: 6f72        BLE     0x0f3c
+0eca: 206e        MOVEA.L  28532(A6),A0
+0ece: 3f00        MOVE.W  D0,-(A7)
+0ed0: 3179        MOVE.W  (0x6f752e20).L,21608(A0)
+0ed8: 6520        BCS     0x0efa
+0eda: 6f64        BLE     0x0f40
+0edc: 6473        BCC     0x0f51
+0ede: 2061        MOVEA.L  -(A1),A0
+0ee0: 7265        MOVEQ   #101,D1
+0ee2: 2033        MOVE.L  116(A3,D2.W),D0
+0ee6: 6f20        BLE     0x0f08
+0ee8: 3120        MOVE.W  -(A0),-(A0)
+0eea: 616e        BSR     0x0f5a
+0eec: 6420        BCC     0x0f0e
+0eee: 796f        DC.W    0x796f
+0ef0: 7572        DC.W    0x7572
+0ef2: 2062        MOVEA.L  -(A2),A0
+0ef4: 6574        BCS     0x0f6a
+0ef6: 2069        MOVEA.L  29472(A1),A0
+0efa: 2434        MOVE.L  44(A4,D3.W),D2
+0efe: 3030        MOVE.W  46(A0,D3.W),D0
+0f02: 1b44        MOVE.B  D4,28448(A5)
+0f06: 796f        DC.W    0x796f
+0f08: 7520        DC.W    0x7520
+0f0a: 7761        DC.W    0x7761
+0f0c: 6e74        BGT     0x0f82
+0f0e: 2074        MOVEA.L  32(A4,D6.L),A0
+0f12: 6465        BCC     0x0f79
+0f14: 616c        BSR     0x0f82
+0f16: 206f        MOVEA.L  29216(A7),A0
+0f1a: 6e6f        BGT     0x0f8b
+0f1c: 743f        MOVEQ   #63,D2
+0f1e: 3246        MOVEA.W  D6,A1
+0f20: 6173        BSR     0x0f95
+0f22: 7465        MOVEQ   #101,D2
+0f24: 7220        MOVEQ   #32,D1
+0f26: 5468        ADDQ.W  #2,24942(A0)
+0f2a: 204c        MOVEA.L  A4,A0
+0f2c: 6967        BVS     0x0f95
+0f2e: 6874        BVC     0x0fa4
+0f30: 2068        MOVEA.L  24947(A0),A0
+0f34: 2072        MOVEA.L  110(A2,D7.W),A0
+0f38: 2075        MOVEA.L  32(A5,D7.W),A0
+0f3c: 2431        MOVE.L  44(A1,D3.W),D2
+0f40: 3030        MOVE.W  32(A0,D3.W),D0
+0f44: 696e        BVS     0x0fb4
+0f46: 2073        MOVEA.L  97(A3,D7.W),A0
+0f4a: 626c        BHI     0x0fb8
+0f4c: 6520        BCS     0x0f6e
+0f4e: 616e        BSR     0x0fbe
+0f50: 6400        BCC     0x41ab
+0f54: 6570        BCS     0x0fc6
+0f56: 2c20        MOVE.L  -(A0),D6
+0f58: 6f6e        BLE     0x0fc8
+0f5a: 6365        BLS     0x0fc1
+0f5c: 2061        MOVEA.L  -(A1),A0
+0f5e: 6761        BEQ     0x0fc1
+0f60: 696e        BVS     0x0fd0
+0f62: 2073        MOVEA.L  97(A3,D7.W),A0
+0f66: 626c        BHI     0x0fd4
+0f68: 6520        BCS     0x0f8a
+0f6a: 616e        BSR     0x0fda
+0f6c: 6420        BCC     0x0f8e
+0f6e: 7472        MOVEQ   #114,D2
+0f70: 6169        BSR     0x0fdb
+0f72: 6e69        BGT     0x0fdd
+0f74: 6e67        BGT     0x0fdd
+0f76: 2066        MOVEA.L  -(A6),A0
+0f78: 6565        BCS     0x0fdf
+0f7a: 7320        DC.W    0x7320
+0f7c: 6172        BSR     0x0ff0
+0f7e: 6520        BCS     0x0fa0
+0f80: 6869        BVC     0x0feb
+0f82: 6768        BEQ     0x0fec
+0f84: 2e00        MOVE.L  D0,D7
+0f86: 3359        MOVE.W  (A1)+,28533(A1)
+0f8a: 2077        MOVEA.L  114(A7,D6.W),A0
+0f8e: 6520        BCS     0x0fb0
+0f90: 6162        BSR     0x0ff4
+0f92: 6c65        BGE     0x0ff9
+0f94: 2074        MOVEA.L  32(A4,D6.L),A0
+0f98: 6b65        BMI     0x0fff
+0f9a: 6570        BCS     0x100c
+0f9c: 2073        MOVEA.L  97(A3,D7.W),A0
+0fa0: 626c        BHI     0x100e
+0fa2: 6520        BCS     0x0fc4
+0fa4: 616e        BSR     0x1014
+0fa6: 6420        BCC     0x0fc8
+0fa8: 7472        MOVEQ   #114,D2
+0faa: 6169        BSR     0x1015
+0fac: 6e69        BGT     0x1017
+0fae: 6e67        BGT     0x1017
+0fb0: 2066        MOVEA.L  -(A6),A0
+0fb2: 6565        BCS     0x1019
+0fb4: 7320        DC.W    0x7320
+0fb6: 646f        BCC     0x1027
+0fb8: 776e        DC.W    0x776e
+0fba: 3274        MOVEA.W  97(A4,D7.W),A1
+0fbe: 696e        BVS     0x102e
+0fc0: 696e        BVS     0x1030
+0fc2: 6720        BEQ     0x0fe4
+0fc4: 6665        BNE     0x102b
+0fc6: 6573        BCS     0x103b
+0fc8: 2e20        MOVE.L  -(A0),D7
+0fca: 2041        MOVEA.L  D1,A0
+0fcc: 6c73        BGE     0x1041
+0fce: 6f2c        BLE     0x0ffc
+0fd0: 2074        MOVEA.L  101(A4,D6.L),A0
+0fd4: 2024        MOVE.L  -(A4),D0
+0fd6: 3235        MOVE.W  48(A5,D2.L),D1
+0fda: 3030        MOVE.W  102(A0,D2.W),D0
+0fde: 6f72        BLE     0x1052
+0fe0: 2074        MOVEA.L  101(A4,D6.L),A0
+0fe4: 2062        MOVEA.L  -(A2),A0
+0fe6: 6574        BCS     0x105c
+0fe8: 2077        MOVEA.L  116(A7,D6.L),A0
+0fec: 6800        BVC     0x4442
+0ff0: 6865        BVC     0x1057
+0ff2: 7920        DC.W    0x7920
+0ff4: 636f        BLS     0x1065
+0ff6: 7374        DC.W    0x7374
+0ff8: 2024        MOVE.L  -(A4),D0
+0ffa: 3131        MOVE.W  48(A1,D2.L),-(A0)
+0ffe: 3030        MOVE.W  97(A0,D2.W),D0
+1002: 6e64        BGT     0x1068
+1004: 2074        MOVEA.L  101(A4,D6.L),A0
+1008: 2062        MOVEA.L  -(A2),A0
+100a: 6574        BCS     0x1080
+100c: 206f        MOVEA.L  28259(A7),A0
+1010: 6520        BCS     0x1032
+1012: 6167        BSR     0x107b
+1014: 6169        BSR     0x107f
+1016: 6e20        BGT     0x1038
+1018: 6973        BVS     0x108d
+101a: 2024        MOVE.L  -(A4),D0
+101c: 3235        MOVE.W  48(A5,D2.L),D1
+1020: 3030        MOVE.W  0(A0,D2.L),D0
+1024: 2e74        MOVEA.L  32(A4,D6.L),A7
+1028: 6f6e        BLE     0x1098
+102a: 6c79        BGE     0x10a5
+102c: 2024        MOVE.L  -(A4),D0
+102e: 352c        MOVE.W  12336(A4),-(A2)
+1032: 3020        MOVE.W  -(A0),D0
+1034: 6279        BHI     0x10af
+1036: 2062        MOVEA.L  -(A2),A0
+1038: 7579        DC.W    0x7579
+103a: 696e        BVS     0x10aa
+103c: 6720        BEQ     0x105e
+103e: 7468        MOVEQ   #104,D2
+1040: 6520        BCS     0x1062
+1042: 686f        BVC     0x10b3
+1044: 7273        MOVEQ   #115,D1
+1046: 6520        BCS     0x1068
+1048: 6174        BSR     0x10be
+104a: 2074        MOVEA.L  101(A4,D6.L),A0
+104e: 206c        MOVEA.L  24947(A4),A0
+1052: 7400        MOVEQ   #0,D2
+1054: 354d        MOVE.W  A5,24931(A2)
+1058: 5261        ADDQ.W  #1,-(A1)
+105a: 7363        DC.W    0x7363
+105c: 616c        BSR     0x10ca
+105e: 2069        MOVEA.L  29472(A1),A0
+1062: 6e6f        BGT     0x10d3
+1064: 7720        DC.W    0x7720
+1066: 6475        BCC     0x10dd
+1068: 652e        BCS     0x1098
+106a: 2044        MOVEA.L  D4,A0
+106c: 6f20        BLE     0x108e
+106e: 796f        DC.W    0x796f
+1070: 7520        DC.W    0x7520
+1072: 7761        DC.W    0x7761
+1074: 6e74        BGT     0x10ea
+1076: 2074        MOVEA.L  32(A4,D6.L),A0
+107a: 636f        BLS     0x10eb
+107c: 6e74        BGT     0x10f2
+107e: 696e        BVS     0x10ee
+1080: 7565        DC.W    0x7565
+1082: 206f        MOVEA.L  29216(A7),A0
+1086: 6e6f        BGT     0x10f7
+1088: 743f        MOVEQ   #63,D2
+108a: 1f44        MOVE.B  D4,28448(A7)
+108e: 796f        DC.W    0x796f
+1090: 7520        DC.W    0x7520
+1092: 7761        DC.W    0x7761
+1094: 6e74        BGT     0x110a
+1096: 2074        MOVEA.L  32(A4,D6.L),A0
+109a: 636f        BLS     0x110b
+109c: 6e74        BGT     0x1112
+109e: 696e        BVS     0x110e
+10a0: 7565        DC.W    0x7565
+10a2: 206f        MOVEA.L  29216(A7),A0
+10a6: 6e6f        BGT     0x1117
+10a8: 743f        MOVEQ   #63,D2
+10aa: 2c6d        MOVEA.L  26990(A5),A6
+10ae: 7574        DC.W    0x7574
+10b0: 652e        BCS     0x10e0
+10b2: 2020        MOVE.L  -(A0),D0
+10b4: 5468        ADDQ.W  #2,25888(A0)
+10b8: 6265        BHI     0x111f
+10ba: 7420        MOVEQ   #32,D2
+10bc: 6973        BVS     0x1131
+10be: 2024        MOVE.L  -(A4),D0
+10c0: 3430        MOVE.W  48(A0,D2.L),D2
+10c4: 3030        MOVE.W  32(A0,D2.L),D0
+10c8: 2044        MOVEA.L  D4,A0
+10ca: 6f20        BLE     0x10ec
+10cc: 796f        DC.W    0x796f
+10ce: 7520        DC.W    0x7520
+10d0: 7761        DC.W    0x7761
+10d2: 6e74        BGT     0x1148
+10d4: 2074        MOVEA.L  0(A4,D6.L),A0
+10d8: 1063        MOVEA.B  -(A3),A0
+10da: 6f6e        BLE     0x114a
+10dc: 7469        MOVEQ   #105,D2
+10de: 6e75        BGT     0x1155
+10e0: 6520        BCS     0x1102
+10e2: 6f72        BLE     0x1156
+10e4: 206e        MOVEA.L  28532(A6),A0
+10e8: 3f00        MOVE.W  D0,-(A7)
+10ea: 3146        MOVE.W  D6,24947(A0)
+10ee: 7465        MOVEQ   #101,D2
+10f0: 7220        MOVEQ   #32,D1
+10f2: 5468        ADDQ.W  #2,24942(A0)
+10f6: 204c        MOVEA.L  A4,A0
+10f8: 6967        BVS     0x1161
+10fa: 6874        BVC     0x1170
+10fc: 2077        MOVEA.L  110(A7,D6.L),A0
+1100: 2074        MOVEA.L  101(A4,D6.L),A0
+1104: 2072        MOVEA.L  99(A2,D6.W),A0
+1108: 6520        BCS     0x112a
+110a: 7769        DC.W    0x7769
+110c: 7468        MOVEQ   #104,D2
+110e: 2061        MOVEA.L  -(A1),A0
+1110: 206c        MOVEA.L  24947(A4),A0
+1114: 7420        MOVEQ   #32,D2
+1116: 6d69        BLT     0x1181
+1118: 6e75        BGT     0x118f
+111a: 7465        MOVEQ   #101,D2
+111c: 2f4c        MOVE.L  A4,26983(A7)
+1120: 6874        BVC     0x1196
+1122: 6e69        BGT     0x118d
+1124: 6e67        BGT     0x118d
+1126: 2077        MOVEA.L  110(A7,D6.L),A0
+112a: 2c20        MOVE.L  -(A0),D6
+112c: 7275        MOVEQ   #117,D1
+112e: 6e6e        BGT     0x119e
+1130: 696e        BVS     0x11a0
+1132: 6720        BEQ     0x1154
+1134: 6168        BSR     0x119e
+1136: 6561        BCS     0x1199
+1138: 6420        BCC     0x115a
+113a: 7468        MOVEQ   #104,D2
+113c: 726f        MOVEQ   #111,D1
+113e: 7567        DC.W    0x7567
+1140: 686f        BVC     0x11b1
+1142: 7574        DC.W    0x7574
+1144: 206d        MOVEA.L  28531(A5),A0
+1148: 7420        MOVEQ   #32,D2
+114a: 6f66        BLE     0x11b2
+114c: 2f4f        MOVE.L  A7,27748(A7)
+1150: 2047        MOVEA.L  D7,A0
+1152: 7261        MOVEQ   #97,D1
+1154: 7920        DC.W    0x7920
+1156: 776f        DC.W    0x776f
+1158: 6e20        BGT     0x117a
+115a: 7468        MOVEQ   #104,D2
+115c: 6520        BCS     0x117e
+115e: 7261        MOVEQ   #97,D1
+1160: 6365        BLS     0x11c7
+1162: 2061        MOVEA.L  -(A1),A0
+1164: 6e64        BGT     0x11ca
+1166: 2079        MOVEA.L  (0x6f752077).L,A0
+116c: 6f6e        BLE     0x11dc
+116e: 2024        MOVE.L  -(A4),D0
+1170: 3132        MOVE.W  44(A2,D3.W),-(A0)
+1174: 3030        MOVE.W  32(A0,D3.W),D0
+1178: 6672        BNE     0x11ec
+117a: 6f6d        BLE     0x11e9
+117c: 3162        MOVE.W  -(A2),30066(A0)
+1180: 7374        DC.W    0x7374
+1182: 206f        MOVEA.L  26144(A7),A0
+1186: 7370        DC.W    0x7370
+1188: 6565        BCS     0x11ef
+118a: 642e        BCC     0x11ba
+118c: 2020        MOVE.L  -(A0),D0
+118e: 596f        SUBQ.W  #4,29984(A7)
+1192: 776f        DC.W    0x776f
+1194: 6e20        BGT     0x11b6
+1196: 2431        MOVE.L  48(A1,D3.W),D2
+119a: 2c30        MOVE.L  48(A0,D3.W),D6
+119e: 2066        MOVEA.L  -(A6),A0
+11a0: 726f        MOVEQ   #111,D1
+11a2: 6d20        BLT     0x11c4
+11a4: 4d61        DC.W    0x4d61
+11a6: 6352        BLS     0x11fa
+11a8: 6173        BSR     0x121d
+11aa: 6361        BLS     0x120d
+11ac: 6c2e        BGE     0x11dc
+11ae: 2d72        MOVE.L  99(A2,D6.W),25902(A6)
+11b4: 2020        MOVE.L  -(A0),D0
+11b6: 596f        SUBQ.W  #4,29984(A7)
+11ba: 776f        DC.W    0x776f
+11bc: 6e20        BGT     0x11de
+11be: 2437        MOVE.L  44(A7,D3.W),D2
+11c2: 3030        MOVE.W  32(A0,D3.W),D0
+11c6: 616e        BSR     0x1236
+11c8: 6420        BCC     0x11ea
+11ca: 736f        DC.W    0x736f
+11cc: 6c64        BGE     0x1232
+11ce: 2074        MOVEA.L  101(A4,D6.L),A0
+11d2: 2068        MOVEA.L  28530(A0),A0
+11d6: 7365        DC.W    0x7365
+11d8: 2066        MOVEA.L  -(A6),A0
+11da: 6f72        BLE     0x124e
+11dc: 2a4d        MOVEA.L  A5,A5
+11de: 6163        BSR     0x1243
+11e0: 5261        ADDQ.W  #1,-(A1)
+11e2: 7363        DC.W    0x7363
+11e4: 616c        BSR     0x1252
+11e6: 2061        MOVEA.L  -(A1),A0
+11e8: 6e64        BGT     0x124e
+11ea: 2073        MOVEA.L  108(A3,D6.L),A0
+11ee: 6420        BCC     0x1210
+11f0: 7468        MOVEQ   #104,D2
+11f2: 6520        BCS     0x1214
+11f4: 686f        BVC     0x1265
+11f6: 7273        MOVEQ   #115,D1
+11f8: 6520        BCS     0x121a
+11fa: 666f        BNE     0x126b
+11fc: 7220        MOVEQ   #32,D1
+11fe: 2431        MOVE.L  48(A1,D3.W),D2
+1202: 2c30        MOVE.L  48(A0,D3.W),D6
+1206: 2e00        MOVE.L  D0,D7
+1208: 3349        MOVE.W  A1,29728(A1)
+120c: 7761        DC.W    0x7761
+120e: 7320        DC.W    0x7320
+1210: 6120        BSR     0x1232
+1212: 636c        BLS     0x1280
+1214: 6169        BSR     0x127f
+1216: 6d65        BLT     0x127d
+1218: 7220        MOVEQ   #32,D1
+121a: 7261        MOVEQ   #97,D1
+121c: 6365        BLS     0x1283
+121e: 2073        MOVEA.L  32(A3,D6.L),A0
+1222: 796f        DC.W    0x796f
+1224: 7520        DC.W    0x7520
+1226: 6861        BVC     0x1289
+1228: 6420        BCC     0x124a
+122a: 746f        MOVEQ   #111,D2
+122c: 2073        MOVEA.L  108(A3,D6.W),A0
+1230: 6c20        BGE     0x1252
+1232: 4661        DC.W    0x4661
+1234: 7374        DC.W    0x7374
+1236: 6572        BCS     0x12aa
+1238: 2062        MOVEA.L  -(A2),A0
+123a: 7574        DC.W    0x7574
+123c: 0824        DC.W    0x0824
+123e: 3630        MOVE.W  48(A0,D2.L),D3
+1242: 3030        MOVE.W  0(A0,D2.L),D0
+1246: 1879        MOVEA.B  (0x6f752067).L,A4
+124c: 6f74        BLE     0x12c2
+124e: 2024        MOVE.L  -(A4),D0
+1250: 3530        MOVE.W  48(A0,D2.L),-(A2)
+1254: 3030        MOVE.W  102(A0,D2.W),D0
+1258: 6f72        BLE     0x12cc
+125a: 2068        MOVEA.L  26989(A0),A0
+125e: 2e00        MOVE.L  D0,D7
+1260: 2f46        MOVE.L  D6,24947(A7)
+1264: 7465        MOVEQ   #101,D2
+1266: 7220        MOVEQ   #32,D1
+1268: 7761        DC.W    0x7761
+126a: 736e        DC.W    0x736e
+126c: 6074        BRA     0x12e2
+126e: 2e20        MOVE.L  -(A0),D7
+1270: 2048        MOVEA.L  A0,A0
+1272: 6520        BCS     0x1294
+1274: 7761        DC.W    0x7761
+1276: 736e        DC.W    0x736e
+1278: 6074        BRA     0x12ee
+127a: 2065        MOVEA.L  -(A5),A0
+127c: 7665        MOVEQ   #101,D3
+127e: 6e20        BGT     0x12a0
+1280: 636c        BLS     0x12ee
+1282: 6f73        BLE     0x12f7
+1284: 652e        BCS     0x12b4
+1286: 2020        MOVE.L  -(A0),D0
+1288: 596f        SUBQ.W  #4,29984(A7)
+128c: 7765        DC.W    0x7765
+128e: 7265        MOVEQ   #101,D1
+1290: 2f4c        MOVE.L  A4,26983(A7)
+1294: 6874        BVC     0x130a
+1296: 6e69        BGT     0x1301
+1298: 6e67        BGT     0x1301
+129a: 2077        MOVEA.L  115(A7,D6.W),A0
+129e: 2061        MOVEA.L  -(A1),A0
+12a0: 7320        DC.W    0x7320
+12a2: 736c        DC.W    0x736c
+12a4: 6f77        BLE     0x131d
+12a6: 2061        MOVEA.L  -(A1),A0
+12a8: 7320        DC.W    0x7320
+12aa: 6d6f        BLT     0x131b
+12ac: 6c61        BGE     0x130f
+12ae: 7373        DC.W    0x7373
+12b0: 6573        BCS     0x1325
+12b2: 2061        MOVEA.L  -(A1),A0
+12b4: 6e64        BGT     0x131a
+12b6: 2079        MOVEA.L  (0x6f75206c).L,A0
+12bc: 6f73        BLE     0x1331
+12be: 742e        MOVEQ   #46,D2
+12c0: 2d41        MOVE.L  D1,28784(A6)
+12c4: 6172        BSR     0x1338
+12c6: 656e        BCS     0x1336
+12c8: 746c        MOVEQ   #108,D2
+12ca: 792c        DC.W    0x792c
+12cc: 2074        MOVEA.L  101(A4,D6.L),A0
+12d0: 2066        MOVEA.L  -(A6),A0
+12d2: 656c        BCS     0x1340
+12d4: 6c6f        BGE     0x1345
+12d6: 7773        DC.W    0x7773
+12d8: 2077        MOVEA.L  111(A7,D6.L),A0
+12dc: 2073        MOVEA.L  108(A3,D6.L),A0
+12e0: 6420        BCC     0x1302
+12e2: 796f        DC.W    0x796f
+12e4: 7520        DC.W    0x7520
+12e6: 4f6c        DC.W    0x4f6c
+12e8: 6420        BCC     0x130a
+12ea: 4772        DC.W    0x4772
+12ec: 6179        BSR     0x1367
+12ee: 326c        MOVEA.W  30051(A4),A1
+12f2: 6b79        BMI     0x136d
+12f4: 2074        MOVEA.L  32(A4,D6.L),A0
+12f8: 6265        BHI     0x135f
+12fa: 2061        MOVEA.L  -(A1),A0
+12fc: 626c        BHI     0x136a
+12fe: 6520        BCS     0x1320
+1300: 746f        MOVEQ   #111,D2
+1302: 2073        MOVEA.L  108(A3,D6.W),A0
+1306: 6c20        BGE     0x1328
+1308: 6869        BVC     0x1373
+130a: 6d20        BLT     0x132c
+130c: 746f        MOVEQ   #111,D2
+130e: 2061        MOVEA.L  -(A1),A0
+1310: 2067        MOVEA.L  -(A7),A0
+1312: 6c75        BGE     0x1389
+1314: 6520        BCS     0x1336
+1316: 6661        BNE     0x1379
+1318: 6374        BLS     0x138e
+131a: 6f72        BLE     0x138e
+131c: 7920        DC.W    0x7920
+131e: 666f        BNE     0x138f
+1320: 7200        MOVEQ   #0,D1
+1322: 1559        MOVE.B  (A1)+,28533(A2)
+1326: 2067        MOVEA.L  -(A7),A0
+1328: 6f74        BLE     0x139e
+132a: 2024        MOVE.L  -(A4),D0
+132c: 3530        MOVE.W  32(A0,D3.W),-(A2)
+1330: 666f        BNE     0x13a1
+1332: 7220        MOVEQ   #32,D1
+1334: 6869        BVC     0x139f
+1336: 6d2e        BLT     0x1366
+1338: 3064        MOVEA.W  -(A4),A0
+133a: 6964        BVS     0x13a0
+133c: 2067        MOVEA.L  -(A7),A0
+133e: 6574        BCS     0x13b4
+1340: 2074        MOVEA.L  101(A4,D6.L),A0
+1344: 2062        MOVEA.L  -(A2),A0
+1346: 6574        BCS     0x13bc
+1348: 7465        MOVEQ   #101,D2
+134a: 7220        MOVEQ   #32,D1
+134c: 6f66        BLE     0x13b4
+134e: 2074        MOVEA.L  101(A4,D6.L),A0
+1352: 2064        MOVEA.L  -(A4),A0
+1354: 6561        BCS     0x13b7
+1356: 6c2e        BGE     0x1386
+1358: 2020        MOVE.L  -(A0),D0
+135a: 596f        SUBQ.W  #4,29984(A7)
+135e: 6761        BEQ     0x13c1
+1360: 7665        MOVEQ   #101,D3
+1362: 2068        MOVEA.L  26989(A0),A0
+1366: 2074        MOVEA.L  0(A4,D6.L),A0
+136a: 0524        DC.W    0x0524
+136c: 3130        MOVE.W  46(A0,D3.W),-(A0)
+1370: 2074        MOVEA.L  101(A4,D6.L),A0
+1374: 204d        MOVEA.L  A5,A0
+1376: 6172        BSR     0x13ea
+1378: 696e        BVS     0x13e8
+137a: 6573        BCS     0x13ef
+137c: 2066        MOVEA.L  -(A6),A0
+137e: 6f72        BLE     0x13f2
+1380: 2074        MOVEA.L  114(A4,D6.W),A0
+1384: 6765        BEQ     0x13eb
+1386: 7420        MOVEQ   #32,D2
+1388: 7072        MOVEQ   #114,D0
+138a: 6163        BSR     0x13ef
+138c: 7469        MOVEQ   #105,D2
+138e: 6365        BLS     0x13f5
+1390: 2e00        MOVE.L  D0,D7
+1392: 2f59        MOVE.L  (A1)+,28533(A7)
+1396: 2067        MOVEA.L  -(A7),A0
+1398: 6f74        BLE     0x140e
+139a: 2024        MOVE.L  -(A4),D0
+139c: 352c        MOVE.W  12336(A4),-(A2)
+13a0: 3020        MOVE.W  -(A0),D0
+13a2: 7768        DC.W    0x7768
+13a4: 656e        BCS     0x1414
+13a6: 2079        MOVEA.L  (0x6f752073).L,A0
+13ac: 6f6c        BLE     0x141a
+13ae: 6420        BCC     0x13d0
+13b0: 4661        DC.W    0x4661
+13b2: 7374        DC.W    0x7374
+13b4: 6572        BCS     0x1428
+13b6: 2054        MOVEA.L  (A4),A0
+13b8: 6861        BVC     0x141b
+13ba: 6e20        BGT     0x13dc
+13bc: 4c69        DC.W    0x4c69
+13be: 6768        BEQ     0x1428
+13c0: 742e        MOVEQ   #46,D2
+13c2: 2759        MOVE.L  (A1)+,28533(A3)
+13c6: 2067        MOVEA.L  -(A7),A0
+13c8: 6f74        BLE     0x143e
+13ca: 2024        MOVE.L  -(A4),D0
+13cc: 382c        MOVE.W  12336(A4),D4
+13d0: 3020        MOVE.W  -(A0),D0
+13d2: 7768        DC.W    0x7768
+13d4: 656e        BCS     0x1444
+13d6: 2079        MOVEA.L  (0x6f752073).L,A0
+13dc: 6f6c        BLE     0x144a
+13de: 6420        BCC     0x1400
+13e0: 4c69        DC.W    0x4c69
+13e2: 6768        BEQ     0x144c
+13e4: 746e        MOVEQ   #110,D2
+13e6: 696e        BVS     0x1456
+13e8: 672e        BEQ     0x1418
+13ea: 2759        MOVE.L  (A1)+,28533(A3)
+13ee: 2067        MOVEA.L  -(A7),A0
+13f0: 6f74        BLE     0x1466
+13f2: 2024        MOVE.L  -(A4),D0
+13f4: 3130        MOVE.W  48(A0,D2.L),-(A0)
+13f8: 3030        MOVE.W  119(A0,D2.W),D0
+13fc: 6865        BVC     0x1463
+13fe: 6e20        BGT     0x1420
+1400: 796f        DC.W    0x796f
+1402: 7520        DC.W    0x7520
+1404: 736f        DC.W    0x736f
+1406: 6c64        BGE     0x146c
+1408: 204f        MOVEA.L  A7,A0
+140a: 6c64        BGE     0x1470
+140c: 2047        MOVEA.L  D7,A0
+140e: 7261        MOVEQ   #97,D1
+1410: 792e        DC.W    0x792e
+1412: 3646        MOVEA.W  D6,A3
+1414: 6173        BSR     0x1489
+1416: 7465        MOVEQ   #101,D2
+1418: 7220        MOVEQ   #32,D1
+141a: 776f        DC.W    0x776f
+141c: 6e20        BGT     0x143e
+141e: 7468        MOVEQ   #104,D2
+1420: 6520        BCS     0x1442
+1422: 7261        MOVEQ   #97,D1
+1424: 6365        BLS     0x148b
+1426: 2077        MOVEA.L  116(A7,D6.L),A0
+142a: 6820        BVC     0x144c
+142c: 6120        BSR     0x144e
+142e: 6c61        BGE     0x1491
+1430: 7374        DC.W    0x7374
+1432: 206d        MOVEA.L  26990(A5),A0
+1436: 7574        DC.W    0x7574
+1438: 6520        BCS     0x145a
+143a: 6275        BHI     0x14b1
+143c: 7273        MOVEQ   #115,D1
+143e: 7420        MOVEQ   #32,D2
+1440: 6f66        BLE     0x14a8
+1442: 2073        MOVEA.L  101(A3,D7.W),A0
+1446: 6564        BCS     0x14ac
+1448: 2e00        MOVE.L  D0,D7
+144a: 2b4c        MOVE.L  A4,26983(A5)
+144e: 6874        BVC     0x14c4
+1450: 6e69        BGT     0x14bb
+1452: 6e67        BGT     0x14bb
+1454: 2077        MOVEA.L  115(A7,D6.W),A0
+1458: 2061        MOVEA.L  -(A1),A0
+145a: 6865        BVC     0x14c1
+145c: 6164        BSR     0x14c2
+145e: 2074        MOVEA.L  114(A4,D6.L),A0
+1462: 6f75        BLE     0x14d9
+1464: 6768        BEQ     0x14ce
+1466: 2074        MOVEA.L  101(A4,D6.L),A0
+146a: 2077        MOVEA.L  111(A7,D6.L),A0
+146e: 6c65        BGE     0x14d5
+1470: 2072        MOVEA.L  99(A2,D6.W),A0
+1474: 652e        BCS     0x14a4
+1476: 144f        MOVEA.B  A7,A2
+1478: 6c64        BGE     0x14de
+147a: 2047        MOVEA.L  D7,A0
+147c: 7261        MOVEQ   #97,D1
+147e: 7920        DC.W    0x7920
+1480: 776f        DC.W    0x776f
+1482: 6e20        BGT     0x14a4
+1484: 6561        BCS     0x14e7
+1486: 7369        DC.W    0x7369
+1488: 6c79        BGE     0x1503
+148a: 2e00        MOVE.L  D0,D7
+148c: 1546        MOVE.B  D6,24947(A2)
+1490: 7465        MOVEQ   #101,D2
+1492: 7220        MOVEQ   #32,D1
+1494: 6c6f        BGE     0x1505
+1496: 7374        DC.W    0x7374
+1498: 2074        MOVEA.L  101(A4,D6.L),A0
+149c: 2072        MOVEA.L  99(A2,D6.W),A0
+14a0: 652e        BCS     0x14d0
+14a2: 374c        MOVE.W  A4,26983(A3)
+14a6: 6874        BVC     0x151c
+14a8: 6e69        BGT     0x1513
+14aa: 6e67        BGT     0x1513
+14ac: 206e        MOVEA.L  25974(A6),A0
+14b0: 6572        BCS     0x1524
+14b2: 2064        MOVEA.L  -(A4),A0
+14b4: 6964        BVS     0x151a
+14b6: 2062        MOVEA.L  -(A2),A0
+14b8: 6574        BCS     0x152e
+14ba: 7465        MOVEQ   #101,D2
+14bc: 7220        MOVEQ   #32,D1
+14be: 7468        MOVEQ   #104,D2
+14c0: 616e        BSR     0x1530
+14c2: 2074        MOVEA.L  101(A4,D6.L),A0
+14c6: 206d        MOVEA.L  26980(A5),A0
+14ca: 646c        BCC     0x1538
+14cc: 6520        BCS     0x14ee
+14ce: 6f66        BLE     0x1536
+14d0: 2074        MOVEA.L  101(A4,D6.L),A0
+14d4: 2070        MOVEA.L  99(A0,D6.W),A0
+14d8: 6b2e        BMI     0x1508
+14da: 0e4f        DC.W    0x0e4f
+14dc: 6c64        BGE     0x1542
+14de: 2047        MOVEA.L  D7,A0
+14e0: 7261        MOVEQ   #97,D1
+14e2: 7920        DC.W    0x7920
+14e4: 6c6f        BGE     0x1555
+14e6: 7374        DC.W    0x7374
+14e8: 2e00        MOVE.L  D0,D7
+14ea: 0000        ORI.B  #0x0 (0),D0
+
+14ee: 4e56        LINK    A6,#0
+14f2: 1b7c        MOVE.B  #0x1 (1),-2451(A5)
+14f8: 3b7c        MOVE.W  #0x2 (2),-2460(A5)
+14fe: 302d        MOVE.W  -2458(A5),D0
+1502: 5240        ADDQ.W  #1,D0
+1504: 3b40        MOVE.W  D0,-2458(A5)
+1508: 42ad        CLR.L   -314(A5)
+150c: 302d        MOVE.W  -2458(A5),D0
+1510: 0c40        CMPI.W  #0x1 (1),D0
+1514: 6600        BNE     0x1a3c
+1518: 598f        SUBQ.L  #4,A7
+151a: 3f3c        MOVE.W  #0x1b5f (7007),-(A7)
+151e: 42a7        CLR.L   -(A7)
+1520: 2f3c        MOVE.L  #0xffffffff,-(A7)
+1526: a97c        _GetNewDialog
+1528: 2b5f        MOVE.L  (A7)+,-286(A5)
+152c: 2f2d        MOVE.L  -286(A5),-(A7)
+1530: 3f3c        MOVE.W  #0x3 (3),-(A7)
+1534: 486d        PEA     -2256(A5)
+1538: 486d        PEA     -2218(A5)
+153c: 486d        PEA     -2234(A5)
+1540: a98d        _GetDItem
+1542: 302d        MOVE.W  -2474(A5),D0
+1546: 0c40        CMPI.W  #0x1 (1),D0
+154a: 6600        BNE     0x1562
+154e: 487a        PEA     2248(PC) [0x1e18 ; pstr='Your old fraternity brother J. Marmaduke Dirty has']
+1552: 486d        PEA     -850(A5)
+1556: 3f3c        MOVE.W  #0xff (255),-(A7)
+155a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+155e: 6000        BRA     0x15b2
+1562: 0c40        CMPI.W  #0x2 (2),D0
+1566: 6600        BNE     0x157e
+156a: 487a        PEA     2272(PC) [0x1e4c ; pstr='Your old frat brother J. Marmaduke Dirty has come']
+156e: 486d        PEA     -850(A5)
+1572: 3f3c        MOVE.W  #0xff (255),-(A7)
+1576: 4ead        JSR     154(A5) [CODE_1+0x11a]
+157a: 6000        BRA     0x15b2
+157e: 0c40        CMPI.W  #0x3 (3),D0
+1582: 6600        BNE     0x159a
+1586: 487a        PEA     2294(PC) [0x1e7e ; pstr='J. Marmaduke Dirty is back in town with another scheme.']
+158a: 486d        PEA     -850(A5)
+158e: 3f3c        MOVE.W  #0xff (255),-(A7)
+1592: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1596: 6000        BRA     0x15b2
+159a: 0c40        CMPI.W  #0x4 (4),D0
+159e: 6600        BNE     0x15b2
+15a2: 487a        PEA     2322(PC) [0x1eb6 ; pstr='You learn that the Bank is holding large amounts of']
+15a6: 486d        PEA     -850(A5)
+15aa: 3f3c        MOVE.W  #0xff (255),-(A7)
+15ae: 4ead        JSR     154(A5) [CODE_1+0x11a]
+15b2: 2f2d        MOVE.L  -2218(A5),-(A7)
+15b6: 486d        PEA     -850(A5)
+15ba: a98f        _SetIText
+15bc: 2f2d        MOVE.L  -286(A5),-(A7)
+15c0: 3f3c        MOVE.W  #0x4 (4),-(A7)
+15c4: 486d        PEA     -2256(A5)
+15c8: 486d        PEA     -2218(A5)
+15cc: 486d        PEA     -2234(A5)
+15d0: a98d        _GetDItem
+15d2: 302d        MOVE.W  -2474(A5),D0
+15d6: 0c40        CMPI.W  #0x1 (1),D0
+15da: 6600        BNE     0x15f2
+15de: 487a        PEA     2314(PC) [0x1eea ; pstr='come to town with a slightly illegal business deal']
+15e2: 486d        PEA     -850(A5)
+15e6: 3f3c        MOVE.W  #0xff (255),-(A7)
+15ea: 4ead        JSR     154(A5) [CODE_1+0x11a]
+15ee: 6000        BRA     0x1642
+15f2: 0c40        CMPI.W  #0x2 (2),D0
+15f6: 6600        BNE     0x160e
+15fa: 487a        PEA     2338(PC) [0x1f1e ; pstr='looking for your help in another illegal scheme.']
+15fe: 486d        PEA     -850(A5)
+1602: 3f3c        MOVE.W  #0xff (255),-(A7)
+1606: 4ead        JSR     154(A5) [CODE_1+0x11a]
+160a: 6000        BRA     0x1642
+160e: 0c40        CMPI.W  #0x3 (3),D0
+1612: 6600        BNE     0x162a
+1616: 487a        PEA     2360(PC) [0x1f50 ; pstr='He will pose as a representative of a large company']
+161a: 486d        PEA     -850(A5)
+161e: 3f3c        MOVE.W  #0xff (255),-(A7)
+1622: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1626: 6000        BRA     0x1642
+162a: 0c40        CMPI.W  #0x4 (4),D0
+162e: 6600        BNE     0x1642
+1632: 487a        PEA     2384(PC) [0x1f84 ; pstr='cash.  You have a plan, a stocking mask and J.']
+1636: 486d        PEA     -850(A5)
+163a: 3f3c        MOVE.W  #0xff (255),-(A7)
+163e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1642: 2f2d        MOVE.L  -2218(A5),-(A7)
+1646: 486d        PEA     -850(A5)
+164a: a98f        _SetIText
+164c: 2f2d        MOVE.L  -286(A5),-(A7)
+1650: 3f3c        MOVE.W  #0x5 (5),-(A7)
+1654: 486d        PEA     -2256(A5)
+1658: 486d        PEA     -2218(A5)
+165c: 486d        PEA     -2234(A5)
+1660: a98d        _GetDItem
+1662: 302d        MOVE.W  -2474(A5),D0
+1666: 0c40        CMPI.W  #0x1 (1),D0
+166a: 6600        BNE     0x1682
+166e: 487a        PEA     2372(PC) [0x1fb4 ; pstr='for you.  He will drive around with a tank truck in']
+1672: 486d        PEA     -850(A5)
+1676: 3f3c        MOVE.W  #0xff (255),-(A7)
+167a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+167e: 6000        BRA     0x16d2
+1682: 0c40        CMPI.W  #0x2 (2),D0
+1686: 6600        BNE     0x169e
+168a: 487a        PEA     2396(PC) [0x1fe8 ; pstr='This time he is running an oil promotion and he needs']
+168e: 486d        PEA     -850(A5)
+1692: 3f3c        MOVE.W  #0xff (255),-(A7)
+1696: 4ead        JSR     154(A5) [CODE_1+0x11a]
+169a: 6000        BRA     0x16d2
+169e: 0c40        CMPI.W  #0x3 (3),D0
+16a2: 6600        BNE     0x16ba
+16a6: 487a        PEA     2422(PC) [0x201e ; pstr='thinking about locating a major plant in Tumbleweed.']
+16aa: 486d        PEA     -850(A5)
+16ae: 3f3c        MOVE.W  #0xff (255),-(A7)
+16b2: 4ead        JSR     154(A5) [CODE_1+0x11a]
+16b6: 6000        BRA     0x16d2
+16ba: 0c40        CMPI.W  #0x4 (4),D0
+16be: 6600        BNE     0x16d2
+16c2: 487a        PEA     2448(PC) [0x2054 ; pstr='Marmaduke has volunteered to help.  You need money.']
+16c6: 486d        PEA     -850(A5)
+16ca: 3f3c        MOVE.W  #0xff (255),-(A7)
+16ce: 4ead        JSR     154(A5) [CODE_1+0x11a]
+16d2: 2f2d        MOVE.L  -2218(A5),-(A7)
+16d6: 486d        PEA     -850(A5)
+16da: a98f        _SetIText
+16dc: 2f2d        MOVE.L  -286(A5),-(A7)
+16e0: 3f3c        MOVE.W  #0x6 (6),-(A7)
+16e4: 486d        PEA     -2256(A5)
+16e8: 486d        PEA     -2218(A5)
+16ec: 486d        PEA     -2234(A5)
+16f0: a98d        _GetDItem
+16f2: 302d        MOVE.W  -2474(A5),D0
+16f6: 0c40        CMPI.W  #0x1 (1),D0
+16fa: 6600        BNE     0x1712
+16fe: 487a        PEA     2440(PC) [0x2088 ; pstr='the middle of the night stealing oil from other folk`s']
+1702: 486d        PEA     -850(A5)
+1706: 3f3c        MOVE.W  #0xff (255),-(A7)
+170a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+170e: 6000        BRA     0x1762
+1712: 0c40        CMPI.W  #0x2 (2),D0
+1716: 6600        BNE     0x172e
+171a: 487a        PEA     2468(PC) [0x20c0 ; pstr='to use your oil property in the scheme.  There is an']
+171e: 486d        PEA     -850(A5)
+1722: 3f3c        MOVE.W  #0xff (255),-(A7)
+1726: 4ead        JSR     154(A5) [CODE_1+0x11a]
+172a: 6000        BRA     0x1762
+172e: 0c40        CMPI.W  #0x3 (3),D0
+1732: 6600        BNE     0x174a
+1736: 487a        PEA     2494(PC) [0x20f6 ; pstr='He wants you to start a bidding war bribing him to ']
+173a: 486d        PEA     -850(A5)
+173e: 3f3c        MOVE.W  #0xff (255),-(A7)
+1742: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1746: 6000        BRA     0x1762
+174a: 0c40        CMPI.W  #0x4 (4),D0
+174e: 6600        BNE     0x1762
+1752: 487a        PEA     2518(PC) [0x212a ; pstr='Now the only question is are you going to rob the ']
+1756: 486d        PEA     -850(A5)
+175a: 3f3c        MOVE.W  #0xff (255),-(A7)
+175e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1762: 2f2d        MOVE.L  -2218(A5),-(A7)
+1766: 486d        PEA     -850(A5)
+176a: a98f        _SetIText
+176c: 2f2d        MOVE.L  -286(A5),-(A7)
+1770: 3f3c        MOVE.W  #0x7 (7),-(A7)
+1774: 486d        PEA     -2256(A5)
+1778: 486d        PEA     -2218(A5)
+177c: 486d        PEA     -2234(A5)
+1780: a98d        _GetDItem
+1782: 302d        MOVE.W  -2474(A5),D0
+1786: 0c40        CMPI.W  #0x1 (1),D0
+178a: 6600        BNE     0x17a2
+178e: 487a        PEA     2510(PC) [0x215e ; pstr='tank batteries and split profits with you if you ']
+1792: 486d        PEA     -850(A5)
+1796: 3f3c        MOVE.W  #0xff (255),-(A7)
+179a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+179e: 6000        BRA     0x17f2
+17a2: 0c40        CMPI.W  #0x2 (2),D0
+17a6: 6600        BNE     0x17be
+17aa: 487a        PEA     2532(PC) [0x2190 ; pstr='oil bearing sand formation under your property that']
+17ae: 486d        PEA     -850(A5)
+17b2: 3f3c        MOVE.W  #0xff (255),-(A7)
+17b6: 4ead        JSR     154(A5) [CODE_1+0x11a]
+17ba: 6000        BRA     0x17f2
+17be: 0c40        CMPI.W  #0x3 (3),D0
+17c2: 6600        BNE     0x17da
+17c6: 487a        PEA     2556(PC) [0x21c4 ; pstr='choose your property for the plant as against other']
+17ca: 486d        PEA     -850(A5)
+17ce: 3f3c        MOVE.W  #0xff (255),-(A7)
+17d2: 4ead        JSR     154(A5) [CODE_1+0x11a]
+17d6: 6000        BRA     0x17f2
+17da: 0c40        CMPI.W  #0x4 (4),D0
+17de: 6600        BNE     0x17f2
+17e2: 487a        PEA     2580(PC) [0x21f8 ; pstr='Bank or not?']
+17e6: 486d        PEA     -850(A5)
+17ea: 3f3c        MOVE.W  #0xff (255),-(A7)
+17ee: 4ead        JSR     154(A5) [CODE_1+0x11a]
+17f2: 2f2d        MOVE.L  -2218(A5),-(A7)
+17f6: 486d        PEA     -850(A5)
+17fa: a98f        _SetIText
+17fc: 2f2d        MOVE.L  -286(A5),-(A7)
+1800: 3f3c        MOVE.W  #0x8 (8),-(A7)
+1804: 486d        PEA     -2256(A5)
+1808: 486d        PEA     -2218(A5)
+180c: 486d        PEA     -2234(A5)
+1810: a98d        _GetDItem
+1812: 302d        MOVE.W  -2474(A5),D0
+1816: 0c40        CMPI.W  #0x1 (1),D0
+181a: 6600        BNE     0x1832
+181e: 487a        PEA     2534(PC) [0x2206 ; pstr='will sell the stolen oil from the small oil lease your']
+1822: 486d        PEA     -850(A5)
+1826: 3f3c        MOVE.W  #0xff (255),-(A7)
+182a: 4ead        JSR     154(A5) [CODE_1+0x11a]
+182e: 6000        BRA     0x1866
+1832: 0c40        CMPI.W  #0x2 (2),D0
+1836: 6600        BNE     0x184e
+183a: 487a        PEA     2562(PC) [0x223e ; pstr='looks good for a short while but gives out quickly.']
+183e: 486d        PEA     -850(A5)
+1842: 3f3c        MOVE.W  #0xff (255),-(A7)
+1846: 4ead        JSR     154(A5) [CODE_1+0x11a]
+184a: 6000        BRA     0x1866
+184e: 0c40        CMPI.W  #0x3 (3),D0
+1852: 6600        BNE     0x1866
+1856: 487a        PEA     2586(PC) [0x2272 ; pstr='people`s in the community.  If its done right you']
+185a: 486d        PEA     -850(A5)
+185e: 3f3c        MOVE.W  #0xff (255),-(A7)
+1862: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1866: 2f2d        MOVE.L  -2218(A5),-(A7)
+186a: 486d        PEA     -850(A5)
+186e: a98f        _SetIText
+1870: 2f2d        MOVE.L  -286(A5),-(A7)
+1874: 3f3c        MOVE.W  #0x9 (9),-(A7)
+1878: 486d        PEA     -2256(A5)
+187c: 486d        PEA     -2218(A5)
+1880: 486d        PEA     -2234(A5)
+1884: a98d        _GetDItem
+1886: 302d        MOVE.W  -2474(A5),D0
+188a: 0c40        CMPI.W  #0x1 (1),D0
+188e: 6600        BNE     0x18a6
+1892: 487a        PEA     2576(PC) [0x22a4 ; pstr='uncle left you.  Do you want to deal or not?']
+1896: 486d        PEA     -850(A5)
+189a: 3f3c        MOVE.W  #0xff (255),-(A7)
+189e: 4ead        JSR     154(A5) [CODE_1+0x11a]
+18a2: 6000        BRA     0x18da
+18a6: 0c40        CMPI.W  #0x2 (2),D0
+18aa: 6600        BNE     0x18c2
+18ae: 487a        PEA     2594(PC) [0x22d2 ; pstr='You can be in for half.  Do you want to deal?']
+18b2: 486d        PEA     -850(A5)
+18b6: 3f3c        MOVE.W  #0xff (255),-(A7)
+18ba: 4ead        JSR     154(A5) [CODE_1+0x11a]
+18be: 6000        BRA     0x18da
+18c2: 0c40        CMPI.W  #0x3 (3),D0
+18c6: 6600        BNE     0x18da
+18ca: 487a        PEA     2612(PC) [0x2300 ; pstr='and he should be able to pull MacRascal into the']
+18ce: 486d        PEA     -850(A5)
+18d2: 3f3c        MOVE.W  #0xff (255),-(A7)
+18d6: 4ead        JSR     154(A5) [CODE_1+0x11a]
+18da: 2f2d        MOVE.L  -2218(A5),-(A7)
+18de: 486d        PEA     -850(A5)
+18e2: a98f        _SetIText
+18e4: 0c6d        CMPI.W  #0x3 (3),-2474(A5)
+18ea: 6600        BNE     0x191e
+18ee: 2f2d        MOVE.L  -286(A5),-(A7)
+18f2: 3f3c        MOVE.W  #0xa (10),-(A7)
+18f6: 486d        PEA     -2256(A5)
+18fa: 486d        PEA     -2218(A5)
+18fe: 486d        PEA     -2234(A5)
+1902: a98d        _GetDItem
+1904: 487a        PEA     2604(PC) [0x2332 ; pstr='bidding.  For half of the take, do you want in?']
+1908: 486d        PEA     -850(A5)
+190c: 3f3c        MOVE.W  #0xff (255),-(A7)
+1910: 4ead        JSR     154(A5) [CODE_1+0x11a]
+1914: 2f2d        MOVE.L  -2218(A5),-(A7)
+1918: 486d        PEA     -850(A5)
+191c: a98f        _SetIText
+191e: 2f2d        MOVE.L  -286(A5),-(A7)
+1922: a915        _ShowWindow
+1924: 42a7        CLR.L   -(A7)
+1926: 486d        PEA     -2446(A5)
+192a: a991        _ModalDialog
+192c: 302d        MOVE.W  -2446(A5),D0
+1930: 0c40        CMPI.W  #0x1 (1),D0
+1934: 6600        BNE     0x198e
+1938: 2f2d        MOVE.L  -286(A5),-(A7)
+193c: a983        _DisposDialog
+193e: 42ad        CLR.L   -286(A5)
+1942: 302d        MOVE.W  -2474(A5),D0
+1946: 0c40        CMPI.W  #0x1 (1),D0
+194a: 6600        BNE     0x1958
+194e: 1b7c        MOVE.B  #0x1 (1),-2489(A5)
+1954: 6000        BRA     0x198a
+1958: 0c40        CMPI.W  #0x2 (2),D0
+195c: 6600        BNE     0x196a
+1960: 1b7c        MOVE.B  #0x1 (1),-2490(A5)
+1966: 6000        BRA     0x198a
+196a: 0c40        CMPI.W  #0x3 (3),D0
+196e: 6600        BNE     0x197c
+1972: 1b7c        MOVE.B  #0x1 (1),-2491(A5)
+1978: 6000        BRA     0x198a
+197c: 0c40        CMPI.W  #0x4 (4),D0
+1980: 6600        BNE     0x198a
+1984: 1b7c        MOVE.B  #0x1 (1),-2493(A5)
+198a: 6000        BRA     0x1a38
+198e: 0c40        CMPI.W  #0x2 (2),D0
+1992: 6600        BNE     0x1a38
+1996: 422d        CLR.B   -2451(A5)
+199a: 426d        CLR.W   -2460(A5)
+199e: 302d        MOVE.W  -2474(A5),D0
+19a2: 0c40        CMPI.W  #0x1 (1),D0
+19a6: 6600        BNE     0x19c8
+19aa: 4a2d        TST.B   -2489(A5)
+19ae: 6600        BNE     0x19be
+19b2: 302d        MOVE.W  -2472(A5),D0
+19b6: 0640        ADDI.W  #0xf (15),D0
+19ba: 3b40        MOVE.W  D0,-2472(A5)
+19be: 1b7c        MOVE.B  #0x1 (1),-2489(A5)
+19c4: 6000        BRA     0x1a2e
+19c8: 0c40        CMPI.W  #0x2 (2),D0
+19cc: 6600        BNE     0x19ee
+19d0: 4a2d        TST.B   -2490(A5)
+19d4: 6600        BNE     0x19e4
+19d8: 302d        MOVE.W  -2478(A5),D0
+19dc: 0640        ADDI.W  #0xf (15),D0
+19e0: 3b40        MOVE.W  D0,-2478(A5)
+19e4: 1b7c        MOVE.B  #0x1 (1),-2490(A5)
+19ea: 6000        BRA     0x1a2e
+19ee: 0c40        CMPI.W  #0x3 (3),D0
+19f2: 6600        BNE     0x1a14
+19f6: 4a2d        TST.B   -2491(A5)
+19fa: 6600        BNE     0x1a0a
+19fe: 302d        MOVE.W  -2480(A5),D0
+1a02: 0640        ADDI.W  #0xf (15),D0
+1a06: 3b40        MOVE.W  D0,-2480(A5)
+1a0a: 1b7c        MOVE.B  #0x1 (1),-2491(A5)
+1a10: 6000        BRA     0x1a2e
+1a14: 0c40        CMPI.W  #0x4 (4),D0
+1a18: 6600        BNE     0x1a2e
+1a1c: 4a2d        TST.B   -2493(A5)
+1a20: 6600        BNE     0x1a28
+1a24: 42ad        CLR.L   -322(A5)
+1a28: 1b7c        MOVE.B  #0x1 (1),-2493(A5)
+1a2e: 2f2d        MOVE.L  -286(A5),-(A7)
+1a32: a983        _DisposDialog
+1a34: 42ad        CLR.L   -286(A5)
+1a38: 6000        BRA     0x1e14
+1a3c: 0c40        CMPI.W  #0x2 (2),D0
+1a40: 6600        BNE     0x1c20
+1a44: 0c6d        CMPI.W  #0x1 (1),-2474(A5)
+1a4a: 6600        BNE     0x1b26
+1a4e: 598f        SUBQ.L  #4,A7
+1a50: a975        _TickCount
+1a52: 201f        MOVE.L  (A7)+,D0
+1a54: 7214        MOVEQ   #20,D1
+1a56: 4ead        JSR     146(A5) [CODE_1+0x60]
+1a5a: 2b40        MOVE.L  D0,-314(A5)
+1a5e: 0cad        CMPI.L  #0xf,-314(A5)
+1a66: 6c00        BGE     0x1ad8
+1a6a: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1a6e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a72: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a76: a893        _MoveTo
+1a78: 487a        PEA     2280(PC) [0x2362 ; pstr='You lucked out this time.  Although he almost got caught,']
+1a7c: a884        _DrawString
+1a7e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a82: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1a86: a893        _MoveTo
+1a88: 487a        PEA     2322(PC) [0x239c ; pstr='J. Marmaduke got away with it.  You were able to sell']
+1a8c: a884        _DrawString
+1a8e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a92: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1a96: a893        _MoveTo
+1a98: 487a        PEA     2360(PC) [0x23d2 ; pstr='the extra oil over time and it wasn`t noticed.  Your']
+1a9c: a884        _DrawString
+1a9e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1aa2: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1aa6: a893        _MoveTo
+1aa8: 487a        PEA     2398(PC) [0x2408 ; pstr='share came to $8,000.']
+1aac: a884        _DrawString
+1aae: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1ab2: 202d        MOVE.L  -1696(A5),D0
+1ab6: 0680        ADDI.L  #0x1f40,D0
+1abc: 2b40        MOVE.L  D0,-1696(A5)
+1ac0: 302d        MOVE.W  -1680(A5),D0
+1ac4: 0640        ADDI.W  #0x32 (50),D0
+1ac8: 3b40        MOVE.W  D0,-1680(A5)
+1acc: 422d        CLR.B   -2451(A5)
+1ad0: 426d        CLR.W   -2460(A5)
+1ad4: 6000        BRA     0x1b26
+1ad8: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1adc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ae0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ae4: a893        _MoveTo
+1ae6: 487a        PEA     2358(PC) [0x241e ; pstr='J. Marmaduke was caught the second night out.  You']
+1aea: a884        _DrawString
+1aec: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1af0: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1af4: a893        _MoveTo
+1af6: 487a        PEA     2394(PC) [0x2452 ; pstr='weren`t implicated, but it cost $10,000 to get J.']
+1afa: a884        _DrawString
+1afc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b00: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1b04: a893        _MoveTo
+1b06: 487a        PEA     2428(PC) [0x2484 ; pstr='Marmaduke off the hook.']
+1b0a: a884        _DrawString
+1b0c: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1b10: 202d        MOVE.L  -1696(A5),D0
+1b14: 0480        SUBI.L  #0x2710,D0
+1b1a: 2b40        MOVE.L  D0,-1696(A5)
+1b1e: 422d        CLR.B   -2451(A5)
+1b22: 426d        CLR.W   -2460(A5)
+1b26: 0c6d        CMPI.W  #0x4 (4),-2474(A5)
+1b2c: 6600        BNE     0x1c1c
+1b30: 598f        SUBQ.L  #4,A7
+1b32: a975        _TickCount
+1b34: 201f        MOVE.L  (A7)+,D0
+1b36: 7214        MOVEQ   #20,D1
+1b38: 4ead        JSR     146(A5) [CODE_1+0x60]
+1b3c: 2b40        MOVE.L  D0,-314(A5)
+1b40: 0cad        CMPI.L  #0xa,-314(A5)
+1b48: 6c00        BGE     0x1bae
+1b4c: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1b50: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b54: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b58: a893        _MoveTo
+1b5a: 487a        PEA     2368(PC) [0x249c ; pstr='Whew, was that ever risky!!  But you and J. Marmaduke']
+1b5e: a884        _DrawString
+1b60: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b64: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1b68: a893        _MoveTo
+1b6a: 487a        PEA     2406(PC) [0x24d2 ; pstr='robbed the Bank.  Your share was $100,000 and you were']
+1b6e: a884        _DrawString
+1b70: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b74: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1b78: a893        _MoveTo
+1b7a: 487a        PEA     2446(PC) [0x250a ; pstr='able to explain having the extra money with a story']
+1b7e: a884        _DrawString
+1b80: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b84: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1b88: a893        _MoveTo
+1b8a: 487a        PEA     2482(PC) [0x253e ; pstr='about inheriting it from a cousin.']
+1b8e: a884        _DrawString
+1b90: 202d        MOVE.L  -1696(A5),D0
+1b94: 0680        ADDI.L  #0x186a0,D0
+1b9a: 2b40        MOVE.L  D0,-1696(A5)
+1b9e: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1ba2: 422d        CLR.B   -2451(A5)
+1ba6: 426d        CLR.W   -2460(A5)
+1baa: 6000        BRA     0x1c1c
+1bae: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1bb2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bb6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bba: a893        _MoveTo
+1bbc: 487a        PEA     2468(PC) [0x2562 ; pstr='You and J. Marmaduke were caught trying to rob the Bank.']
+1bc0: a884        _DrawString
+1bc2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bc6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1bca: a893        _MoveTo
+1bcc: 487a        PEA     2510(PC) [0x259c ; pstr='You lose the game but look at the good side.  They just']
+1bd0: a884        _DrawString
+1bd2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bd6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1bda: a893        _MoveTo
+1bdc: 487a        PEA     2550(PC) [0x25d4 ; pstr='built a new golf course at the Federal pen they sent you']
+1be0: a884        _DrawString
+1be2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1be6: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1bea: a893        _MoveTo
+1bec: 487a        PEA     2592(PC) [0x260e ; pstr='to.  Also, what with the flying lessons they are giving']
+1bf0: a884        _DrawString
+1bf2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bf6: 3f3c        MOVE.W  #0x82 (130),-(A7)
+1bfa: a893        _MoveTo
+1bfc: 487a        PEA     2632(PC) [0x2646 ; pstr='you and your new friends` connections in Columbia, you']
+1c00: a884        _DrawString
+1c02: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c06: 3f3c        MOVE.W  #0x96 (150),-(A7)
+1c0a: a893        _MoveTo
+1c0c: 487a        PEA     2672(PC) [0x267e ; pstr='will have learned a good trade when you get out.']
+1c10: a884        _DrawString
+1c12: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1c16: 1b7c        MOVE.B  #0x1 (1),-243(A5)
+1c1c: 6000        BRA     0x1e14
+1c20: 0c40        CMPI.W  #0x3 (3),D0
+1c24: 6600        BNE     0x1e14
+1c28: 422d        CLR.B   -2451(A5)
+1c2c: 426d        CLR.W   -2460(A5)
+1c30: 42ad        CLR.L   -314(A5)
+1c34: 598f        SUBQ.L  #4,A7
+1c36: a975        _TickCount
+1c38: 201f        MOVE.L  (A7)+,D0
+1c3a: 7214        MOVEQ   #20,D1
+1c3c: 4ead        JSR     146(A5) [CODE_1+0x60]
+1c40: 2b40        MOVE.L  D0,-314(A5)
+1c44: 0cad        CMPI.L  #0x4,-314(A5)
+1c4c: 6f00        BLE     0x1c56
+1c50: 1b7c        MOVE.B  #0x1 (1),-2492(A5)
+1c56: 302d        MOVE.W  -2474(A5),D0
+1c5a: 0c40        CMPI.W  #0x2 (2),D0
+1c5e: 6600        BNE     0x1d36
+1c62: 4a2d        TST.B   -2492(A5)
+1c66: 6700        BEQ     0x1cd0
+1c6a: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1c6e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c72: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c76: a893        _MoveTo
+1c78: 487a        PEA     2614(PC) [0x26b0 ; pstr='J. Marmaduke`s scheme worked!  The well came in and']
+1c7c: a884        _DrawString
+1c7e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c82: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1c86: a893        _MoveTo
+1c88: 487a        PEA     2650(PC) [0x26e4 ; pstr='produced for 3 weeks, just long enough for J. Marmaduke']
+1c8c: a884        _DrawString
+1c8e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1c92: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1c96: a893        _MoveTo
+1c98: 487a        PEA     2690(PC) [0x271c ; pstr='to sell an extra 150% of the well.  Your share is']
+1c9c: a884        _DrawString
+1c9e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ca2: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1ca6: a893        _MoveTo
+1ca8: 487a        PEA     2724(PC) [0x274e ; pstr='$73,000.']
+1cac: a884        _DrawString
+1cae: 202d        MOVE.L  -1696(A5),D0
+1cb2: 0680        ADDI.L  #0x11d28,D0
+1cb8: 2b40        MOVE.L  D0,-1696(A5)
+1cbc: 302d        MOVE.W  -1680(A5),D0
+1cc0: 0640        ADDI.W  #0x32 (50),D0
+1cc4: 3b40        MOVE.W  D0,-1680(A5)
+1cc8: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1ccc: 6000        BRA     0x1d32
+1cd0: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1cd4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1cd8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1cdc: a893        _MoveTo
+1cde: 487a        PEA     2680(PC) [0x2758 ; pstr='Somebody got wise.  State police and Feds swarmed down']
+1ce2: a884        _DrawString
+1ce4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1ce8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1cec: a893        _MoveTo
+1cee: 487a        PEA     2720(PC) [0x2790 ; pstr='on the deal.  J. Marmaduke got away just in the nick']
+1cf2: a884        _DrawString
+1cf4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1cf8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1cfc: a893        _MoveTo
+1cfe: 487a        PEA     2758(PC) [0x27c6 ; pstr='of time and you had to play it pretty cool for a while.']
+1d02: a884        _DrawString
+1d04: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d08: 3f3c        MOVE.W  #0x6e (110),-(A7)
+1d0c: a893        _MoveTo
+1d0e: 487a        PEA     2798(PC) [0x27fe ; pstr='Your share of unrecovered expenses was $5,000.']
+1d12: a884        _DrawString
+1d14: 202d        MOVE.L  -1696(A5),D0
+1d18: 0480        SUBI.L  #0x1388,D0
+1d1e: 2b40        MOVE.L  D0,-1696(A5)
+1d22: 302d        MOVE.W  -1680(A5),D0
+1d26: 0440        SUBI.W  #0x1e (30),D0
+1d2a: 3b40        MOVE.W  D0,-1680(A5)
+1d2e: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1d32: 6000        BRA     0x1e14
+1d36: 0c40        CMPI.W  #0x3 (3),D0
+1d3a: 6600        BNE     0x1e14
+1d3e: 4a2d        TST.B   -2492(A5)
+1d42: 6700        BEQ     0x1db6
+1d46: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1d4a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d4e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d52: a893        _MoveTo
+1d54: 487a        PEA     2776(PC) [0x282e ; pstr='The scheme worked very well!  MacRascal went into a']
+1d58: a884        _DrawString
+1d5a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d5e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1d62: a893        _MoveTo
+1d64: 487a        PEA     2812(PC) [0x2862 ; pstr='frenzy trying to outdo you in bribing J. Marmaduke']
+1d68: a884        _DrawString
+1d6a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1d6e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1d72: a893        _MoveTo
+1d74: 487a        PEA     2848(PC) [0x2896 ; pstr='for the factory site.  Your cut of the take was $42,000.']
+1d78: a884        _DrawString
+1d7a: 202d        MOVE.L  -1696(A5),D0
+1d7e: 0680        ADDI.L  #0xa410,D0
+1d84: 2b40        MOVE.L  D0,-1696(A5)
+1d88: 202d        MOVE.L  -1740(A5),D0
+1d8c: 0480        SUBI.L  #0x14820,D0
+1d92: 2b40        MOVE.L  D0,-1740(A5)
+1d96: 302d        MOVE.W  -1680(A5),D0
+1d9a: 0640        ADDI.W  #0x64 (100),D0
+1d9e: 3b40        MOVE.W  D0,-1680(A5)
+1da2: 302d        MOVE.W  -1724(A5),D0
+1da6: 0440        SUBI.W  #0x64 (100),D0
+1daa: 3b40        MOVE.W  D0,-1724(A5)
+1dae: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1db2: 6000        BRA     0x1e14
+1db6: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1dba: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1dbe: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1dc2: a893        _MoveTo
+1dc4: 487a        PEA     2826(PC) [0x28d0 ; pstr='MacRascal got wise to the factory site scam.  The']
+1dc8: a884        _DrawString
+1dca: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1dce: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1dd2: a893        _MoveTo
+1dd4: 487a        PEA     2860(PC) [0x2902 ; pstr='police just missed catching J. Marmaduke.  You lost']
+1dd8: a884        _DrawString
+1dda: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1dde: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1de2: a893        _MoveTo
+1de4: 487a        PEA     2896(PC) [0x2936 ; pstr='$3000 as expenses on the deal.']
+1de8: a884        _DrawString
+1dea: 202d        MOVE.L  -1696(A5),D0
+1dee: 0480        SUBI.L  #0xbb8,D0
+1df4: 2b40        MOVE.L  D0,-1696(A5)
+1df8: 302d        MOVE.W  -1680(A5),D0
+1dfc: 0440        SUBI.W  #0x32 (50),D0
+1e00: 3b40        MOVE.W  D0,-1680(A5)
+1e04: 302d        MOVE.W  -1724(A5),D0
+1e08: 0640        ADDI.W  #0x64 (100),D0
+1e0c: 3b40        MOVE.W  D0,-1724(A5)
+1e10: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1e14: 4e5e        UNLK    A6
+1e16: 4e75        RTS
+1e18: 3259        MOVEA.W  (A1)+,A1
+1e1a: 6f75        BLE     0x1e91
+1e1c: 7220        MOVEQ   #32,D1
+1e1e: 6f6c        BLE     0x1e8c
+1e20: 6420        BCC     0x1e42
+1e22: 6672        BNE     0x1e96
+1e24: 6174        BSR     0x1e9a
+1e26: 6572        BCS     0x1e9a
+1e28: 6e69        BGT     0x1e93
+1e2a: 7479        MOVEQ   #121,D2
+1e2c: 2062        MOVEA.L  -(A2),A0
+1e2e: 726f        MOVEQ   #111,D1
+1e30: 7468        MOVEQ   #104,D2
+1e32: 6572        BCS     0x1ea6
+1e34: 204a        MOVEA.L  A2,A0
+1e36: 2e20        MOVE.L  -(A0),D7
+1e38: 4d61        DC.W    0x4d61
+1e3a: 726d        MOVEQ   #109,D1
+1e3c: 6164        BSR     0x1ea2
+1e3e: 756b        DC.W    0x756b
+1e40: 6520        BCS     0x1e62
+1e42: 4469        DC.W    0x4469
+1e44: 7274        MOVEQ   #116,D1
+1e46: 7920        DC.W    0x7920
+1e48: 6861        BVC     0x1eab
+1e4a: 7300        DC.W    0x7300
+1e4c: 3159        MOVE.W  (A1)+,28533(A0)
+1e50: 7220        MOVEQ   #32,D1
+1e52: 6f6c        BLE     0x1ec0
+1e54: 6420        BCC     0x1e76
+1e56: 6672        BNE     0x1eca
+1e58: 6174        BSR     0x1ece
+1e5a: 2062        MOVEA.L  -(A2),A0
+1e5c: 726f        MOVEQ   #111,D1
+1e5e: 7468        MOVEQ   #104,D2
+1e60: 6572        BCS     0x1ed4
+1e62: 204a        MOVEA.L  A2,A0
+1e64: 2e20        MOVE.L  -(A0),D7
+1e66: 4d61        DC.W    0x4d61
+1e68: 726d        MOVEQ   #109,D1
+1e6a: 6164        BSR     0x1ed0
+1e6c: 756b        DC.W    0x756b
+1e6e: 6520        BCS     0x1e90
+1e70: 4469        DC.W    0x4469
+1e72: 7274        MOVEQ   #116,D1
+1e74: 7920        DC.W    0x7920
+1e76: 6861        BVC     0x1ed9
+1e78: 7320        DC.W    0x7320
+1e7a: 636f        BLS     0x1eeb
+1e7c: 6d65        BLT     0x1ee3
+1e7e: 374a        MOVE.W  A2,11808(A3)
+1e82: 4d61        DC.W    0x4d61
+1e84: 726d        MOVEQ   #109,D1
+1e86: 6164        BSR     0x1eec
+1e88: 756b        DC.W    0x756b
+1e8a: 6520        BCS     0x1eac
+1e8c: 4469        DC.W    0x4469
+1e8e: 7274        MOVEQ   #116,D1
+1e90: 7920        DC.W    0x7920
+1e92: 6973        BVS     0x1f07
+1e94: 2062        MOVEA.L  -(A2),A0
+1e96: 6163        BSR     0x1efb
+1e98: 6b20        BMI     0x1eba
+1e9a: 696e        BVS     0x1f0a
+1e9c: 2074        MOVEA.L  119(A4,D6.L),A0
+1ea0: 6e20        BGT     0x1ec2
+1ea2: 7769        DC.W    0x7769
+1ea4: 7468        MOVEQ   #104,D2
+1ea6: 2061        MOVEA.L  -(A1),A0
+1ea8: 6e6f        BGT     0x1f19
+1eaa: 7468        MOVEQ   #104,D2
+1eac: 6572        BCS     0x1f20
+1eae: 2073        MOVEA.L  104(A3,D6.W),A0
+1eb2: 656d        BCS     0x1f21
+1eb4: 652e        BCS     0x1ee4
+1eb6: 3359        MOVE.W  (A1)+,28533(A1)
+1eba: 206c        MOVEA.L  25953(A4),A0
+1ebe: 726e        MOVEQ   #110,D1
+1ec0: 2074        MOVEA.L  97(A4,D6.L),A0
+1ec4: 7420        MOVEQ   #32,D2
+1ec6: 7468        MOVEQ   #104,D2
+1ec8: 6520        BCS     0x1eea
+1eca: 4261        CLR.W   -(A1)
+1ecc: 6e6b        BGT     0x1f39
+1ece: 2069        MOVEA.L  29472(A1),A0
+1ed2: 686f        BVC     0x1f43
+1ed4: 6c64        BGE     0x1f3a
+1ed6: 696e        BVS     0x1f46
+1ed8: 6720        BEQ     0x1efa
+1eda: 6c61        BGE     0x1f3d
+1edc: 7267        MOVEQ   #103,D1
+1ede: 6520        BCS     0x1f00
+1ee0: 616d        BSR     0x1f4f
+1ee2: 6f75        BLE     0x1f59
+1ee4: 6e74        BGT     0x1f5a
+1ee6: 7320        DC.W    0x7320
+1ee8: 6f66        BLE     0x1f50
+1eea: 3263        MOVEA.W  -(A3),A1
+1eec: 6f6d        BLE     0x1f5b
+1eee: 6520        BCS     0x1f10
+1ef0: 746f        MOVEQ   #111,D2
+1ef2: 2074        MOVEA.L  119(A4,D6.L),A0
+1ef6: 6e20        BGT     0x1f18
+1ef8: 7769        DC.W    0x7769
+1efa: 7468        MOVEQ   #104,D2
+1efc: 2061        MOVEA.L  -(A1),A0
+1efe: 2073        MOVEA.L  105(A3,D6.L),A0
+1f02: 6768        BEQ     0x1f6c
+1f04: 746c        MOVEQ   #108,D2
+1f06: 7920        DC.W    0x7920
+1f08: 696c        BVS     0x1f76
+1f0a: 6c65        BGE     0x1f71
+1f0c: 6761        BEQ     0x1f6f
+1f0e: 6c20        BGE     0x1f30
+1f10: 6275        BHI     0x1f87
+1f12: 7369        DC.W    0x7369
+1f14: 6e65        BGT     0x1f7b
+1f16: 7373        DC.W    0x7373
+1f18: 2064        MOVEA.L  -(A4),A0
+1f1a: 6561        BCS     0x1f7d
+1f1c: 6c00        BGE     0x4f8a
+1f20: 6f6f        BLE     0x1f91
+1f22: 6b69        BMI     0x1f8d
+1f24: 6e67        BGT     0x1f8d
+1f26: 2066        MOVEA.L  -(A6),A0
+1f28: 6f72        BLE     0x1f9c
+1f2a: 2079        MOVEA.L  (0x6f757220).L,A0
+1f30: 6865        BVC     0x1f97
+1f32: 6c70        BGE     0x1fa4
+1f34: 2069        MOVEA.L  28192(A1),A0
+1f38: 616e        BSR     0x1fa8
+1f3a: 6f74        BLE     0x1fb0
+1f3c: 6865        BVC     0x1fa3
+1f3e: 7220        MOVEQ   #32,D1
+1f40: 696c        BVS     0x1fae
+1f42: 6c65        BGE     0x1fa9
+1f44: 6761        BEQ     0x1fa7
+1f46: 6c20        BGE     0x1f68
+1f48: 7363        DC.W    0x7363
+1f4a: 6865        BVC     0x1fb1
+1f4c: 6d65        BLT     0x1fb3
+1f4e: 2e00        MOVE.L  D0,D7
+1f50: 3348        MOVE.W  A0,25888(A1)
+1f54: 7769        DC.W    0x7769
+1f56: 6c6c        BGE     0x1fc4
+1f58: 2070        MOVEA.L  115(A0,D6.L),A0
+1f5c: 6520        BCS     0x1f7e
+1f5e: 6173        BSR     0x1fd3
+1f60: 2061        MOVEA.L  -(A1),A0
+1f62: 2072        MOVEA.L  112(A2,D6.W),A0
+1f66: 7265        MOVEQ   #101,D1
+1f68: 7365        DC.W    0x7365
+1f6a: 6e74        BGT     0x1fe0
+1f6c: 6174        BSR     0x1fe2
+1f6e: 6976        BVS     0x1fe6
+1f70: 6520        BCS     0x1f92
+1f72: 6f66        BLE     0x1fda
+1f74: 2061        MOVEA.L  -(A1),A0
+1f76: 206c        MOVEA.L  24946(A4),A0
+1f7a: 6765        BEQ     0x1fe1
+1f7c: 2063        MOVEA.L  -(A3),A0
+1f7e: 6f6d        BLE     0x1fed
+1f80: 7061        MOVEQ   #97,D0
+1f82: 6e79        BGT     0x1ffd
+1f84: 2e63        MOVEA.L  -(A3),A7
+1f86: 6173        BSR     0x1ffb
+1f88: 682e        BVC     0x1fb8
+1f8a: 2020        MOVE.L  -(A0),D0
+1f8c: 596f        SUBQ.W  #4,29984(A7)
+1f90: 6861        BVC     0x1ff3
+1f92: 7665        MOVEQ   #101,D3
+1f94: 2061        MOVEA.L  -(A1),A0
+1f96: 2070        MOVEA.L  97(A0,D6.L),A0
+1f9a: 6e2c        BGT     0x1fc8
+1f9c: 2061        MOVEA.L  -(A1),A0
+1f9e: 2073        MOVEA.L  111(A3,D7.W),A0
+1fa2: 636b        BLS     0x200f
+1fa4: 696e        BVS     0x2014
+1fa6: 6720        BEQ     0x1fc8
+1fa8: 6d61        BLT     0x200b
+1faa: 736b        DC.W    0x736b
+1fac: 2061        MOVEA.L  -(A1),A0
+1fae: 6e64        BGT     0x2014
+1fb0: 204a        MOVEA.L  A2,A0
+1fb2: 2e00        MOVE.L  D0,D7
+1fb4: 3366        MOVE.W  -(A6),28530(A1)
+1fb8: 2079        MOVEA.L  (0x6f752e20).L,A0
+1fbe: 2048        MOVEA.L  A0,A0
+1fc0: 6520        BCS     0x1fe2
+1fc2: 7769        DC.W    0x7769
+1fc4: 6c6c        BGE     0x2032
+1fc6: 2064        MOVEA.L  -(A4),A0
+1fc8: 7269        MOVEQ   #105,D1
+1fca: 7665        MOVEQ   #101,D3
+1fcc: 2061        MOVEA.L  -(A1),A0
+1fce: 726f        MOVEQ   #111,D1
+1fd0: 756e        DC.W    0x756e
+1fd2: 6420        BCC     0x1ff4
+1fd4: 7769        DC.W    0x7769
+1fd6: 7468        MOVEQ   #104,D2
+1fd8: 2061        MOVEA.L  -(A1),A0
+1fda: 2074        MOVEA.L  110(A4,D6.W),A0
+1fde: 6b20        BMI     0x2000
+1fe0: 7472        MOVEQ   #114,D2
+1fe2: 7563        DC.W    0x7563
+1fe4: 6b20        BMI     0x2006
+1fe6: 696e        BVS     0x2056
+1fe8: 3554        MOVE.W  (A4),26729(A2)
+1fec: 7320        DC.W    0x7320
+1fee: 7469        MOVEQ   #105,D2
+1ff0: 6d65        BLT     0x2057
+1ff2: 2068        MOVEA.L  25888(A0),A0
+1ff6: 6973        BVS     0x206b
+1ff8: 2072        MOVEA.L  110(A2,D7.W),A0
+1ffc: 6e69        BGT     0x2067
+1ffe: 6e67        BGT     0x2067
+2000: 2061        MOVEA.L  -(A1),A0
+2002: 6e20        BGT     0x2024
+2004: 6f69        BLE     0x206f
+2006: 6c20        BGE     0x2028
+2008: 7072        MOVEQ   #114,D0
+200a: 6f6d        BLE     0x2079
+200c: 6f74        BLE     0x2082
+200e: 696f        BVS     0x207f
+2010: 6e20        BGT     0x2032
+2012: 616e        BSR     0x2082
+2014: 6420        BCC     0x2036
+2016: 6865        BVC     0x207d
+2018: 206e        MOVEA.L  25957(A6),A0
+201c: 6473        BCC     0x2091
+201e: 3474        MOVEA.W  105(A4,D6.L),A2
+2022: 6e6b        BGT     0x208f
+2024: 696e        BVS     0x2094
+2026: 6720        BEQ     0x2048
+2028: 6162        BSR     0x208c
+202a: 6f75        BLE     0x20a1
+202c: 7420        MOVEQ   #32,D2
+202e: 6c6f        BGE     0x209f
+2030: 6361        BLS     0x2093
+2032: 7469        MOVEQ   #105,D2
+2034: 6e67        BGT     0x209d
+2036: 2061        MOVEA.L  -(A1),A0
+2038: 206d        MOVEA.L  24938(A5),A0
+203c: 6f72        BLE     0x20b0
+203e: 2070        MOVEA.L  97(A0,D6.L),A0
+2042: 6e74        BGT     0x20b8
+2044: 2069        MOVEA.L  28192(A1),A0
+2048: 5475        ADDQ.W  #2,98(A5,D6.L)
+204c: 6c65        BGE     0x20b3
+204e: 7765        DC.W    0x7765
+2050: 6564        BCS     0x20b6
+2052: 2e00        MOVE.L  D0,D7
+2054: 334d        MOVE.W  A5,24946(A1)
+2058: 6d61        BLT     0x20bb
+205a: 6475        BCC     0x20d1
+205c: 6b65        BMI     0x20c3
+205e: 2068        MOVEA.L  24947(A0),A0
+2062: 2076        MOVEA.L  108(A6,D6.L),A0
+2066: 756e        DC.W    0x756e
+2068: 7465        MOVEQ   #101,D2
+206a: 6572        BCS     0x20de
+206c: 6564        BCS     0x20d2
+206e: 2074        MOVEA.L  32(A4,D6.L),A0
+2072: 6865        BVC     0x20d9
+2074: 6c70        BGE     0x20e6
+2076: 2e20        MOVE.L  -(A0),D7
+2078: 2059        MOVEA.L  (A1)+,A0
+207a: 6f75        BLE     0x20f1
+207c: 206e        MOVEA.L  25957(A6),A0
+2080: 6420        BCC     0x20a2
+2082: 6d6f        BLT     0x20f3
+2084: 6e65        BGT     0x20eb
+2086: 792e        DC.W    0x792e
+2088: 3674        MOVEA.W  101(A4,D6.L),A3
+208c: 206d        MOVEA.L  26980(A5),A0
+2090: 646c        BCC     0x20fe
+2092: 6520        BCS     0x20b4
+2094: 6f66        BLE     0x20fc
+2096: 2074        MOVEA.L  101(A4,D6.L),A0
+209a: 206e        MOVEA.L  26983(A6),A0
+209e: 6874        BVC     0x2114
+20a0: 2073        MOVEA.L  101(A3,D7.W),A0
+20a4: 616c        BSR     0x2112
+20a6: 696e        BVS     0x2116
+20a8: 6720        BEQ     0x20ca
+20aa: 6f69        BLE     0x2115
+20ac: 6c20        BGE     0x20ce
+20ae: 6672        BNE     0x2122
+20b0: 6f6d        BLE     0x211f
+20b2: 206f        MOVEA.L  29800(A7),A0
+20b6: 6572        BCS     0x212a
+20b8: 2066        MOVEA.L  -(A6),A0
+20ba: 6f6c        BLE     0x2128
+20bc: 6b60        BMI     0x211e
+20be: 7300        DC.W    0x7300
+20c0: 3474        MOVEA.W  32(A4,D6.L),A2
+20c4: 7573        DC.W    0x7573
+20c6: 6520        BCS     0x20e8
+20c8: 796f        DC.W    0x796f
+20ca: 7572        DC.W    0x7572
+20cc: 206f        MOVEA.L  26988(A7),A0
+20d0: 2070        MOVEA.L  111(A0,D7.W),A0
+20d4: 7065        MOVEQ   #101,D0
+20d6: 7274        MOVEQ   #116,D1
+20d8: 7920        DC.W    0x7920
+20da: 696e        BVS     0x214a
+20dc: 2074        MOVEA.L  101(A4,D6.L),A0
+20e0: 2073        MOVEA.L  104(A3,D6.W),A0
+20e4: 656d        BCS     0x2153
+20e6: 652e        BCS     0x2116
+20e8: 2020        MOVE.L  -(A0),D0
+20ea: 5468        ADDQ.W  #2,25970(A0)
+20ee: 6520        BCS     0x2110
+20f0: 6973        BVS     0x2165
+20f2: 2061        MOVEA.L  -(A1),A0
+20f4: 6e00        BGT     0x543e
+20f8: 6520        BCS     0x211a
+20fa: 7761        DC.W    0x7761
+20fc: 6e74        BGT     0x2172
+20fe: 7320        DC.W    0x7320
+2100: 796f        DC.W    0x796f
+2102: 7520        DC.W    0x7520
+2104: 746f        MOVEQ   #111,D2
+2106: 2073        MOVEA.L  97(A3,D7.W),A0
+210a: 7274        MOVEQ   #116,D1
+210c: 2061        MOVEA.L  -(A1),A0
+210e: 2062        MOVEA.L  -(A2),A0
+2110: 6964        BVS     0x2176
+2112: 6469        BCC     0x217d
+2114: 6e67        BGT     0x217d
+2116: 2077        MOVEA.L  114(A7,D6.W),A0
+211a: 2062        MOVEA.L  -(A2),A0
+211c: 7269        MOVEQ   #105,D1
+211e: 6269        BHI     0x2189
+2120: 6e67        BGT     0x2189
+2122: 2068        MOVEA.L  26989(A0),A0
+2126: 2074        MOVEA.L  32(A4,D6.L),A0
+212a: 324e        MOVEA.W  A6,A1
+212c: 6f77        BLE     0x21a5
+212e: 2074        MOVEA.L  101(A4,D6.L),A0
+2132: 206f        MOVEA.L  28268(A7),A0
+2136: 7920        DC.W    0x7920
+2138: 7175        DC.W    0x7175
+213a: 6573        BCS     0x21af
+213c: 7469        MOVEQ   #105,D2
+213e: 6f6e        BLE     0x21ae
+2140: 2069        MOVEA.L  29472(A1),A0
+2144: 6172        BSR     0x21b8
+2146: 6520        BCS     0x2168
+2148: 796f        DC.W    0x796f
+214a: 7520        DC.W    0x7520
+214c: 676f        BEQ     0x21bd
+214e: 696e        BVS     0x21be
+2150: 6720        BEQ     0x2172
+2152: 746f        MOVEQ   #111,D2
+2154: 2072        MOVEA.L  98(A2,D6.L),A0
+2158: 2074        MOVEA.L  101(A4,D6.L),A0
+215c: 2000        MOVE.L  D0,D0
+215e: 3174        MOVE.W  110(A4,D6.W),27424(A0)
+2164: 6261        BHI     0x21c7
+2166: 7474        MOVEQ   #116,D2
+2168: 6572        BCS     0x21dc
+216a: 6965        BVS     0x21d1
+216c: 7320        DC.W    0x7320
+216e: 616e        BSR     0x21de
+2170: 6420        BCC     0x2192
+2172: 7370        DC.W    0x7370
+2174: 6c69        BGE     0x21df
+2176: 7420        MOVEQ   #32,D2
+2178: 7072        MOVEQ   #114,D0
+217a: 6f66        BLE     0x21e2
+217c: 6974        BVS     0x21f2
+217e: 7320        DC.W    0x7320
+2180: 7769        DC.W    0x7769
+2182: 7468        MOVEQ   #104,D2
+2184: 2079        MOVEA.L  (0x6f752069).L,A0
+218a: 6620        BNE     0x21ac
+218c: 796f        DC.W    0x796f
+218e: 7520        DC.W    0x7520
+2190: 336f        MOVE.W  26988(A7),8290(A1)
+2196: 6561        BCS     0x21f9
+2198: 7269        MOVEQ   #105,D1
+219a: 6e67        BGT     0x2203
+219c: 2073        MOVEA.L  110(A3,D6.W),A0
+21a0: 6420        BCC     0x21c2
+21a2: 666f        BNE     0x2213
+21a4: 726d        MOVEQ   #109,D1
+21a6: 6174        BSR     0x221c
+21a8: 696f        BVS     0x2219
+21aa: 6e20        BGT     0x21cc
+21ac: 756e        DC.W    0x756e
+21ae: 6465        BCC     0x2215
+21b0: 7220        MOVEQ   #32,D1
+21b2: 796f        DC.W    0x796f
+21b4: 7572        DC.W    0x7572
+21b6: 2070        MOVEA.L  111(A0,D7.W),A0
+21ba: 7065        MOVEQ   #101,D0
+21bc: 7274        MOVEQ   #116,D1
+21be: 7920        DC.W    0x7920
+21c0: 7468        MOVEQ   #104,D2
+21c2: 6174        BSR     0x2238
+21c4: 3363        MOVE.W  -(A3),26735(A1)
+21c8: 6f73        BLE     0x223d
+21ca: 6520        BCS     0x21ec
+21cc: 796f        DC.W    0x796f
+21ce: 7572        DC.W    0x7572
+21d0: 2070        MOVEA.L  111(A0,D7.W),A0
+21d4: 7065        MOVEQ   #101,D0
+21d6: 7274        MOVEQ   #116,D1
+21d8: 7920        DC.W    0x7920
+21da: 666f        BNE     0x224b
+21dc: 7220        MOVEQ   #32,D1
+21de: 7468        MOVEQ   #104,D2
+21e0: 6520        BCS     0x2202
+21e2: 706c        MOVEQ   #108,D0
+21e4: 616e        BSR     0x2254
+21e6: 7420        MOVEQ   #32,D2
+21e8: 6173        BSR     0x225d
+21ea: 2061        MOVEA.L  -(A1),A0
+21ec: 6761        BEQ     0x224f
+21ee: 696e        BVS     0x225e
+21f0: 7374        DC.W    0x7374
+21f2: 206f        MOVEA.L  29800(A7),A0
+21f6: 6572        BCS     0x226a
+21f8: 0c42        CMPI.W  #0x616e (24942),D2
+21fc: 6b20        BMI     0x221e
+21fe: 6f72        BLE     0x2272
+2200: 206e        MOVEA.L  28532(A6),A0
+2204: 3f00        MOVE.W  D0,-(A7)
+2206: 3677        MOVEA.W  108(A7,D6.L),A3
+220a: 6c20        BGE     0x222c
+220c: 7365        DC.W    0x7365
+220e: 6c6c        BGE     0x227c
+2210: 2074        MOVEA.L  101(A4,D6.L),A0
+2214: 2073        MOVEA.L  111(A3,D7.W),A0
+2218: 6c65        BGE     0x227f
+221a: 6e20        BGT     0x223c
+221c: 6f69        BLE     0x2287
+221e: 6c20        BGE     0x2240
+2220: 6672        BNE     0x2294
+2222: 6f6d        BLE     0x2291
+2224: 2074        MOVEA.L  101(A4,D6.L),A0
+2228: 2073        MOVEA.L  97(A3,D6.L),A0
+222c: 6c6c        BGE     0x229a
+222e: 206f        MOVEA.L  26988(A7),A0
+2232: 206c        MOVEA.L  25953(A4),A0
+2236: 7365        DC.W    0x7365
+2238: 2079        MOVEA.L  (0x6f757200).L,A0
+223e: 336c        MOVE.W  28527(A4),27507(A1)
+2244: 2067        MOVEA.L  -(A7),A0
+2246: 6f6f        BLE     0x22b7
+2248: 6420        BCC     0x226a
+224a: 666f        BNE     0x22bb
+224c: 7220        MOVEQ   #32,D1
+224e: 6120        BSR     0x2270
+2250: 7368        DC.W    0x7368
+2252: 6f72        BLE     0x22c6
+2254: 7420        MOVEQ   #32,D2
+2256: 7768        DC.W    0x7768
+2258: 696c        BVS     0x22c6
+225a: 6520        BCS     0x227c
+225c: 6275        BHI     0x22d3
+225e: 7420        MOVEQ   #32,D2
+2260: 6769        BEQ     0x22cb
+2262: 7665        MOVEQ   #101,D3
+2264: 7320        DC.W    0x7320
+2266: 6f75        BLE     0x22dd
+2268: 7420        MOVEQ   #32,D2
+226a: 7175        DC.W    0x7175
+226c: 6963        BVS     0x22d1
+226e: 6b6c        BMI     0x22dc
+2270: 792e        DC.W    0x792e
+2272: 3170        MOVE.W  111(A0,D6.W),28780(A0)
+2278: 6560        BCS     0x22da
+227a: 7320        DC.W    0x7320
+227c: 696e        BVS     0x22ec
+227e: 2074        MOVEA.L  101(A4,D6.L),A0
+2282: 2063        MOVEA.L  -(A3),A0
+2284: 6f6d        BLE     0x22f3
+2286: 6d75        BLT     0x22fd
+2288: 6e69        BGT     0x22f3
+228a: 7479        MOVEQ   #121,D2
+228c: 2e20        MOVE.L  -(A0),D7
+228e: 2049        MOVEA.L  A1,A0
+2290: 6620        BNE     0x22b2
+2292: 6974        BVS     0x2308
+2294: 7320        DC.W    0x7320
+2296: 646f        BCC     0x2307
+2298: 6e65        BGT     0x22ff
+229a: 2072        MOVEA.L  103(A2,D6.L),A0
+229e: 6874        BVC     0x2314
+22a0: 2079        MOVEA.L  (0x6f752c75).L,A0
+22a6: 6e63        BGT     0x230b
+22a8: 6c65        BGE     0x230f
+22aa: 206c        MOVEA.L  25958(A4),A0
+22ae: 7420        MOVEQ   #32,D2
+22b0: 796f        DC.W    0x796f
+22b2: 752e        DC.W    0x752e
+22b4: 2020        MOVE.L  -(A0),D0
+22b6: 446f        DC.W    0x446f
+22b8: 2079        MOVEA.L  (0x6f752077).L,A0
+22be: 616e        BSR     0x232e
+22c0: 7420        MOVEQ   #32,D2
+22c2: 746f        MOVEQ   #111,D2
+22c4: 2064        MOVEA.L  -(A4),A0
+22c6: 6561        BCS     0x2329
+22c8: 6c20        BGE     0x22ea
+22ca: 6f72        BLE     0x233e
+22cc: 206e        MOVEA.L  28532(A6),A0
+22d0: 3f00        MOVE.W  D0,-(A7)
+22d2: 2d59        MOVE.L  (A1)+,28533(A6)
+22d6: 2063        MOVEA.L  -(A3),A0
+22d8: 616e        BSR     0x2348
+22da: 2062        MOVEA.L  -(A2),A0
+22dc: 6520        BCS     0x22fe
+22de: 696e        BVS     0x234e
+22e0: 2066        MOVEA.L  -(A6),A0
+22e2: 6f72        BLE     0x2356
+22e4: 2068        MOVEA.L  24940(A0),A0
+22e8: 662e        BNE     0x2318
+22ea: 2020        MOVE.L  -(A0),D0
+22ec: 446f        DC.W    0x446f
+22ee: 2079        MOVEA.L  (0x6f752077).L,A0
+22f4: 616e        BSR     0x2364
+22f6: 7420        MOVEQ   #32,D2
+22f8: 746f        MOVEQ   #111,D2
+22fa: 2064        MOVEA.L  -(A4),A0
+22fc: 6561        BCS     0x235f
+22fe: 6c3f        BGE     0x233f
+2300: 3061        MOVEA.W  -(A1),A0
+2302: 6e64        BGT     0x2368
+2304: 2068        MOVEA.L  25888(A0),A0
+2308: 7368        DC.W    0x7368
+230a: 6f75        BLE     0x2381
+230c: 6c64        BGE     0x2372
+230e: 2062        MOVEA.L  -(A2),A0
+2310: 6520        BCS     0x2332
+2312: 6162        BSR     0x2376
+2314: 6c65        BGE     0x237b
+2316: 2074        MOVEA.L  32(A4,D6.L),A0
+231a: 7075        MOVEQ   #117,D0
+231c: 6c6c        BGE     0x238a
+231e: 204d        MOVEA.L  A5,A0
+2320: 6163        BSR     0x2385
+2322: 5261        ADDQ.W  #1,-(A1)
+2324: 7363        DC.W    0x7363
+2326: 616c        BSR     0x2394
+2328: 2069        MOVEA.L  28276(A1),A0
+232c: 6f20        BLE     0x234e
+232e: 7468        MOVEQ   #104,D2
+2330: 6500        BCS     0x5294
+2334: 6964        BVS     0x239a
+2336: 6469        BCC     0x23a1
+2338: 6e67        BGT     0x23a1
+233a: 2e20        MOVE.L  -(A0),D7
+233c: 2046        MOVEA.L  D6,A0
+233e: 6f72        BLE     0x23b2
+2340: 2068        MOVEA.L  24940(A0),A0
+2344: 6620        BNE     0x2366
+2346: 6f66        BLE     0x23ae
+2348: 2074        MOVEA.L  101(A4,D6.L),A0
+234c: 2074        MOVEA.L  107(A4,D6.W),A0
+2350: 652c        BCS     0x237e
+2352: 2064        MOVEA.L  -(A4),A0
+2354: 6f20        BLE     0x2376
+2356: 796f        DC.W    0x796f
+2358: 7520        DC.W    0x7520
+235a: 7761        DC.W    0x7761
+235c: 6e74        BGT     0x23d2
+235e: 2069        MOVEA.L  28223(A1),A0
+2362: 3959        MOVE.W  (A1)+,28533(A4)
+2366: 206c        MOVEA.L  30051(A4),A0
+236a: 6b65        BMI     0x23d1
+236c: 6420        BCC     0x238e
+236e: 6f75        BLE     0x23e5
+2370: 7420        MOVEQ   #32,D2
+2372: 7468        MOVEQ   #104,D2
+2374: 6973        BVS     0x23e9
+2376: 2074        MOVEA.L  109(A4,D6.L),A0
+237a: 652e        BCS     0x23aa
+237c: 2020        MOVE.L  -(A0),D0
+237e: 416c        DC.W    0x416c
+2380: 7468        MOVEQ   #104,D2
+2382: 6f75        BLE     0x23f9
+2384: 6768        BEQ     0x23ee
+2386: 2068        MOVEA.L  25888(A0),A0
+238a: 616c        BSR     0x23f8
+238c: 6d6f        BLT     0x23fd
+238e: 7374        DC.W    0x7374
+2390: 2067        MOVEA.L  -(A7),A0
+2392: 6f74        BLE     0x2408
+2394: 2063        MOVEA.L  -(A3),A0
+2396: 6175        BSR     0x240d
+2398: 6768        BEQ     0x2402
+239a: 742c        MOVEQ   #44,D2
+239c: 354a        MOVE.W  A2,11808(A2)
+23a0: 4d61        DC.W    0x4d61
+23a2: 726d        MOVEQ   #109,D1
+23a4: 6164        BSR     0x240a
+23a6: 756b        DC.W    0x756b
+23a8: 6520        BCS     0x23ca
+23aa: 676f        BEQ     0x241b
+23ac: 7420        MOVEQ   #32,D2
+23ae: 6177        BSR     0x2427
+23b0: 6179        BSR     0x242b
+23b2: 2077        MOVEA.L  116(A7,D6.L),A0
+23b6: 6820        BVC     0x23d8
+23b8: 6974        BVS     0x242e
+23ba: 2e20        MOVE.L  -(A0),D7
+23bc: 2059        MOVEA.L  (A1)+,A0
+23be: 6f75        BLE     0x2435
+23c0: 2077        MOVEA.L  114(A7,D6.W),A0
+23c4: 6520        BCS     0x23e6
+23c6: 6162        BSR     0x242a
+23c8: 6c65        BGE     0x242f
+23ca: 2074        MOVEA.L  32(A4,D6.L),A0
+23ce: 7365        DC.W    0x7365
+23d0: 6c6c        BGE     0x243e
+23d2: 3474        MOVEA.W  101(A4,D6.L),A2
+23d6: 2065        MOVEA.L  -(A5),A0
+23d8: 7874        MOVEQ   #116,D4
+23da: 7261        MOVEQ   #97,D1
+23dc: 206f        MOVEA.L  26988(A7),A0
+23e0: 206f        MOVEA.L  30309(A7),A0
+23e4: 7220        MOVEQ   #32,D1
+23e6: 7469        MOVEQ   #105,D2
+23e8: 6d65        BLT     0x244f
+23ea: 2061        MOVEA.L  -(A1),A0
+23ec: 6e64        BGT     0x2452
+23ee: 2069        MOVEA.L  29728(A1),A0
+23f2: 7761        DC.W    0x7761
+23f4: 736e        DC.W    0x736e
+23f6: 6074        BRA     0x246c
+23f8: 206e        MOVEA.L  28532(A6),A0
+23fc: 6963        BVS     0x2461
+23fe: 6564        BCS     0x2464
+2400: 2e20        MOVE.L  -(A0),D7
+2402: 2059        MOVEA.L  (A1)+,A0
+2404: 6f75        BLE     0x247b
+2406: 7200        MOVEQ   #0,D1
+2408: 1573        MOVE.B  97(A3,D6.L),29285(A2)
+240e: 2063        MOVEA.L  -(A3),A0
+2410: 616d        BSR     0x247f
+2412: 6520        BCS     0x2434
+2414: 746f        MOVEQ   #111,D2
+2416: 2024        MOVE.L  -(A4),D0
+2418: 382c        MOVE.W  12336(A4),D4
+241c: 302e        MOVE.W  12874(A6),D0
+2420: 2e20        MOVE.L  -(A0),D7
+2422: 4d61        DC.W    0x4d61
+2424: 726d        MOVEQ   #109,D1
+2426: 6164        BSR     0x248c
+2428: 756b        DC.W    0x756b
+242a: 6520        BCS     0x244c
+242c: 7761        DC.W    0x7761
+242e: 7320        DC.W    0x7320
+2430: 6361        BLS     0x2493
+2432: 7567        DC.W    0x7567
+2434: 6874        BVC     0x24aa
+2436: 2074        MOVEA.L  101(A4,D6.L),A0
+243a: 2073        MOVEA.L  99(A3,D6.W),A0
+243e: 6f6e        BLE     0x24ae
+2440: 6420        BCC     0x2462
+2442: 6e69        BGT     0x24ad
+2444: 6768        BEQ     0x24ae
+2446: 7420        MOVEQ   #32,D2
+2448: 6f75        BLE     0x24bf
+244a: 742e        MOVEQ   #46,D2
+244c: 2020        MOVE.L  -(A0),D0
+244e: 596f        SUBQ.W  #4,29952(A7)
+2452: 3177        MOVE.W  114(A7,D6.W),25966(A0)
+2458: 6074        BRA     0x24ce
+245a: 2069        MOVEA.L  28016(A1),A0
+245e: 6c69        BGE     0x24c9
+2460: 6361        BLS     0x24c3
+2462: 7465        MOVEQ   #101,D2
+2464: 642c        BCC     0x2492
+2466: 2062        MOVEA.L  -(A2),A0
+2468: 7574        DC.W    0x7574
+246a: 2069        MOVEA.L  29728(A1),A0
+246e: 636f        BLS     0x24df
+2470: 7374        DC.W    0x7374
+2472: 2024        MOVE.L  -(A4),D0
+2474: 3130        MOVE.W  48(A0,D2.L),-(A0)
+2478: 3030        MOVE.W  116(A0,D2.W),D0
+247c: 6f20        BLE     0x249e
+247e: 6765        BEQ     0x24e5
+2480: 7420        MOVEQ   #32,D2
+2482: 4a2e        TST.B   5965(A6)
+2486: 6172        BSR     0x24fa
+2488: 6d61        BLT     0x24eb
+248a: 6475        BCC     0x2501
+248c: 6b65        BMI     0x24f3
+248e: 206f        MOVEA.L  26214(A7),A0
+2492: 2074        MOVEA.L  101(A4,D6.L),A0
+2496: 2068        MOVEA.L  28527(A0),A0
+249a: 6b2e        BMI     0x24ca
+249c: 3557        MOVE.W  (A7),26725(A2)
+24a0: 772c        DC.W    0x772c
+24a2: 2077        MOVEA.L  115(A7,D6.W),A0
+24a6: 2074        MOVEA.L  97(A4,D6.L),A0
+24aa: 7420        MOVEQ   #32,D2
+24ac: 6576        BCS     0x2524
+24ae: 6572        BCS     0x2522
+24b0: 2072        MOVEA.L  115(A2,D6.L),A0
+24b4: 6b79        BMI     0x252f
+24b6: 2121        MOVE.L  -(A1),-(A0)
+24b8: 2020        MOVE.L  -(A0),D0
+24ba: 4275        CLR.W   32(A5,D7.W)
+24be: 796f        DC.W    0x796f
+24c0: 7520        DC.W    0x7520
+24c2: 616e        BSR     0x2532
+24c4: 6420        BCC     0x24e6
+24c6: 4a2e        TST.B   8269(A6)
+24ca: 6172        BSR     0x253e
+24cc: 6d61        BLT     0x252f
+24ce: 6475        BCC     0x2545
+24d0: 6b65        BMI     0x2537
+24d2: 3672        MOVEA.W  98(A2,D6.L),A3
+24d6: 6265        BHI     0x253d
+24d8: 6420        BCC     0x24fa
+24da: 7468        MOVEQ   #104,D2
+24dc: 6520        BCS     0x24fe
+24de: 4261        CLR.W   -(A1)
+24e0: 6e6b        BGT     0x254d
+24e2: 2e20        MOVE.L  -(A0),D7
+24e4: 2059        MOVEA.L  (A1)+,A0
+24e6: 6f75        BLE     0x255d
+24e8: 7220        MOVEQ   #32,D1
+24ea: 7368        DC.W    0x7368
+24ec: 6172        BSR     0x2560
+24ee: 6520        BCS     0x2510
+24f0: 7761        DC.W    0x7761
+24f2: 7320        DC.W    0x7320
+24f4: 2431        MOVE.L  48(A1,D3.W),D2
+24f8: 2c30        MOVE.L  48(A0,D3.W),D6
+24fc: 2061        MOVEA.L  -(A1),A0
+24fe: 6e64        BGT     0x2564
+2500: 2079        MOVEA.L  (0x6f752077).L,A0
+2506: 6572        BCS     0x257a
+2508: 6500        BCS     0x586b
+250c: 626c        BHI     0x257a
+250e: 6520        BCS     0x2530
+2510: 746f        MOVEQ   #111,D2
+2512: 2065        MOVEA.L  -(A5),A0
+2514: 7870        MOVEQ   #112,D4
+2516: 6c61        BGE     0x2579
+2518: 696e        BVS     0x2588
+251a: 2068        MOVEA.L  24950(A0),A0
+251e: 696e        BVS     0x258e
+2520: 6720        BEQ     0x2542
+2522: 7468        MOVEQ   #104,D2
+2524: 6520        BCS     0x2546
+2526: 6578        BCS     0x25a0
+2528: 7472        MOVEQ   #114,D2
+252a: 6120        BSR     0x254c
+252c: 6d6f        BLT     0x259d
+252e: 6e65        BGT     0x2595
+2530: 7920        DC.W    0x7920
+2532: 7769        DC.W    0x7769
+2534: 7468        MOVEQ   #104,D2
+2536: 2061        MOVEA.L  -(A1),A0
+2538: 2073        MOVEA.L  111(A3,D7.W),A0
+253c: 7279        MOVEQ   #121,D1
+253e: 2261        MOVEA.L  -(A1),A1
+2540: 626f        BHI     0x25b1
+2542: 7574        DC.W    0x7574
+2544: 2069        MOVEA.L  28264(A1),A0
+2548: 6572        BCS     0x25bc
+254a: 6974        BVS     0x25c0
+254c: 696e        BVS     0x25bc
+254e: 6720        BEQ     0x2570
+2550: 6974        BVS     0x25c6
+2552: 2066        MOVEA.L  -(A6),A0
+2554: 726f        MOVEQ   #111,D1
+2556: 6d20        BLT     0x2578
+2558: 6120        BSR     0x257a
+255a: 636f        BLS     0x25cb
+255c: 7573        DC.W    0x7573
+255e: 696e        BVS     0x25ce
+2560: 2e00        MOVE.L  D0,D7
+2562: 3859        MOVEA.W  (A1)+,A4
+2564: 6f75        BLE     0x25db
+2566: 2061        MOVEA.L  -(A1),A0
+2568: 6e64        BGT     0x25ce
+256a: 204a        MOVEA.L  A2,A0
+256c: 2e20        MOVE.L  -(A0),D7
+256e: 4d61        DC.W    0x4d61
+2570: 726d        MOVEQ   #109,D1
+2572: 6164        BSR     0x25d8
+2574: 756b        DC.W    0x756b
+2576: 6520        BCS     0x2598
+2578: 7765        DC.W    0x7765
+257a: 7265        MOVEQ   #101,D1
+257c: 2063        MOVEA.L  -(A3),A0
+257e: 6175        BSR     0x25f5
+2580: 6768        BEQ     0x25ea
+2582: 7420        MOVEQ   #32,D2
+2584: 7472        MOVEQ   #114,D2
+2586: 7969        DC.W    0x7969
+2588: 6e67        BGT     0x25f1
+258a: 2074        MOVEA.L  32(A4,D6.L),A0
+258e: 726f        MOVEQ   #111,D1
+2590: 6220        BHI     0x25b2
+2592: 7468        MOVEQ   #104,D2
+2594: 6520        BCS     0x25b6
+2596: 4261        CLR.W   -(A1)
+2598: 6e6b        BGT     0x2605
+259a: 2e00        MOVE.L  D0,D7
+259c: 3759        MOVE.W  (A1)+,28533(A3)
+25a0: 206c        MOVEA.L  28531(A4),A0
+25a4: 6520        BCS     0x25c6
+25a6: 7468        MOVEQ   #104,D2
+25a8: 6520        BCS     0x25ca
+25aa: 6761        BEQ     0x260d
+25ac: 6d65        BLT     0x2613
+25ae: 2062        MOVEA.L  -(A2),A0
+25b0: 7574        DC.W    0x7574
+25b2: 206c        MOVEA.L  28527(A4),A0
+25b6: 6b20        BMI     0x25d8
+25b8: 6174        BSR     0x262e
+25ba: 2074        MOVEA.L  101(A4,D6.L),A0
+25be: 2067        MOVEA.L  -(A7),A0
+25c0: 6f6f        BLE     0x2631
+25c2: 6420        BCC     0x25e4
+25c4: 7369        DC.W    0x7369
+25c6: 6465        BCC     0x262d
+25c8: 2e20        MOVE.L  -(A0),D7
+25ca: 2054        MOVEA.L  (A4),A0
+25cc: 6865        BVC     0x2633
+25ce: 7920        DC.W    0x7920
+25d0: 6a75        BPL     0x2647
+25d2: 7374        DC.W    0x7374
+25d4: 3862        MOVEA.W  -(A2),A4
+25d6: 7569        DC.W    0x7569
+25d8: 6c74        BGE     0x264e
+25da: 2061        MOVEA.L  -(A1),A0
+25dc: 206e        MOVEA.L  25975(A6),A0
+25e0: 2067        MOVEA.L  -(A7),A0
+25e2: 6f6c        BLE     0x2650
+25e4: 6620        BNE     0x2606
+25e6: 636f        BLS     0x2657
+25e8: 7572        DC.W    0x7572
+25ea: 7365        DC.W    0x7365
+25ec: 2061        MOVEA.L  -(A1),A0
+25ee: 7420        MOVEQ   #32,D2
+25f0: 7468        MOVEQ   #104,D2
+25f2: 6520        BCS     0x2614
+25f4: 4665        DC.W    0x4665
+25f6: 6465        BCC     0x265d
+25f8: 7261        MOVEQ   #97,D1
+25fa: 6c20        BGE     0x261c
+25fc: 7065        MOVEQ   #101,D0
+25fe: 6e20        BGT     0x2620
+2600: 7468        MOVEQ   #104,D2
+2602: 6579        BCS     0x267d
+2604: 2073        MOVEA.L  110(A3,D6.W),A0
+2608: 7420        MOVEQ   #32,D2
+260a: 796f        DC.W    0x796f
+260c: 7500        DC.W    0x7500
+260e: 3774        MOVE.W  46(A4,D6.L),8224(A3)
+2614: 416c        DC.W    0x416c
+2616: 736f        DC.W    0x736f
+2618: 2c20        MOVE.L  -(A0),D6
+261a: 7768        DC.W    0x7768
+261c: 6174        BSR     0x2692
+261e: 2077        MOVEA.L  116(A7,D6.L),A0
+2622: 6820        BVC     0x2644
+2624: 7468        MOVEQ   #104,D2
+2626: 6520        BCS     0x2648
+2628: 666c        BNE     0x2696
+262a: 7969        DC.W    0x7969
+262c: 6e67        BGT     0x2695
+262e: 206c        MOVEA.L  25971(A4),A0
+2632: 736f        DC.W    0x736f
+2634: 6e73        BGT     0x26a9
+2636: 2074        MOVEA.L  101(A4,D6.L),A0
+263a: 7920        DC.W    0x7920
+263c: 6172        BSR     0x26b0
+263e: 6520        BCS     0x2660
+2640: 6769        BEQ     0x26ab
+2642: 7669        MOVEQ   #105,D3
+2644: 6e67        BGT     0x26ad
+2646: 3679        MOVEA.W  (0x6f752061).L,A3
+264c: 6e64        BGT     0x26b2
+264e: 2079        MOVEA.L  (0x6f757220).L,A0
+2654: 6e65        BGT     0x26bb
+2656: 7720        DC.W    0x7720
+2658: 6672        BNE     0x26cc
+265a: 6965        BVS     0x26c1
+265c: 6e64        BGT     0x26c2
+265e: 7360        DC.W    0x7360
+2660: 2063        MOVEA.L  -(A3),A0
+2662: 6f6e        BLE     0x26d2
+2664: 6e65        BGT     0x26cb
+2666: 6374        BLS     0x26dc
+2668: 696f        BVS     0x26d9
+266a: 6e73        BGT     0x26df
+266c: 2069        MOVEA.L  28192(A1),A0
+2670: 436f        DC.W    0x436f
+2672: 6c75        BGE     0x26e9
+2674: 6d62        BLT     0x26d8
+2676: 6961        BVS     0x26d9
+2678: 2c20        MOVE.L  -(A0),D6
+267a: 796f        DC.W    0x796f
+267c: 7500        DC.W    0x7500
+267e: 3077        MOVEA.W  108(A7,D6.L),A0
+2682: 6c20        BGE     0x26a4
+2684: 6861        BVC     0x26e7
+2686: 7665        MOVEQ   #101,D3
+2688: 206c        MOVEA.L  25953(A4),A0
+268c: 726e        MOVEQ   #110,D1
+268e: 6564        BCS     0x26f4
+2690: 2061        MOVEA.L  -(A1),A0
+2692: 2067        MOVEA.L  -(A7),A0
+2694: 6f6f        BLE     0x2705
+2696: 6420        BCC     0x26b8
+2698: 7472        MOVEQ   #114,D2
+269a: 6164        BSR     0x2700
+269c: 6520        BCS     0x26be
+269e: 7768        DC.W    0x7768
+26a0: 656e        BCS     0x2710
+26a2: 2079        MOVEA.L  (0x6f752067).L,A0
+26a8: 6574        BCS     0x271e
+26aa: 206f        MOVEA.L  30068(A7),A0
+26ae: 2e00        MOVE.L  D0,D7
+26b0: 334a        MOVE.W  A2,11808(A1)
+26b4: 4d61        DC.W    0x4d61
+26b6: 726d        MOVEQ   #109,D1
+26b8: 6164        BSR     0x271e
+26ba: 756b        DC.W    0x756b
+26bc: 6560        BCS     0x271e
+26be: 7320        DC.W    0x7320
+26c0: 7363        DC.W    0x7363
+26c2: 6865        BVC     0x2729
+26c4: 6d65        BLT     0x272b
+26c6: 2077        MOVEA.L  114(A7,D6.L),A0
+26ca: 6b65        BMI     0x2731
+26cc: 6421        BCC     0x26ef
+26ce: 2020        MOVE.L  -(A0),D0
+26d0: 5468        ADDQ.W  #2,25888(A0)
+26d4: 7765        DC.W    0x7765
+26d6: 6c6c        BGE     0x2744
+26d8: 2063        MOVEA.L  -(A3),A0
+26da: 616d        BSR     0x2749
+26dc: 6520        BCS     0x26fe
+26de: 696e        BVS     0x274e
+26e0: 2061        MOVEA.L  -(A1),A0
+26e2: 6e64        BGT     0x2748
+26e4: 3770        MOVE.W  111(A0,D7.W),25717(A3)
+26ea: 6365        BLS     0x2751
+26ec: 6420        BCC     0x270e
+26ee: 666f        BNE     0x275f
+26f0: 7220        MOVEQ   #32,D1
+26f2: 3320        MOVE.W  -(A0),-(A1)
+26f4: 7765        DC.W    0x7765
+26f6: 656b        BCS     0x2763
+26f8: 732c        DC.W    0x732c
+26fa: 206a        MOVEA.L  30067(A2),A0
+26fe: 7420        MOVEQ   #32,D2
+2700: 6c6f        BGE     0x2771
+2702: 6e67        BGT     0x276b
+2704: 2065        MOVEA.L  -(A5),A0
+2706: 6e6f        BGT     0x2777
+2708: 7567        DC.W    0x7567
+270a: 6820        BVC     0x272c
+270c: 666f        BNE     0x277d
+270e: 7220        MOVEQ   #32,D1
+2710: 4a2e        TST.B   8269(A6)
+2714: 6172        BSR     0x2788
+2716: 6d61        BLT     0x2779
+2718: 6475        BCC     0x278f
+271a: 6b65        BMI     0x2781
+271c: 3174        MOVE.W  32(A4,D6.L),29541(A0)
+2722: 6c6c        BGE     0x2790
+2724: 2061        MOVEA.L  -(A1),A0
+2726: 6e20        BGT     0x2748
+2728: 6578        BCS     0x27a2
+272a: 7472        MOVEQ   #114,D2
+272c: 6120        BSR     0x274e
+272e: 3135        MOVE.W  37(A5,D3.W),-(A0)
+2732: 206f        MOVEA.L  26144(A7),A0
+2736: 7468        MOVEQ   #104,D2
+2738: 6520        BCS     0x275a
+273a: 7765        DC.W    0x7765
+273c: 6c6c        BGE     0x27aa
+273e: 2e20        MOVE.L  -(A0),D7
+2740: 2059        MOVEA.L  (A1)+,A0
+2742: 6f75        BLE     0x27b9
+2744: 7220        MOVEQ   #32,D1
+2746: 7368        DC.W    0x7368
+2748: 6172        BSR     0x27bc
+274a: 6520        BCS     0x276c
+274c: 6973        BVS     0x27c1
+274e: 0824        DC.W    0x0824
+2750: 3733        MOVE.W  48(A3,D2.L),-(A3)
+2754: 3030        MOVE.W  0(A0,D2.L),D0
+2758: 3653        MOVEA.W  (A3),A3
+275a: 6f6d        BLE     0x27c9
+275c: 6562        BCS     0x27c0
+275e: 6f64        BLE     0x27c4
+2760: 7920        DC.W    0x7920
+2762: 676f        BEQ     0x27d3
+2764: 7420        MOVEQ   #32,D2
+2766: 7769        DC.W    0x7769
+2768: 7365        DC.W    0x7365
+276a: 2e20        MOVE.L  -(A0),D7
+276c: 2053        MOVEA.L  (A3),A0
+276e: 7461        MOVEQ   #97,D2
+2770: 7465        MOVEQ   #101,D2
+2772: 2070        MOVEA.L  108(A0,D6.L),A0
+2776: 6963        BVS     0x27db
+2778: 6520        BCS     0x279a
+277a: 616e        BSR     0x27ea
+277c: 6420        BCC     0x279e
+277e: 4665        DC.W    0x4665
+2780: 6473        BCC     0x27f5
+2782: 2073        MOVEA.L  97(A3,D7.W),A0
+2786: 726d        MOVEQ   #109,D1
+2788: 6564        BCS     0x27ee
+278a: 2064        MOVEA.L  -(A4),A0
+278c: 6f77        BLE     0x2805
+278e: 6e00        BGT     0x5bff
+2792: 6e20        BGT     0x27b4
+2794: 7468        MOVEQ   #104,D2
+2796: 6520        BCS     0x27b8
+2798: 6465        BCC     0x27ff
+279a: 616c        BSR     0x2808
+279c: 2e20        MOVE.L  -(A0),D7
+279e: 204a        MOVEA.L  A2,A0
+27a0: 2e20        MOVE.L  -(A0),D7
+27a2: 4d61        DC.W    0x4d61
+27a4: 726d        MOVEQ   #109,D1
+27a6: 6164        BSR     0x280c
+27a8: 756b        DC.W    0x756b
+27aa: 6520        BCS     0x27cc
+27ac: 676f        BEQ     0x281d
+27ae: 7420        MOVEQ   #32,D2
+27b0: 6177        BSR     0x2829
+27b2: 6179        BSR     0x282d
+27b4: 206a        MOVEA.L  30067(A2),A0
+27b8: 7420        MOVEQ   #32,D2
+27ba: 696e        BVS     0x282a
+27bc: 2074        MOVEA.L  101(A4,D6.L),A0
+27c0: 206e        MOVEA.L  26979(A6),A0
+27c4: 6b00        BMI     0x5f35
+27c8: 6620        BNE     0x27ea
+27ca: 7469        MOVEQ   #105,D2
+27cc: 6d65        BLT     0x2833
+27ce: 2061        MOVEA.L  -(A1),A0
+27d0: 6e64        BGT     0x2836
+27d2: 2079        MOVEA.L  (0x6f752068).L,A0
+27d8: 6164        BSR     0x283e
+27da: 2074        MOVEA.L  32(A4,D6.L),A0
+27de: 706c        MOVEQ   #108,D0
+27e0: 6179        BSR     0x285b
+27e2: 2069        MOVEA.L  29728(A1),A0
+27e6: 7072        MOVEQ   #114,D0
+27e8: 6574        BCS     0x285e
+27ea: 7479        MOVEQ   #121,D2
+27ec: 2063        MOVEA.L  -(A3),A0
+27ee: 6f6f        BLE     0x285f
+27f0: 6c20        BGE     0x2812
+27f2: 666f        BNE     0x2863
+27f4: 7220        MOVEQ   #32,D1
+27f6: 6120        BSR     0x2818
+27f8: 7768        DC.W    0x7768
+27fa: 696c        BVS     0x2868
+27fc: 652e        BCS     0x282c
+27fe: 2e59        MOVEA.L  (A1)+,A7
+2800: 6f75        BLE     0x2877
+2802: 7220        MOVEQ   #32,D1
+2804: 7368        DC.W    0x7368
+2806: 6172        BSR     0x287a
+2808: 6520        BCS     0x282a
+280a: 6f66        BLE     0x2872
+280c: 2075        MOVEA.L  114(A5,D6.L),A0
+2810: 6563        BCS     0x2875
+2812: 6f76        BLE     0x288a
+2814: 6572        BCS     0x2888
+2816: 6564        BCS     0x287c
+2818: 2065        MOVEA.L  -(A5),A0
+281a: 7870        MOVEQ   #112,D4
+281c: 656e        BCS     0x288c
+281e: 7365        DC.W    0x7365
+2820: 7320        DC.W    0x7320
+2822: 7761        DC.W    0x7761
+2824: 7320        DC.W    0x7320
+2826: 2435        MOVE.L  48(A5,D2.L),D2
+282a: 3030        MOVE.W  0(A0,D2.L),D0
+282e: 3354        MOVE.W  (A4),26725(A1)
+2832: 2073        MOVEA.L  104(A3,D6.W),A0
+2836: 656d        BCS     0x28a5
+2838: 6520        BCS     0x285a
+283a: 776f        DC.W    0x776f
+283c: 726b        MOVEQ   #107,D1
+283e: 6564        BCS     0x28a4
+2840: 2076        MOVEA.L  114(A6,D6.W),A0
+2844: 7920        DC.W    0x7920
+2846: 7765        DC.W    0x7765
+2848: 6c6c        BGE     0x28b6
+284a: 2120        MOVE.L  -(A0),-(A0)
+284c: 204d        MOVEA.L  A5,A0
+284e: 6163        BSR     0x28b3
+2850: 5261        ADDQ.W  #1,-(A1)
+2852: 7363        DC.W    0x7363
+2854: 616c        BSR     0x28c2
+2856: 2077        MOVEA.L  110(A7,D6.W),A0
+285a: 7420        MOVEQ   #32,D2
+285c: 696e        BVS     0x28cc
+285e: 746f        MOVEQ   #111,D2
+2860: 2061        MOVEA.L  -(A1),A0
+2862: 3266        MOVEA.W  -(A6),A1
+2864: 7265        MOVEQ   #101,D1
+2866: 6e7a        BGT     0x28e2
+2868: 7920        DC.W    0x7920
+286a: 7472        MOVEQ   #114,D2
+286c: 7969        DC.W    0x7969
+286e: 6e67        BGT     0x28d7
+2870: 2074        MOVEA.L  32(A4,D6.L),A0
+2874: 6f75        BLE     0x28eb
+2876: 7464        MOVEQ   #100,D2
+2878: 6f20        BLE     0x289a
+287a: 796f        DC.W    0x796f
+287c: 7520        DC.W    0x7520
+287e: 696e        BVS     0x28ee
+2880: 2062        MOVEA.L  -(A2),A0
+2882: 7269        MOVEQ   #105,D1
+2884: 6269        BHI     0x28ef
+2886: 6e67        BGT     0x28ef
+2888: 204a        MOVEA.L  A2,A0
+288a: 2e20        MOVE.L  -(A0),D7
+288c: 4d61        DC.W    0x4d61
+288e: 726d        MOVEQ   #109,D1
+2890: 6164        BSR     0x28f6
+2892: 756b        DC.W    0x756b
+2894: 6500        BCS     0x60fc
+2898: 6f72        BLE     0x290c
+289a: 2074        MOVEA.L  101(A4,D6.L),A0
+289e: 2066        MOVEA.L  -(A6),A0
+28a0: 6163        BSR     0x2905
+28a2: 746f        MOVEQ   #111,D2
+28a4: 7279        MOVEQ   #121,D1
+28a6: 2073        MOVEA.L  116(A3,D6.L),A0
+28aa: 652e        BCS     0x28da
+28ac: 2020        MOVE.L  -(A0),D0
+28ae: 596f        SUBQ.W  #4,30066(A7)
+28b2: 2063        MOVEA.L  -(A3),A0
+28b4: 7574        DC.W    0x7574
+28b6: 206f        MOVEA.L  26144(A7),A0
+28ba: 7468        MOVEQ   #104,D2
+28bc: 6520        BCS     0x28de
+28be: 7461        MOVEQ   #97,D2
+28c0: 6b65        BMI     0x2927
+28c2: 2077        MOVEA.L  115(A7,D6.W),A0
+28c6: 2024        MOVE.L  -(A4),D0
+28c8: 3432        MOVE.W  48(A2,D2.L),D2
+28cc: 3030        MOVE.W  0(A0,D2.L),D0
+28d0: 314d        MOVE.W  A5,24931(A0)
+28d4: 5261        ADDQ.W  #1,-(A1)
+28d6: 7363        DC.W    0x7363
+28d8: 616c        BSR     0x2946
+28da: 2067        MOVEA.L  -(A7),A0
+28dc: 6f74        BLE     0x2952
+28de: 2077        MOVEA.L  115(A7,D6.L),A0
+28e2: 6520        BCS     0x2904
+28e4: 746f        MOVEQ   #111,D2
+28e6: 2074        MOVEA.L  101(A4,D6.L),A0
+28ea: 2066        MOVEA.L  -(A6),A0
+28ec: 6163        BSR     0x2951
+28ee: 746f        MOVEQ   #111,D2
+28f0: 7279        MOVEQ   #121,D1
+28f2: 2073        MOVEA.L  116(A3,D6.L),A0
+28f6: 6520        BCS     0x2918
+28f8: 7363        DC.W    0x7363
+28fa: 616d        BSR     0x2969
+28fc: 2e20        MOVE.L  -(A0),D7
+28fe: 2054        MOVEA.L  (A4),A0
+2900: 6865        BVC     0x2967
+2902: 3370        MOVE.W  108(A0,D6.L),26979(A1)
+2908: 6520        BCS     0x292a
+290a: 6a75        BPL     0x2981
+290c: 7374        DC.W    0x7374
+290e: 206d        MOVEA.L  26995(A5),A0
+2912: 7365        DC.W    0x7365
+2914: 6420        BCC     0x2936
+2916: 6361        BLS     0x2979
+2918: 7463        MOVEQ   #99,D2
+291a: 6869        BVC     0x2985
+291c: 6e67        BGT     0x2985
+291e: 204a        MOVEA.L  A2,A0
+2920: 2e20        MOVE.L  -(A0),D7
+2922: 4d61        DC.W    0x4d61
+2924: 726d        MOVEQ   #109,D1
+2926: 6164        BSR     0x298c
+2928: 756b        DC.W    0x756b
+292a: 652e        BCS     0x295a
+292c: 2020        MOVE.L  -(A0),D0
+292e: 596f        SUBQ.W  #4,29984(A7)
+2932: 6c6f        BGE     0x29a3
+2934: 7374        DC.W    0x7374
+2936: 1e24        MOVE.B  -(A4),D7
+2938: 3330        MOVE.W  48(A0,D3.W),-(A1)
+293c: 2061        MOVEA.L  -(A1),A0
+293e: 7320        DC.W    0x7320
+2940: 6578        BCS     0x29ba
+2942: 7065        MOVEQ   #101,D0
+2944: 6e73        BGT     0x29b9
+2946: 6573        BCS     0x29bb
+2948: 206f        MOVEA.L  28192(A7),A0
+294c: 7468        MOVEQ   #104,D2
+294e: 6520        BCS     0x2970
+2950: 6465        BCC     0x29b7
+2952: 616c        BSR     0x29c0
+2954: 2e00        MOVE.L  D0,D7
+2956: 0000        ORI.B  #0x0 (0),D0
+
+295a: 4e56        LINK    A6,#0
+295e: 42ad        CLR.L   -314(A5)
+2962: 4a2d        TST.B   -2451(A5)
+2966: 6700        BEQ     0x298e
+296a: 302d        MOVE.W  -2460(A5),D0
+296e: 0c40        CMPI.W  #0x1 (1),D0
+2972: 6600        BNE     0x297e
+2976: 4ead        JSR     1738(A5) [CODE_21+0x42]
+297a: 6000        BRA     0x298a
+297e: 0c40        CMPI.W  #0x2 (2),D0
+2982: 6600        BNE     0x298a
+2986: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+298a: 6000        BRA     0x2a94
+298e: 426d        CLR.W   -2458(A5)
+2992: 302d        MOVE.W  -324(A5),D0
+2996: b06d        CMP.W   -2466(A5),D0
+299a: 6600        BNE     0x29ac
+299e: 3b7c        MOVE.W  #0x1 (1),-2476(A5)
+29a4: 4ead        JSR     1738(A5) [CODE_21+0x42]
+29a8: 6000        BRA     0x2b2a
+29ac: 302d        MOVE.W  -324(A5),D0
+29b0: b06d        CMP.W   -2472(A5),D0
+29b4: 6600        BNE     0x29ca
+29b8: 3b7c        MOVE.W  #0x1 (1),-2474(A5)
+29be: 422d        CLR.B   -2492(A5)
+29c2: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+29c6: 6000        BRA     0x2b2a
+29ca: 302d        MOVE.W  -324(A5),D0
+29ce: b06d        CMP.W   -2468(A5),D0
+29d2: 6600        BNE     0x29e4
+29d6: 3b7c        MOVE.W  #0x2 (2),-2476(A5)
+29dc: 4ead        JSR     1738(A5) [CODE_21+0x42]
+29e0: 6000        BRA     0x2b2a
+29e4: 302d        MOVE.W  -324(A5),D0
+29e8: b06d        CMP.W   -2478(A5),D0
+29ec: 6600        BNE     0x2a02
+29f0: 3b7c        MOVE.W  #0x2 (2),-2474(A5)
+29f6: 422d        CLR.B   -2492(A5)
+29fa: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+29fe: 6000        BRA     0x2b2a
+2a02: 302d        MOVE.W  -324(A5),D0
+2a06: b06d        CMP.W   -2470(A5),D0
+2a0a: 6600        BNE     0x2a1c
+2a0e: 3b7c        MOVE.W  #0x3 (3),-2476(A5)
+2a14: 4ead        JSR     1738(A5) [CODE_21+0x42]
+2a18: 6000        BRA     0x2b2a
+2a1c: 302d        MOVE.W  -324(A5),D0
+2a20: b06d        CMP.W   -2480(A5),D0
+2a24: 6600        BNE     0x2a3a
+2a28: 3b7c        MOVE.W  #0x3 (3),-2474(A5)
+2a2e: 422d        CLR.B   -2492(A5)
+2a32: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+2a36: 6000        BRA     0x2b2a
+2a3a: 302d        MOVE.W  -324(A5),D0
+2a3e: b06d        CMP.W   -2484(A5),D0
+2a42: 6600        BNE     0x2a58
+2a46: 3b7c        MOVE.W  #0x1 (1),-2474(A5)
+2a4c: 422d        CLR.B   -2492(A5)
+2a50: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+2a54: 6000        BRA     0x2b2a
+2a58: 302d        MOVE.W  -324(A5),D0
+2a5c: b06d        CMP.W   -2486(A5),D0
+2a60: 6600        BNE     0x2a76
+2a64: 3b7c        MOVE.W  #0x2 (2),-2474(A5)
+2a6a: 422d        CLR.B   -2492(A5)
+2a6e: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+2a72: 6000        BRA     0x2b2a
+2a76: 302d        MOVE.W  -324(A5),D0
+2a7a: b06d        CMP.W   -2488(A5),D0
+2a7e: 6600        BNE     0x2a94
+2a82: 3b7c        MOVE.W  #0x3 (3),-2474(A5)
+2a88: 422d        CLR.B   -2492(A5)
+2a8c: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+2a90: 6000        BRA     0x2b2a
+2a94: 202d        MOVE.L  -1692(A5),D0
+2a98: b0ad        CMP.L   -322(A5),D0
+2a9c: 6c00        BGE     0x2aae
+2aa0: 3b7c        MOVE.W  #0x4 (4),-2474(A5)
+2aa6: 422d        CLR.B   -2492(A5)
+2aaa: 4ead        JSR     1746(A5) [CODE_21+0x14ee]
+2aae: 4a2d        TST.B   -2493(A5)
+2ab2: 6700        BEQ     0x2aca
+2ab6: 0cad        CMPI.L  #0x61a8,-1692(A5)
+2abe: 6f00        BLE     0x2aca
+2ac2: 2b7c        MOVE.L  #0x2710,-322(A5)
+2aca: 0c6d        CMPI.W  #0x64 (100),-324(A5)
+2ad0: 5ec0        SGT     D0
+2ad2: 4400        DC.W    0x4400
+2ad4: 322d        MOVE.W  -324(A5),D1
+2ad8: b26d        CMP.W   -2484(A5),D1
+2adc: 5dc1        SLT     D1
+2ade: 4401        DC.W    0x4401
+2ae0: c001        AND.B   D1,D0
+2ae2: 6700        BEQ     0x2aea
+2ae6: 422d        CLR.B   -2489(A5)
+2aea: 0c6d        CMPI.W  #0x6e (110),-324(A5)
+2af0: 5ec0        SGT     D0
+2af2: 4400        DC.W    0x4400
+2af4: 322d        MOVE.W  -324(A5),D1
+2af8: b26d        CMP.W   -2486(A5),D1
+2afc: 5dc1        SLT     D1
+2afe: 4401        DC.W    0x4401
+2b00: c001        AND.B   D1,D0
+2b02: 6700        BEQ     0x2b0a
+2b06: 422d        CLR.B   -2490(A5)
+2b0a: 0c6d        CMPI.W  #0xa0 (160),-324(A5)
+2b10: 5ec0        SGT     D0
+2b12: 4400        DC.W    0x4400
+2b14: 322d        MOVE.W  -324(A5),D1
+2b18: b26d        CMP.W   -2488(A5),D1
+2b1c: 5dc1        SLT     D1
+2b1e: 4401        DC.W    0x4401
+2b20: c001        AND.B   D1,D0
+2b22: 6700        BEQ     0x2b2a
+2b26: 422d        CLR.B   -2491(A5)
+2b2a: 4e5e        UNLK    A6
+2b2c: 4e75        RTS

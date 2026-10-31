@@ -1,0 +1,319 @@
+0004: 0000        ORI.B  #0x0 (0),D0
+
+0008: 4e56        LINK    A6,#0
+000c: 487a        PEA     18(PC) [0x20 ; pstr='Copyright 1987 by George Lott']
+0010: 486d        PEA     -850(A5)
+0014: 3f3c        MOVE.W  #0xff (255),-(A7)
+0018: 4ead        JSR     154(A5) [CODE_1+0x11a]
+001c: 4e5e        UNLK    A6
+001e: 4e75        RTS
+0020: 1d43        MOVE.B  D3,28528(A6)
+0024: 7972        DC.W    0x7972
+0026: 6967        BVS     0x008f
+0028: 6874        BVC     0x009e
+002a: 2031        MOVE.L  56(A1,D3.L),D0
+002e: 3720        MOVE.W  -(A0),-(A3)
+0030: 6279        BHI     0x00ab
+0032: 2047        MOVEA.L  D7,A0
+0034: 656f        BCS     0x00a5
+0036: 7267        MOVEQ   #103,D1
+0038: 6520        BCS     0x005a
+003a: 4c6f        DC.W    0x4c6f
+003c: 7474        MOVEQ   #116,D2
+003e: 0000        ORI.B  #0x0 (0),D0
+
+0042: 4e56        LINK    A6,#0
+0046: 42ad        CLR.L   -314(A5)
+004a: 426d        CLR.W   -2358(A5)
+004e: 4a2d        TST.B   -337(A5)
+0052: 6700        BEQ     0x011a
+0056: 302d        MOVE.W  -336(A5),D0
+005a: 0c40        CMPI.W  #0x1 (1),D0
+005e: 6600        BNE     0x006a
+0062: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0066: 6000        BRA     0x0116
+006a: 0c40        CMPI.W  #0x2 (2),D0
+006e: 6600        BNE     0x007a
+0072: 4ead        JSR     1058(A5) [CODE_15+0x670]
+0076: 6000        BRA     0x0116
+007a: 0c40        CMPI.W  #0x3 (3),D0
+007e: 6600        BNE     0x008a
+0082: 4ead        JSR     1066(A5) [CODE_15+0xc62]
+0086: 6000        BRA     0x0116
+008a: 0c40        CMPI.W  #0x20 (32),D0
+008e: 6600        BNE     0x009a
+0092: 4ead        JSR     1362(A5) [CODE_17+0x26c]
+0096: 6000        BRA     0x0116
+009a: 0c40        CMPI.W  #0x21 (33),D0
+009e: 6600        BNE     0x00aa
+00a2: 4ead        JSR     1370(A5) [CODE_17+0x5a4]
+00a6: 6000        BRA     0x0116
+00aa: 0c40        CMPI.W  #0x22 (34),D0
+00ae: 6600        BNE     0x00ba
+00b2: 4ead        JSR     1378(A5) [CODE_17+0x92c]
+00b6: 6000        BRA     0x0116
+00ba: 0c40        CMPI.W  #0x23 (35),D0
+00be: 6600        BNE     0x00ca
+00c2: 4ead        JSR     1386(A5) [CODE_17+0xc48]
+00c6: 6000        BRA     0x0116
+00ca: 0c40        CMPI.W  #0x24 (36),D0
+00ce: 6600        BNE     0x00da
+00d2: 4ead        JSR     1394(A5) [CODE_17+0xf68]
+00d6: 6000        BRA     0x0116
+00da: 0c40        CMPI.W  #0x25 (37),D0
+00de: 6600        BNE     0x00ea
+00e2: 4ead        JSR     1402(A5) [CODE_17+0x1268]
+00e6: 6000        BRA     0x0116
+00ea: 0c40        CMPI.W  #0x26 (38),D0
+00ee: 6600        BNE     0x00fa
+00f2: 4ead        JSR     1410(A5) [CODE_17+0x15a4]
+00f6: 6000        BRA     0x0116
+00fa: 0c40        CMPI.W  #0x27 (39),D0
+00fe: 6600        BNE     0x010a
+0102: 4ead        JSR     1418(A5) [CODE_17+0x1882]
+0106: 6000        BRA     0x0116
+010a: 0c40        CMPI.W  #0x28 (40),D0
+010e: 6600        BNE     0x0116
+0112: 4ead        JSR     1426(A5) [CODE_17+0x1baa]
+0116: 6000        BRA     0x0556
+011a: 426d        CLR.W   -334(A5)
+011e: 598f        SUBQ.L  #4,A7
+0120: a975        _TickCount
+0122: 201f        MOVE.L  (A7)+,D0
+0124: 7239        MOVEQ   #57,D1
+0126: 4ead        JSR     146(A5) [CODE_1+0x60]
+012a: 2b40        MOVE.L  D0,-314(A5)
+012e: 202d        MOVE.L  -314(A5),D0
+0132: 0c80        CMPI.L  #0x0,D0
+0138: 6600        BNE     0x0144
+013c: 4ead        JSR     1482(A5) [CODE_17+0x2210]
+0140: 6000        BRA     0x0556
+0144: 0c80        CMPI.L  #0x1,D0
+014a: 6600        BNE     0x0156
+014e: 4ead        JSR     1330(A5) [CODE_17+0x42]
+0152: 6000        BRA     0x0556
+0156: 0c80        CMPI.L  #0x2,D0
+015c: 6600        BNE     0x0168
+0160: 4ead        JSR     1338(A5) [CODE_17+0xba]
+0164: 6000        BRA     0x0556
+0168: 0c80        CMPI.L  #0x3,D0
+016e: 6600        BNE     0x017a
+0172: 4ead        JSR     1346(A5) [CODE_17+0x128]
+0176: 6000        BRA     0x0556
+017a: 0c80        CMPI.L  #0x4,D0
+0180: 6600        BNE     0x018c
+0184: 4ead        JSR     1354(A5) [CODE_17+0x1ca]
+0188: 6000        BRA     0x0556
+018c: 0c80        CMPI.L  #0x5,D0
+0192: 6600        BNE     0x019e
+0196: 4ead        JSR     1362(A5) [CODE_17+0x26c]
+019a: 6000        BRA     0x0556
+019e: 0c80        CMPI.L  #0x6,D0
+01a4: 6600        BNE     0x01b0
+01a8: 4ead        JSR     1370(A5) [CODE_17+0x5a4]
+01ac: 6000        BRA     0x0556
+01b0: 0c80        CMPI.L  #0x7,D0
+01b6: 6600        BNE     0x01c2
+01ba: 4ead        JSR     1378(A5) [CODE_17+0x92c]
+01be: 6000        BRA     0x0556
+01c2: 0c80        CMPI.L  #0x8,D0
+01c8: 6600        BNE     0x01d4
+01cc: 4ead        JSR     1386(A5) [CODE_17+0xc48]
+01d0: 6000        BRA     0x0556
+01d4: 0c80        CMPI.L  #0x9,D0
+01da: 6600        BNE     0x01e6
+01de: 4ead        JSR     1394(A5) [CODE_17+0xf68]
+01e2: 6000        BRA     0x0556
+01e6: 0c80        CMPI.L  #0xa,D0
+01ec: 6600        BNE     0x01f8
+01f0: 4ead        JSR     1402(A5) [CODE_17+0x1268]
+01f4: 6000        BRA     0x0556
+01f8: 0c80        CMPI.L  #0xb,D0
+01fe: 6600        BNE     0x020a
+0202: 4ead        JSR     1410(A5) [CODE_17+0x15a4]
+0206: 6000        BRA     0x0556
+020a: 0c80        CMPI.L  #0xc,D0
+0210: 6600        BNE     0x021c
+0214: 4ead        JSR     1426(A5) [CODE_17+0x1baa]
+0218: 6000        BRA     0x0556
+021c: 0c80        CMPI.L  #0xd,D0
+0222: 6600        BNE     0x022e
+0226: 4ead        JSR     1066(A5) [CODE_15+0xc62]
+022a: 6000        BRA     0x0556
+022e: 0c80        CMPI.L  #0xe,D0
+0234: 6600        BNE     0x0246
+0238: 3b7c        MOVE.W  #0x1 (1),-2482(A5)
+023e: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0242: 6000        BRA     0x0556
+0246: 0c80        CMPI.L  #0xf,D0
+024c: 6600        BNE     0x025e
+0250: 3b7c        MOVE.W  #0x1 (1),-2482(A5)
+0256: 4ead        JSR     1058(A5) [CODE_15+0x670]
+025a: 6000        BRA     0x0556
+025e: 0c80        CMPI.L  #0x10,D0
+0264: 6600        BNE     0x0270
+0268: 4ead        JSR     1330(A5) [CODE_17+0x42]
+026c: 6000        BRA     0x0556
+0270: 0c80        CMPI.L  #0x11,D0
+0276: 6600        BNE     0x0282
+027a: 4ead        JSR     1338(A5) [CODE_17+0xba]
+027e: 6000        BRA     0x0556
+0282: 0c80        CMPI.L  #0x12,D0
+0288: 6600        BNE     0x0294
+028c: 4ead        JSR     1346(A5) [CODE_17+0x128]
+0290: 6000        BRA     0x0556
+0294: 0c80        CMPI.L  #0x13,D0
+029a: 6600        BNE     0x02a6
+029e: 4ead        JSR     1354(A5) [CODE_17+0x1ca]
+02a2: 6000        BRA     0x0556
+02a6: 0c80        CMPI.L  #0x14,D0
+02ac: 6600        BNE     0x02b8
+02b0: 4ead        JSR     1362(A5) [CODE_17+0x26c]
+02b4: 6000        BRA     0x0556
+02b8: 0c80        CMPI.L  #0x16,D0
+02be: 6600        BNE     0x02ca
+02c2: 4ead        JSR     1370(A5) [CODE_17+0x5a4]
+02c6: 6000        BRA     0x0556
+02ca: 0c80        CMPI.L  #0x17,D0
+02d0: 6600        BNE     0x02dc
+02d4: 4ead        JSR     1386(A5) [CODE_17+0xc48]
+02d8: 6000        BRA     0x0556
+02dc: 0c80        CMPI.L  #0x18,D0
+02e2: 6600        BNE     0x02ee
+02e6: 4ead        JSR     1394(A5) [CODE_17+0xf68]
+02ea: 6000        BRA     0x0556
+02ee: 0c80        CMPI.L  #0x19,D0
+02f4: 6600        BNE     0x0300
+02f8: 4ead        JSR     1066(A5) [CODE_15+0xc62]
+02fc: 6000        BRA     0x0556
+0300: 0c80        CMPI.L  #0x1a,D0
+0306: 6600        BNE     0x0318
+030a: 3b7c        MOVE.W  #0x1 (1),-2482(A5)
+0310: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0314: 6000        BRA     0x0556
+0318: 0c80        CMPI.L  #0x1b,D0
+031e: 6600        BNE     0x0330
+0322: 3b7c        MOVE.W  #0x2 (2),-2482(A5)
+0328: 4ead        JSR     1050(A5) [CODE_15+0x42]
+032c: 6000        BRA     0x0556
+0330: 0c80        CMPI.L  #0x1c,D0
+0336: 6700        BEQ     0x0344
+033a: 0c80        CMPI.L  #0x1d,D0
+0340: 6600        BNE     0x0352
+0344: 3b7c        MOVE.W  #0x3 (3),-2482(A5)
+034a: 4ead        JSR     1050(A5) [CODE_15+0x42]
+034e: 6000        BRA     0x0556
+0352: 0c80        CMPI.L  #0x1e,D0
+0358: 6600        BNE     0x036a
+035c: 3b7c        MOVE.W  #0x4 (4),-2482(A5)
+0362: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0366: 6000        BRA     0x0556
+036a: 0c80        CMPI.L  #0x1f,D0
+0370: 6600        BNE     0x0382
+0374: 3b7c        MOVE.W  #0x4 (4),-2482(A5)
+037a: 4ead        JSR     1058(A5) [CODE_15+0x670]
+037e: 6000        BRA     0x0556
+0382: 0c80        CMPI.L  #0x20,D0
+0388: 6600        BNE     0x0394
+038c: 4ead        JSR     1434(A5) [CODE_17+0x1ea0]
+0390: 6000        BRA     0x0556
+0394: 0c80        CMPI.L  #0x21,D0
+039a: 6600        BNE     0x03a6
+039e: 4ead        JSR     1330(A5) [CODE_17+0x42]
+03a2: 6000        BRA     0x0556
+03a6: 0c80        CMPI.L  #0x22,D0
+03ac: 6700        BEQ     0x03ba
+03b0: 0c80        CMPI.L  #0x23,D0
+03b6: 6600        BNE     0x03c2
+03ba: 4ead        JSR     1338(A5) [CODE_17+0xba]
+03be: 6000        BRA     0x0556
+03c2: 0c80        CMPI.L  #0x24,D0
+03c8: 6600        BNE     0x03d4
+03cc: 4ead        JSR     1394(A5) [CODE_17+0xf68]
+03d0: 6000        BRA     0x0556
+03d4: 0c80        CMPI.L  #0x25,D0
+03da: 6600        BNE     0x03e6
+03de: 4ead        JSR     1402(A5) [CODE_17+0x1268]
+03e2: 6000        BRA     0x0556
+03e6: 0c80        CMPI.L  #0x26,D0
+03ec: 6600        BNE     0x03f8
+03f0: 4ead        JSR     1418(A5) [CODE_17+0x1882]
+03f4: 6000        BRA     0x0556
+03f8: 0c80        CMPI.L  #0x27,D0
+03fe: 6600        BNE     0x040a
+0402: 4ead        JSR     1066(A5) [CODE_15+0xc62]
+0406: 6000        BRA     0x0556
+040a: 0c80        CMPI.L  #0x28,D0
+0410: 6600        BNE     0x041c
+0414: 4ead        JSR     1074(A5) [CODE_15+0x10c4]
+0418: 6000        BRA     0x0556
+041c: 0c80        CMPI.L  #0x29,D0
+0422: 6600        BNE     0x0434
+0426: 3b7c        MOVE.W  #0x1 (1),-2482(A5)
+042c: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0430: 6000        BRA     0x0556
+0434: 0c80        CMPI.L  #0x2a,D0
+043a: 6600        BNE     0x044c
+043e: 3b7c        MOVE.W  #0x2 (2),-2482(A5)
+0444: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0448: 6000        BRA     0x0556
+044c: 0c80        CMPI.L  #0x2b,D0
+0452: 6600        BNE     0x0464
+0456: 3b7c        MOVE.W  #0x2 (2),-2482(A5)
+045c: 4ead        JSR     1058(A5) [CODE_15+0x670]
+0460: 6000        BRA     0x0556
+0464: 0c80        CMPI.L  #0x2c,D0
+046a: 6600        BNE     0x047c
+046e: 3b7c        MOVE.W  #0x3 (3),-2482(A5)
+0474: 4ead        JSR     1050(A5) [CODE_15+0x42]
+0478: 6000        BRA     0x0556
+047c: 0c80        CMPI.L  #0x2d,D0
+0482: 6600        BNE     0x0494
+0486: 3b7c        MOVE.W  #0x3 (3),-2482(A5)
+048c: 4ead        JSR     1058(A5) [CODE_15+0x670]
+0490: 6000        BRA     0x0556
+0494: 0c80        CMPI.L  #0x2e,D0
+049a: 6600        BNE     0x04a6
+049e: 4ead        JSR     1338(A5) [CODE_17+0xba]
+04a2: 6000        BRA     0x0556
+04a6: 0c80        CMPI.L  #0x2f,D0
+04ac: 6600        BNE     0x04b8
+04b0: 4ead        JSR     1466(A5) [CODE_17+0x211e]
+04b4: 6000        BRA     0x0556
+04b8: 0c80        CMPI.L  #0x30,D0
+04be: 6600        BNE     0x04ca
+04c2: 4ead        JSR     1450(A5) [CODE_17+0x1fd8]
+04c6: 6000        BRA     0x0556
+04ca: 0c80        CMPI.L  #0x31,D0
+04d0: 6600        BNE     0x04dc
+04d4: 4ead        JSR     1458(A5) [CODE_17+0x205e]
+04d8: 6000        BRA     0x0556
+04dc: 0c80        CMPI.L  #0x32,D0
+04e2: 6600        BNE     0x04ee
+04e6: 4ead        JSR     1474(A5) [CODE_17+0x21a4]
+04ea: 6000        BRA     0x0556
+04ee: 0c80        CMPI.L  #0x33,D0
+04f4: 6600        BNE     0x0500
+04f8: 4ead        JSR     1442(A5) [CODE_17+0x1f12]
+04fc: 6000        BRA     0x0556
+0500: 0c80        CMPI.L  #0x34,D0
+0506: 6600        BNE     0x0512
+050a: 4ead        JSR     1490(A5) [CODE_17+0x228a]
+050e: 6000        BRA     0x0556
+0512: 0c80        CMPI.L  #0x35,D0
+0518: 6600        BNE     0x0524
+051c: 4ead        JSR     1498(A5) [CODE_17+0x2310]
+0520: 6000        BRA     0x0556
+0524: 0c80        CMPI.L  #0x36,D0
+052a: 6600        BNE     0x0536
+052e: 4ead        JSR     1506(A5) [CODE_17+0x238c]
+0532: 6000        BRA     0x0556
+0536: 0c80        CMPI.L  #0x37,D0
+053c: 6600        BNE     0x0548
+0540: 4ead        JSR     1514(A5) [CODE_17+0x2408]
+0544: 6000        BRA     0x0556
+0548: 0c80        CMPI.L  #0x38,D0
+054e: 6600        BNE     0x0556
+0552: 4ead        JSR     1522(A5) [CODE_17+0x2470]
+0556: 4e5e        UNLK    A6
+0558: 4e75        RTS

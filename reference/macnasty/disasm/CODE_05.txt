@@ -1,0 +1,2944 @@
+0004: 0000        ORI.B  #0x0 (0),D0
+
+0008: 4e56        LINK    A6,#0
+000c: 487a        PEA     18(PC) [0x20 ; pstr='Copyright 1987 by George Lott']
+0010: 486d        PEA     -850(A5)
+0014: 3f3c        MOVE.W  #0xff (255),-(A7)
+0018: 4ead        JSR     154(A5) [CODE_1+0x11a]
+001c: 4e5e        UNLK    A6
+001e: 4e75        RTS
+0020: 1d43        MOVE.B  D3,28528(A6)
+0024: 7972        DC.W    0x7972
+0026: 6967        BVS     0x008f
+0028: 6874        BVC     0x009e
+002a: 2031        MOVE.L  56(A1,D3.L),D0
+002e: 3720        MOVE.W  -(A0),-(A3)
+0030: 6279        BHI     0x00ab
+0032: 2047        MOVEA.L  D7,A0
+0034: 656f        BCS     0x00a5
+0036: 7267        MOVEQ   #103,D1
+0038: 6520        BCS     0x005a
+003a: 4c6f        DC.W    0x4c6f
+003c: 7474        MOVEQ   #116,D2
+003e: 0000        ORI.B  #0x0 (0),D0
+
+0042: 4e56        LINK    A6,#0
+0046: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+004a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+004e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0052: a893        _MoveTo
+0054: 487a        PEA     44(PC) [0x82 ; pstr='Al Able` s job is broker.']
+0058: a884        _DrawString
+005a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+005e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0062: a893        _MoveTo
+0064: 487a        PEA     54(PC) [0x9c ; pstr='His wife`s name is Anna Able.']
+0068: a884        _DrawString
+006a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+006e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0072: a893        _MoveTo
+0074: 487a        PEA     68(PC) [0xba ; pstr='Her job is also broker.']
+0078: a884        _DrawString
+007a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+007e: 4e5e        UNLK    A6
+0080: 4e75        RTS
+0082: 1941        MOVE.B  D1,27680(A4)
+0086: 4162        DC.W    0x4162
+0088: 6c65        BGE     0x00ef
+008a: 6020        BRA     0x00ac
+008c: 7320        DC.W    0x7320
+008e: 6a6f        BPL     0x00ff
+0090: 6220        BHI     0x00b2
+0092: 6973        BVS     0x0107
+0094: 2062        MOVEA.L  -(A2),A0
+0096: 726f        MOVEQ   #111,D1
+0098: 6b65        BMI     0x00ff
+009a: 722e        MOVEQ   #46,D1
+009c: 1d48        MOVE.B  A0,26995(A6)
+00a0: 2077        MOVEA.L  102(A7,D6.L),A0
+00a4: 6560        BCS     0x0106
+00a6: 7320        DC.W    0x7320
+00a8: 6e61        BGT     0x010b
+00aa: 6d65        BLT     0x0111
+00ac: 2069        MOVEA.L  29472(A1),A0
+00b0: 416e        DC.W    0x416e
+00b2: 6e61        BGT     0x0115
+00b4: 2041        MOVEA.L  D1,A0
+00b6: 626c        BHI     0x0124
+00b8: 652e        BCS     0x00e8
+00ba: 1748        MOVE.B  A0,25970(A3)
+00be: 206a        MOVEA.L  28514(A2),A0
+00c2: 2069        MOVEA.L  29472(A1),A0
+00c6: 616c        BSR     0x0134
+00c8: 736f        DC.W    0x736f
+00ca: 2062        MOVEA.L  -(A2),A0
+00cc: 726f        MOVEQ   #111,D1
+00ce: 6b65        BMI     0x0135
+00d0: 722e        MOVEQ   #46,D1
+00d2: 0000        ORI.B  #0x0 (0),D0
+
+00d6: 4e56        LINK    A6,#0
+00da: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+00de: 3f3c        MOVE.W  #0x32 (50),-(A7)
+00e2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+00e6: a893        _MoveTo
+00e8: 487a        PEA     44(PC) [0x116 ; pstr='Anna Able` s job is broker . ']
+00ec: a884        _DrawString
+00ee: 3f3c        MOVE.W  #0x32 (50),-(A7)
+00f2: 3f3c        MOVE.W  #0x46 (70),-(A7)
+00f6: a893        _MoveTo
+00f8: 487a        PEA     58(PC) [0x134 ; pstr='Her husband`s name is Al Able.']
+00fc: a884        _DrawString
+00fe: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0102: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0106: a893        _MoveTo
+0108: 487a        PEA     74(PC) [0x154 ; pstr='His job is also broker.']
+010c: a884        _DrawString
+010e: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0112: 4e5e        UNLK    A6
+0114: 4e75        RTS
+0116: 1d41        MOVE.B  D1,28270(A6)
+011a: 6120        BSR     0x013c
+011c: 4162        DC.W    0x4162
+011e: 6c65        BGE     0x0185
+0120: 6020        BRA     0x0142
+0122: 7320        DC.W    0x7320
+0124: 6a6f        BPL     0x0195
+0126: 6220        BHI     0x0148
+0128: 6973        BVS     0x019d
+012a: 2062        MOVEA.L  -(A2),A0
+012c: 726f        MOVEQ   #111,D1
+012e: 6b65        BMI     0x0195
+0130: 7220        MOVEQ   #32,D1
+0132: 2e20        MOVE.L  -(A0),D7
+0134: 1e48        MOVEA.B  A0,A7
+0136: 6572        BCS     0x01aa
+0138: 2068        MOVEA.L  30067(A0),A0
+013c: 6261        BHI     0x019f
+013e: 6e64        BGT     0x01a4
+0140: 6073        BRA     0x01b5
+0142: 206e        MOVEA.L  24941(A6),A0
+0146: 6520        BCS     0x0168
+0148: 6973        BVS     0x01bd
+014a: 2041        MOVEA.L  D1,A0
+014c: 6c20        BGE     0x016e
+014e: 4162        DC.W    0x4162
+0150: 6c65        BGE     0x01b7
+0152: 2e00        MOVE.L  D0,D7
+0154: 1748        MOVE.B  A0,26995(A3)
+0158: 206a        MOVEA.L  28514(A2),A0
+015c: 2069        MOVEA.L  29472(A1),A0
+0160: 616c        BSR     0x01ce
+0162: 736f        DC.W    0x736f
+0164: 2062        MOVEA.L  -(A2),A0
+0166: 726f        MOVEQ   #111,D1
+0168: 6b65        BMI     0x01cf
+016a: 722e        MOVEQ   #46,D1
+016c: 0000        ORI.B  #0x0 (0),D0
+
+0170: 4e56        LINK    A6,#0
+0174: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0178: 3f3c        MOVE.W  #0x32 (50),-(A7)
+017c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0180: a893        _MoveTo
+0182: 487a        PEA     44(PC) [0x1b0 ; pstr='Bob Baker` s job is bank loan officer . ']
+0186: a884        _DrawString
+0188: 3f3c        MOVE.W  #0x32 (50),-(A7)
+018c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0190: a893        _MoveTo
+0192: 487a        PEA     70(PC) [0x1da ; pstr='His wife`s name is Betty Baker.']
+0196: a884        _DrawString
+0198: 3f3c        MOVE.W  #0x32 (50),-(A7)
+019c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+01a0: a893        _MoveTo
+01a2: 487a        PEA     86(PC) [0x1fa ; pstr='Her job is appraiser.']
+01a6: a884        _DrawString
+01a8: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+01ac: 4e5e        UNLK    A6
+01ae: 4e75        RTS
+01b0: 2842        MOVEA.L  D2,A4
+01b2: 6f62        BLE     0x0216
+01b4: 2042        MOVEA.L  D2,A0
+01b6: 616b        BSR     0x0223
+01b8: 6572        BCS     0x022c
+01ba: 6020        BRA     0x01dc
+01bc: 7320        DC.W    0x7320
+01be: 6a6f        BPL     0x022f
+01c0: 6220        BHI     0x01e2
+01c2: 6973        BVS     0x0237
+01c4: 2062        MOVEA.L  -(A2),A0
+01c6: 616e        BSR     0x0236
+01c8: 6b20        BMI     0x01ea
+01ca: 6c6f        BGE     0x023b
+01cc: 616e        BSR     0x023c
+01ce: 206f        MOVEA.L  26214(A7),A0
+01d2: 6963        BVS     0x0237
+01d4: 6572        BCS     0x0248
+01d6: 202e        MOVE.L  8192(A6),D0
+01da: 1f48        MOVE.B  A0,26995(A7)
+01de: 2077        MOVEA.L  102(A7,D6.L),A0
+01e2: 6560        BCS     0x0244
+01e4: 7320        DC.W    0x7320
+01e6: 6e61        BGT     0x0249
+01e8: 6d65        BLT     0x024f
+01ea: 2069        MOVEA.L  29472(A1),A0
+01ee: 4265        CLR.W   -(A5)
+01f0: 7474        MOVEQ   #116,D2
+01f2: 7920        DC.W    0x7920
+01f4: 4261        CLR.W   -(A1)
+01f6: 6b65        BMI     0x025d
+01f8: 722e        MOVEQ   #46,D1
+01fa: 1548        MOVE.B  A0,25970(A2)
+01fe: 206a        MOVEA.L  28514(A2),A0
+0202: 2069        MOVEA.L  29472(A1),A0
+0206: 6170        BSR     0x0278
+0208: 7072        MOVEQ   #114,D0
+020a: 6169        BSR     0x0275
+020c: 7365        DC.W    0x7365
+020e: 722e        MOVEQ   #46,D1
+0210: 0000        ORI.B  #0x0 (0),D0
+
+0214: 4e56        LINK    A6,#0
+0218: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+021c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0220: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0224: a893        _MoveTo
+0226: 487a        PEA     44(PC) [0x254 ; pstr='Betty Baker` s job is appraiser . ']
+022a: a884        _DrawString
+022c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0230: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0234: a893        _MoveTo
+0236: 487a        PEA     64(PC) [0x278 ; pstr='Her husband`s name is Bob Baker.']
+023a: a884        _DrawString
+023c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0240: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0244: a893        _MoveTo
+0246: 487a        PEA     82(PC) [0x29a ; pstr='His job is bank loan officer.']
+024a: a884        _DrawString
+024c: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0250: 4e5e        UNLK    A6
+0252: 4e75        RTS
+0254: 2242        MOVEA.L  D2,A1
+0256: 6574        BCS     0x02cc
+0258: 7479        MOVEQ   #121,D2
+025a: 2042        MOVEA.L  D2,A0
+025c: 616b        BSR     0x02c9
+025e: 6572        BCS     0x02d2
+0260: 6020        BRA     0x0282
+0262: 7320        DC.W    0x7320
+0264: 6a6f        BPL     0x02d5
+0266: 6220        BHI     0x0288
+0268: 6973        BVS     0x02dd
+026a: 2061        MOVEA.L  -(A1),A0
+026c: 7070        MOVEQ   #112,D0
+026e: 7261        MOVEQ   #97,D1
+0270: 6973        BVS     0x02e5
+0272: 6572        BCS     0x02e6
+0274: 202e        MOVE.L  8192(A6),D0
+0278: 2048        MOVEA.L  A0,A0
+027a: 6572        BCS     0x02ee
+027c: 2068        MOVEA.L  30067(A0),A0
+0280: 6261        BHI     0x02e3
+0282: 6e64        BGT     0x02e8
+0284: 6073        BRA     0x02f9
+0286: 206e        MOVEA.L  24941(A6),A0
+028a: 6520        BCS     0x02ac
+028c: 6973        BVS     0x0301
+028e: 2042        MOVEA.L  D2,A0
+0290: 6f62        BLE     0x02f4
+0292: 2042        MOVEA.L  D2,A0
+0294: 616b        BSR     0x0301
+0296: 6572        BCS     0x030a
+0298: 2e00        MOVE.L  D0,D7
+029a: 1d48        MOVE.B  A0,26995(A6)
+029e: 206a        MOVEA.L  28514(A2),A0
+02a2: 2069        MOVEA.L  29472(A1),A0
+02a6: 6261        BHI     0x0309
+02a8: 6e6b        BGT     0x0315
+02aa: 206c        MOVEA.L  28513(A4),A0
+02ae: 6e20        BGT     0x02d0
+02b0: 6f66        BLE     0x0318
+02b2: 6669        BNE     0x031d
+02b4: 6365        BLS     0x031b
+02b6: 722e        MOVEQ   #46,D1
+02b8: 0000        ORI.B  #0x0 (0),D0
+
+02bc: 4e56        LINK    A6,#0
+02c0: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+02c4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+02c8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+02cc: a893        _MoveTo
+02ce: 487a        PEA     44(PC) [0x2fc ; pstr='Charles Cook` s job is landman . ']
+02d2: a884        _DrawString
+02d4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+02d8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+02dc: a893        _MoveTo
+02de: 487a        PEA     62(PC) [0x31e ; pstr='His wife`s name is Cathy Cook.']
+02e2: a884        _DrawString
+02e4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+02e8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+02ec: a893        _MoveTo
+02ee: 487a        PEA     78(PC) [0x33e ; pstr='Her job is bank loan officer.']
+02f2: a884        _DrawString
+02f4: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+02f8: 4e5e        UNLK    A6
+02fa: 4e75        RTS
+02fc: 2143        MOVE.L  D3,26721(A0)
+0300: 726c        MOVEQ   #108,D1
+0302: 6573        BCS     0x0377
+0304: 2043        MOVEA.L  D3,A0
+0306: 6f6f        BLE     0x0377
+0308: 6b60        BMI     0x036a
+030a: 2073        MOVEA.L  106(A3,D2.W),A0
+030e: 6f62        BLE     0x0372
+0310: 2069        MOVEA.L  29472(A1),A0
+0314: 6c61        BGE     0x0377
+0316: 6e64        BGT     0x037c
+0318: 6d61        BLT     0x037b
+031a: 6e20        BGT     0x033c
+031c: 2e20        MOVE.L  -(A0),D7
+031e: 1e48        MOVEA.B  A0,A7
+0320: 6973        BVS     0x0395
+0322: 2077        MOVEA.L  102(A7,D6.L),A0
+0326: 6560        BCS     0x0388
+0328: 7320        DC.W    0x7320
+032a: 6e61        BGT     0x038d
+032c: 6d65        BLT     0x0393
+032e: 2069        MOVEA.L  29472(A1),A0
+0332: 4361        DC.W    0x4361
+0334: 7468        MOVEQ   #104,D2
+0336: 7920        DC.W    0x7920
+0338: 436f        DC.W    0x436f
+033a: 6f6b        BLE     0x03a7
+033c: 2e00        MOVE.L  D0,D7
+033e: 1d48        MOVE.B  A0,25970(A6)
+0342: 206a        MOVEA.L  28514(A2),A0
+0346: 2069        MOVEA.L  29472(A1),A0
+034a: 6261        BHI     0x03ad
+034c: 6e6b        BGT     0x03b9
+034e: 206c        MOVEA.L  28513(A4),A0
+0352: 6e20        BGT     0x0374
+0354: 6f66        BLE     0x03bc
+0356: 6669        BNE     0x03c1
+0358: 6365        BLS     0x03bf
+035a: 722e        MOVEQ   #46,D1
+035c: 0000        ORI.B  #0x0 (0),D0
+
+0360: 4e56        LINK    A6,#0
+0364: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0368: 3f3c        MOVE.W  #0x32 (50),-(A7)
+036c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0370: a893        _MoveTo
+0372: 487a        PEA     44(PC) [0x3a0 ; pstr='Cathy Cook` s job is bank loan officer . ']
+0376: a884        _DrawString
+0378: 3f3c        MOVE.W  #0x32 (50),-(A7)
+037c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0380: a893        _MoveTo
+0382: 487a        PEA     70(PC) [0x3ca ; pstr='Her husband`s name is Charles Cook.']
+0386: a884        _DrawString
+0388: 3f3c        MOVE.W  #0x32 (50),-(A7)
+038c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0390: a893        _MoveTo
+0392: 487a        PEA     90(PC) [0x3ee ; pstr='His job is landman.']
+0396: a884        _DrawString
+0398: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+039c: 4e5e        UNLK    A6
+039e: 4e75        RTS
+03a0: 2943        MOVE.L  D3,24948(A4)
+03a4: 6879        BVC     0x041f
+03a6: 2043        MOVEA.L  D3,A0
+03a8: 6f6f        BLE     0x0419
+03aa: 6b60        BMI     0x040c
+03ac: 2073        MOVEA.L  106(A3,D2.W),A0
+03b0: 6f62        BLE     0x0414
+03b2: 2069        MOVEA.L  29472(A1),A0
+03b6: 6261        BHI     0x0419
+03b8: 6e6b        BGT     0x0425
+03ba: 206c        MOVEA.L  28513(A4),A0
+03be: 6e20        BGT     0x03e0
+03c0: 6f66        BLE     0x0428
+03c2: 6669        BNE     0x042d
+03c4: 6365        BLS     0x042b
+03c6: 7220        MOVEQ   #32,D1
+03c8: 2e20        MOVE.L  -(A0),D7
+03ca: 2348        MOVE.L  A0,25970(A1)
+03ce: 2068        MOVEA.L  30067(A0),A0
+03d2: 6261        BHI     0x0435
+03d4: 6e64        BGT     0x043a
+03d6: 6073        BRA     0x044b
+03d8: 206e        MOVEA.L  24941(A6),A0
+03dc: 6520        BCS     0x03fe
+03de: 6973        BVS     0x0453
+03e0: 2043        MOVEA.L  D3,A0
+03e2: 6861        BVC     0x0445
+03e4: 726c        MOVEQ   #108,D1
+03e6: 6573        BCS     0x045b
+03e8: 2043        MOVEA.L  D3,A0
+03ea: 6f6f        BLE     0x045b
+03ec: 6b2e        BMI     0x041c
+03ee: 1348        MOVE.B  A0,26995(A1)
+03f2: 206a        MOVEA.L  28514(A2),A0
+03f6: 2069        MOVEA.L  29472(A1),A0
+03fa: 6c61        BGE     0x045d
+03fc: 6e64        BGT     0x0462
+03fe: 6d61        BLT     0x0461
+0400: 6e2e        BGT     0x0430
+0402: 0000        ORI.B  #0x0 (0),D0
+
+0406: 4e56        LINK    A6,#0
+040a: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+040e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0412: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0416: a893        _MoveTo
+0418: 487a        PEA     44(PC) [0x446 ; pstr='Dan Davis` s job is bank president. ']
+041c: a884        _DrawString
+041e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0422: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0426: a893        _MoveTo
+0428: 487a        PEA     66(PC) [0x46c ; pstr='His wife`s name is Dottie Davis.']
+042c: a884        _DrawString
+042e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0432: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0436: a893        _MoveTo
+0438: 487a        PEA     84(PC) [0x48e ; pstr='Her job is housewife.']
+043c: a884        _DrawString
+043e: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0442: 4e5e        UNLK    A6
+0444: 4e75        RTS
+0446: 2444        MOVEA.L  D4,A2
+0448: 616e        BSR     0x04b8
+044a: 2044        MOVEA.L  D4,A0
+044c: 6176        BSR     0x04c4
+044e: 6973        BVS     0x04c3
+0450: 6020        BRA     0x0472
+0452: 7320        DC.W    0x7320
+0454: 6a6f        BPL     0x04c5
+0456: 6220        BHI     0x0478
+0458: 6973        BVS     0x04cd
+045a: 2062        MOVEA.L  -(A2),A0
+045c: 616e        BSR     0x04cc
+045e: 6b20        BMI     0x0480
+0460: 7072        MOVEQ   #114,D0
+0462: 6573        BCS     0x04d7
+0464: 6964        BVS     0x04ca
+0466: 656e        BCS     0x04d6
+0468: 742e        MOVEQ   #46,D2
+046a: 2000        MOVE.L  D0,D0
+046c: 2048        MOVEA.L  A0,A0
+046e: 6973        BVS     0x04e3
+0470: 2077        MOVEA.L  102(A7,D6.L),A0
+0474: 6560        BCS     0x04d6
+0476: 7320        DC.W    0x7320
+0478: 6e61        BGT     0x04db
+047a: 6d65        BLT     0x04e1
+047c: 2069        MOVEA.L  29472(A1),A0
+0480: 446f        DC.W    0x446f
+0482: 7474        MOVEQ   #116,D2
+0484: 6965        BVS     0x04eb
+0486: 2044        MOVEA.L  D4,A0
+0488: 6176        BSR     0x0500
+048a: 6973        BVS     0x04ff
+048c: 2e00        MOVE.L  D0,D7
+048e: 1548        MOVE.B  A0,25970(A2)
+0492: 206a        MOVEA.L  28514(A2),A0
+0496: 2069        MOVEA.L  29472(A1),A0
+049a: 686f        BVC     0x050b
+049c: 7573        DC.W    0x7573
+049e: 6577        BCS     0x0517
+04a0: 6966        BVS     0x0508
+04a2: 652e        BCS     0x04d2
+04a4: 0000        ORI.B  #0x0 (0),D0
+
+04a8: 4e56        LINK    A6,#0
+04ac: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+04b0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+04b4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+04b8: a893        _MoveTo
+04ba: 487a        PEA     44(PC) [0x4e8 ; pstr='Dottie Davis` s job is housewife . ']
+04be: a884        _DrawString
+04c0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+04c4: 3f3c        MOVE.W  #0x46 (70),-(A7)
+04c8: a893        _MoveTo
+04ca: 487a        PEA     64(PC) [0x50c ; pstr='Her husband`s name is Dan Davis.']
+04ce: a884        _DrawString
+04d0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+04d4: 3f3c        MOVE.W  #0x5a (90),-(A7)
+04d8: a893        _MoveTo
+04da: 487a        PEA     82(PC) [0x52e ; pstr='His job is bank president.']
+04de: a884        _DrawString
+04e0: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+04e4: 4e5e        UNLK    A6
+04e6: 4e75        RTS
+04e8: 2344        MOVE.L  D4,28532(A1)
+04ec: 7469        MOVEQ   #105,D2
+04ee: 6520        BCS     0x0510
+04f0: 4461        DC.W    0x4461
+04f2: 7669        MOVEQ   #105,D3
+04f4: 7360        DC.W    0x7360
+04f6: 2073        MOVEA.L  106(A3,D2.W),A0
+04fa: 6f62        BLE     0x055e
+04fc: 2069        MOVEA.L  29472(A1),A0
+0500: 686f        BVC     0x0571
+0502: 7573        DC.W    0x7573
+0504: 6577        BCS     0x057d
+0506: 6966        BVS     0x056e
+0508: 6520        BCS     0x052a
+050a: 2e20        MOVE.L  -(A0),D7
+050c: 2048        MOVEA.L  A0,A0
+050e: 6572        BCS     0x0582
+0510: 2068        MOVEA.L  30067(A0),A0
+0514: 6261        BHI     0x0577
+0516: 6e64        BGT     0x057c
+0518: 6073        BRA     0x058d
+051a: 206e        MOVEA.L  24941(A6),A0
+051e: 6520        BCS     0x0540
+0520: 6973        BVS     0x0595
+0522: 2044        MOVEA.L  D4,A0
+0524: 616e        BSR     0x0594
+0526: 2044        MOVEA.L  D4,A0
+0528: 6176        BSR     0x05a0
+052a: 6973        BVS     0x059f
+052c: 2e00        MOVE.L  D0,D7
+052e: 1a48        MOVEA.B  A0,A5
+0530: 6973        BVS     0x05a5
+0532: 206a        MOVEA.L  28514(A2),A0
+0536: 2069        MOVEA.L  29472(A1),A0
+053a: 6261        BHI     0x059d
+053c: 6e6b        BGT     0x05a9
+053e: 2070        MOVEA.L  101(A0,D7.W),A0
+0542: 7369        DC.W    0x7369
+0544: 6465        BCC     0x05ab
+0546: 6e74        BGT     0x05bc
+0548: 2e00        MOVE.L  D0,D7
+054a: 0000        ORI.B  #0x0 (0),D0
+
+054e: 4e56        LINK    A6,#0
+0552: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0556: 3f3c        MOVE.W  #0x32 (50),-(A7)
+055a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+055e: a893        _MoveTo
+0560: 487a        PEA     44(PC) [0x58e ; pstr='Ed Ellis` s job is widget inspector. ']
+0564: a884        _DrawString
+0566: 3f3c        MOVE.W  #0x32 (50),-(A7)
+056a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+056e: a893        _MoveTo
+0570: 487a        PEA     66(PC) [0x5b4 ; pstr='His wife`s name is Ellen Ellis.']
+0574: a884        _DrawString
+0576: 3f3c        MOVE.W  #0x32 (50),-(A7)
+057a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+057e: a893        _MoveTo
+0580: 487a        PEA     82(PC) [0x5d4 ; pstr='Her job is newspaper reporter.']
+0584: a884        _DrawString
+0586: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+058a: 4e5e        UNLK    A6
+058c: 4e75        RTS
+058e: 2545        MOVE.L  D5,25632(A2)
+0592: 456c        DC.W    0x456c
+0594: 6c69        BGE     0x05ff
+0596: 7360        DC.W    0x7360
+0598: 2073        MOVEA.L  106(A3,D2.W),A0
+059c: 6f62        BLE     0x0600
+059e: 2069        MOVEA.L  29472(A1),A0
+05a2: 7769        DC.W    0x7769
+05a4: 6467        BCC     0x060d
+05a6: 6574        BCS     0x061c
+05a8: 2069        MOVEA.L  28275(A1),A0
+05ac: 7065        MOVEQ   #101,D0
+05ae: 6374        BLS     0x0624
+05b0: 6f72        BLE     0x0624
+05b2: 2e20        MOVE.L  -(A0),D7
+05b4: 1f48        MOVE.B  A0,26995(A7)
+05b8: 2077        MOVEA.L  102(A7,D6.L),A0
+05bc: 6560        BCS     0x061e
+05be: 7320        DC.W    0x7320
+05c0: 6e61        BGT     0x0623
+05c2: 6d65        BLT     0x0629
+05c4: 2069        MOVEA.L  29472(A1),A0
+05c8: 456c        DC.W    0x456c
+05ca: 6c65        BGE     0x0631
+05cc: 6e20        BGT     0x05ee
+05ce: 456c        DC.W    0x456c
+05d0: 6c69        BGE     0x063b
+05d2: 732e        DC.W    0x732e
+05d4: 1e48        MOVEA.B  A0,A7
+05d6: 6572        BCS     0x064a
+05d8: 206a        MOVEA.L  28514(A2),A0
+05dc: 2069        MOVEA.L  29472(A1),A0
+05e0: 6e65        BGT     0x0647
+05e2: 7773        DC.W    0x7773
+05e4: 7061        MOVEQ   #97,D0
+05e6: 7065        MOVEQ   #101,D0
+05e8: 7220        MOVEQ   #32,D1
+05ea: 7265        MOVEQ   #101,D1
+05ec: 706f        MOVEQ   #111,D0
+05ee: 7274        MOVEQ   #116,D1
+05f0: 6572        BCS     0x0664
+05f2: 2e00        MOVE.L  D0,D7
+05f4: 0000        ORI.B  #0x0 (0),D0
+
+05f8: 4e56        LINK    A6,#0
+05fc: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0600: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0604: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0608: a893        _MoveTo
+060a: 487a        PEA     44(PC) [0x638 ; pstr='Ellen Ellis` s job is newspaper reporter. ']
+060e: a884        _DrawString
+0610: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0614: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0618: a893        _MoveTo
+061a: 487a        PEA     72(PC) [0x664 ; pstr='Her husband`s name is Ed Ellis.']
+061e: a884        _DrawString
+0620: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0624: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0628: a893        _MoveTo
+062a: 487a        PEA     88(PC) [0x684 ; pstr='His job is widget inspector.']
+062e: a884        _DrawString
+0630: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0634: 4e5e        UNLK    A6
+0636: 4e75        RTS
+0638: 2a45        MOVEA.L  D5,A5
+063a: 6c6c        BGE     0x06a8
+063c: 656e        BCS     0x06ac
+063e: 2045        MOVEA.L  D5,A0
+0640: 6c6c        BGE     0x06ae
+0642: 6973        BVS     0x06b7
+0644: 6020        BRA     0x0666
+0646: 7320        DC.W    0x7320
+0648: 6a6f        BPL     0x06b9
+064a: 6220        BHI     0x066c
+064c: 6973        BVS     0x06c1
+064e: 206e        MOVEA.L  25975(A6),A0
+0652: 7370        DC.W    0x7370
+0654: 6170        BSR     0x06c6
+0656: 6572        BCS     0x06ca
+0658: 2072        MOVEA.L  112(A2,D6.W),A0
+065c: 6f72        BLE     0x06d0
+065e: 7465        MOVEQ   #101,D2
+0660: 722e        MOVEQ   #46,D1
+0662: 2000        MOVE.L  D0,D0
+0664: 1f48        MOVE.B  A0,25970(A7)
+0668: 2068        MOVEA.L  30067(A0),A0
+066c: 6261        BHI     0x06cf
+066e: 6e64        BGT     0x06d4
+0670: 6073        BRA     0x06e5
+0672: 206e        MOVEA.L  24941(A6),A0
+0676: 6520        BCS     0x0698
+0678: 6973        BVS     0x06ed
+067a: 2045        MOVEA.L  D5,A0
+067c: 6420        BCC     0x069e
+067e: 456c        DC.W    0x456c
+0680: 6c69        BGE     0x06eb
+0682: 732e        DC.W    0x732e
+0684: 1c48        MOVEA.B  A0,A6
+0686: 6973        BVS     0x06fb
+0688: 206a        MOVEA.L  28514(A2),A0
+068c: 2069        MOVEA.L  29472(A1),A0
+0690: 7769        DC.W    0x7769
+0692: 6467        BCC     0x06fb
+0694: 6574        BCS     0x070a
+0696: 2069        MOVEA.L  28275(A1),A0
+069a: 7065        MOVEQ   #101,D0
+069c: 6374        BLS     0x0712
+069e: 6f72        BLE     0x0712
+06a0: 2e00        MOVE.L  D0,D7
+06a2: 0000        ORI.B  #0x0 (0),D0
+
+06a6: 4e56        LINK    A6,#0
+06aa: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+06ae: 3f3c        MOVE.W  #0x32 (50),-(A7)
+06b2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+06b6: a893        _MoveTo
+06b8: 487a        PEA     44(PC) [0x6e6 ; pstr='Fred Fox` s job is insurance salesman. ']
+06bc: a884        _DrawString
+06be: 3f3c        MOVE.W  #0x32 (50),-(A7)
+06c2: 3f3c        MOVE.W  #0x46 (70),-(A7)
+06c6: a893        _MoveTo
+06c8: 487a        PEA     68(PC) [0x70e ; pstr='His wife`s name is Fay Fox.']
+06cc: a884        _DrawString
+06ce: 3f3c        MOVE.W  #0x32 (50),-(A7)
+06d2: 3f3c        MOVE.W  #0x5a (90),-(A7)
+06d6: a893        _MoveTo
+06d8: 487a        PEA     80(PC) [0x72a ; pstr='Her job is lawyer.']
+06dc: a884        _DrawString
+06de: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+06e2: 4e5e        UNLK    A6
+06e4: 4e75        RTS
+06e6: 2746        MOVE.L  D6,29285(A3)
+06ea: 6420        BCC     0x070c
+06ec: 466f        DC.W    0x466f
+06ee: 7860        MOVEQ   #96,D4
+06f0: 2073        MOVEA.L  106(A3,D2.W),A0
+06f4: 6f62        BLE     0x0758
+06f6: 2069        MOVEA.L  29472(A1),A0
+06fa: 696e        BVS     0x076a
+06fc: 7375        DC.W    0x7375
+06fe: 7261        MOVEQ   #97,D1
+0700: 6e63        BGT     0x0765
+0702: 6520        BCS     0x0724
+0704: 7361        DC.W    0x7361
+0706: 6c65        BGE     0x076d
+0708: 736d        DC.W    0x736d
+070a: 616e        BSR     0x077a
+070c: 2e20        MOVE.L  -(A0),D7
+070e: 1b48        MOVE.B  A0,26995(A5)
+0712: 2077        MOVEA.L  102(A7,D6.L),A0
+0716: 6560        BCS     0x0778
+0718: 7320        DC.W    0x7320
+071a: 6e61        BGT     0x077d
+071c: 6d65        BLT     0x0783
+071e: 2069        MOVEA.L  29472(A1),A0
+0722: 4661        DC.W    0x4661
+0724: 7920        DC.W    0x7920
+0726: 466f        DC.W    0x466f
+0728: 782e        MOVEQ   #46,D4
+072a: 1248        MOVEA.B  A0,A1
+072c: 6572        BCS     0x07a0
+072e: 206a        MOVEA.L  28514(A2),A0
+0732: 2069        MOVEA.L  29472(A1),A0
+0736: 6c61        BGE     0x0799
+0738: 7779        DC.W    0x7779
+073a: 6572        BCS     0x07ae
+073c: 2e00        MOVE.L  D0,D7
+073e: 0000        ORI.B  #0x0 (0),D0
+
+0742: 4e56        LINK    A6,#0
+0746: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+074a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+074e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0752: a893        _MoveTo
+0754: 487a        PEA     44(PC) [0x782 ; pstr='Fay Fox` s job is lawyer. ']
+0758: a884        _DrawString
+075a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+075e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0762: a893        _MoveTo
+0764: 487a        PEA     56(PC) [0x79e ; pstr='Her husband`s name is Fred Fox.']
+0768: a884        _DrawString
+076a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+076e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0772: a893        _MoveTo
+0774: 487a        PEA     72(PC) [0x7be ; pstr='His job is insurance salesman.']
+0778: a884        _DrawString
+077a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+077e: 4e5e        UNLK    A6
+0780: 4e75        RTS
+0782: 1a46        MOVEA.B  D6,A5
+0784: 6179        BSR     0x07ff
+0786: 2046        MOVEA.L  D6,A0
+0788: 6f78        BLE     0x0802
+078a: 6020        BRA     0x07ac
+078c: 7320        DC.W    0x7320
+078e: 6a6f        BPL     0x07ff
+0790: 6220        BHI     0x07b2
+0792: 6973        BVS     0x0807
+0794: 206c        MOVEA.L  24951(A4),A0
+0798: 7965        DC.W    0x7965
+079a: 722e        MOVEQ   #46,D1
+079c: 2000        MOVE.L  D0,D0
+079e: 1f48        MOVE.B  A0,25970(A7)
+07a2: 2068        MOVEA.L  30067(A0),A0
+07a6: 6261        BHI     0x0809
+07a8: 6e64        BGT     0x080e
+07aa: 6073        BRA     0x081f
+07ac: 206e        MOVEA.L  24941(A6),A0
+07b0: 6520        BCS     0x07d2
+07b2: 6973        BVS     0x0827
+07b4: 2046        MOVEA.L  D6,A0
+07b6: 7265        MOVEQ   #101,D1
+07b8: 6420        BCC     0x07da
+07ba: 466f        DC.W    0x466f
+07bc: 782e        MOVEQ   #46,D4
+07be: 1e48        MOVEA.B  A0,A7
+07c0: 6973        BVS     0x0835
+07c2: 206a        MOVEA.L  28514(A2),A0
+07c6: 2069        MOVEA.L  29472(A1),A0
+07ca: 696e        BVS     0x083a
+07cc: 7375        DC.W    0x7375
+07ce: 7261        MOVEQ   #97,D1
+07d0: 6e63        BGT     0x0835
+07d2: 6520        BCS     0x07f4
+07d4: 7361        DC.W    0x7361
+07d6: 6c65        BGE     0x083d
+07d8: 736d        DC.W    0x736d
+07da: 616e        BSR     0x084a
+07dc: 2e00        MOVE.L  D0,D7
+07de: 0000        ORI.B  #0x0 (0),D0
+
+07e2: 4e56        LINK    A6,#0
+07e6: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+07ea: 3f3c        MOVE.W  #0x32 (50),-(A7)
+07ee: 3f3c        MOVE.W  #0x32 (50),-(A7)
+07f2: a893        _MoveTo
+07f4: 487a        PEA     44(PC) [0x822 ; pstr='Glen Giles` s job is newspaper reporter. ']
+07f8: a884        _DrawString
+07fa: 3f3c        MOVE.W  #0x32 (50),-(A7)
+07fe: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0802: a893        _MoveTo
+0804: 487a        PEA     70(PC) [0x84c ; pstr='His wife`s name is Gail Giles.']
+0808: a884        _DrawString
+080a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+080e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0812: a893        _MoveTo
+0814: 487a        PEA     86(PC) [0x86c ; pstr='Her job is country club manager.']
+0818: a884        _DrawString
+081a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+081e: 4e5e        UNLK    A6
+0820: 4e75        RTS
+0822: 2947        MOVE.L  D7,27749(A4)
+0826: 6e20        BGT     0x0848
+0828: 4769        DC.W    0x4769
+082a: 6c65        BGE     0x0891
+082c: 7360        DC.W    0x7360
+082e: 2073        MOVEA.L  106(A3,D2.W),A0
+0832: 6f62        BLE     0x0896
+0834: 2069        MOVEA.L  29472(A1),A0
+0838: 6e65        BGT     0x089f
+083a: 7773        DC.W    0x7773
+083c: 7061        MOVEQ   #97,D0
+083e: 7065        MOVEQ   #101,D0
+0840: 7220        MOVEQ   #32,D1
+0842: 7265        MOVEQ   #101,D1
+0844: 706f        MOVEQ   #111,D0
+0846: 7274        MOVEQ   #116,D1
+0848: 6572        BCS     0x08bc
+084a: 2e20        MOVE.L  -(A0),D7
+084c: 1e48        MOVEA.B  A0,A7
+084e: 6973        BVS     0x08c3
+0850: 2077        MOVEA.L  102(A7,D6.L),A0
+0854: 6560        BCS     0x08b6
+0856: 7320        DC.W    0x7320
+0858: 6e61        BGT     0x08bb
+085a: 6d65        BLT     0x08c1
+085c: 2069        MOVEA.L  29472(A1),A0
+0860: 4761        DC.W    0x4761
+0862: 696c        BVS     0x08d0
+0864: 2047        MOVEA.L  D7,A0
+0866: 696c        BVS     0x08d4
+0868: 6573        BCS     0x08dd
+086a: 2e00        MOVE.L  D0,D7
+086c: 2048        MOVEA.L  A0,A0
+086e: 6572        BCS     0x08e2
+0870: 206a        MOVEA.L  28514(A2),A0
+0874: 2069        MOVEA.L  29472(A1),A0
+0878: 636f        BLS     0x08e9
+087a: 756e        DC.W    0x756e
+087c: 7472        MOVEQ   #114,D2
+087e: 7920        DC.W    0x7920
+0880: 636c        BLS     0x08ee
+0882: 7562        DC.W    0x7562
+0884: 206d        MOVEA.L  24942(A5),A0
+0888: 6167        BSR     0x08f1
+088a: 6572        BCS     0x08fe
+088c: 2e00        MOVE.L  D0,D7
+088e: 0000        ORI.B  #0x0 (0),D0
+
+0892: 4e56        LINK    A6,#0
+0896: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+089a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+089e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+08a2: a893        _MoveTo
+08a4: 487a        PEA     44(PC) [0x8d2 ; pstr='Gail Giles` s job is country club manager. ']
+08a8: a884        _DrawString
+08aa: 3f3c        MOVE.W  #0x32 (50),-(A7)
+08ae: 3f3c        MOVE.W  #0x46 (70),-(A7)
+08b2: a893        _MoveTo
+08b4: 487a        PEA     72(PC) [0x8fe ; pstr='Her husband`s name is Glen Giles.']
+08b8: a884        _DrawString
+08ba: 3f3c        MOVE.W  #0x32 (50),-(A7)
+08be: 3f3c        MOVE.W  #0x5a (90),-(A7)
+08c2: a893        _MoveTo
+08c4: 487a        PEA     90(PC) [0x920 ; pstr='His job is newspaper reporter.']
+08c8: a884        _DrawString
+08ca: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+08ce: 4e5e        UNLK    A6
+08d0: 4e75        RTS
+08d2: 2b47        MOVE.L  D7,24937(A5)
+08d6: 6c20        BGE     0x08f8
+08d8: 4769        DC.W    0x4769
+08da: 6c65        BGE     0x0941
+08dc: 7360        DC.W    0x7360
+08de: 2073        MOVEA.L  106(A3,D2.W),A0
+08e2: 6f62        BLE     0x0946
+08e4: 2069        MOVEA.L  29472(A1),A0
+08e8: 636f        BLS     0x0959
+08ea: 756e        DC.W    0x756e
+08ec: 7472        MOVEQ   #114,D2
+08ee: 7920        DC.W    0x7920
+08f0: 636c        BLS     0x095e
+08f2: 7562        DC.W    0x7562
+08f4: 206d        MOVEA.L  24942(A5),A0
+08f8: 6167        BSR     0x0961
+08fa: 6572        BCS     0x096e
+08fc: 2e20        MOVE.L  -(A0),D7
+08fe: 2148        MOVE.L  A0,25970(A0)
+0902: 2068        MOVEA.L  30067(A0),A0
+0906: 6261        BHI     0x0969
+0908: 6e64        BGT     0x096e
+090a: 6073        BRA     0x097f
+090c: 206e        MOVEA.L  24941(A6),A0
+0910: 6520        BCS     0x0932
+0912: 6973        BVS     0x0987
+0914: 2047        MOVEA.L  D7,A0
+0916: 6c65        BGE     0x097d
+0918: 6e20        BGT     0x093a
+091a: 4769        DC.W    0x4769
+091c: 6c65        BGE     0x0983
+091e: 732e        DC.W    0x732e
+0920: 1e48        MOVEA.B  A0,A7
+0922: 6973        BVS     0x0997
+0924: 206a        MOVEA.L  28514(A2),A0
+0928: 2069        MOVEA.L  29472(A1),A0
+092c: 6e65        BGT     0x0993
+092e: 7773        DC.W    0x7773
+0930: 7061        MOVEQ   #97,D0
+0932: 7065        MOVEQ   #101,D0
+0934: 7220        MOVEQ   #32,D1
+0936: 7265        MOVEQ   #101,D1
+0938: 706f        MOVEQ   #111,D0
+093a: 7274        MOVEQ   #116,D1
+093c: 6572        BCS     0x09b0
+093e: 2e00        MOVE.L  D0,D7
+0940: 0000        ORI.B  #0x0 (0),D0
+
+0944: 4e56        LINK    A6,#0
+0948: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+094c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0950: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0954: a893        _MoveTo
+0956: 487a        PEA     44(PC) [0x984 ; pstr='Harry Hall` s job is appraiser. ']
+095a: a884        _DrawString
+095c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0960: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0964: a893        _MoveTo
+0966: 487a        PEA     62(PC) [0x9a6 ; pstr='His wife`s name is Holly Hall.']
+096a: a884        _DrawString
+096c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0970: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0974: a893        _MoveTo
+0976: 487a        PEA     78(PC) [0x9c6 ; pstr='Her job is policeman.']
+097a: a884        _DrawString
+097c: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0980: 4e5e        UNLK    A6
+0982: 4e75        RTS
+0984: 2048        MOVEA.L  A0,A0
+0986: 6172        BSR     0x09fa
+0988: 7279        MOVEQ   #121,D1
+098a: 2048        MOVEA.L  A0,A0
+098c: 616c        BSR     0x09fa
+098e: 6c60        BGE     0x09f0
+0990: 2073        MOVEA.L  106(A3,D2.W),A0
+0994: 6f62        BLE     0x09f8
+0996: 2069        MOVEA.L  29472(A1),A0
+099a: 6170        BSR     0x0a0c
+099c: 7072        MOVEQ   #114,D0
+099e: 6169        BSR     0x0a09
+09a0: 7365        DC.W    0x7365
+09a2: 722e        MOVEQ   #46,D1
+09a4: 2000        MOVE.L  D0,D0
+09a6: 1e48        MOVEA.B  A0,A7
+09a8: 6973        BVS     0x0a1d
+09aa: 2077        MOVEA.L  102(A7,D6.L),A0
+09ae: 6560        BCS     0x0a10
+09b0: 7320        DC.W    0x7320
+09b2: 6e61        BGT     0x0a15
+09b4: 6d65        BLT     0x0a1b
+09b6: 2069        MOVEA.L  29472(A1),A0
+09ba: 486f        PEA     27756(A7)
+09be: 7920        DC.W    0x7920
+09c0: 4861        PEA     -(A1)
+09c2: 6c6c        BGE     0x0a30
+09c4: 2e00        MOVE.L  D0,D7
+09c6: 1548        MOVE.B  A0,25970(A2)
+09ca: 206a        MOVEA.L  28514(A2),A0
+09ce: 2069        MOVEA.L  29472(A1),A0
+09d2: 706f        MOVEQ   #111,D0
+09d4: 6c69        BGE     0x0a3f
+09d6: 6365        BLS     0x0a3d
+09d8: 6d61        BLT     0x0a3b
+09da: 6e2e        BGT     0x0a0a
+09dc: 0000        ORI.B  #0x0 (0),D0
+
+09e0: 4e56        LINK    A6,#0
+09e4: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+09e8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+09ec: 3f3c        MOVE.W  #0x32 (50),-(A7)
+09f0: a893        _MoveTo
+09f2: 487a        PEA     44(PC) [0xa20 ; pstr='Holly Hall` s job is policeman. ']
+09f6: a884        _DrawString
+09f8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+09fc: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0a00: a893        _MoveTo
+0a02: 487a        PEA     62(PC) [0xa42 ; pstr='Her husband`s name is Harry Hall.']
+0a06: a884        _DrawString
+0a08: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a0c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0a10: a893        _MoveTo
+0a12: 487a        PEA     80(PC) [0xa64 ; pstr='His job is appraiser.']
+0a16: a884        _DrawString
+0a18: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0a1c: 4e5e        UNLK    A6
+0a1e: 4e75        RTS
+0a20: 2048        MOVEA.L  A0,A0
+0a22: 6f6c        BLE     0x0a90
+0a24: 6c79        BGE     0x0a9f
+0a26: 2048        MOVEA.L  A0,A0
+0a28: 616c        BSR     0x0a96
+0a2a: 6c60        BGE     0x0a8c
+0a2c: 2073        MOVEA.L  106(A3,D2.W),A0
+0a30: 6f62        BLE     0x0a94
+0a32: 2069        MOVEA.L  29472(A1),A0
+0a36: 706f        MOVEQ   #111,D0
+0a38: 6c69        BGE     0x0aa3
+0a3a: 6365        BLS     0x0aa1
+0a3c: 6d61        BLT     0x0a9f
+0a3e: 6e2e        BGT     0x0a6e
+0a40: 2000        MOVE.L  D0,D0
+0a42: 2148        MOVE.L  A0,25970(A0)
+0a46: 2068        MOVEA.L  30067(A0),A0
+0a4a: 6261        BHI     0x0aad
+0a4c: 6e64        BGT     0x0ab2
+0a4e: 6073        BRA     0x0ac3
+0a50: 206e        MOVEA.L  24941(A6),A0
+0a54: 6520        BCS     0x0a76
+0a56: 6973        BVS     0x0acb
+0a58: 2048        MOVEA.L  A0,A0
+0a5a: 6172        BSR     0x0ace
+0a5c: 7279        MOVEQ   #121,D1
+0a5e: 2048        MOVEA.L  A0,A0
+0a60: 616c        BSR     0x0ace
+0a62: 6c2e        BGE     0x0a92
+0a64: 1548        MOVE.B  A0,26995(A2)
+0a68: 206a        MOVEA.L  28514(A2),A0
+0a6c: 2069        MOVEA.L  29472(A1),A0
+0a70: 6170        BSR     0x0ae2
+0a72: 7072        MOVEQ   #114,D0
+0a74: 6169        BSR     0x0adf
+0a76: 7365        DC.W    0x7365
+0a78: 722e        MOVEQ   #46,D1
+0a7a: 0000        ORI.B  #0x0 (0),D0
+
+0a7e: 4e56        LINK    A6,#0
+0a82: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0a86: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a8a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a8e: a893        _MoveTo
+0a90: 487a        PEA     44(PC) [0xabe ; pstr='Irwin Idle` s job is tennis pro. ']
+0a94: a884        _DrawString
+0a96: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0a9a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0a9e: a893        _MoveTo
+0aa0: 487a        PEA     62(PC) [0xae0 ; pstr='His wife`s name is Inger Idle.']
+0aa4: a884        _DrawString
+0aa6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0aaa: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0aae: a893        _MoveTo
+0ab0: 487a        PEA     78(PC) [0xb00 ; pstr='Her job is golf pro.']
+0ab4: a884        _DrawString
+0ab6: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0aba: 4e5e        UNLK    A6
+0abc: 4e75        RTS
+0abe: 2149        MOVE.L  A1,29303(A0)
+0ac2: 696e        BVS     0x0b32
+0ac4: 2049        MOVEA.L  A1,A0
+0ac6: 646c        BCC     0x0b34
+0ac8: 6560        BCS     0x0b2a
+0aca: 2073        MOVEA.L  106(A3,D2.W),A0
+0ace: 6f62        BLE     0x0b32
+0ad0: 2069        MOVEA.L  29472(A1),A0
+0ad4: 7465        MOVEQ   #101,D2
+0ad6: 6e6e        BGT     0x0b46
+0ad8: 6973        BVS     0x0b4d
+0ada: 2070        MOVEA.L  111(A0,D7.W),A0
+0ade: 2e20        MOVE.L  -(A0),D7
+0ae0: 1e48        MOVEA.B  A0,A7
+0ae2: 6973        BVS     0x0b57
+0ae4: 2077        MOVEA.L  102(A7,D6.L),A0
+0ae8: 6560        BCS     0x0b4a
+0aea: 7320        DC.W    0x7320
+0aec: 6e61        BGT     0x0b4f
+0aee: 6d65        BLT     0x0b55
+0af0: 2069        MOVEA.L  29472(A1),A0
+0af4: 496e        DC.W    0x496e
+0af6: 6765        BEQ     0x0b5d
+0af8: 7220        MOVEQ   #32,D1
+0afa: 4964        DC.W    0x4964
+0afc: 6c65        BGE     0x0b63
+0afe: 2e00        MOVE.L  D0,D7
+0b00: 1448        MOVEA.B  A0,A2
+0b02: 6572        BCS     0x0b76
+0b04: 206a        MOVEA.L  28514(A2),A0
+0b08: 2069        MOVEA.L  29472(A1),A0
+0b0c: 676f        BEQ     0x0b7d
+0b0e: 6c66        BGE     0x0b76
+0b10: 2070        MOVEA.L  111(A0,D7.W),A0
+0b14: 2e00        MOVE.L  D0,D7
+0b16: 0000        ORI.B  #0x0 (0),D0
+
+0b1a: 4e56        LINK    A6,#0
+0b1e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0b22: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0b26: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0b2a: a893        _MoveTo
+0b2c: 487a        PEA     44(PC) [0xb5a ; pstr='Inger Idle` s job is golf pro. ']
+0b30: a884        _DrawString
+0b32: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0b36: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0b3a: a893        _MoveTo
+0b3c: 487a        PEA     60(PC) [0xb7a ; pstr='Her husband`s name is Irwin Idle.']
+0b40: a884        _DrawString
+0b42: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0b46: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0b4a: a893        _MoveTo
+0b4c: 487a        PEA     78(PC) [0xb9c ; pstr='His job is tennis pro.']
+0b50: a884        _DrawString
+0b52: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0b56: 4e5e        UNLK    A6
+0b58: 4e75        RTS
+0b5a: 1f49        MOVE.B  A1,28263(A7)
+0b5e: 6572        BCS     0x0bd2
+0b60: 2049        MOVEA.L  A1,A0
+0b62: 646c        BCC     0x0bd0
+0b64: 6560        BCS     0x0bc6
+0b66: 2073        MOVEA.L  106(A3,D2.W),A0
+0b6a: 6f62        BLE     0x0bce
+0b6c: 2069        MOVEA.L  29472(A1),A0
+0b70: 676f        BEQ     0x0be1
+0b72: 6c66        BGE     0x0bda
+0b74: 2070        MOVEA.L  111(A0,D7.W),A0
+0b78: 2e20        MOVE.L  -(A0),D7
+0b7a: 2148        MOVE.L  A0,25970(A0)
+0b7e: 2068        MOVEA.L  30067(A0),A0
+0b82: 6261        BHI     0x0be5
+0b84: 6e64        BGT     0x0bea
+0b86: 6073        BRA     0x0bfb
+0b88: 206e        MOVEA.L  24941(A6),A0
+0b8c: 6520        BCS     0x0bae
+0b8e: 6973        BVS     0x0c03
+0b90: 2049        MOVEA.L  A1,A0
+0b92: 7277        MOVEQ   #119,D1
+0b94: 696e        BVS     0x0c04
+0b96: 2049        MOVEA.L  A1,A0
+0b98: 646c        BCC     0x0c06
+0b9a: 652e        BCS     0x0bca
+0b9c: 1648        MOVEA.B  A0,A3
+0b9e: 6973        BVS     0x0c13
+0ba0: 206a        MOVEA.L  28514(A2),A0
+0ba4: 2069        MOVEA.L  29472(A1),A0
+0ba8: 7465        MOVEQ   #101,D2
+0baa: 6e6e        BGT     0x0c1a
+0bac: 6973        BVS     0x0c21
+0bae: 2070        MOVEA.L  111(A0,D7.W),A0
+0bb2: 2e00        MOVE.L  D0,D7
+0bb4: 0000        ORI.B  #0x0 (0),D0
+
+0bb8: 4e56        LINK    A6,#0
+0bbc: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0bc0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0bc4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0bc8: a893        _MoveTo
+0bca: 487a        PEA     44(PC) [0xbf8 ; pstr='John Jones` s job is judge. ']
+0bce: a884        _DrawString
+0bd0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0bd4: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0bd8: a893        _MoveTo
+0bda: 487a        PEA     58(PC) [0xc16 ; pstr='His wife`s name is Janet Jones.']
+0bde: a884        _DrawString
+0be0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0be4: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0be8: a893        _MoveTo
+0bea: 487a        PEA     74(PC) [0xc36 ; pstr='Her job is housewife.']
+0bee: a884        _DrawString
+0bf0: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0bf4: 4e5e        UNLK    A6
+0bf6: 4e75        RTS
+0bf8: 1c4a        MOVEA.B  A2,A6
+0bfa: 6f68        BLE     0x0c64
+0bfc: 6e20        BGT     0x0c1e
+0bfe: 4a6f        TST.W   28261(A7)
+0c02: 7360        DC.W    0x7360
+0c04: 2073        MOVEA.L  106(A3,D2.W),A0
+0c08: 6f62        BLE     0x0c6c
+0c0a: 2069        MOVEA.L  29472(A1),A0
+0c0e: 6a75        BPL     0x0c85
+0c10: 6467        BCC     0x0c79
+0c12: 652e        BCS     0x0c42
+0c14: 2000        MOVE.L  D0,D0
+0c16: 1f48        MOVE.B  A0,26995(A7)
+0c1a: 2077        MOVEA.L  102(A7,D6.L),A0
+0c1e: 6560        BCS     0x0c80
+0c20: 7320        DC.W    0x7320
+0c22: 6e61        BGT     0x0c85
+0c24: 6d65        BLT     0x0c8b
+0c26: 2069        MOVEA.L  29472(A1),A0
+0c2a: 4a61        TST.W   -(A1)
+0c2c: 6e65        BGT     0x0c93
+0c2e: 7420        MOVEQ   #32,D2
+0c30: 4a6f        TST.W   28261(A7)
+0c34: 732e        DC.W    0x732e
+0c36: 1548        MOVE.B  A0,25970(A2)
+0c3a: 206a        MOVEA.L  28514(A2),A0
+0c3e: 2069        MOVEA.L  29472(A1),A0
+0c42: 686f        BVC     0x0cb3
+0c44: 7573        DC.W    0x7573
+0c46: 6577        BCS     0x0cbf
+0c48: 6966        BVS     0x0cb0
+0c4a: 652e        BCS     0x0c7a
+0c4c: 0000        ORI.B  #0x0 (0),D0
+
+0c50: 4e56        LINK    A6,#0
+0c54: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0c58: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c5c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c60: a893        _MoveTo
+0c62: 487a        PEA     44(PC) [0xc90 ; pstr='Janet Jones` s job is housewife. ']
+0c66: a884        _DrawString
+0c68: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c6c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0c70: a893        _MoveTo
+0c72: 487a        PEA     62(PC) [0xcb2 ; pstr='Her husband`s name is John Jones.']
+0c76: a884        _DrawString
+0c78: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0c7c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0c80: a893        _MoveTo
+0c82: 487a        PEA     80(PC) [0xcd4 ; pstr='His job is judge.']
+0c86: a884        _DrawString
+0c88: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0c8c: 4e5e        UNLK    A6
+0c8e: 4e75        RTS
+0c90: 214a        MOVE.L  A2,24942(A0)
+0c94: 6574        BCS     0x0d0a
+0c96: 204a        MOVEA.L  A2,A0
+0c98: 6f6e        BLE     0x0d08
+0c9a: 6573        BCS     0x0d0f
+0c9c: 6020        BRA     0x0cbe
+0c9e: 7320        DC.W    0x7320
+0ca0: 6a6f        BPL     0x0d11
+0ca2: 6220        BHI     0x0cc4
+0ca4: 6973        BVS     0x0d19
+0ca6: 2068        MOVEA.L  28533(A0),A0
+0caa: 7365        DC.W    0x7365
+0cac: 7769        DC.W    0x7769
+0cae: 6665        BNE     0x0d15
+0cb0: 2e20        MOVE.L  -(A0),D7
+0cb2: 2148        MOVE.L  A0,25970(A0)
+0cb6: 2068        MOVEA.L  30067(A0),A0
+0cba: 6261        BHI     0x0d1d
+0cbc: 6e64        BGT     0x0d22
+0cbe: 6073        BRA     0x0d33
+0cc0: 206e        MOVEA.L  24941(A6),A0
+0cc4: 6520        BCS     0x0ce6
+0cc6: 6973        BVS     0x0d3b
+0cc8: 204a        MOVEA.L  A2,A0
+0cca: 6f68        BLE     0x0d34
+0ccc: 6e20        BGT     0x0cee
+0cce: 4a6f        TST.W   28261(A7)
+0cd2: 732e        DC.W    0x732e
+0cd4: 1148        MOVE.B  A0,26995(A0)
+0cd8: 206a        MOVEA.L  28514(A2),A0
+0cdc: 2069        MOVEA.L  29472(A1),A0
+0ce0: 6a75        BPL     0x0d57
+0ce2: 6467        BCC     0x0d4b
+0ce4: 652e        BCS     0x0d14
+0ce6: 0000        ORI.B  #0x0 (0),D0
+
+0cea: 4e56        LINK    A6,#0
+0cee: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0cf2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0cf6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0cfa: a893        _MoveTo
+0cfc: 487a        PEA     44(PC) [0xd2a ; pstr='Kirk King` s job is appraiser. ']
+0d00: a884        _DrawString
+0d02: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0d06: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0d0a: a893        _MoveTo
+0d0c: 487a        PEA     60(PC) [0xd4a ; pstr='His wife`s name is Karen King.']
+0d10: a884        _DrawString
+0d12: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0d16: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0d1a: a893        _MoveTo
+0d1c: 487a        PEA     76(PC) [0xd6a ; pstr='Her job is bank record clerk.']
+0d20: a884        _DrawString
+0d22: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0d26: 4e5e        UNLK    A6
+0d28: 4e75        RTS
+0d2a: 1f4b        MOVE.B  A3,26994(A7)
+0d2e: 6b20        BMI     0x0d50
+0d30: 4b69        DC.W    0x4b69
+0d32: 6e67        BGT     0x0d9b
+0d34: 6020        BRA     0x0d56
+0d36: 7320        DC.W    0x7320
+0d38: 6a6f        BPL     0x0da9
+0d3a: 6220        BHI     0x0d5c
+0d3c: 6973        BVS     0x0db1
+0d3e: 2061        MOVEA.L  -(A1),A0
+0d40: 7070        MOVEQ   #112,D0
+0d42: 7261        MOVEQ   #97,D1
+0d44: 6973        BVS     0x0db9
+0d46: 6572        BCS     0x0dba
+0d48: 2e20        MOVE.L  -(A0),D7
+0d4a: 1e48        MOVEA.B  A0,A7
+0d4c: 6973        BVS     0x0dc1
+0d4e: 2077        MOVEA.L  102(A7,D6.L),A0
+0d52: 6560        BCS     0x0db4
+0d54: 7320        DC.W    0x7320
+0d56: 6e61        BGT     0x0db9
+0d58: 6d65        BLT     0x0dbf
+0d5a: 2069        MOVEA.L  29472(A1),A0
+0d5e: 4b61        DC.W    0x4b61
+0d60: 7265        MOVEQ   #101,D1
+0d62: 6e20        BGT     0x0d84
+0d64: 4b69        DC.W    0x4b69
+0d66: 6e67        BGT     0x0dcf
+0d68: 2e00        MOVE.L  D0,D7
+0d6a: 1d48        MOVE.B  A0,25970(A6)
+0d6e: 206a        MOVEA.L  28514(A2),A0
+0d72: 2069        MOVEA.L  29472(A1),A0
+0d76: 6261        BHI     0x0dd9
+0d78: 6e6b        BGT     0x0de5
+0d7a: 2072        MOVEA.L  99(A2,D6.W),A0
+0d7e: 6f72        BLE     0x0df2
+0d80: 6420        BCC     0x0da2
+0d82: 636c        BLS     0x0df0
+0d84: 6572        BCS     0x0df8
+0d86: 6b2e        BMI     0x0db6
+0d88: 0000        ORI.B  #0x0 (0),D0
+
+0d8c: 4e56        LINK    A6,#0
+0d90: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0d94: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0d98: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0d9c: a893        _MoveTo
+0d9e: 487a        PEA     44(PC) [0xdcc ; pstr='Karen King` s job is bank record clerk. ']
+0da2: a884        _DrawString
+0da4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0da8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0dac: a893        _MoveTo
+0dae: 487a        PEA     70(PC) [0xdf6 ; pstr='Her husband`s name is Kirk King.']
+0db2: a884        _DrawString
+0db4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0db8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0dbc: a893        _MoveTo
+0dbe: 487a        PEA     88(PC) [0xe18 ; pstr='His job is appraiser.']
+0dc2: a884        _DrawString
+0dc4: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0dc8: 4e5e        UNLK    A6
+0dca: 4e75        RTS
+0dcc: 284b        MOVEA.L  A3,A4
+0dce: 6172        BSR     0x0e42
+0dd0: 656e        BCS     0x0e40
+0dd2: 204b        MOVEA.L  A3,A0
+0dd4: 696e        BVS     0x0e44
+0dd6: 6760        BEQ     0x0e38
+0dd8: 2073        MOVEA.L  106(A3,D2.W),A0
+0ddc: 6f62        BLE     0x0e40
+0dde: 2069        MOVEA.L  29472(A1),A0
+0de2: 6261        BHI     0x0e45
+0de4: 6e6b        BGT     0x0e51
+0de6: 2072        MOVEA.L  99(A2,D6.W),A0
+0dea: 6f72        BLE     0x0e5e
+0dec: 6420        BCC     0x0e0e
+0dee: 636c        BLS     0x0e5c
+0df0: 6572        BCS     0x0e64
+0df2: 6b2e        BMI     0x0e22
+0df4: 2000        MOVE.L  D0,D0
+0df6: 2048        MOVEA.L  A0,A0
+0df8: 6572        BCS     0x0e6c
+0dfa: 2068        MOVEA.L  30067(A0),A0
+0dfe: 6261        BHI     0x0e61
+0e00: 6e64        BGT     0x0e66
+0e02: 6073        BRA     0x0e77
+0e04: 206e        MOVEA.L  24941(A6),A0
+0e08: 6520        BCS     0x0e2a
+0e0a: 6973        BVS     0x0e7f
+0e0c: 204b        MOVEA.L  A3,A0
+0e0e: 6972        BVS     0x0e82
+0e10: 6b20        BMI     0x0e32
+0e12: 4b69        DC.W    0x4b69
+0e14: 6e67        BGT     0x0e7d
+0e16: 2e00        MOVE.L  D0,D7
+0e18: 1548        MOVE.B  A0,26995(A2)
+0e1c: 206a        MOVEA.L  28514(A2),A0
+0e20: 2069        MOVEA.L  29472(A1),A0
+0e24: 6170        BSR     0x0e96
+0e26: 7072        MOVEQ   #114,D0
+0e28: 6169        BSR     0x0e93
+0e2a: 7365        DC.W    0x7365
+0e2c: 722e        MOVEQ   #46,D1
+0e2e: 0000        ORI.B  #0x0 (0),D0
+
+0e32: 4e56        LINK    A6,#0
+0e36: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0e3a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0e3e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0e42: a893        _MoveTo
+0e44: 487a        PEA     44(PC) [0xe72 ; pstr='Leon Long` s job is policeman. ']
+0e48: a884        _DrawString
+0e4a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0e4e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0e52: a893        _MoveTo
+0e54: 487a        PEA     60(PC) [0xe92 ; pstr='His wife`s name is Lily Long.']
+0e58: a884        _DrawString
+0e5a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0e5e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0e62: a893        _MoveTo
+0e64: 487a        PEA     74(PC) [0xeb0 ; pstr='Her job is credit rating clerk.']
+0e68: a884        _DrawString
+0e6a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0e6e: 4e5e        UNLK    A6
+0e70: 4e75        RTS
+0e72: 1f4c        MOVE.B  A4,25967(A7)
+0e76: 6e20        BGT     0x0e98
+0e78: 4c6f        DC.W    0x4c6f
+0e7a: 6e67        BGT     0x0ee3
+0e7c: 6020        BRA     0x0e9e
+0e7e: 7320        DC.W    0x7320
+0e80: 6a6f        BPL     0x0ef1
+0e82: 6220        BHI     0x0ea4
+0e84: 6973        BVS     0x0ef9
+0e86: 2070        MOVEA.L  108(A0,D6.L),A0
+0e8a: 6963        BVS     0x0eef
+0e8c: 656d        BCS     0x0efb
+0e8e: 616e        BSR     0x0efe
+0e90: 2e20        MOVE.L  -(A0),D7
+0e92: 1d48        MOVE.B  A0,26995(A6)
+0e96: 2077        MOVEA.L  102(A7,D6.L),A0
+0e9a: 6560        BCS     0x0efc
+0e9c: 7320        DC.W    0x7320
+0e9e: 6e61        BGT     0x0f01
+0ea0: 6d65        BLT     0x0f07
+0ea2: 2069        MOVEA.L  29472(A1),A0
+0ea6: 4c69        DC.W    0x4c69
+0ea8: 6c79        BGE     0x0f23
+0eaa: 204c        MOVEA.L  A4,A0
+0eac: 6f6e        BLE     0x0f1c
+0eae: 672e        BEQ     0x0ede
+0eb0: 1f48        MOVE.B  A0,25970(A7)
+0eb4: 206a        MOVEA.L  28514(A2),A0
+0eb8: 2069        MOVEA.L  29472(A1),A0
+0ebc: 6372        BLS     0x0f30
+0ebe: 6564        BCS     0x0f24
+0ec0: 6974        BVS     0x0f36
+0ec2: 2072        MOVEA.L  116(A2,D6.W),A0
+0ec6: 696e        BVS     0x0f36
+0ec8: 6720        BEQ     0x0eea
+0eca: 636c        BLS     0x0f38
+0ecc: 6572        BCS     0x0f40
+0ece: 6b2e        BMI     0x0efe
+0ed0: 0000        ORI.B  #0x0 (0),D0
+
+0ed4: 4e56        LINK    A6,#0
+0ed8: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0edc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0ee0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0ee4: a893        _MoveTo
+0ee6: 487a        PEA     44(PC) [0xf14 ; pstr='Lily Long` s job is credit rating clerk. ']
+0eea: a884        _DrawString
+0eec: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0ef0: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0ef4: a893        _MoveTo
+0ef6: 487a        PEA     70(PC) [0xf3e ; pstr='Her husband`s name is Leon Long.']
+0efa: a884        _DrawString
+0efc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0f00: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0f04: a893        _MoveTo
+0f06: 487a        PEA     88(PC) [0xf60 ; pstr='His job is policeman.']
+0f0a: a884        _DrawString
+0f0c: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0f10: 4e5e        UNLK    A6
+0f12: 4e75        RTS
+0f14: 294c        MOVE.L  A4,26988(A4)
+0f18: 7920        DC.W    0x7920
+0f1a: 4c6f        DC.W    0x4c6f
+0f1c: 6e67        BGT     0x0f85
+0f1e: 6020        BRA     0x0f40
+0f20: 7320        DC.W    0x7320
+0f22: 6a6f        BPL     0x0f93
+0f24: 6220        BHI     0x0f46
+0f26: 6973        BVS     0x0f9b
+0f28: 2063        MOVEA.L  -(A3),A0
+0f2a: 7265        MOVEQ   #101,D1
+0f2c: 6469        BCC     0x0f97
+0f2e: 7420        MOVEQ   #32,D2
+0f30: 7261        MOVEQ   #97,D1
+0f32: 7469        MOVEQ   #105,D2
+0f34: 6e67        BGT     0x0f9d
+0f36: 2063        MOVEA.L  -(A3),A0
+0f38: 6c65        BGE     0x0f9f
+0f3a: 726b        MOVEQ   #107,D1
+0f3c: 2e20        MOVE.L  -(A0),D7
+0f3e: 2048        MOVEA.L  A0,A0
+0f40: 6572        BCS     0x0fb4
+0f42: 2068        MOVEA.L  30067(A0),A0
+0f46: 6261        BHI     0x0fa9
+0f48: 6e64        BGT     0x0fae
+0f4a: 6073        BRA     0x0fbf
+0f4c: 206e        MOVEA.L  24941(A6),A0
+0f50: 6520        BCS     0x0f72
+0f52: 6973        BVS     0x0fc7
+0f54: 204c        MOVEA.L  A4,A0
+0f56: 656f        BCS     0x0fc7
+0f58: 6e20        BGT     0x0f7a
+0f5a: 4c6f        DC.W    0x4c6f
+0f5c: 6e67        BGT     0x0fc5
+0f5e: 2e00        MOVE.L  D0,D7
+0f60: 1548        MOVE.B  A0,26995(A2)
+0f64: 206a        MOVEA.L  28514(A2),A0
+0f68: 2069        MOVEA.L  29472(A1),A0
+0f6c: 706f        MOVEQ   #111,D0
+0f6e: 6c69        BGE     0x0fd9
+0f70: 6365        BLS     0x0fd7
+0f72: 6d61        BLT     0x0fd5
+0f74: 6e2e        BGT     0x0fa4
+0f76: 0000        ORI.B  #0x0 (0),D0
+
+0f7a: 4e56        LINK    A6,#0
+0f7e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+0f82: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0f86: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0f8a: a893        _MoveTo
+0f8c: 487a        PEA     44(PC) [0xfba ; pstr='Max MacNasty` s job is businessman. ']
+0f90: a884        _DrawString
+0f92: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0f96: 3f3c        MOVE.W  #0x46 (70),-(A7)
+0f9a: a893        _MoveTo
+0f9c: 487a        PEA     66(PC) [0xfe0 ; pstr='His wife`s name is Mona MacNasty.']
+0fa0: a884        _DrawString
+0fa2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+0fa6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+0faa: a893        _MoveTo
+0fac: 487a        PEA     84(PC) [0x1002 ; pstr='Her job is heiress.']
+0fb0: a884        _DrawString
+0fb2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+0fb6: 4e5e        UNLK    A6
+0fb8: 4e75        RTS
+0fba: 244d        MOVEA.L  A5,A2
+0fbc: 6178        BSR     0x1036
+0fbe: 204d        MOVEA.L  A5,A0
+0fc0: 6163        BSR     0x1025
+0fc2: 4e61        DC.W    0x4e61
+0fc4: 7374        DC.W    0x7374
+0fc6: 7960        DC.W    0x7960
+0fc8: 2073        MOVEA.L  106(A3,D2.W),A0
+0fcc: 6f62        BLE     0x1030
+0fce: 2069        MOVEA.L  29472(A1),A0
+0fd2: 6275        BHI     0x1049
+0fd4: 7369        DC.W    0x7369
+0fd6: 6e65        BGT     0x103d
+0fd8: 7373        DC.W    0x7373
+0fda: 6d61        BLT     0x103d
+0fdc: 6e2e        BGT     0x100c
+0fde: 2000        MOVE.L  D0,D0
+0fe0: 2148        MOVE.L  A0,26995(A0)
+0fe4: 2077        MOVEA.L  102(A7,D6.L),A0
+0fe8: 6560        BCS     0x104a
+0fea: 7320        DC.W    0x7320
+0fec: 6e61        BGT     0x104f
+0fee: 6d65        BLT     0x1055
+0ff0: 2069        MOVEA.L  29472(A1),A0
+0ff4: 4d6f        DC.W    0x4d6f
+0ff6: 6e61        BGT     0x1059
+0ff8: 204d        MOVEA.L  A5,A0
+0ffa: 6163        BSR     0x105f
+0ffc: 4e61        DC.W    0x4e61
+0ffe: 7374        DC.W    0x7374
+1000: 792e        DC.W    0x792e
+1002: 1348        MOVE.B  A0,25970(A1)
+1006: 206a        MOVEA.L  28514(A2),A0
+100a: 2069        MOVEA.L  29472(A1),A0
+100e: 6865        BVC     0x1075
+1010: 6972        BVS     0x1084
+1012: 6573        BCS     0x1087
+1014: 732e        DC.W    0x732e
+1016: 0000        ORI.B  #0x0 (0),D0
+
+101a: 4e56        LINK    A6,#0
+101e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1022: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1026: 3f3c        MOVE.W  #0x32 (50),-(A7)
+102a: a893        _MoveTo
+102c: 487a        PEA     44(PC) [0x105a ; pstr='Mona MacNasty` s job is heiress. ']
+1030: a884        _DrawString
+1032: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1036: 3f3c        MOVE.W  #0x46 (70),-(A7)
+103a: a893        _MoveTo
+103c: 487a        PEA     62(PC) [0x107c ; pstr='Her husband`s name is Max MacNasty.']
+1040: a884        _DrawString
+1042: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1046: 3f3c        MOVE.W  #0x5a (90),-(A7)
+104a: a893        _MoveTo
+104c: 487a        PEA     82(PC) [0x10a0 ; pstr='His job is businessman.']
+1050: a884        _DrawString
+1052: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1056: 4e5e        UNLK    A6
+1058: 4e75        RTS
+105a: 214d        MOVE.L  A5,28526(A0)
+105e: 6120        BSR     0x1080
+1060: 4d61        DC.W    0x4d61
+1062: 634e        BLS     0x10b2
+1064: 6173        BSR     0x10d9
+1066: 7479        MOVEQ   #121,D2
+1068: 6020        BRA     0x108a
+106a: 7320        DC.W    0x7320
+106c: 6a6f        BPL     0x10dd
+106e: 6220        BHI     0x1090
+1070: 6973        BVS     0x10e5
+1072: 2068        MOVEA.L  25961(A0),A0
+1076: 7265        MOVEQ   #101,D1
+1078: 7373        DC.W    0x7373
+107a: 2e20        MOVE.L  -(A0),D7
+107c: 2348        MOVE.L  A0,25970(A1)
+1080: 2068        MOVEA.L  30067(A0),A0
+1084: 6261        BHI     0x10e7
+1086: 6e64        BGT     0x10ec
+1088: 6073        BRA     0x10fd
+108a: 206e        MOVEA.L  24941(A6),A0
+108e: 6520        BCS     0x10b0
+1090: 6973        BVS     0x1105
+1092: 204d        MOVEA.L  A5,A0
+1094: 6178        BSR     0x110e
+1096: 204d        MOVEA.L  A5,A0
+1098: 6163        BSR     0x10fd
+109a: 4e61        DC.W    0x4e61
+109c: 7374        DC.W    0x7374
+109e: 792e        DC.W    0x792e
+10a0: 1748        MOVE.B  A0,26995(A3)
+10a4: 206a        MOVEA.L  28514(A2),A0
+10a8: 2069        MOVEA.L  29472(A1),A0
+10ac: 6275        BHI     0x1123
+10ae: 7369        DC.W    0x7369
+10b0: 6e65        BGT     0x1117
+10b2: 7373        DC.W    0x7373
+10b4: 6d61        BLT     0x1117
+10b6: 6e2e        BGT     0x10e6
+10b8: 0000        ORI.B  #0x0 (0),D0
+
+10bc: 4e56        LINK    A6,#0
+10c0: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+10c4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+10c8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+10cc: a893        _MoveTo
+10ce: 487a        PEA     44(PC) [0x10fc ; pstr='Mac MacRascal` s job is businessman. ']
+10d2: a884        _DrawString
+10d4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+10d8: 3f3c        MOVE.W  #0x46 (70),-(A7)
+10dc: a893        _MoveTo
+10de: 487a        PEA     66(PC) [0x1122 ; pstr='His wife`s name is Marta MacRascal.']
+10e2: a884        _DrawString
+10e4: 3f3c        MOVE.W  #0x32 (50),-(A7)
+10e8: 3f3c        MOVE.W  #0x5a (90),-(A7)
+10ec: a893        _MoveTo
+10ee: 487a        PEA     86(PC) [0x1146 ; pstr='Her job is civic leader.']
+10f2: a884        _DrawString
+10f4: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+10f8: 4e5e        UNLK    A6
+10fa: 4e75        RTS
+10fc: 254d        MOVE.L  A5,24931(A2)
+1100: 204d        MOVEA.L  A5,A0
+1102: 6163        BSR     0x1167
+1104: 5261        ADDQ.W  #1,-(A1)
+1106: 7363        DC.W    0x7363
+1108: 616c        BSR     0x1176
+110a: 6020        BRA     0x112c
+110c: 7320        DC.W    0x7320
+110e: 6a6f        BPL     0x117f
+1110: 6220        BHI     0x1132
+1112: 6973        BVS     0x1187
+1114: 2062        MOVEA.L  -(A2),A0
+1116: 7573        DC.W    0x7573
+1118: 696e        BVS     0x1188
+111a: 6573        BCS     0x118f
+111c: 736d        DC.W    0x736d
+111e: 616e        BSR     0x118e
+1120: 2e20        MOVE.L  -(A0),D7
+1122: 2348        MOVE.L  A0,26995(A1)
+1126: 2077        MOVEA.L  102(A7,D6.L),A0
+112a: 6560        BCS     0x118c
+112c: 7320        DC.W    0x7320
+112e: 6e61        BGT     0x1191
+1130: 6d65        BLT     0x1197
+1132: 2069        MOVEA.L  29472(A1),A0
+1136: 4d61        DC.W    0x4d61
+1138: 7274        MOVEQ   #116,D1
+113a: 6120        BSR     0x115c
+113c: 4d61        DC.W    0x4d61
+113e: 6352        BLS     0x1192
+1140: 6173        BSR     0x11b5
+1142: 6361        BLS     0x11a5
+1144: 6c2e        BGE     0x1174
+1146: 1848        MOVEA.B  A0,A4
+1148: 6572        BCS     0x11bc
+114a: 206a        MOVEA.L  28514(A2),A0
+114e: 2069        MOVEA.L  29472(A1),A0
+1152: 6369        BLS     0x11bd
+1154: 7669        MOVEQ   #105,D3
+1156: 6320        BLS     0x1178
+1158: 6c65        BGE     0x11bf
+115a: 6164        BSR     0x11c0
+115c: 6572        BCS     0x11d0
+115e: 2e00        MOVE.L  D0,D7
+1160: 0000        ORI.B  #0x0 (0),D0
+
+1164: 4e56        LINK    A6,#0
+1168: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+116c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1170: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1174: a893        _MoveTo
+1176: 487a        PEA     44(PC) [0x11a4 ; pstr='Marta MacRascal` s job is civic leader. ']
+117a: a884        _DrawString
+117c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1180: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1184: a893        _MoveTo
+1186: 487a        PEA     70(PC) [0x11ce ; pstr='Her husband`s name is Mac MacRascal.']
+118a: a884        _DrawString
+118c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1190: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1194: a893        _MoveTo
+1196: 487a        PEA     92(PC) [0x11f4 ; pstr='His job is businessman.']
+119a: a884        _DrawString
+119c: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+11a0: 4e5e        UNLK    A6
+11a2: 4e75        RTS
+11a4: 284d        MOVEA.L  A5,A4
+11a6: 6172        BSR     0x121a
+11a8: 7461        MOVEQ   #97,D2
+11aa: 204d        MOVEA.L  A5,A0
+11ac: 6163        BSR     0x1211
+11ae: 5261        ADDQ.W  #1,-(A1)
+11b0: 7363        DC.W    0x7363
+11b2: 616c        BSR     0x1220
+11b4: 6020        BRA     0x11d6
+11b6: 7320        DC.W    0x7320
+11b8: 6a6f        BPL     0x1229
+11ba: 6220        BHI     0x11dc
+11bc: 6973        BVS     0x1231
+11be: 2063        MOVEA.L  -(A3),A0
+11c0: 6976        BVS     0x1238
+11c2: 6963        BVS     0x1227
+11c4: 206c        MOVEA.L  25953(A4),A0
+11c8: 6465        BCC     0x122f
+11ca: 722e        MOVEQ   #46,D1
+11cc: 2000        MOVE.L  D0,D0
+11ce: 2448        MOVEA.L  A0,A2
+11d0: 6572        BCS     0x1244
+11d2: 2068        MOVEA.L  30067(A0),A0
+11d6: 6261        BHI     0x1239
+11d8: 6e64        BGT     0x123e
+11da: 6073        BRA     0x124f
+11dc: 206e        MOVEA.L  24941(A6),A0
+11e0: 6520        BCS     0x1202
+11e2: 6973        BVS     0x1257
+11e4: 204d        MOVEA.L  A5,A0
+11e6: 6163        BSR     0x124b
+11e8: 204d        MOVEA.L  A5,A0
+11ea: 6163        BSR     0x124f
+11ec: 5261        ADDQ.W  #1,-(A1)
+11ee: 7363        DC.W    0x7363
+11f0: 616c        BSR     0x125e
+11f2: 2e00        MOVE.L  D0,D7
+11f4: 1748        MOVE.B  A0,26995(A3)
+11f8: 206a        MOVEA.L  28514(A2),A0
+11fc: 2069        MOVEA.L  29472(A1),A0
+1200: 6275        BHI     0x1277
+1202: 7369        DC.W    0x7369
+1204: 6e65        BGT     0x126b
+1206: 7373        DC.W    0x7373
+1208: 6d61        BLT     0x126b
+120a: 6e2e        BGT     0x123a
+120c: 0000        ORI.B  #0x0 (0),D0
+
+1210: 4e56        LINK    A6,#0
+1214: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1218: 3f3c        MOVE.W  #0x32 (50),-(A7)
+121c: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1220: a893        _MoveTo
+1222: 487a        PEA     44(PC) [0x1250 ; pstr='Nate Ness` s job is geologist. ']
+1226: a884        _DrawString
+1228: 3f3c        MOVE.W  #0x32 (50),-(A7)
+122c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1230: a893        _MoveTo
+1232: 487a        PEA     60(PC) [0x1270 ; pstr='His wife`s name is Nina Ness.']
+1236: a884        _DrawString
+1238: 3f3c        MOVE.W  #0x32 (50),-(A7)
+123c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1240: a893        _MoveTo
+1242: 487a        PEA     74(PC) [0x128e ; pstr='Her job is credit rating clerk.']
+1246: a884        _DrawString
+1248: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+124c: 4e5e        UNLK    A6
+124e: 4e75        RTS
+1250: 1f4e        MOVE.B  A6,24948(A7)
+1254: 6520        BCS     0x1276
+1256: 4e65        DC.W    0x4e65
+1258: 7373        DC.W    0x7373
+125a: 6020        BRA     0x127c
+125c: 7320        DC.W    0x7320
+125e: 6a6f        BPL     0x12cf
+1260: 6220        BHI     0x1282
+1262: 6973        BVS     0x12d7
+1264: 2067        MOVEA.L  -(A7),A0
+1266: 656f        BCS     0x12d7
+1268: 6c6f        BGE     0x12d9
+126a: 6769        BEQ     0x12d5
+126c: 7374        DC.W    0x7374
+126e: 2e20        MOVE.L  -(A0),D7
+1270: 1d48        MOVE.B  A0,26995(A6)
+1274: 2077        MOVEA.L  102(A7,D6.L),A0
+1278: 6560        BCS     0x12da
+127a: 7320        DC.W    0x7320
+127c: 6e61        BGT     0x12df
+127e: 6d65        BLT     0x12e5
+1280: 2069        MOVEA.L  29472(A1),A0
+1284: 4e69        DC.W    0x4e69
+1286: 6e61        BGT     0x12e9
+1288: 204e        MOVEA.L  A6,A0
+128a: 6573        BCS     0x12ff
+128c: 732e        DC.W    0x732e
+128e: 1f48        MOVE.B  A0,25970(A7)
+1292: 206a        MOVEA.L  28514(A2),A0
+1296: 2069        MOVEA.L  29472(A1),A0
+129a: 6372        BLS     0x130e
+129c: 6564        BCS     0x1302
+129e: 6974        BVS     0x1314
+12a0: 2072        MOVEA.L  116(A2,D6.W),A0
+12a4: 696e        BVS     0x1314
+12a6: 6720        BEQ     0x12c8
+12a8: 636c        BLS     0x1316
+12aa: 6572        BCS     0x131e
+12ac: 6b2e        BMI     0x12dc
+12ae: 0000        ORI.B  #0x0 (0),D0
+
+12b2: 4e56        LINK    A6,#0
+12b6: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+12ba: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12be: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12c2: a893        _MoveTo
+12c4: 487a        PEA     44(PC) [0x12f2 ; pstr='Nina Ness` s job is credit rating clerk. ']
+12c8: a884        _DrawString
+12ca: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12ce: 3f3c        MOVE.W  #0x46 (70),-(A7)
+12d2: a893        _MoveTo
+12d4: 487a        PEA     70(PC) [0x131c ; pstr='Her husband`s name is Nate Ness.']
+12d8: a884        _DrawString
+12da: 3f3c        MOVE.W  #0x32 (50),-(A7)
+12de: 3f3c        MOVE.W  #0x5a (90),-(A7)
+12e2: a893        _MoveTo
+12e4: 487a        PEA     88(PC) [0x133e ; pstr='His job is geologist.']
+12e8: a884        _DrawString
+12ea: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+12ee: 4e5e        UNLK    A6
+12f0: 4e75        RTS
+12f2: 294e        MOVE.L  A6,26990(A4)
+12f6: 6120        BSR     0x1318
+12f8: 4e65        DC.W    0x4e65
+12fa: 7373        DC.W    0x7373
+12fc: 6020        BRA     0x131e
+12fe: 7320        DC.W    0x7320
+1300: 6a6f        BPL     0x1371
+1302: 6220        BHI     0x1324
+1304: 6973        BVS     0x1379
+1306: 2063        MOVEA.L  -(A3),A0
+1308: 7265        MOVEQ   #101,D1
+130a: 6469        BCC     0x1375
+130c: 7420        MOVEQ   #32,D2
+130e: 7261        MOVEQ   #97,D1
+1310: 7469        MOVEQ   #105,D2
+1312: 6e67        BGT     0x137b
+1314: 2063        MOVEA.L  -(A3),A0
+1316: 6c65        BGE     0x137d
+1318: 726b        MOVEQ   #107,D1
+131a: 2e20        MOVE.L  -(A0),D7
+131c: 2048        MOVEA.L  A0,A0
+131e: 6572        BCS     0x1392
+1320: 2068        MOVEA.L  30067(A0),A0
+1324: 6261        BHI     0x1387
+1326: 6e64        BGT     0x138c
+1328: 6073        BRA     0x139d
+132a: 206e        MOVEA.L  24941(A6),A0
+132e: 6520        BCS     0x1350
+1330: 6973        BVS     0x13a5
+1332: 204e        MOVEA.L  A6,A0
+1334: 6174        BSR     0x13aa
+1336: 6520        BCS     0x1358
+1338: 4e65        DC.W    0x4e65
+133a: 7373        DC.W    0x7373
+133c: 2e00        MOVE.L  D0,D7
+133e: 1548        MOVE.B  A0,26995(A2)
+1342: 206a        MOVEA.L  28514(A2),A0
+1346: 2069        MOVEA.L  29472(A1),A0
+134a: 6765        BEQ     0x13b1
+134c: 6f6c        BLE     0x13ba
+134e: 6f67        BLE     0x13b7
+1350: 6973        BVS     0x13c5
+1352: 742e        MOVEQ   #46,D2
+1354: 0000        ORI.B  #0x0 (0),D0
+
+1358: 4e56        LINK    A6,#0
+135c: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1360: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1364: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1368: a893        _MoveTo
+136a: 487a        PEA     44(PC) [0x1398 ; pstr='Oscar Oaks` s job is tax man. ']
+136e: a884        _DrawString
+1370: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1374: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1378: a893        _MoveTo
+137a: 487a        PEA     60(PC) [0x13b8 ; pstr='His wife`s name is Olga Oaks.']
+137e: a884        _DrawString
+1380: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1384: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1388: a893        _MoveTo
+138a: 487a        PEA     74(PC) [0x13d6 ; pstr='Her job is geologist.']
+138e: a884        _DrawString
+1390: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1394: 4e5e        UNLK    A6
+1396: 4e75        RTS
+1398: 1e4f        MOVEA.B  A7,A7
+139a: 7363        DC.W    0x7363
+139c: 6172        BSR     0x1410
+139e: 204f        MOVEA.L  A7,A0
+13a0: 616b        BSR     0x140d
+13a2: 7360        DC.W    0x7360
+13a4: 2073        MOVEA.L  106(A3,D2.W),A0
+13a8: 6f62        BLE     0x140c
+13aa: 2069        MOVEA.L  29472(A1),A0
+13ae: 7461        MOVEQ   #97,D2
+13b0: 7820        MOVEQ   #32,D4
+13b2: 6d61        BLT     0x1415
+13b4: 6e2e        BGT     0x13e4
+13b6: 2000        MOVE.L  D0,D0
+13b8: 1d48        MOVE.B  A0,26995(A6)
+13bc: 2077        MOVEA.L  102(A7,D6.L),A0
+13c0: 6560        BCS     0x1422
+13c2: 7320        DC.W    0x7320
+13c4: 6e61        BGT     0x1427
+13c6: 6d65        BLT     0x142d
+13c8: 2069        MOVEA.L  29472(A1),A0
+13cc: 4f6c        DC.W    0x4f6c
+13ce: 6761        BEQ     0x1431
+13d0: 204f        MOVEA.L  A7,A0
+13d2: 616b        BSR     0x143f
+13d4: 732e        DC.W    0x732e
+13d6: 1548        MOVE.B  A0,25970(A2)
+13da: 206a        MOVEA.L  28514(A2),A0
+13de: 2069        MOVEA.L  29472(A1),A0
+13e2: 6765        BEQ     0x1449
+13e4: 6f6c        BLE     0x1452
+13e6: 6f67        BLE     0x144f
+13e8: 6973        BVS     0x145d
+13ea: 742e        MOVEQ   #46,D2
+13ec: 0000        ORI.B  #0x0 (0),D0
+
+13f0: 4e56        LINK    A6,#0
+13f4: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+13f8: 3f3c        MOVE.W  #0x32 (50),-(A7)
+13fc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1400: a893        _MoveTo
+1402: 487a        PEA     44(PC) [0x1430 ; pstr='Olga Oaks` s job is geologist. ']
+1406: a884        _DrawString
+1408: 3f3c        MOVE.W  #0x32 (50),-(A7)
+140c: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1410: a893        _MoveTo
+1412: 487a        PEA     60(PC) [0x1450 ; pstr='Her husband`s name is Oscar Oaks.']
+1416: a884        _DrawString
+1418: 3f3c        MOVE.W  #0x32 (50),-(A7)
+141c: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1420: a893        _MoveTo
+1422: 487a        PEA     78(PC) [0x1472 ; pstr='His job is tax man.']
+1426: a884        _DrawString
+1428: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+142c: 4e5e        UNLK    A6
+142e: 4e75        RTS
+1430: 1f4f        MOVE.B  A7,27751(A7)
+1434: 6120        BSR     0x1456
+1436: 4f61        DC.W    0x4f61
+1438: 6b73        BMI     0x14ad
+143a: 6020        BRA     0x145c
+143c: 7320        DC.W    0x7320
+143e: 6a6f        BPL     0x14af
+1440: 6220        BHI     0x1462
+1442: 6973        BVS     0x14b7
+1444: 2067        MOVEA.L  -(A7),A0
+1446: 656f        BCS     0x14b7
+1448: 6c6f        BGE     0x14b9
+144a: 6769        BEQ     0x14b5
+144c: 7374        DC.W    0x7374
+144e: 2e20        MOVE.L  -(A0),D7
+1450: 2148        MOVE.L  A0,25970(A0)
+1454: 2068        MOVEA.L  30067(A0),A0
+1458: 6261        BHI     0x14bb
+145a: 6e64        BGT     0x14c0
+145c: 6073        BRA     0x14d1
+145e: 206e        MOVEA.L  24941(A6),A0
+1462: 6520        BCS     0x1484
+1464: 6973        BVS     0x14d9
+1466: 204f        MOVEA.L  A7,A0
+1468: 7363        DC.W    0x7363
+146a: 6172        BSR     0x14de
+146c: 204f        MOVEA.L  A7,A0
+146e: 616b        BSR     0x14db
+1470: 732e        DC.W    0x732e
+1472: 1348        MOVE.B  A0,26995(A1)
+1476: 206a        MOVEA.L  28514(A2),A0
+147a: 2069        MOVEA.L  29472(A1),A0
+147e: 7461        MOVEQ   #97,D2
+1480: 7820        MOVEQ   #32,D4
+1482: 6d61        BLT     0x14e5
+1484: 6e2e        BGT     0x14b4
+1486: 0000        ORI.B  #0x0 (0),D0
+
+148a: 4e56        LINK    A6,#0
+148e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1492: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1496: 3f3c        MOVE.W  #0x32 (50),-(A7)
+149a: a893        _MoveTo
+149c: 487a        PEA     44(PC) [0x14ca ; pstr='Perry Parks` s job is district attorney. ']
+14a0: a884        _DrawString
+14a2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+14a6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+14aa: a893        _MoveTo
+14ac: 487a        PEA     70(PC) [0x14f4 ; pstr='His wife`s name is Patty Parks.']
+14b0: a884        _DrawString
+14b2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+14b6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+14ba: a893        _MoveTo
+14bc: 487a        PEA     86(PC) [0x1514 ; pstr='Her job is trust officer.']
+14c0: a884        _DrawString
+14c2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+14c6: 4e5e        UNLK    A6
+14c8: 4e75        RTS
+14ca: 2950        MOVE.L  (A0),25970(A4)
+14ce: 7279        MOVEQ   #121,D1
+14d0: 2050        MOVEA.L  (A0),A0
+14d2: 6172        BSR     0x1546
+14d4: 6b73        BMI     0x1549
+14d6: 6020        BRA     0x14f8
+14d8: 7320        DC.W    0x7320
+14da: 6a6f        BPL     0x154b
+14dc: 6220        BHI     0x14fe
+14de: 6973        BVS     0x1553
+14e0: 2064        MOVEA.L  -(A4),A0
+14e2: 6973        BVS     0x1557
+14e4: 7472        MOVEQ   #114,D2
+14e6: 6963        BVS     0x154b
+14e8: 7420        MOVEQ   #32,D2
+14ea: 6174        BSR     0x1560
+14ec: 746f        MOVEQ   #111,D2
+14ee: 726e        MOVEQ   #110,D1
+14f0: 6579        BCS     0x156b
+14f2: 2e20        MOVE.L  -(A0),D7
+14f4: 1f48        MOVE.B  A0,26995(A7)
+14f8: 2077        MOVEA.L  102(A7,D6.L),A0
+14fc: 6560        BCS     0x155e
+14fe: 7320        DC.W    0x7320
+1500: 6e61        BGT     0x1563
+1502: 6d65        BLT     0x1569
+1504: 2069        MOVEA.L  29472(A1),A0
+1508: 5061        ADDQ.W  #8,-(A1)
+150a: 7474        MOVEQ   #116,D2
+150c: 7920        DC.W    0x7920
+150e: 5061        ADDQ.W  #8,-(A1)
+1510: 726b        MOVEQ   #107,D1
+1512: 732e        DC.W    0x732e
+1514: 1948        MOVE.B  A0,25970(A4)
+1518: 206a        MOVEA.L  28514(A2),A0
+151c: 2069        MOVEA.L  29472(A1),A0
+1520: 7472        MOVEQ   #114,D2
+1522: 7573        DC.W    0x7573
+1524: 7420        MOVEQ   #32,D2
+1526: 6f66        BLE     0x158e
+1528: 6669        BNE     0x1593
+152a: 6365        BLS     0x1591
+152c: 722e        MOVEQ   #46,D1
+152e: 0000        ORI.B  #0x0 (0),D0
+
+1532: 4e56        LINK    A6,#0
+1536: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+153a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+153e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1542: a893        _MoveTo
+1544: 487a        PEA     44(PC) [0x1572 ; pstr='Patty Parks` s job is trust officer. ']
+1548: a884        _DrawString
+154a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+154e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1552: a893        _MoveTo
+1554: 487a        PEA     66(PC) [0x1598 ; pstr='Her husband`s name is Perry Parks.']
+1558: a884        _DrawString
+155a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+155e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1562: a893        _MoveTo
+1564: 487a        PEA     86(PC) [0x15bc ; pstr='His job is district attorney.']
+1568: a884        _DrawString
+156a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+156e: 4e5e        UNLK    A6
+1570: 4e75        RTS
+1572: 2550        MOVE.L  (A0),24948(A2)
+1576: 7479        MOVEQ   #121,D2
+1578: 2050        MOVEA.L  (A0),A0
+157a: 6172        BSR     0x15ee
+157c: 6b73        BMI     0x15f1
+157e: 6020        BRA     0x15a0
+1580: 7320        DC.W    0x7320
+1582: 6a6f        BPL     0x15f3
+1584: 6220        BHI     0x15a6
+1586: 6973        BVS     0x15fb
+1588: 2074        MOVEA.L  117(A4,D7.W),A0
+158c: 7374        DC.W    0x7374
+158e: 206f        MOVEA.L  26214(A7),A0
+1592: 6963        BVS     0x15f7
+1594: 6572        BCS     0x1608
+1596: 2e20        MOVE.L  -(A0),D7
+1598: 2248        MOVEA.L  A0,A1
+159a: 6572        BCS     0x160e
+159c: 2068        MOVEA.L  30067(A0),A0
+15a0: 6261        BHI     0x1603
+15a2: 6e64        BGT     0x1608
+15a4: 6073        BRA     0x1619
+15a6: 206e        MOVEA.L  24941(A6),A0
+15aa: 6520        BCS     0x15cc
+15ac: 6973        BVS     0x1621
+15ae: 2050        MOVEA.L  (A0),A0
+15b0: 6572        BCS     0x1624
+15b2: 7279        MOVEQ   #121,D1
+15b4: 2050        MOVEA.L  (A0),A0
+15b6: 6172        BSR     0x162a
+15b8: 6b73        BMI     0x162d
+15ba: 2e00        MOVE.L  D0,D7
+15bc: 1d48        MOVE.B  A0,26995(A6)
+15c0: 206a        MOVEA.L  28514(A2),A0
+15c4: 2069        MOVEA.L  29472(A1),A0
+15c8: 6469        BCC     0x1633
+15ca: 7374        DC.W    0x7374
+15cc: 7269        MOVEQ   #105,D1
+15ce: 6374        BLS     0x1644
+15d0: 2061        MOVEA.L  -(A1),A0
+15d2: 7474        MOVEQ   #116,D2
+15d4: 6f72        BLE     0x1648
+15d6: 6e65        BGT     0x163d
+15d8: 792e        DC.W    0x792e
+15da: 0000        ORI.B  #0x0 (0),D0
+
+15de: 4e56        LINK    A6,#0
+15e2: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+15e6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+15ea: 3f3c        MOVE.W  #0x32 (50),-(A7)
+15ee: a893        _MoveTo
+15f0: 487a        PEA     44(PC) [0x161e ; pstr='Ray Ryan` s job is widget inspector. ']
+15f4: a884        _DrawString
+15f6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+15fa: 3f3c        MOVE.W  #0x46 (70),-(A7)
+15fe: a893        _MoveTo
+1600: 487a        PEA     66(PC) [0x1644 ; pstr='His wife`s name is Rita Ryan.']
+1604: a884        _DrawString
+1606: 3f3c        MOVE.W  #0x32 (50),-(A7)
+160a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+160e: a893        _MoveTo
+1610: 487a        PEA     80(PC) [0x1662 ; pstr='Her job is landman.']
+1614: a884        _DrawString
+1616: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+161a: 4e5e        UNLK    A6
+161c: 4e75        RTS
+161e: 2552        MOVE.L  (A2),24953(A2)
+1622: 2052        MOVEA.L  (A2),A0
+1624: 7961        DC.W    0x7961
+1626: 6e60        BGT     0x1688
+1628: 2073        MOVEA.L  106(A3,D2.W),A0
+162c: 6f62        BLE     0x1690
+162e: 2069        MOVEA.L  29472(A1),A0
+1632: 7769        DC.W    0x7769
+1634: 6467        BCC     0x169d
+1636: 6574        BCS     0x16ac
+1638: 2069        MOVEA.L  28275(A1),A0
+163c: 7065        MOVEQ   #101,D0
+163e: 6374        BLS     0x16b4
+1640: 6f72        BLE     0x16b4
+1642: 2e20        MOVE.L  -(A0),D7
+1644: 1d48        MOVE.B  A0,26995(A6)
+1648: 2077        MOVEA.L  102(A7,D6.L),A0
+164c: 6560        BCS     0x16ae
+164e: 7320        DC.W    0x7320
+1650: 6e61        BGT     0x16b3
+1652: 6d65        BLT     0x16b9
+1654: 2069        MOVEA.L  29472(A1),A0
+1658: 5269        ADDQ.W  #1,29793(A1)
+165c: 2052        MOVEA.L  (A2),A0
+165e: 7961        DC.W    0x7961
+1660: 6e2e        BGT     0x1690
+1662: 1348        MOVE.B  A0,25970(A1)
+1666: 206a        MOVEA.L  28514(A2),A0
+166a: 2069        MOVEA.L  29472(A1),A0
+166e: 6c61        BGE     0x16d1
+1670: 6e64        BGT     0x16d6
+1672: 6d61        BLT     0x16d5
+1674: 6e2e        BGT     0x16a4
+1676: 0000        ORI.B  #0x0 (0),D0
+
+167a: 4e56        LINK    A6,#0
+167e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1682: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1686: 3f3c        MOVE.W  #0x32 (50),-(A7)
+168a: a893        _MoveTo
+168c: 487a        PEA     44(PC) [0x16ba ; pstr='Rita Ryan` s job is landman. ']
+1690: a884        _DrawString
+1692: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1696: 3f3c        MOVE.W  #0x46 (70),-(A7)
+169a: a893        _MoveTo
+169c: 487a        PEA     58(PC) [0x16d8 ; pstr='Her husband`s name is Ray Ryan.']
+16a0: a884        _DrawString
+16a2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+16a6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+16aa: a893        _MoveTo
+16ac: 487a        PEA     74(PC) [0x16f8 ; pstr='His job is widget inspector.']
+16b0: a884        _DrawString
+16b2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+16b6: 4e5e        UNLK    A6
+16b8: 4e75        RTS
+16ba: 1d52        MOVE.B  (A2),26996(A6)
+16be: 6120        BSR     0x16e0
+16c0: 5279        ADDQ.W  #1,(0x616e6020).L
+16c6: 7320        DC.W    0x7320
+16c8: 6a6f        BPL     0x1739
+16ca: 6220        BHI     0x16ec
+16cc: 6973        BVS     0x1741
+16ce: 206c        MOVEA.L  24942(A4),A0
+16d2: 646d        BCC     0x1741
+16d4: 616e        BSR     0x1744
+16d6: 2e20        MOVE.L  -(A0),D7
+16d8: 1f48        MOVE.B  A0,25970(A7)
+16dc: 2068        MOVEA.L  30067(A0),A0
+16e0: 6261        BHI     0x1743
+16e2: 6e64        BGT     0x1748
+16e4: 6073        BRA     0x1759
+16e6: 206e        MOVEA.L  24941(A6),A0
+16ea: 6520        BCS     0x170c
+16ec: 6973        BVS     0x1761
+16ee: 2052        MOVEA.L  (A2),A0
+16f0: 6179        BSR     0x176b
+16f2: 2052        MOVEA.L  (A2),A0
+16f4: 7961        DC.W    0x7961
+16f6: 6e2e        BGT     0x1726
+16f8: 1c48        MOVEA.B  A0,A6
+16fa: 6973        BVS     0x176f
+16fc: 206a        MOVEA.L  28514(A2),A0
+1700: 2069        MOVEA.L  29472(A1),A0
+1704: 7769        DC.W    0x7769
+1706: 6467        BCC     0x176f
+1708: 6574        BCS     0x177e
+170a: 2069        MOVEA.L  28275(A1),A0
+170e: 7065        MOVEQ   #101,D0
+1710: 6374        BLS     0x1786
+1712: 6f72        BLE     0x1786
+1714: 2e00        MOVE.L  D0,D7
+1716: 0000        ORI.B  #0x0 (0),D0
+
+171a: 4e56        LINK    A6,#0
+171e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1722: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1726: 3f3c        MOVE.W  #0x32 (50),-(A7)
+172a: a893        _MoveTo
+172c: 487a        PEA     44(PC) [0x175a ; pstr='Sam Smith` s job is trust officer. ']
+1730: a884        _DrawString
+1732: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1736: 3f3c        MOVE.W  #0x46 (70),-(A7)
+173a: a893        _MoveTo
+173c: 487a        PEA     64(PC) [0x177e ; pstr='His wife`s name is Sue Smith.']
+1740: a884        _DrawString
+1742: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1746: 3f3c        MOVE.W  #0x5a (90),-(A7)
+174a: a893        _MoveTo
+174c: 487a        PEA     78(PC) [0x179c ; pstr='Her job is special investigator.']
+1750: a884        _DrawString
+1752: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1756: 4e5e        UNLK    A6
+1758: 4e75        RTS
+175a: 2353        MOVE.L  (A3),24941(A1)
+175e: 2053        MOVEA.L  (A3),A0
+1760: 6d69        BLT     0x17cb
+1762: 7468        MOVEQ   #104,D2
+1764: 6020        BRA     0x1786
+1766: 7320        DC.W    0x7320
+1768: 6a6f        BPL     0x17d9
+176a: 6220        BHI     0x178c
+176c: 6973        BVS     0x17e1
+176e: 2074        MOVEA.L  117(A4,D7.W),A0
+1772: 7374        DC.W    0x7374
+1774: 206f        MOVEA.L  26214(A7),A0
+1778: 6963        BVS     0x17dd
+177a: 6572        BCS     0x17ee
+177c: 2e20        MOVE.L  -(A0),D7
+177e: 1d48        MOVE.B  A0,26995(A6)
+1782: 2077        MOVEA.L  102(A7,D6.L),A0
+1786: 6560        BCS     0x17e8
+1788: 7320        DC.W    0x7320
+178a: 6e61        BGT     0x17ed
+178c: 6d65        BLT     0x17f3
+178e: 2069        MOVEA.L  29472(A1),A0
+1792: 5375        SUBQ.W  #1,32(A5,D6.W)
+1796: 536d        SUBQ.W  #1,26996(A5)
+179a: 682e        BVC     0x17ca
+179c: 2048        MOVEA.L  A0,A0
+179e: 6572        BCS     0x1812
+17a0: 206a        MOVEA.L  28514(A2),A0
+17a4: 2069        MOVEA.L  29472(A1),A0
+17a8: 7370        DC.W    0x7370
+17aa: 6563        BCS     0x180f
+17ac: 6961        BVS     0x180f
+17ae: 6c20        BGE     0x17d0
+17b0: 696e        BVS     0x1820
+17b2: 7665        MOVEQ   #101,D3
+17b4: 7374        DC.W    0x7374
+17b6: 6967        BVS     0x181f
+17b8: 6174        BSR     0x182e
+17ba: 6f72        BLE     0x182e
+17bc: 2e00        MOVE.L  D0,D7
+17be: 0000        ORI.B  #0x0 (0),D0
+
+17c2: 4e56        LINK    A6,#0
+17c6: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+17ca: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17ce: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17d2: a893        _MoveTo
+17d4: 487a        PEA     44(PC) [0x1802 ; pstr='Sue Smith` s job is special investigator. ']
+17d8: a884        _DrawString
+17da: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17de: 3f3c        MOVE.W  #0x46 (70),-(A7)
+17e2: a893        _MoveTo
+17e4: 487a        PEA     72(PC) [0x182e ; pstr='Her husband`s name is Sam Smith.']
+17e8: a884        _DrawString
+17ea: 3f3c        MOVE.W  #0x32 (50),-(A7)
+17ee: 3f3c        MOVE.W  #0x5a (90),-(A7)
+17f2: a893        _MoveTo
+17f4: 487a        PEA     90(PC) [0x1850 ; pstr='His job is trust officer.']
+17f8: a884        _DrawString
+17fa: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+17fe: 4e5e        UNLK    A6
+1800: 4e75        RTS
+1802: 2a53        MOVEA.L  (A3),A5
+1804: 7565        DC.W    0x7565
+1806: 2053        MOVEA.L  (A3),A0
+1808: 6d69        BLT     0x1873
+180a: 7468        MOVEQ   #104,D2
+180c: 6020        BRA     0x182e
+180e: 7320        DC.W    0x7320
+1810: 6a6f        BPL     0x1881
+1812: 6220        BHI     0x1834
+1814: 6973        BVS     0x1889
+1816: 2073        MOVEA.L  101(A3,D7.W),A0
+181a: 6369        BLS     0x1885
+181c: 616c        BSR     0x188a
+181e: 2069        MOVEA.L  28278(A1),A0
+1822: 6573        BCS     0x1897
+1824: 7469        MOVEQ   #105,D2
+1826: 6761        BEQ     0x1889
+1828: 746f        MOVEQ   #111,D2
+182a: 722e        MOVEQ   #46,D1
+182c: 2000        MOVE.L  D0,D0
+182e: 2048        MOVEA.L  A0,A0
+1830: 6572        BCS     0x18a4
+1832: 2068        MOVEA.L  30067(A0),A0
+1836: 6261        BHI     0x1899
+1838: 6e64        BGT     0x189e
+183a: 6073        BRA     0x18af
+183c: 206e        MOVEA.L  24941(A6),A0
+1840: 6520        BCS     0x1862
+1842: 6973        BVS     0x18b7
+1844: 2053        MOVEA.L  (A3),A0
+1846: 616d        BSR     0x18b5
+1848: 2053        MOVEA.L  (A3),A0
+184a: 6d69        BLT     0x18b5
+184c: 7468        MOVEQ   #104,D2
+184e: 2e00        MOVE.L  D0,D7
+1850: 1948        MOVE.B  A0,26995(A4)
+1854: 206a        MOVEA.L  28514(A2),A0
+1858: 2069        MOVEA.L  29472(A1),A0
+185c: 7472        MOVEQ   #114,D2
+185e: 7573        DC.W    0x7573
+1860: 7420        MOVEQ   #32,D2
+1862: 6f66        BLE     0x18ca
+1864: 6669        BNE     0x18cf
+1866: 6365        BLS     0x18cd
+1868: 722e        MOVEQ   #46,D1
+186a: 0000        ORI.B  #0x0 (0),D0
+
+186e: 4e56        LINK    A6,#0
+1872: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1876: 3f3c        MOVE.W  #0x32 (50),-(A7)
+187a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+187e: a893        _MoveTo
+1880: 487a        PEA     44(PC) [0x18ae ; pstr='Ted Taft` s job is political chairman. ']
+1884: a884        _DrawString
+1886: 3f3c        MOVE.W  #0x32 (50),-(A7)
+188a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+188e: a893        _MoveTo
+1890: 487a        PEA     68(PC) [0x18d6 ; pstr='His wife`s name is Tina Taft.']
+1894: a884        _DrawString
+1896: 3f3c        MOVE.W  #0x32 (50),-(A7)
+189a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+189e: a893        _MoveTo
+18a0: 487a        PEA     82(PC) [0x18f4 ; pstr='Her job is civic leader.']
+18a4: a884        _DrawString
+18a6: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+18aa: 4e5e        UNLK    A6
+18ac: 4e75        RTS
+18ae: 2754        MOVE.L  (A4),25956(A3)
+18b2: 2054        MOVEA.L  (A4),A0
+18b4: 6166        BSR     0x191c
+18b6: 7460        MOVEQ   #96,D2
+18b8: 2073        MOVEA.L  106(A3,D2.W),A0
+18bc: 6f62        BLE     0x1920
+18be: 2069        MOVEA.L  29472(A1),A0
+18c2: 706f        MOVEQ   #111,D0
+18c4: 6c69        BGE     0x192f
+18c6: 7469        MOVEQ   #105,D2
+18c8: 6361        BLS     0x192b
+18ca: 6c20        BGE     0x18ec
+18cc: 6368        BLS     0x1936
+18ce: 6169        BSR     0x1939
+18d0: 726d        MOVEQ   #109,D1
+18d2: 616e        BSR     0x1942
+18d4: 2e20        MOVE.L  -(A0),D7
+18d6: 1d48        MOVE.B  A0,26995(A6)
+18da: 2077        MOVEA.L  102(A7,D6.L),A0
+18de: 6560        BCS     0x1940
+18e0: 7320        DC.W    0x7320
+18e2: 6e61        BGT     0x1945
+18e4: 6d65        BLT     0x194b
+18e6: 2069        MOVEA.L  29472(A1),A0
+18ea: 5469        ADDQ.W  #2,28257(A1)
+18ee: 2054        MOVEA.L  (A4),A0
+18f0: 6166        BSR     0x1958
+18f2: 742e        MOVEQ   #46,D2
+18f4: 1848        MOVEA.B  A0,A4
+18f6: 6572        BCS     0x196a
+18f8: 206a        MOVEA.L  28514(A2),A0
+18fc: 2069        MOVEA.L  29472(A1),A0
+1900: 6369        BLS     0x196b
+1902: 7669        MOVEQ   #105,D3
+1904: 6320        BLS     0x1926
+1906: 6c65        BGE     0x196d
+1908: 6164        BSR     0x196e
+190a: 6572        BCS     0x197e
+190c: 2e00        MOVE.L  D0,D7
+190e: 0000        ORI.B  #0x0 (0),D0
+
+1912: 4e56        LINK    A6,#0
+1916: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+191a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+191e: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1922: a893        _MoveTo
+1924: 487a        PEA     44(PC) [0x1952 ; pstr='Tina Taft` s job is civic leader. ']
+1928: a884        _DrawString
+192a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+192e: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1932: a893        _MoveTo
+1934: 487a        PEA     64(PC) [0x1976 ; pstr='Her husband`s name is Ted Taft.']
+1938: a884        _DrawString
+193a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+193e: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1942: a893        _MoveTo
+1944: 487a        PEA     80(PC) [0x1996 ; pstr='His job is political chairman.']
+1948: a884        _DrawString
+194a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+194e: 4e5e        UNLK    A6
+1950: 4e75        RTS
+1952: 2254        MOVEA.L  (A4),A1
+1954: 696e        BVS     0x19c4
+1956: 6120        BSR     0x1978
+1958: 5461        ADDQ.W  #2,-(A1)
+195a: 6674        BNE     0x19d0
+195c: 6020        BRA     0x197e
+195e: 7320        DC.W    0x7320
+1960: 6a6f        BPL     0x19d1
+1962: 6220        BHI     0x1984
+1964: 6973        BVS     0x19d9
+1966: 2063        MOVEA.L  -(A3),A0
+1968: 6976        BVS     0x19e0
+196a: 6963        BVS     0x19cf
+196c: 206c        MOVEA.L  25953(A4),A0
+1970: 6465        BCC     0x19d7
+1972: 722e        MOVEQ   #46,D1
+1974: 2000        MOVE.L  D0,D0
+1976: 1f48        MOVE.B  A0,25970(A7)
+197a: 2068        MOVEA.L  30067(A0),A0
+197e: 6261        BHI     0x19e1
+1980: 6e64        BGT     0x19e6
+1982: 6073        BRA     0x19f7
+1984: 206e        MOVEA.L  24941(A6),A0
+1988: 6520        BCS     0x19aa
+198a: 6973        BVS     0x19ff
+198c: 2054        MOVEA.L  (A4),A0
+198e: 6564        BCS     0x19f4
+1990: 2054        MOVEA.L  (A4),A0
+1992: 6166        BSR     0x19fa
+1994: 742e        MOVEQ   #46,D2
+1996: 1e48        MOVEA.B  A0,A7
+1998: 6973        BVS     0x1a0d
+199a: 206a        MOVEA.L  28514(A2),A0
+199e: 2069        MOVEA.L  29472(A1),A0
+19a2: 706f        MOVEQ   #111,D0
+19a4: 6c69        BGE     0x1a0f
+19a6: 7469        MOVEQ   #105,D2
+19a8: 6361        BLS     0x1a0b
+19aa: 6c20        BGE     0x19cc
+19ac: 6368        BLS     0x1a16
+19ae: 6169        BSR     0x1a19
+19b0: 726d        MOVEQ   #109,D1
+19b2: 616e        BSR     0x1a22
+19b4: 2e00        MOVE.L  D0,D7
+19b6: 0000        ORI.B  #0x0 (0),D0
+
+19ba: 4e56        LINK    A6,#0
+19be: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+19c2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19c6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19ca: a893        _MoveTo
+19cc: 487a        PEA     44(PC) [0x19fa ; pstr='Van Vail` s job is lawyer. ']
+19d0: a884        _DrawString
+19d2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19d6: 3f3c        MOVE.W  #0x46 (70),-(A7)
+19da: a893        _MoveTo
+19dc: 487a        PEA     56(PC) [0x1a16 ; pstr='His wife`s name is Vera Vail.']
+19e0: a884        _DrawString
+19e2: 3f3c        MOVE.W  #0x32 (50),-(A7)
+19e6: 3f3c        MOVE.W  #0x5a (90),-(A7)
+19ea: a893        _MoveTo
+19ec: 487a        PEA     70(PC) [0x1a34 ; pstr='Her job is vice president of the widget company.']
+19f0: a884        _DrawString
+19f2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+19f6: 4e5e        UNLK    A6
+19f8: 4e75        RTS
+19fa: 1b56        MOVE.B  (A6),24942(A5)
+19fe: 2056        MOVEA.L  (A6),A0
+1a00: 6169        BSR     0x1a6b
+1a02: 6c60        BGE     0x1a64
+1a04: 2073        MOVEA.L  106(A3,D2.W),A0
+1a08: 6f62        BLE     0x1a6c
+1a0a: 2069        MOVEA.L  29472(A1),A0
+1a0e: 6c61        BGE     0x1a71
+1a10: 7779        DC.W    0x7779
+1a12: 6572        BCS     0x1a86
+1a14: 2e20        MOVE.L  -(A0),D7
+1a16: 1d48        MOVE.B  A0,26995(A6)
+1a1a: 2077        MOVEA.L  102(A7,D6.L),A0
+1a1e: 6560        BCS     0x1a80
+1a20: 7320        DC.W    0x7320
+1a22: 6e61        BGT     0x1a85
+1a24: 6d65        BLT     0x1a8b
+1a26: 2069        MOVEA.L  29472(A1),A0
+1a2a: 5665        ADDQ.W  #3,-(A5)
+1a2c: 7261        MOVEQ   #97,D1
+1a2e: 2056        MOVEA.L  (A6),A0
+1a30: 6169        BSR     0x1a9b
+1a32: 6c2e        BGE     0x1a62
+1a34: 3048        MOVEA.W  A0,A0
+1a36: 6572        BCS     0x1aaa
+1a38: 206a        MOVEA.L  28514(A2),A0
+1a3c: 2069        MOVEA.L  29472(A1),A0
+1a40: 7669        MOVEQ   #105,D3
+1a42: 6365        BLS     0x1aa9
+1a44: 2070        MOVEA.L  101(A0,D7.W),A0
+1a48: 7369        DC.W    0x7369
+1a4a: 6465        BCC     0x1ab1
+1a4c: 6e74        BGT     0x1ac2
+1a4e: 206f        MOVEA.L  26144(A7),A0
+1a52: 7468        MOVEQ   #104,D2
+1a54: 6520        BCS     0x1a76
+1a56: 7769        DC.W    0x7769
+1a58: 6467        BCC     0x1ac1
+1a5a: 6574        BCS     0x1ad0
+1a5c: 2063        MOVEA.L  -(A3),A0
+1a5e: 6f6d        BLE     0x1acd
+1a60: 7061        MOVEQ   #97,D0
+1a62: 6e79        BGT     0x1add
+1a64: 2e00        MOVE.L  D0,D7
+1a66: 0000        ORI.B  #0x0 (0),D0
+
+1a6a: 4e56        LINK    A6,#0
+1a6e: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1a72: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a76: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a7a: a893        _MoveTo
+1a7c: 487a        PEA     44(PC) [0x1aaa ; pstr='Vera Vail` s job is vice president of the widget company. ']
+1a80: a884        _DrawString
+1a82: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a86: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1a8a: a893        _MoveTo
+1a8c: 487a        PEA     88(PC) [0x1ae6 ; pstr='Her husband`s name is Van Vail.']
+1a90: a884        _DrawString
+1a92: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1a96: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1a9a: a893        _MoveTo
+1a9c: 487a        PEA     104(PC) [0x1b06 ; pstr='His job is lawyer.']
+1aa0: a884        _DrawString
+1aa2: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1aa6: 4e5e        UNLK    A6
+1aa8: 4e75        RTS
+1aaa: 3a56        MOVEA.W  (A6),A5
+1aac: 6572        BCS     0x1b20
+1aae: 6120        BSR     0x1ad0
+1ab0: 5661        ADDQ.W  #3,-(A1)
+1ab2: 696c        BVS     0x1b20
+1ab4: 6020        BRA     0x1ad6
+1ab6: 7320        DC.W    0x7320
+1ab8: 6a6f        BPL     0x1b29
+1aba: 6220        BHI     0x1adc
+1abc: 6973        BVS     0x1b31
+1abe: 2076        MOVEA.L  99(A6,D6.L),A0
+1ac2: 6520        BCS     0x1ae4
+1ac4: 7072        MOVEQ   #114,D0
+1ac6: 6573        BCS     0x1b3b
+1ac8: 6964        BVS     0x1b2e
+1aca: 656e        BCS     0x1b3a
+1acc: 7420        MOVEQ   #32,D2
+1ace: 6f66        BLE     0x1b36
+1ad0: 2074        MOVEA.L  101(A4,D6.L),A0
+1ad4: 2077        MOVEA.L  100(A7,D6.L),A0
+1ad8: 6765        BEQ     0x1b3f
+1ada: 7420        MOVEQ   #32,D2
+1adc: 636f        BLS     0x1b4d
+1ade: 6d70        BLT     0x1b50
+1ae0: 616e        BSR     0x1b50
+1ae2: 792e        DC.W    0x792e
+1ae4: 2000        MOVE.L  D0,D0
+1ae6: 1f48        MOVE.B  A0,25970(A7)
+1aea: 2068        MOVEA.L  30067(A0),A0
+1aee: 6261        BHI     0x1b51
+1af0: 6e64        BGT     0x1b56
+1af2: 6073        BRA     0x1b67
+1af4: 206e        MOVEA.L  24941(A6),A0
+1af8: 6520        BCS     0x1b1a
+1afa: 6973        BVS     0x1b6f
+1afc: 2056        MOVEA.L  (A6),A0
+1afe: 616e        BSR     0x1b6e
+1b00: 2056        MOVEA.L  (A6),A0
+1b02: 6169        BSR     0x1b6d
+1b04: 6c2e        BGE     0x1b34
+1b06: 1248        MOVEA.B  A0,A1
+1b08: 6973        BVS     0x1b7d
+1b0a: 206a        MOVEA.L  28514(A2),A0
+1b0e: 2069        MOVEA.L  29472(A1),A0
+1b12: 6c61        BGE     0x1b75
+1b14: 7779        DC.W    0x7779
+1b16: 6572        BCS     0x1b8a
+1b18: 2e00        MOVE.L  D0,D7
+1b1a: 0000        ORI.B  #0x0 (0),D0
+
+1b1e: 4e56        LINK    A6,#0
+1b22: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1b26: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b2a: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b2e: a893        _MoveTo
+1b30: 487a        PEA     44(PC) [0x1b5e ; pstr='Ward Wade` s job is president of the widget company.']
+1b34: a884        _DrawString
+1b36: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b3a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1b3e: a893        _MoveTo
+1b40: 487a        PEA     82(PC) [0x1b94 ; pstr='His wife`s name is Willa Wade.']
+1b44: a884        _DrawString
+1b46: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1b4a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1b4e: a893        _MoveTo
+1b50: 487a        PEA     98(PC) [0x1bb4 ; pstr='Her job is civic leader.']
+1b54: a884        _DrawString
+1b56: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1b5a: 4e5e        UNLK    A6
+1b5c: 4e75        RTS
+1b5e: 3457        MOVEA.W  (A7),A2
+1b60: 6172        BSR     0x1bd4
+1b62: 6420        BCC     0x1b84
+1b64: 5761        SUBQ.W  #3,-(A1)
+1b66: 6465        BCC     0x1bcd
+1b68: 6020        BRA     0x1b8a
+1b6a: 7320        DC.W    0x7320
+1b6c: 6a6f        BPL     0x1bdd
+1b6e: 6220        BHI     0x1b90
+1b70: 6973        BVS     0x1be5
+1b72: 2070        MOVEA.L  101(A0,D7.W),A0
+1b76: 7369        DC.W    0x7369
+1b78: 6465        BCC     0x1bdf
+1b7a: 6e74        BGT     0x1bf0
+1b7c: 206f        MOVEA.L  26144(A7),A0
+1b80: 7468        MOVEQ   #104,D2
+1b82: 6520        BCS     0x1ba4
+1b84: 7769        DC.W    0x7769
+1b86: 6467        BCC     0x1bef
+1b88: 6574        BCS     0x1bfe
+1b8a: 2063        MOVEA.L  -(A3),A0
+1b8c: 6f6d        BLE     0x1bfb
+1b8e: 7061        MOVEQ   #97,D0
+1b90: 6e79        BGT     0x1c0b
+1b92: 2e00        MOVE.L  D0,D7
+1b94: 1e48        MOVEA.B  A0,A7
+1b96: 6973        BVS     0x1c0b
+1b98: 2077        MOVEA.L  102(A7,D6.L),A0
+1b9c: 6560        BCS     0x1bfe
+1b9e: 7320        DC.W    0x7320
+1ba0: 6e61        BGT     0x1c03
+1ba2: 6d65        BLT     0x1c09
+1ba4: 2069        MOVEA.L  29472(A1),A0
+1ba8: 5769        SUBQ.W  #3,27756(A1)
+1bac: 6120        BSR     0x1bce
+1bae: 5761        SUBQ.W  #3,-(A1)
+1bb0: 6465        BCC     0x1c17
+1bb2: 2e00        MOVE.L  D0,D7
+1bb4: 1848        MOVEA.B  A0,A4
+1bb6: 6572        BCS     0x1c2a
+1bb8: 206a        MOVEA.L  28514(A2),A0
+1bbc: 2069        MOVEA.L  29472(A1),A0
+1bc0: 6369        BLS     0x1c2b
+1bc2: 7669        MOVEQ   #105,D3
+1bc4: 6320        BLS     0x1be6
+1bc6: 6c65        BGE     0x1c2d
+1bc8: 6164        BSR     0x1c2e
+1bca: 6572        BCS     0x1c3e
+1bcc: 2e00        MOVE.L  D0,D7
+1bce: 0000        ORI.B  #0x0 (0),D0
+
+1bd2: 4e56        LINK    A6,#0
+1bd6: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+1bda: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bde: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1be2: a893        _MoveTo
+1be4: 487a        PEA     44(PC) [0x1c12 ; pstr='Willa Wade` s job is civic leader. ']
+1be8: a884        _DrawString
+1bea: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bee: 3f3c        MOVE.W  #0x46 (70),-(A7)
+1bf2: a893        _MoveTo
+1bf4: 487a        PEA     64(PC) [0x1c36 ; pstr='Her husband`s name is Ward Wade.']
+1bf8: a884        _DrawString
+1bfa: 3f3c        MOVE.W  #0x32 (50),-(A7)
+1bfe: 3f3c        MOVE.W  #0x5a (90),-(A7)
+1c02: a893        _MoveTo
+1c04: 487a        PEA     82(PC) [0x1c58 ; pstr='His job is president of the widget company.']
+1c08: a884        _DrawString
+1c0a: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+1c0e: 4e5e        UNLK    A6
+1c10: 4e75        RTS
+1c12: 2357        MOVE.L  (A7),26988(A1)
+1c16: 6c61        BGE     0x1c79
+1c18: 2057        MOVEA.L  (A7),A0
+1c1a: 6164        BSR     0x1c80
+1c1c: 6560        BCS     0x1c7e
+1c1e: 2073        MOVEA.L  106(A3,D2.W),A0
+1c22: 6f62        BLE     0x1c86
+1c24: 2069        MOVEA.L  29472(A1),A0
+1c28: 6369        BLS     0x1c93
+1c2a: 7669        MOVEQ   #105,D3
+1c2c: 6320        BLS     0x1c4e
+1c2e: 6c65        BGE     0x1c95
+1c30: 6164        BSR     0x1c96
+1c32: 6572        BCS     0x1ca6
+1c34: 2e20        MOVE.L  -(A0),D7
+1c36: 2048        MOVEA.L  A0,A0
+1c38: 6572        BCS     0x1cac
+1c3a: 2068        MOVEA.L  30067(A0),A0
+1c3e: 6261        BHI     0x1ca1
+1c40: 6e64        BGT     0x1ca6
+1c42: 6073        BRA     0x1cb7
+1c44: 206e        MOVEA.L  24941(A6),A0
+1c48: 6520        BCS     0x1c6a
+1c4a: 6973        BVS     0x1cbf
+1c4c: 2057        MOVEA.L  (A7),A0
+1c4e: 6172        BSR     0x1cc2
+1c50: 6420        BCC     0x1c72
+1c52: 5761        SUBQ.W  #3,-(A1)
+1c54: 6465        BCC     0x1cbb
+1c56: 2e00        MOVE.L  D0,D7
+1c58: 2b48        MOVE.L  A0,26995(A5)
+1c5c: 206a        MOVEA.L  28514(A2),A0
+1c60: 2069        MOVEA.L  29472(A1),A0
+1c64: 7072        MOVEQ   #114,D0
+1c66: 6573        BCS     0x1cdb
+1c68: 6964        BVS     0x1cce
+1c6a: 656e        BCS     0x1cda
+1c6c: 7420        MOVEQ   #32,D2
+1c6e: 6f66        BLE     0x1cd6
+1c70: 2074        MOVEA.L  101(A4,D6.L),A0
+1c74: 2077        MOVEA.L  100(A7,D6.L),A0
+1c78: 6765        BEQ     0x1cdf
+1c7a: 7420        MOVEQ   #32,D2
+1c7c: 636f        BLS     0x1ced
+1c7e: 6d70        BLT     0x1cf0
+1c80: 616e        BSR     0x1cf0
+1c82: 792e        DC.W    0x792e
+1c84: 0000        ORI.B  #0x0 (0),D0
+
+1c88: 4e56        LINK    A6,#0
+1c8c: 302e        MOVE.W  8(A6),D0
+1c90: 0c40        CMPI.W  #0x2bc (700),D0
+1c94: 6600        BNE     0x1ca0
+1c98: 4ead        JSR     250(A5) [CODE_5+0x42]
+1c9c: 6000        BRA     0x1f4c
+1ca0: 0c40        CMPI.W  #0x2bd (701),D0
+1ca4: 6600        BNE     0x1cb0
+1ca8: 4ead        JSR     258(A5) [CODE_5+0xd6]
+1cac: 6000        BRA     0x1f4c
+1cb0: 0c40        CMPI.W  #0x2be (702),D0
+1cb4: 6600        BNE     0x1cc0
+1cb8: 4ead        JSR     266(A5) [CODE_5+0x170]
+1cbc: 6000        BRA     0x1f4c
+1cc0: 0c40        CMPI.W  #0x2bf (703),D0
+1cc4: 6600        BNE     0x1cd0
+1cc8: 4ead        JSR     274(A5) [CODE_5+0x214]
+1ccc: 6000        BRA     0x1f4c
+1cd0: 0c40        CMPI.W  #0x2c0 (704),D0
+1cd4: 6600        BNE     0x1ce0
+1cd8: 4ead        JSR     282(A5) [CODE_5+0x2bc]
+1cdc: 6000        BRA     0x1f4c
+1ce0: 0c40        CMPI.W  #0x2c1 (705),D0
+1ce4: 6600        BNE     0x1cf0
+1ce8: 4ead        JSR     290(A5) [CODE_5+0x360]
+1cec: 6000        BRA     0x1f4c
+1cf0: 0c40        CMPI.W  #0x2c2 (706),D0
+1cf4: 6600        BNE     0x1d00
+1cf8: 4ead        JSR     298(A5) [CODE_5+0x406]
+1cfc: 6000        BRA     0x1f4c
+1d00: 0c40        CMPI.W  #0x2c3 (707),D0
+1d04: 6600        BNE     0x1d10
+1d08: 4ead        JSR     306(A5) [CODE_5+0x4a8]
+1d0c: 6000        BRA     0x1f4c
+1d10: 0c40        CMPI.W  #0x2c4 (708),D0
+1d14: 6600        BNE     0x1d20
+1d18: 4ead        JSR     314(A5) [CODE_5+0x54e]
+1d1c: 6000        BRA     0x1f4c
+1d20: 0c40        CMPI.W  #0x2c5 (709),D0
+1d24: 6600        BNE     0x1d30
+1d28: 4ead        JSR     322(A5) [CODE_5+0x5f8]
+1d2c: 6000        BRA     0x1f4c
+1d30: 0c40        CMPI.W  #0x2c6 (710),D0
+1d34: 6600        BNE     0x1d40
+1d38: 4ead        JSR     330(A5) [CODE_5+0x6a6]
+1d3c: 6000        BRA     0x1f4c
+1d40: 0c40        CMPI.W  #0x2c7 (711),D0
+1d44: 6600        BNE     0x1d50
+1d48: 4ead        JSR     338(A5) [CODE_5+0x742]
+1d4c: 6000        BRA     0x1f4c
+1d50: 0c40        CMPI.W  #0x2c8 (712),D0
+1d54: 6600        BNE     0x1d60
+1d58: 4ead        JSR     346(A5) [CODE_5+0x7e2]
+1d5c: 6000        BRA     0x1f4c
+1d60: 0c40        CMPI.W  #0x2c9 (713),D0
+1d64: 6600        BNE     0x1d70
+1d68: 4ead        JSR     354(A5) [CODE_5+0x892]
+1d6c: 6000        BRA     0x1f4c
+1d70: 0c40        CMPI.W  #0x2ca (714),D0
+1d74: 6600        BNE     0x1d80
+1d78: 4ead        JSR     362(A5) [CODE_5+0x944]
+1d7c: 6000        BRA     0x1f4c
+1d80: 0c40        CMPI.W  #0x2cb (715),D0
+1d84: 6600        BNE     0x1d90
+1d88: 4ead        JSR     370(A5) [CODE_5+0x9e0]
+1d8c: 6000        BRA     0x1f4c
+1d90: 0c40        CMPI.W  #0x2cc (716),D0
+1d94: 6600        BNE     0x1da0
+1d98: 4ead        JSR     378(A5) [CODE_5+0xa7e]
+1d9c: 6000        BRA     0x1f4c
+1da0: 0c40        CMPI.W  #0x2cd (717),D0
+1da4: 6600        BNE     0x1db0
+1da8: 4ead        JSR     386(A5) [CODE_5+0xb1a]
+1dac: 6000        BRA     0x1f4c
+1db0: 0c40        CMPI.W  #0x2ce (718),D0
+1db4: 6600        BNE     0x1dc0
+1db8: 4ead        JSR     394(A5) [CODE_5+0xbb8]
+1dbc: 6000        BRA     0x1f4c
+1dc0: 0c40        CMPI.W  #0x2cf (719),D0
+1dc4: 6600        BNE     0x1dd0
+1dc8: 4ead        JSR     402(A5) [CODE_5+0xc50]
+1dcc: 6000        BRA     0x1f4c
+1dd0: 0c40        CMPI.W  #0x2d0 (720),D0
+1dd4: 6600        BNE     0x1de0
+1dd8: 4ead        JSR     410(A5) [CODE_5+0xcea]
+1ddc: 6000        BRA     0x1f4c
+1de0: 0c40        CMPI.W  #0x2d1 (721),D0
+1de4: 6600        BNE     0x1df0
+1de8: 4ead        JSR     418(A5) [CODE_5+0xd8c]
+1dec: 6000        BRA     0x1f4c
+1df0: 0c40        CMPI.W  #0x2d2 (722),D0
+1df4: 6600        BNE     0x1e00
+1df8: 4ead        JSR     426(A5) [CODE_5+0xe32]
+1dfc: 6000        BRA     0x1f4c
+1e00: 0c40        CMPI.W  #0x2d3 (723),D0
+1e04: 6600        BNE     0x1e10
+1e08: 4ead        JSR     434(A5) [CODE_5+0xed4]
+1e0c: 6000        BRA     0x1f4c
+1e10: 0c40        CMPI.W  #0x2d4 (724),D0
+1e14: 6600        BNE     0x1e20
+1e18: 4ead        JSR     442(A5) [CODE_5+0xf7a]
+1e1c: 6000        BRA     0x1f4c
+1e20: 0c40        CMPI.W  #0x2d5 (725),D0
+1e24: 6600        BNE     0x1e30
+1e28: 4ead        JSR     450(A5) [CODE_5+0x101a]
+1e2c: 6000        BRA     0x1f4c
+1e30: 0c40        CMPI.W  #0x2d6 (726),D0
+1e34: 6600        BNE     0x1e40
+1e38: 4ead        JSR     458(A5) [CODE_5+0x10bc]
+1e3c: 6000        BRA     0x1f4c
+1e40: 0c40        CMPI.W  #0x2d7 (727),D0
+1e44: 6600        BNE     0x1e50
+1e48: 4ead        JSR     466(A5) [CODE_5+0x1164]
+1e4c: 6000        BRA     0x1f4c
+1e50: 0c40        CMPI.W  #0x2d8 (728),D0
+1e54: 6600        BNE     0x1e60
+1e58: 4ead        JSR     474(A5) [CODE_5+0x1210]
+1e5c: 6000        BRA     0x1f4c
+1e60: 0c40        CMPI.W  #0x2d9 (729),D0
+1e64: 6600        BNE     0x1e70
+1e68: 4ead        JSR     482(A5) [CODE_5+0x12b2]
+1e6c: 6000        BRA     0x1f4c
+1e70: 0c40        CMPI.W  #0x2da (730),D0
+1e74: 6600        BNE     0x1e80
+1e78: 4ead        JSR     490(A5) [CODE_5+0x1358]
+1e7c: 6000        BRA     0x1f4c
+1e80: 0c40        CMPI.W  #0x2db (731),D0
+1e84: 6600        BNE     0x1e90
+1e88: 4ead        JSR     498(A5) [CODE_5+0x13f0]
+1e8c: 6000        BRA     0x1f4c
+1e90: 0c40        CMPI.W  #0x2dc (732),D0
+1e94: 6600        BNE     0x1ea0
+1e98: 4ead        JSR     506(A5) [CODE_5+0x148a]
+1e9c: 6000        BRA     0x1f4c
+1ea0: 0c40        CMPI.W  #0x2dd (733),D0
+1ea4: 6600        BNE     0x1eb0
+1ea8: 4ead        JSR     514(A5) [CODE_5+0x1532]
+1eac: 6000        BRA     0x1f4c
+1eb0: 0c40        CMPI.W  #0x2de (734),D0
+1eb4: 6600        BNE     0x1ec0
+1eb8: 4ead        JSR     522(A5) [CODE_5+0x15de]
+1ebc: 6000        BRA     0x1f4c
+1ec0: 0c40        CMPI.W  #0x2df (735),D0
+1ec4: 6600        BNE     0x1ed0
+1ec8: 4ead        JSR     530(A5) [CODE_5+0x167a]
+1ecc: 6000        BRA     0x1f4c
+1ed0: 0c40        CMPI.W  #0x2e0 (736),D0
+1ed4: 6600        BNE     0x1ee0
+1ed8: 4ead        JSR     538(A5) [CODE_5+0x171a]
+1edc: 6000        BRA     0x1f4c
+1ee0: 0c40        CMPI.W  #0x2e1 (737),D0
+1ee4: 6600        BNE     0x1ef0
+1ee8: 4ead        JSR     546(A5) [CODE_5+0x17c2]
+1eec: 6000        BRA     0x1f4c
+1ef0: 0c40        CMPI.W  #0x2e2 (738),D0
+1ef4: 6600        BNE     0x1f00
+1ef8: 4ead        JSR     554(A5) [CODE_5+0x186e]
+1efc: 6000        BRA     0x1f4c
+1f00: 0c40        CMPI.W  #0x2e3 (739),D0
+1f04: 6600        BNE     0x1f10
+1f08: 4ead        JSR     562(A5) [CODE_5+0x1912]
+1f0c: 6000        BRA     0x1f4c
+1f10: 0c40        CMPI.W  #0x2e4 (740),D0
+1f14: 6600        BNE     0x1f20
+1f18: 4ead        JSR     570(A5) [CODE_5+0x19ba]
+1f1c: 6000        BRA     0x1f4c
+1f20: 0c40        CMPI.W  #0x2e5 (741),D0
+1f24: 6600        BNE     0x1f30
+1f28: 4ead        JSR     578(A5) [CODE_5+0x1a6a]
+1f2c: 6000        BRA     0x1f4c
+1f30: 0c40        CMPI.W  #0x2e6 (742),D0
+1f34: 6600        BNE     0x1f40
+1f38: 4ead        JSR     586(A5) [CODE_5+0x1b1e]
+1f3c: 6000        BRA     0x1f4c
+1f40: 0c40        CMPI.W  #0x2e7 (743),D0
+1f44: 6600        BNE     0x1f4c
+1f48: 4ead        JSR     594(A5) [CODE_5+0x1bd2]
+1f4c: 4e5e        UNLK    A6
+1f4e: 205f        MOVEA.L  (A7)+,A0
+1f50: 548f        ADDQ.L  #2,A7
+1f52: 4ed0        JMP     (A0)

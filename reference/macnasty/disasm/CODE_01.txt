@@ -1,0 +1,3510 @@
+0004: 2043        MOVEA.L  D3,A0
+0006: 2400        MOVE.L  D0,D2
+0008: 4842        DC.W    0x4842
+000a: c4c1        MULU    D1,D2
+000c: 2601        MOVE.L  D1,D3
+000e: 4843        DC.W    0x4843
+0010: c6c0        MULU    D0,D3
+0012: d443        ADD.W   D3,D2
+0014: 4842        DC.W    0x4842
+0016: 4242        CLR.W   D2
+0018: c0c1        MULU    D1,D0
+001a: d082        ADD.L   D2,D0
+001c: 2608        MOVE.L  A0,D3
+001e: 4e75        RTS
+0020: 2043        MOVEA.L  D3,A0
+0022: 2244        MOVEA.L  D4,A1
+0024: 7800        MOVEQ   #0,D4
+0026: 4a80        TST.L   D0
+0028: 6a04        BPL     0x002e
+002a: 4480        DC.W    0x4480
+002c: 78ff        MOVEQ   #-1,D4
+002e: 4a81        TST.L   D1
+0030: 6a04        BPL     0x0036
+0032: 4481        DC.W    0x4481
+0034: 4644        DC.W    0x4644
+0036: 2401        MOVE.L  D1,D2
+0038: 9281        SUB.L   D1,D1
+003a: 7620        MOVEQ   #32,D3
+003c: d381        ADD.L   D1,D1
+003e: 9282        SUB.L   D2,D1
+0040: 6402        BCC     0x0044
+0042: d282        ADD.L   D2,D1
+0044: d180        ADD.L   D0,D0
+0046: 51cb        DBF   D3,0x003c
+004a: 4680        DC.W    0x4680
+004c: 4a44        TST.W   D4
+004e: 6702        BEQ     0x0052
+0050: 4480        DC.W    0x4480
+0052: 4844        DC.W    0x4844
+0054: 4a44        TST.W   D4
+0056: 6702        BEQ     0x005a
+0058: 4481        DC.W    0x4481
+005a: 2608        MOVE.L  A0,D3
+005c: 2809        MOVE.L  A1,D4
+005e: 4e75        RTS
+0060: 61be        BSR     0x0020
+0062: 2001        MOVE.L  D1,D0
+0064: 4e75        RTS
+0066: 202f        MOVE.L  4(A7),D0
+006a: 2200        MOVE.L  D0,D1
+006c: 6196        BSR     0x0004
+006e: 2f40        MOVE.L  D0,4(A7)
+0072: 4e75        RTS
+0074: 205f        MOVEA.L  (A7)+,A0
+0076: 486f        PEA     4(A7)
+007a: 2f2f        MOVE.L  4(A7),-(A7)
+007e: 3f3c        MOVE.W  #0x280e (10254),-(A7)
+0082: a9eb        A_TRAP_0xa9eb
+0084: 508f        ADDQ.L  #8,A7
+0086: 4ed0        JMP     (A0)
+0088: 558f        SUBQ.L  #2,A7
+008a: 4857        PEA     (A7)
+008c: 3f3c        MOVE.W  #0x17 (23),-(A7)
+0090: a9eb        A_TRAP_0xa9eb
+0092: 206f        MOVEA.L  6(A7),A0
+0096: 0890        DC.W    0x0890
+0098: 0007        ORI.B  #0xe7 (-25),D7
+009c: 487a        PEA     70(PC) [0xe4]
+00a0: 2f08        MOVE.L  A0,-(A7)
+00a2: 3f3c        MOVE.W  #0x0 (0),-(A7)
+00a6: a9eb        A_TRAP_0xa9eb
+00a8: 4a1f        TST.B   (A7)+
+00aa: 6710        BEQ     0x00bc
+00ac: 08d0        DC.W    0x08d0
+00ae: 0007        ORI.B  #0xa (10),D7
+00b2: 558f        SUBQ.L  #2,A7
+00b4: 4857        PEA     (A7)
+00b6: 3f3c        MOVE.W  #0x17 (23),-(A7)
+00ba: a9eb        A_TRAP_0xa9eb
+00bc: 3f3c        MOVE.W  #0x6000 (24576),-(A7)
+00c0: 4857        PEA     (A7)
+00c2: 3f3c        MOVE.W  #0x1 (1),-(A7)
+00c6: a9eb        A_TRAP_0xa9eb
+00c8: 548f        ADDQ.L  #2,A7
+00ca: 2f2f        MOVE.L  6(A7),-(A7)
+00ce: 486f        PEA     10(A7)
+00d2: 3f3c        MOVE.W  #0x2810 (10256),-(A7)
+00d6: a9eb        A_TRAP_0xa9eb
+00d8: 4857        PEA     (A7)
+00da: 3f3c        MOVE.W  #0x19 (25),-(A7)
+00de: a9eb        A_TRAP_0xa9eb
+00e0: 548f        ADDQ.L  #2,A7
+00e2: 4e75        RTS
+00e4: 3ffe        MOVE.W  <ea 7:6>,<ea 7:7>
+00e6: 8000        OR.B   D0,D0
+00e8: 0000        ORI.B  #0x0 (0),D0
+00ec: 0000        ORI.B  #0x1f (31),D0
+00f0: 225f        MOVEA.L  (A7)+,A1
+00f2: 205f        MOVEA.L  (A7)+,A0
+00f4: 2f01        MOVE.L  D1,-(A7)
+00f6: 7000        MOVEQ   #0,D0
+00f8: 1010        MOVE.B  (A0),D0
+00fa: e248        DC.W    0xe248
+00fc: 32d8        MOVE.W  (A0)+,(A1)+
+00fe: 51c8        DBF   D0,0x00fc
+0102: 4e75        RTS
+0104: 221f        MOVE.L  (A7)+,D1
+0106: 301f        MOVE.W  (A7)+,D0
+0108: 225f        MOVEA.L  (A7)+,A1
+010a: 205f        MOVEA.L  (A7)+,A0
+010c: 2f01        MOVE.L  D1,-(A7)
+010e: 12c0        MOVE.B  D0,(A1)+
+0110: 6002        BRA     0x0114
+0112: 12d8        MOVE.B  (A0)+,(A1)+
+0114: 51c8        DBF   D0,0x0112
+0118: 4e75        RTS
+011a: 221f        MOVE.L  (A7)+,D1
+011c: 301f        MOVE.W  (A7)+,D0
+011e: 205f        MOVEA.L  (A7)+,A0
+0120: 225f        MOVEA.L  (A7)+,A1
+0122: 2f01        MOVE.L  D1,-(A7)
+0124: b011        CMP.B   (A1),D0
+0126: 6302        BLS     0x012a
+0128: 1011        MOVE.B  (A1),D0
+012a: 5289        ADDQ.L  #1,A1
+012c: 10c0        MOVE.B  D0,(A0)+
+012e: 6002        BRA     0x0132
+0130: 10d9        MOVE.B  (A1)+,(A0)+
+0132: 51c8        DBF   D0,0x0130
+0136: 4e75        RTS
+0138: 221f        MOVE.L  (A7)+,D1
+013a: 225f        MOVEA.L  (A7)+,A1
+013c: 205f        MOVEA.L  (A7)+,A0
+013e: 2f01        MOVE.L  D1,-(A7)
+0140: 1018        MOVE.B  (A0)+,D0
+0142: 1219        MOVE.B  (A1)+,D1
+0144: 1400        MOVE.B  D0,D2
+0146: b401        CMP.B   D1,D2
+0148: 6302        BLS     0x014c
+014a: 1401        MOVE.B  D1,D2
+014c: 0242        ANDI.W  #0xff (255),D2
+0150: 670a        BEQ     0x015c
+0152: 5342        SUBQ.W  #1,D2
+0154: b308        EOR.B   D1,A0
+0156: 56ca        DBNE   D2,0x0154
+015a: 6602        BNE     0x015e
+015c: b200        CMP.B   D0,D1
+015e: 4e75        RTS
+0160: 221f        MOVE.L  (A7)+,D1
+0162: 225f        MOVEA.L  (A7)+,A1
+0164: 205f        MOVEA.L  (A7)+,A0
+0166: 2f01        MOVE.L  D1,-(A7)
+0168: 7000        MOVEQ   #0,D0
+016a: 7200        MOVEQ   #0,D1
+016c: 1018        MOVE.B  (A0)+,D0
+016e: 1211        MOVE.B  (A1),D1
+0170: d111        ADD.B   D0,(A1)
+0172: 6406        BCC     0x017a
+0174: 50d1        ST     (A1)
+0176: 1001        MOVE.B  D1,D0
+0178: 4600        DC.W    0x4600
+017a: 43f1        LEA     1(A1,D1.W),A1
+017e: 6002        BRA     0x0182
+0180: 12d8        MOVE.B  (A0)+,(A1)+
+0182: 51c8        DBF   D0,0x0180
+0186: 4e75        RTS
+0188: 241f        MOVE.L  (A7)+,D2
+018a: 301f        MOVE.W  (A7)+,D0
+018c: 321f        MOVE.W  (A7)+,D1
+018e: 205f        MOVEA.L  (A7)+,A0
+0190: 225f        MOVEA.L  (A7)+,A1
+0192: 2f02        MOVE.L  D2,-(A7)
+0194: 7400        MOVEQ   #0,D2
+0196: 1410        MOVE.B  (A0),D2
+0198: 4a41        TST.W   D1
+019a: 6e02        BGT     0x019e
+019c: 7201        MOVEQ   #1,D1
+019e: b242        CMP.W   D2,D1
+01a0: 6e1c        BGT     0x01be
+01a2: d0c1        ADDA.W  D1,A0
+01a4: 9441        SUB.W   D1,D2
+01a6: 5242        ADDQ.W  #1,D2
+01a8: 4a40        TST.W   D0
+01aa: 6f12        BLE     0x01be
+01ac: b042        CMP.W   D2,D0
+01ae: 6f02        BLE     0x01b2
+01b0: 3002        MOVE.W  D2,D0
+01b2: 12c0        MOVE.B  D0,(A1)+
+01b4: 5340        SUBQ.W  #1,D0
+01b6: 12d8        MOVE.B  (A0)+,(A1)+
+01b8: 51c8        DBF   D0,0x01b6
+01bc: 4e75        RTS
+01be: 4211        CLR.B   (A1)
+01c0: 4e75        RTS
+01c2: 48e7        DC.W    0x48e7
+01c4: 1030        MOVE.B  -17(A0,D4.L),D0
+01c8: 0300        DC.W    0x0300
+01ca: 0010        ORI.B  #0x0 (0),(A0)
+01ce: 7200        MOVEQ   #0,D1
+01d0: 7401        MOVEQ   #1,D2
+01d2: 1018        MOVE.B  (A0)+,D0
+01d4: 6720        BEQ     0x01f6
+01d6: 1219        MOVE.B  (A1)+,D1
+01d8: 671e        BEQ     0x01f8
+01da: 9041        SUB.W   D1,D0
+01dc: 6518        BCS     0x01f6
+01de: 5341        SUBQ.W  #1,D1
+01e0: 3601        MOVE.W  D1,D3
+01e2: 2448        MOVEA.L  A0,A2
+01e4: 2649        MOVEA.L  A1,A3
+01e6: b50b        EOR.B   D2,A3
+01e8: 56cb        DBNE   D3,0x01e6
+01ec: 670a        BEQ     0x01f8
+01ee: 5242        ADDQ.W  #1,D2
+01f0: 5288        ADDQ.L  #1,A0
+01f2: 51c8        DBF   D0,0x01e0
+01f6: 7400        MOVEQ   #0,D2
+01f8: 3f42        MOVE.W  D2,22(A7)
+01fc: 4cdf        DC.W    0x4cdf
+01fe: 0c08        CMPI.B  #0x5f (95),A0
+0202: 5c8f        ADDQ.L  #6,A7
+0204: 4ed0        JMP     (A0)
+
+0206: 4e56        LINK    A6,#-512
+020a: 486e        PEA     -256(A6)
+020e: 2f2e        MOVE.L  12(A6),-(A7)
+0212: 3f3c        MOVE.W  #0x1 (1),-(A7)
+0216: 3f2e        MOVE.W  8(A6),-(A7)
+021a: 5357        SUBQ.W  #1,(A7)
+021c: 6100        BSR     0x0188
+0220: 2f2e        MOVE.L  16(A6),-(A7)
+0224: 486e        PEA     -256(A6)
+0228: 6100        BSR     0x0160
+022c: 486e        PEA     -512(A6)
+0230: 2f2e        MOVE.L  12(A6),-(A7)
+0234: 3f2e        MOVE.W  8(A6),-(A7)
+0238: 3f3c        MOVE.W  #0xff (255),-(A7)
+023c: 6100        BSR     0x0188
+0240: 486e        PEA     -512(A6)
+0244: 486e        PEA     -256(A6)
+0248: 6100        BSR     0x0160
+024c: 486e        PEA     -256(A6)
+0250: 2f2e        MOVE.L  12(A6),-(A7)
+0254: 3f2e        MOVE.W  10(A6),-(A7)
+0258: 6100        BSR     0x011a
+025c: 4e5e        UNLK    A6
+025e: 205f        MOVEA.L  (A7)+,A0
+0260: 4fef        LEA     12(A7),A7
+0264: 4ed0        JMP     (A0)
+
+0266: 4e56        LINK    A6,#-512
+026a: 486e        PEA     -256(A6)
+026e: 2f2e        MOVE.L  12(A6),-(A7)
+0272: 3f3c        MOVE.W  #0x1 (1),-(A7)
+0276: 3f2e        MOVE.W  10(A6),-(A7)
+027a: 5357        SUBQ.W  #1,(A7)
+027c: 6100        BSR     0x0188
+0280: 486e        PEA     -512(A6)
+0284: 2f2e        MOVE.L  12(A6),-(A7)
+0288: 302e        MOVE.W  10(A6),D0
+028c: d06e        ADD.W   8(A6),D0
+0290: 3f00        MOVE.W  D0,-(A7)
+0292: 3f3c        MOVE.W  #0xff (255),-(A7)
+0296: 6100        BSR     0x0188
+029a: 486e        PEA     -512(A6)
+029e: 486e        PEA     -256(A6)
+02a2: 6100        BSR     0x0160
+02a6: 486e        PEA     -256(A6)
+02aa: 2f2e        MOVE.L  12(A6),-(A7)
+02ae: 3f3c        MOVE.W  #0xff (255),-(A7)
+02b2: 6100        BSR     0x011a
+02b6: 4e5e        UNLK    A6
+02b8: 205f        MOVEA.L  (A7)+,A0
+02ba: 508f        ADDQ.L  #8,A7
+02bc: 4ed0        JMP     (A0)
+02be: 241f        MOVE.L  (A7)+,D2
+02c0: 301f        MOVE.W  (A7)+,D0
+02c2: 321f        MOVE.W  (A7)+,D1
+02c4: 225f        MOVEA.L  (A7)+,A1
+02c6: 205f        MOVEA.L  (A7)+,A0
+02c8: 2f02        MOVE.L  D2,-(A7)
+02ca: 7420        MOVEQ   #32,D2
+02cc: 9440        SUB.W   D0,D2
+02ce: 9441        SUB.W   D1,D2
+02d0: 6002        BRA     0x02d4
+02d2: 4219        CLR.B   (A1)+
+02d4: 51c8        DBF   D0,0x02d2
+02d8: 6002        BRA     0x02dc
+02da: 12d8        MOVE.B  (A0)+,(A1)+
+02dc: 51c9        DBF   D1,0x02da
+02e0: 6002        BRA     0x02e4
+02e2: 4219        CLR.B   (A1)+
+02e4: 51ca        DBF   D2,0x02e2
+02e8: 4e75        RTS
+02ea: 205f        MOVEA.L  (A7)+,A0
+02ec: 225f        MOVEA.L  (A7)+,A1
+02ee: 4299        CLR.L   (A1)+
+02f0: 4299        CLR.L   (A1)+
+02f2: 4299        CLR.L   (A1)+
+02f4: 4299        CLR.L   (A1)+
+02f6: 4299        CLR.L   (A1)+
+02f8: 4299        CLR.L   (A1)+
+02fa: 4299        CLR.L   (A1)+
+02fc: 4299        CLR.L   (A1)+
+02fe: 4ed0        JMP     (A0)
+0300: 205f        MOVEA.L  (A7)+,A0
+0302: 301f        MOVE.W  (A7)+,D0
+0304: 225f        MOVEA.L  (A7)+,A1
+0306: 7200        MOVEQ   #0,D1
+0308: 1200        MOVE.B  D0,D1
+030a: e649        DC.W    0xe649
+030c: 01f1        DC.W    0x01f1
+030e: 1000        MOVE.B  D0,D0
+0310: 4ed0        JMP     (A0)
+0312: 205f        MOVEA.L  (A7)+,A0
+0314: 321f        MOVE.W  (A7)+,D1
+0316: 301f        MOVE.W  (A7)+,D0
+0318: 225f        MOVEA.L  (A7)+,A1
+031a: 9200        SUB.B   D0,D1
+031c: 651a        BCS     0x0338
+031e: 7400        MOVEQ   #0,D2
+0320: 1400        MOVE.B  D0,D2
+0322: e64a        DC.W    0xe64a
+0324: d2c2        ADDA.W  D2,A1
+0326: 0000        ORI.B  #0xf8 (-8),D0
+032a: 01d1        DC.W    0x01d1
+032c: 5200        ADDQ.B  #1,D0
+032e: 6604        BNE     0x0334
+0330: 5289        ADDQ.L  #1,A1
+0332: 70f8        MOVEQ   #-8,D0
+0334: 5301        SUBQ.B  #1,D1
+0336: 64f2        BCC     0x032a
+0338: 4ed0        JMP     (A0)
+033a: 241f        MOVE.L  (A7)+,D2
+033c: 301f        MOVE.W  (A7)+,D0
+033e: 321f        MOVE.W  (A7)+,D1
+0340: 205f        MOVEA.L  (A7)+,A0
+0342: 225f        MOVEA.L  (A7)+,A1
+0344: 2f02        MOVE.L  D2,-(A7)
+0346: d2c0        ADDA.W  D0,A1
+0348: 6002        BRA     0x034c
+034a: 10d9        MOVE.B  (A1)+,(A0)+
+034c: 51c9        DBF   D1,0x034a
+0350: 4e75        RTS
+0352: 201f        MOVE.L  (A7)+,D0
+0354: 225f        MOVEA.L  (A7)+,A1
+0356: 205f        MOVEA.L  (A7)+,A0
+0358: 2f00        MOVE.L  D0,-(A7)
+035a: 7007        MOVEQ   #7,D0
+035c: b388        EOR.L   D1,A0
+035e: 56c8        DBNE   D0,0x035c
+0362: 4e75        RTS
+0364: 201f        MOVE.L  (A7)+,D0
+0366: 225f        MOVEA.L  (A7)+,A1
+0368: 205f        MOVEA.L  (A7)+,A0
+036a: 6006        BRA     0x0372
+036c: 201f        MOVE.L  (A7)+,D0
+036e: 205f        MOVEA.L  (A7)+,A0
+0370: 225f        MOVEA.L  (A7)+,A1
+0372: 2f00        MOVE.L  D0,-(A7)
+0374: 7007        MOVEQ   #7,D0
+0376: 2218        MOVE.L  (A0)+,D1
+0378: 8291        OR.L   (A1),D1
+037a: b299        CMP.L   (A1)+,D1
+037c: 56c8        DBNE   D0,0x0376
+0380: 4e75        RTS
+0382: 201f        MOVE.L  (A7)+,D0
+0384: 225f        MOVEA.L  (A7)+,A1
+0386: 205f        MOVEA.L  (A7)+,A0
+0388: 2f00        MOVE.L  D0,-(A7)
+038a: 7007        MOVEQ   #7,D0
+038c: 2218        MOVE.L  (A0)+,D1
+038e: 8291        OR.L   (A1),D1
+0390: 22c1        MOVE.L  D1,(A1)+
+0392: 51c8        DBF   D0,0x038c
+0396: 4e75        RTS
+0398: 201f        MOVE.L  (A7)+,D0
+039a: 225f        MOVEA.L  (A7)+,A1
+039c: 205f        MOVEA.L  (A7)+,A0
+039e: 2f00        MOVE.L  D0,-(A7)
+03a0: 7007        MOVEQ   #7,D0
+03a2: 2218        MOVE.L  (A0)+,D1
+03a4: 4681        DC.W    0x4681
+03a6: c291        AND.L   (A1),D1
+03a8: 22c1        MOVE.L  D1,(A1)+
+03aa: 51c8        DBF   D0,0x03a2
+03ae: 4e75        RTS
+03b0: 201f        MOVE.L  (A7)+,D0
+03b2: 225f        MOVEA.L  (A7)+,A1
+03b4: 205f        MOVEA.L  (A7)+,A0
+03b6: 2f00        MOVE.L  D0,-(A7)
+03b8: 7007        MOVEQ   #7,D0
+03ba: 2218        MOVE.L  (A0)+,D1
+03bc: c291        AND.L   (A1),D1
+03be: 22c1        MOVE.L  D1,(A1)+
+03c0: 51c8        DBF   D0,0x03ba
+03c4: 4e75        RTS
+03c6: 205f        MOVEA.L  (A7)+,A0
+03c8: 225f        MOVEA.L  (A7)+,A1
+03ca: 301f        MOVE.W  (A7)+,D0
+03cc: 0c40        CMPI.W  #0x100 (256),D0
+03d0: 640a        BCC     0x03dc
+03d2: 3200        MOVE.W  D0,D1
+03d4: e649        DC.W    0xe649
+03d6: 0131        DC.W    0x0131
+03d8: 1000        MOVE.B  D0,D0
+03da: 4ed0        JMP     (A0)
+03dc: 7000        MOVEQ   #0,D0
+03de: 4ed0        JMP     (A0)
+03e0: 7000        MOVEQ   #0,D0
+03e2: 221f        MOVE.L  (A7)+,D1
+03e4: 301f        MOVE.W  (A7)+,D0
+03e6: 225f        MOVEA.L  (A7)+,A1
+03e8: a11e        A_TRAP_0xa11e
+03ea: 2288        MOVE.L  A0,(A1)
+03ec: 2041        MOVEA.L  D1,A0
+03ee: 4ed0        JMP     (A0)
+03f0: 225f        MOVEA.L  (A7)+,A1
+03f2: 205f        MOVEA.L  (A7)+,A0
+03f4: 2050        MOVEA.L  (A0),A0
+03f6: a01f        A_TRAP_0xa01f
+03f8: 4ed1        JMP     (A1)
+03fa: 2038        MOVE.L  (0x130).W,D0
+03fe: 90b8        SUB.L   (0x114).W,D0
+0402: 2078        MOVEA.L  (0x2aa).W,A0
+0406: d0a8        ADD.L   12(A0),D0
+040a: 2057        MOVEA.L  (A7),A0
+040c: 2e80        MOVE.L  D0,(A7)
+040e: 4ed0        JMP     (A0)
+0410: 2078        MOVEA.L  (0x130).W,A0
+0414: 2278        MOVEA.L  (0x114).W,A1
+0418: 2008        MOVE.L  A0,D0
+041a: 9089        SUB.L   A1,D0
+041c: 720c        MOVEQ   #12,D1
+041e: b081        CMP.L   D1,D0
+0420: 6512        BCS     0x0434
+0422: 2280        MOVE.L  D0,(A1)
+0424: 2081        MOVE.L  D1,(A0)
+0426: 21c8        MOVE.L  A0,(0x114).W
+042a: 2278        MOVEA.L  (0x2aa).W,A1
+042e: 2288        MOVE.L  A0,(A1)
+0430: d1a9        ADD.L   D0,12(A1)
+0434: 2038        MOVE.L  (0x31a).W,D0
+0438: a04c        A_TRAP_0xa04c
+043a: 2057        MOVEA.L  (A7),A0
+043c: 2e80        MOVE.L  D0,(A7)
+043e: 4ed0        JMP     (A0)
+0440: 221f        MOVE.L  (A7)+,D1
+0442: 301f        MOVE.W  (A7)+,D0
+0444: 225f        MOVEA.L  (A7)+,A1
+0446: 205f        MOVEA.L  (A7)+,A0
+0448: 6002        BRA     0x044c
+044a: 12d8        MOVE.B  (A0)+,(A1)+
+044c: 51c8        DBF   D0,0x044a
+0450: 2041        MOVEA.L  D1,A0
+0452: 4ed0        JMP     (A0)
+0454: 221f        MOVE.L  (A7)+,D1
+0456: 301f        MOVE.W  (A7)+,D0
+0458: 225f        MOVEA.L  (A7)+,A1
+045a: 205f        MOVEA.L  (A7)+,A0
+045c: d0c0        ADDA.W  D0,A0
+045e: d2c0        ADDA.W  D0,A1
+0460: 6002        BRA     0x0464
+0462: 1320        MOVE.B  -(A0),-(A1)
+0464: 51c8        DBF   D0,0x0462
+0468: 2041        MOVEA.L  D1,A0
+046a: 4ed0        JMP     (A0)
+046c: 225f        MOVEA.L  (A7)+,A1
+046e: 321f        MOVE.W  (A7)+,D1
+0470: 301f        MOVE.W  (A7)+,D0
+0472: 205f        MOVEA.L  (A7)+,A0
+0474: 6002        BRA     0x0478
+0476: 10c1        MOVE.B  D1,(A0)+
+0478: 51c8        DBF   D0,0x0476
+047c: 4ed1        JMP     (A1)
+047e: 225f        MOVEA.L  (A7)+,A1
+0480: 205f        MOVEA.L  (A7)+,A0
+0482: 321f        MOVE.W  (A7)+,D1
+0484: 301f        MOVE.W  (A7)+,D0
+0486: 670c        BEQ     0x0494
+0488: 5340        SUBQ.W  #1,D0
+048a: 3400        MOVE.W  D0,D2
+048c: b218        CMP.B   (A0)+,D1
+048e: 57ca        DBEQ   D2,0x048c
+0492: 9042        SUB.W   D2,D0
+0494: 3f00        MOVE.W  D0,-(A7)
+0496: 4ed1        JMP     (A1)
+0498: 225f        MOVEA.L  (A7)+,A1
+049a: 205f        MOVEA.L  (A7)+,A0
+049c: 321f        MOVE.W  (A7)+,D1
+049e: 301f        MOVE.W  (A7)+,D0
+04a0: 670c        BEQ     0x04ae
+04a2: 5340        SUBQ.W  #1,D0
+04a4: 3400        MOVE.W  D0,D2
+04a6: b218        CMP.B   (A0)+,D1
+04a8: 56ca        DBNE   D2,0x04a6
+04ac: 9042        SUB.W   D2,D0
+04ae: 3f00        MOVE.W  D0,-(A7)
+04b0: 4ed1        JMP     (A1)
+04b2: 31fc        MOVE.W  #0xd (13),(0xa4a).W
+04b8: 41fa        LEA     8(PC) [0x4c2],A0
+04bc: 21c8        MOVE.L  A0,(0xa4c).W
+04c0: 4e75        RTS
+04c2: 2f2e        MOVE.L  4(A6),-(A7)
+04c6: 303c        MOVE.W  #0x1c9 (457),D0
+04ca: a146        A_TRAP_0xa146
+04cc: 7010        MOVEQ   #16,D0
+04ce: 4ed0        JMP     (A0)
+04d0: 205f        MOVEA.L  (A7)+,A0
+04d2: b058        CMP.W   (A0)+,D0
+04d4: 6d16        BLT     0x04ec
+04d6: b058        CMP.W   (A0)+,D0
+04d8: 6e10        BGT     0x04ea
+04da: 4ed0        JMP     (A0)
+04dc: 205f        MOVEA.L  (A7)+,A0
+04de: b098        CMP.L   (A0)+,D0
+04e0: 6d08        BLT     0x04ea
+04e2: b098        CMP.L   (A0)+,D0
+04e4: 6e02        BGT     0x04e8
+04e6: 4ed0        JMP     (A0)
+04e8: 5988        SUBQ.L  #4,A0
+04ea: 5588        SUBQ.L  #2,A0
+04ec: 5588        SUBQ.L  #2,A0
+04ee: 2f08        MOVE.L  A0,-(A7)
+04f0: 303c        MOVE.W  #0x1c9 (457),D0
+04f4: a146        A_TRAP_0xa146
+04f6: 7005        MOVEQ   #5,D0
+04f8: 4ed0        JMP     (A0)
+04fa: 206f        MOVEA.L  4(A7),A0
+04fe: 2050        MOVEA.L  (A0),A0
+0500: a9e1        A_TRAP_0xa9e1
+0502: 226f        MOVEA.L  4(A7),A1
+0506: 2288        MOVE.L  A0,(A1)
+0508: 3f40        MOVE.W  D0,8(A7)
+050c: 2e9f        MOVE.L  (A7)+,(A7)
+050e: 4e75        RTS
+0510: 221f        MOVE.L  (A7)+,D1
+0512: 201f        MOVE.L  (A7)+,D0
+0514: 225f        MOVEA.L  (A7)+,A1
+0516: 205f        MOVEA.L  (A7)+,A0
+0518: 2f01        MOVE.L  D1,-(A7)
+051a: a9e2        A_TRAP_0xa9e2
+051c: 3f40        MOVE.W  D0,4(A7)
+0520: 4e75        RTS
+0522: 206f        MOVEA.L  12(A7),A0
+0526: 202f        MOVE.L  4(A7),D0
+052a: a9e3        A_TRAP_0xa9e3
+052c: 3f40        MOVE.W  D0,16(A7)
+0530: 226f        MOVEA.L  8(A7),A1
+0534: 2288        MOVE.L  A0,(A1)
+0536: 205f        MOVEA.L  (A7)+,A0
+0538: defc        ADDA.W  #0xc (12),A7
+053c: 4ed0        JMP     (A0)
+053e: 206f        MOVEA.L  8(A7),A0
+0542: 226f        MOVEA.L  4(A7),A1
+0546: a9e4        A_TRAP_0xa9e4
+0548: 3f40        MOVE.W  D0,12(A7)
+054c: 205f        MOVEA.L  (A7)+,A0
+054e: 504f        ADDQ.W  #8,A7
+0550: 4ed0        JMP     (A0)
+0552: 202f        MOVE.L  4(A7),D0
+0556: 226f        MOVEA.L  8(A7),A1
+055a: 206f        MOVEA.L  12(A7),A0
+055e: a9ef        A_TRAP_0xa9ef
+0560: 3f40        MOVE.W  D0,16(A7)
+0564: 205f        MOVEA.L  (A7)+,A0
+0566: defc        ADDA.W  #0xc (12),A7
+056a: 4ed0        JMP     (A0)
+056c: 225f        MOVEA.L  (A7)+,A1
+056e: 205f        MOVEA.L  (A7)+,A0
+0570: a057        A_TRAP_0xa057
+0572: 4efa        JMP     54(PC) [0x5aa]
+0576: a02c        A_TRAP_0xa02c
+0578: 4efa        JMP     50(PC) [0x5ac]
+057c: 225f        MOVEA.L  (A7)+,A1
+057e: 204f        MOVEA.L  A7,A0
+0580: a019        A_TRAP_0xa019
+0582: defc        ADDA.W  #0xe (14),A7
+0586: 4efa        JMP     34(PC) [0x5aa]
+058a: a11a        A_TRAP_0xa11a
+058c: 2f48        MOVE.L  A0,4(A7)
+0590: 4efa        JMP     26(PC) [0x5ac]
+0594: 225f        MOVEA.L  (A7)+,A1
+0596: 205f        MOVEA.L  (A7)+,A0
+0598: a01b        A_TRAP_0xa01b
+059a: 4efa        JMP     14(PC) [0x5aa]
+059e: 225f        MOVEA.L  (A7)+,A1
+05a0: 201f        MOVE.L  (A7)+,D0
+05a2: a04c        A_TRAP_0xa04c
+05a4: 2e80        MOVE.L  D0,(A7)
+05a6: 4e71        DC.W    0x4e71
+05a8: 7000        MOVEQ   #0,D0
+05aa: 2f09        MOVE.L  A1,-(A7)
+05ac: 31c0        MOVE.W  D0,(0x220).W
+05b0: 4e75        RTS
+05b2: 7000        MOVEQ   #0,D0
+05b4: 60f6        BRA     0x05ac
+05b6: 225f        MOVEA.L  (A7)+,A1
+05b8: 201f        MOVE.L  (A7)+,D0
+05ba: a04d        A_TRAP_0xa04d
+05bc: 4efa        JMP     -20(PC) [0x5aa]
+05c0: a01c        A_TRAP_0xa01c
+05c2: 2f40        MOVE.L  D0,4(A7)
+05c6: 4efa        JMP     -22(PC) [0x5b2]
+05ca: 225f        MOVEA.L  (A7)+,A1
+05cc: 201f        MOVE.L  (A7)+,D0
+05ce: a040        A_TRAP_0xa040
+05d0: 4efa        JMP     -40(PC) [0x5aa]
+05d4: 225f        MOVEA.L  (A7)+,A1
+05d6: a11d        A_TRAP_0xa11d
+05d8: 2208        MOVE.L  A0,D1
+05da: 205f        MOVEA.L  (A7)+,A0
+05dc: 2081        MOVE.L  D1,(A0)
+05de: 2e80        MOVE.L  D0,(A7)
+05e0: 4efa        JMP     -58(PC) [0x5a8]
+05e4: 225f        MOVEA.L  (A7)+,A1
+05e6: 205f        MOVEA.L  (A7)+,A0
+05e8: a04b        A_TRAP_0xa04b
+05ea: 4efa        JMP     -66(PC) [0x5aa]
+05ee: 225f        MOVEA.L  (A7)+,A1
+05f0: 205f        MOVEA.L  (A7)+,A0
+05f2: a02d        A_TRAP_0xa02d
+05f4: 4efa        JMP     -76(PC) [0x5aa]
+05f8: 4a78        TST.W   (0x28e).W
+05fc: 6a2a        BPL     0x0628
+05fe: 2078        MOVEA.L  (0x130).W,A0
+0602: 43f8        LEA     (0x114).W,A1
+0606: 2008        MOVE.L  A0,D0
+0608: 9091        SUB.L   (A1),D0
+060a: 740c        MOVEQ   #12,D2
+060c: b082        CMP.L   D2,D0
+060e: 6516        BCS     0x0626
+0610: 2251        MOVEA.L  (A1),A1
+0612: 21c8        MOVE.L  A0,(0x114).W
+0616: 2280        MOVE.L  D0,(A1)
+0618: 4211        CLR.B   (A1)
+061a: 2278        MOVEA.L  (0x2aa).W,A1
+061e: 2288        MOVE.L  A0,(A1)
+0620: 2082        MOVE.L  D2,(A0)
+0622: d1a9        ADD.L   D0,12(A1)
+0626: 4e75        RTS
+0628: a063        A_TRAP_0xa063
+062a: 4e75        RTS
+062c: 225f        MOVEA.L  (A7)+,A1
+062e: 205f        MOVEA.L  (A7)+,A0
+0630: a064        A_TRAP_0xa064
+0632: 4ed1        JMP     (A1)
+0634: 4a78        TST.W   (0x28e).W
+0638: 6af2        BPL     0x062c
+063a: 226f        MOVEA.L  4(A7),A1
+063e: 48e7        DC.W    0x48e7
+0640: 1f3e        MOVE.B  <ea 7:6>,-(A7)
+0642: 2009        MOVE.L  A1,D0
+0644: c0b8        AND.L   (0x31a).W,D0
+0648: 670c        BEQ     0x0656
+064a: 2240        MOVEA.L  D0,A1
+064c: 2011        MOVE.L  (A1),D0
+064e: c0b8        AND.L   (0x31a).W,D0
+0652: 2040        MOVEA.L  D0,A0
+0654: 6606        BNE     0x065c
+0656: 7093        MOVEQ   #-109,D0
+0658: 4efa        JMP     380(PC) [0x7d6]
+065c: 2849        MOVEA.L  A1,A4
+065e: 4a14        TST.B   (A4)
+0660: 6a04        BPL     0x0666
+0662: 708b        MOVEQ   #-117,D0
+0664: 60f2        BRA     0x0658
+0666: 2c49        MOVEA.L  A1,A6
+0668: 2028        MOVE.L  -4(A0),D0
+066c: c0b8        AND.L   (0x31a).W,D0
+0670: 9dc0        SUBA.L  D0,A6
+0672: 266e        MOVEA.L  0(A6),A3
+0676: 5188        SUBQ.L  #8,A0
+0678: 2228        MOVE.L  0(A0),D1
+067c: c2b8        AND.L   (0x31a).W,D1
+0680: 2e01        MOVE.L  D1,D7
+0682: 5187        SUBQ.L  #8,D7
+0684: 7000        MOVEQ   #0,D0
+0686: d1c1        ADDA.L  D1,A0
+0688: b1cb        CMPA.L  A3,A0
+068a: 6400        BCC     0x07d6
+068e: 4a28        TST.B   0(A0)
+0692: 6710        BEQ     0x06a4
+0694: 6a00        BPL     0x07d6
+0698: 2068        MOVEA.L  4(A0),A0
+069c: d1ce        ADDA.L  A6,A0
+069e: 4a10        TST.B   (A0)
+06a0: 6b00        BMI     0x07d6
+06a4: 220f        MOVE.L  A7,D1
+06a6: c2b8        AND.L   (0x31a).W,D1
+06aa: 2078        MOVEA.L  (0x2aa).W,A0
+06ae: 92a8        SUB.L   0(A0),D1
+06b2: 243c        MOVE.L  #0x400,D2
+06b8: 2002        MOVE.L  D2,D0
+06ba: d087        ADD.L   D7,D0
+06bc: b280        CMP.L   D0,D1
+06be: 6d02        BLT     0x06c2
+06c0: 2200        MOVE.L  D0,D1
+06c2: 70ff        MOVEQ   #-1,D0
+06c4: b282        CMP.L   D2,D1
+06c6: 6d00        BLT     0x07d6
+06ca: 0482        SUBI.L  #0x80,D2
+06d0: 9282        SUB.L   D2,D1
+06d2: 9fc1        SUBA.L  D1,A7
+06d4: 9efc        SUBA.W  #0x16 (22),A7
+06d8: 2a4f        MOVEA.L  A7,A5
+06da: 2b41        MOVE.L  D1,8(A5)
+06de: 2b78        MOVE.L  (0x118).W,18(A5)
+06e4: 21ce        MOVE.L  A6,(0x118).W
+06e8: 2054        MOVEA.L  (A4),A0
+06ea: 5148        SUBQ.W  #8,A0
+06ec: 2b68        MOVE.L  0(A0),0(A5)
+06f2: 2014        MOVE.L  (A4),D0
+06f4: c0b8        AND.L   (0x31a).W,D0
+06f8: 2b40        MOVE.L  D0,12(A5)
+06fc: 1b54        MOVE.B  (A4),16(A5)
+0700: 4eba        JSR     224(PC) [0x7e2]
+0704: 4a12        TST.B   (A2)
+0706: 662c        BNE     0x0734
+0708: 222a        MOVE.L  0(A2),D1
+070c: 2001        MOVE.L  D1,D0
+070e: 5180        SUBQ.L  #8,D0
+0710: be80        CMP.L   D0,D7
+0712: 6220        BHI     0x0734
+0714: 9087        SUB.L   D7,D0
+0716: 6706        BEQ     0x071e
+0718: 740c        MOVEQ   #12,D2
+071a: b082        CMP.L   D2,D0
+071c: 6516        BCS     0x0734
+071e: 2054        MOVEA.L  (A4),A0
+0720: 224a        MOVEA.L  A2,A1
+0722: d3c1        ADDA.L  D1,A1
+0724: 2007        MOVE.L  D7,D0
+0726: 93c0        SUBA.L  D0,A1
+0728: 91ae        SUB.L   D0,12(A6)
+072c: a02e        A_TRAP_0xa02e
+072e: 204c        MOVEA.L  A4,A0
+0730: a02b        A_TRAP_0xa02b
+0732: 6070        BRA     0x07a4
+0734: 7c00        MOVEQ   #0,D6
+0736: 4eba        JSR     232(PC) [0x820]
+073a: 4eba        JSR     298(PC) [0x866]
+073e: 4eba        JSR     162(PC) [0x7e2]
+0742: 222a        MOVE.L  0(A2),D1
+0746: 202d        MOVE.L  4(A5),D0
+074a: 41ed        LEA     22(A5),A0
+074e: 224a        MOVEA.L  A2,A1
+0750: d3c1        ADDA.L  D1,A1
+0752: 93c0        SUBA.L  D0,A1
+0754: dc80        ADD.L   D0,D6
+0756: 91ae        SUB.L   D0,12(A6)
+075a: a02e        A_TRAP_0xa02e
+075c: 4a87        TST.L   D7
+075e: 6744        BEQ     0x07a4
+0760: 2009        MOVE.L  A1,D0
+0762: 908a        SUB.L   A2,D0
+0764: 6718        BEQ     0x077e
+0766: 2200        MOVE.L  D0,D1
+0768: 5181        SUBQ.L  #8,D1
+076a: 9287        SUB.L   D7,D1
+076c: 650c        BCS     0x077a
+076e: 6706        BEQ     0x0776
+0770: 740c        MOVEQ   #12,D2
+0772: b481        CMP.L   D1,D2
+0774: 6504        BCS     0x077a
+0776: 2054        MOVEA.L  (A4),A0
+0778: 60aa        BRA     0x0724
+077a: 2540        MOVE.L  D0,0(A2)
+077e: 4cd1        DC.W    0x4cd1
+0780: 0030        ORI.B  #0x4e (78),4(A0,D0.W)
+0786: 2346        MOVE.L  D6,0(A1)
+078a: 137c        MOVE.B  #0x40 (64),0(A1)
+0790: 2f09        MOVE.L  A1,-(A7)
+0792: 4eba        JSR     140(PC) [0x820]
+0796: 4eba        JSR     206(PC) [0x866]
+079a: 6146        BSR     0x07e2
+079c: 225f        MOVEA.L  (A7)+,A1
+079e: 48d1        DC.W    0x48d1
+07a0: 0030        ORI.B  #0x9e (-98),-119(A0,D5.W)
+07a6: 51ae        SUBQ.L  #8,12(A6)
+07aa: 2009        MOVE.L  A1,D0
+07ac: 908a        SUB.L   A2,D0
+07ae: 6704        BEQ     0x07b4
+07b0: 2540        MOVE.L  D0,0(A2)
+07b4: 2449        MOVEA.L  A1,A2
+07b6: 24ed        MOVE.L  0(A5),(A2)+
+07ba: 204c        MOVEA.L  A4,A0
+07bc: 91ce        SUBA.L  A6,A0
+07be: 24c8        MOVE.L  A0,(A2)+
+07c0: 288a        MOVE.L  A2,(A4)
+07c2: 18ad        MOVE.B  16(A5),(A4)
+07c6: 21ed        MOVE.L  18(A5),(0x118).W
+07cc: 7000        MOVEQ   #0,D0
+07ce: dfed        ADDA.L  8(A5),A7
+07d2: defc        ADDA.W  #0x16 (22),A7
+07d6: 4cdf        DC.W    0x4cdf
+07d8: 7cf8        MOVEQ   #-8,D6
+07da: 2e9f        MOVE.L  (A7)+,(A7)
+07dc: 31c0        MOVE.W  D0,(0x220).W
+07e0: 4e75        RTS
+07e2: 2014        MOVE.L  (A4),D0
+07e4: 670a        BEQ     0x07f0
+07e6: c0b8        AND.L   (0x31a).W,D0
+07ea: 2040        MOVEA.L  D0,A0
+07ec: 5148        SUBQ.W  #8,A0
+07ee: 6004        BRA     0x07f4
+07f0: 41ee        LEA     52(A6),A0
+07f4: 2228        MOVE.L  0(A0),D1
+07f8: c2b8        AND.L   (0x31a).W,D1
+07fc: 4a28        TST.B   0(A0)
+0800: 670c        BEQ     0x080e
+0802: 6a14        BPL     0x0818
+0804: 2268        MOVEA.L  4(A0),A1
+0808: d3ce        ADDA.L  A6,A1
+080a: 4a11        TST.B   (A1)
+080c: 6b0a        BMI     0x0818
+080e: 2448        MOVEA.L  A0,A2
+0810: d1c1        ADDA.L  D1,A0
+0812: b1cb        CMPA.L  A3,A0
+0814: 65de        BCS     0x07f4
+0816: 6006        BRA     0x081e
+0818: b1ed        CMPA.L  12(A5),A0
+081c: 63f0        BLS     0x080e
+081e: 4e75        RTS
+0820: 202d        MOVE.L  8(A5),D0
+0824: b087        CMP.L   D7,D0
+0826: 6d02        BLT     0x082a
+0828: 2007        MOVE.L  D7,D0
+082a: 43ed        LEA     22(A5),A1
+082e: 2054        MOVEA.L  (A4),A0
+0830: d1c7        ADDA.L  D7,A0
+0832: 91c0        SUBA.L  D0,A0
+0834: 9e80        SUB.L   D0,D7
+0836: 2b40        MOVE.L  D0,4(A5)
+083a: 2200        MOVE.L  D0,D1
+083c: a02e        A_TRAP_0xa02e
+083e: 204c        MOVEA.L  A4,A0
+0840: 2007        MOVE.L  D7,D0
+0842: 6604        BNE     0x0848
+0844: a02b        A_TRAP_0xa02b
+0846: 4e75        RTS
+0848: 2050        MOVEA.L  (A0),A0
+084a: 5148        SUBQ.W  #8,A0
+084c: 1428        MOVE.B  0(A0),D2
+0850: 5080        ADDQ.L  #8,D0
+0852: 2140        MOVE.L  D0,0(A0)
+0856: 1142        MOVE.B  D2,0(A0)
+085a: d1c0        ADDA.L  D0,A0
+085c: 2141        MOVE.L  D1,0(A0)
+0860: d3ae        ADD.L   D1,12(A6)
+0864: 4e75        RTS
+0866: 203c        MOVE.L  #0x800000,D0
+086c: a04c        A_TRAP_0xa04c
+086e: 4e75        RTS
+0870: 225f        MOVEA.L  (A7)+,A1
+0872: 201f        MOVE.L  (A7)+,D0
+0874: a11e        A_TRAP_0xa11e
+0876: 2e88        MOVE.L  A0,(A7)
+0878: 4efa        JMP     -720(PC) [0x5aa]
+087c: 225f        MOVEA.L  (A7)+,A1
+087e: 205f        MOVEA.L  (A7)+,A0
+0880: a01f        A_TRAP_0xa01f
+0882: 4efa        JMP     -730(PC) [0x5aa]
+0886: 225f        MOVEA.L  (A7)+,A1
+0888: 205f        MOVEA.L  (A7)+,A0
+088a: a021        A_TRAP_0xa021
+088c: 2e80        MOVE.L  D0,(A7)
+088e: 6a06        BPL     0x0896
+0890: 4297        CLR.L   (A7)
+0892: 4efa        JMP     -746(PC) [0x5aa]
+0896: 4efa        JMP     -752(PC) [0x5a8]
+089a: 225f        MOVEA.L  (A7)+,A1
+089c: 201f        MOVE.L  (A7)+,D0
+089e: 205f        MOVEA.L  (A7)+,A0
+08a0: a020        A_TRAP_0xa020
+08a2: 4efa        JMP     -762(PC) [0x5aa]
+08a6: 225f        MOVEA.L  (A7)+,A1
+08a8: 205f        MOVEA.L  (A7)+,A0
+08aa: a148        A_TRAP_0xa148
+08ac: 2e88        MOVE.L  A0,(A7)
+08ae: 4efa        JMP     -774(PC) [0x5aa]
+08b2: 225f        MOVEA.L  (A7)+,A1
+08b4: 201f        MOVE.L  (A7)+,D0
+08b6: a122        A_TRAP_0xa122
+08b8: 2e88        MOVE.L  A0,(A7)
+08ba: 4efa        JMP     -786(PC) [0x5aa]
+08be: 225f        MOVEA.L  (A7)+,A1
+08c0: 205f        MOVEA.L  (A7)+,A0
+08c2: a023        A_TRAP_0xa023
+08c4: 4efa        JMP     -796(PC) [0x5aa]
+08c8: 225f        MOVEA.L  (A7)+,A1
+08ca: 205f        MOVEA.L  (A7)+,A0
+08cc: a025        A_TRAP_0xa025
+08ce: 2e80        MOVE.L  D0,(A7)
+08d0: 6a06        BPL     0x08d8
+08d2: 4297        CLR.L   (A7)
+08d4: 4efa        JMP     -812(PC) [0x5aa]
+08d8: 4efa        JMP     -818(PC) [0x5a8]
+08dc: 225f        MOVEA.L  (A7)+,A1
+08de: 201f        MOVE.L  (A7)+,D0
+08e0: 205f        MOVEA.L  (A7)+,A0
+08e2: a024        A_TRAP_0xa024
+08e4: 4efa        JMP     -828(PC) [0x5aa]
+08e8: 225f        MOVEA.L  (A7)+,A1
+08ea: 205f        MOVEA.L  (A7)+,A0
+08ec: a126        A_TRAP_0xa126
+08ee: 2e88        MOVE.L  A0,(A7)
+08f0: 4efa        JMP     -840(PC) [0x5aa]
+08f4: 225f        MOVEA.L  (A7)+,A1
+08f6: 205f        MOVEA.L  (A7)+,A0
+08f8: a128        A_TRAP_0xa128
+08fa: 2e88        MOVE.L  A0,(A7)
+08fc: 4efa        JMP     -854(PC) [0x5a8]
+0900: 225f        MOVEA.L  (A7)+,A1
+0902: 205f        MOVEA.L  (A7)+,A0
+0904: a02b        A_TRAP_0xa02b
+0906: 4efa        JMP     -862(PC) [0x5aa]
+090a: 225f        MOVEA.L  (A7)+,A1
+090c: 201f        MOVE.L  (A7)+,D0
+090e: 205f        MOVEA.L  (A7)+,A0
+0910: a027        A_TRAP_0xa027
+0912: 4efa        JMP     -874(PC) [0x5aa]
+0916: 225f        MOVEA.L  (A7)+,A1
+0918: 205f        MOVEA.L  (A7)+,A0
+091a: a029        A_TRAP_0xa029
+091c: 4efa        JMP     -884(PC) [0x5aa]
+0920: 225f        MOVEA.L  (A7)+,A1
+0922: 205f        MOVEA.L  (A7)+,A0
+0924: a02a        A_TRAP_0xa02a
+0926: 4efa        JMP     -894(PC) [0x5aa]
+092a: 225f        MOVEA.L  (A7)+,A1
+092c: 205f        MOVEA.L  (A7)+,A0
+092e: a049        A_TRAP_0xa049
+0930: 4efa        JMP     -904(PC) [0x5aa]
+0934: 225f        MOVEA.L  (A7)+,A1
+0936: 205f        MOVEA.L  (A7)+,A0
+0938: a04a        A_TRAP_0xa04a
+093a: 4efa        JMP     -914(PC) [0x5aa]
+093e: 225f        MOVEA.L  (A7)+,A1
+0940: 205f        MOVEA.L  (A7)+,A0
+0942: a067        A_TRAP_0xa067
+0944: 4ed1        JMP     (A1)
+0946: 225f        MOVEA.L  (A7)+,A1
+0948: 205f        MOVEA.L  (A7)+,A0
+094a: a068        A_TRAP_0xa068
+094c: 4ed1        JMP     (A1)
+094e: a036        A_TRAP_0xa036
+0950: 4efa        JMP     -934(PC) [0x5ac]
+0954: 221f        MOVE.L  (A7)+,D1
+0956: 201f        MOVE.L  (A7)+,D0
+0958: 225f        MOVEA.L  (A7)+,A1
+095a: 205f        MOVEA.L  (A7)+,A0
+095c: a02e        A_TRAP_0xa02e
+095e: 2241        MOVEA.L  D1,A1
+0960: 4efa        JMP     -952(PC) [0x5aa]
+0964: 225f        MOVEA.L  (A7)+,A1
+0966: 205f        MOVEA.L  (A7)+,A0
+0968: a033        A_TRAP_0xa033
+096a: 3e80        MOVE.W  D0,(A7)
+096c: 4ed1        JMP     (A1)
+096e: 225f        MOVEA.L  (A7)+,A1
+0970: 205f        MOVEA.L  (A7)+,A0
+0972: a034        A_TRAP_0xa034
+0974: 3e80        MOVE.W  D0,(A7)
+0976: 4ed1        JMP     (A1)
+0978: 206f        MOVEA.L  8(A7),A0
+097c: 7018        MOVEQ   #24,D0
+097e: 4267        CLR.W   -(A7)
+0980: 51c8        DBF   D0,0x097e
+0984: 2f48        MOVE.L  A0,18(A7)
+0988: 422f        CLR.B   27(A7)
+098c: 204f        MOVEA.L  A7,A0
+098e: a000        A_TRAP_0xa000
+0990: 322f        MOVE.W  24(A7),D1
+0994: defc        ADDA.W  #0x32 (50),A7
+0998: 206f        MOVEA.L  4(A7),A0
+099c: 3081        MOVE.W  D1,(A0)
+099e: 3f40        MOVE.W  D0,12(A7)
+09a2: 205f        MOVEA.L  (A7)+,A0
+09a4: 504f        ADDQ.W  #8,A7
+09a6: 4ed0        JMP     (A0)
+09a8: 302f        MOVE.W  4(A7),D0
+09ac: 9efc        SUBA.W  #0x1e (30),A7
+09b0: 3f40        MOVE.W  D0,24(A7)
+09b4: 204f        MOVEA.L  A7,A0
+09b6: a001        A_TRAP_0xa001
+09b8: defc        ADDA.W  #0x1e (30),A7
+09bc: 3f40        MOVE.W  D0,6(A7)
+09c0: 205f        MOVEA.L  (A7)+,A0
+09c2: 544f        ADDQ.W  #2,A7
+09c4: 4ed0        JMP     (A0)
+
+09c6: 4e56        LINK    A6,#-50
+09ca: 41ee        LEA     -50(A6),A0
+09ce: 316e        MOVE.W  10(A6),24(A0)
+09d4: 317c        MOVE.W  #0x8 (8),26(A0)
+09da: 316e        MOVE.W  8(A6),28(A0)
+09e0: a004        A_TRAP_0xa004
+09e2: 3d40        MOVE.W  D0,12(A6)
+09e6: 4e5e        UNLK    A6
+09e8: 225f        MOVEA.L  (A7)+,A1
+09ea: 584f        ADDQ.W  #4,A7
+09ec: 4ed1        JMP     (A1)
+
+09ee: 4e56        LINK    A6,#-50
+09f2: 41ee        LEA     -50(A6),A0
+09f6: 316e        MOVE.W  14(A6),24(A0)
+09fc: 317c        MOVE.W  #0x9 (9),26(A0)
+0a02: 216e        MOVE.L  10(A6),28(A0)
+0a08: 316e        MOVE.W  8(A6),32(A0)
+0a0e: a004        A_TRAP_0xa004
+0a10: 3d40        MOVE.W  D0,16(A6)
+0a14: 4e5e        UNLK    A6
+0a16: 225f        MOVEA.L  (A7)+,A1
+0a18: 504f        ADDQ.W  #8,A7
+0a1a: 4ed1        JMP     (A1)
+
+0a1c: 4e56        LINK    A6,#-50
+0a20: 41ee        LEA     -50(A6),A0
+0a24: 316e        MOVE.W  12(A6),24(A0)
+0a2a: 317c        MOVE.W  #0xa (10),26(A0)
+0a30: 226e        MOVEA.L  8(A6),A1
+0a34: 2159        MOVE.L  (A1)+,28(A0)
+0a38: 2151        MOVE.L  (A1),32(A0)
+0a3c: a004        A_TRAP_0xa004
+0a3e: 3d40        MOVE.W  D0,14(A6)
+0a42: 4e5e        UNLK    A6
+0a44: 225f        MOVEA.L  (A7)+,A1
+0a46: 5c4f        ADDQ.W  #6,A7
+0a48: 4ed1        JMP     (A1)
+0a4a: 303c        MOVE.W  #0xc (12),D0
+
+0a4e: 4e56        LINK    A6,#-50
+0a52: 41ee        LEA     -50(A6),A0
+0a56: 316e        MOVE.W  8(A6),24(A0)
+0a5c: 3140        MOVE.W  D0,26(A0)
+0a60: a004        A_TRAP_0xa004
+0a62: 3d40        MOVE.W  D0,10(A6)
+0a66: 4e5e        UNLK    A6
+0a68: 225f        MOVEA.L  (A7)+,A1
+0a6a: 544f        ADDQ.W  #2,A7
+0a6c: 4ed1        JMP     (A1)
+0a6e: 303c        MOVE.W  #0xb (11),D0
+0a72: 4efa        JMP     -38(PC) [0xa4e]
+
+0a76: 4e56        LINK    A6,#-50
+0a7a: 41ee        LEA     -50(A6),A0
+0a7e: 316e        MOVE.W  12(A6),24(A0)
+0a84: 317c        MOVE.W  #0x2 (2),26(A0)
+0a8a: a005        A_TRAP_0xa005
+0a8c: 3d40        MOVE.W  D0,14(A6)
+0a90: 226e        MOVEA.L  8(A6),A1
+0a94: 22a8        MOVE.L  28(A0),(A1)
+0a98: 4e5e        UNLK    A6
+0a9a: 225f        MOVEA.L  (A7)+,A1
+0a9c: 5c4f        ADDQ.W  #6,A7
+0a9e: 4ed1        JMP     (A1)
+
+0aa0: 4e56        LINK    A6,#-50
+0aa4: 41ee        LEA     -50(A6),A0
+0aa8: 316e        MOVE.W  12(A6),24(A0)
+0aae: 317c        MOVE.W  #0x8 (8),26(A0)
+0ab4: a005        A_TRAP_0xa005
+0ab6: 3d40        MOVE.W  D0,14(A6)
+0aba: 226e        MOVEA.L  8(A6),A1
+0abe: 22e8        MOVE.L  28(A0),(A1)+
+0ac2: 32a8        MOVE.W  32(A0),(A1)
+0ac6: 4e5e        UNLK    A6
+0ac8: 225f        MOVEA.L  (A7)+,A1
+0aca: 5c4f        ADDQ.W  #6,A7
+0acc: 4ed1        JMP     (A1)
+
+0ace: 4e56        LINK    A6,#-50
+0ad2: 41ee        LEA     -50(A6),A0
+0ad6: 317c        MOVE.W  #0xfffb (-5),24(A0)
+0adc: 317c        MOVE.W  #0x7 (7),26(A0)
+0ae2: 316e        MOVE.W  8(A6),22(A0)
+0ae8: a004        A_TRAP_0xa004
+0aea: 3d40        MOVE.W  D0,10(A6)
+0aee: 4e5e        UNLK    A6
+0af0: 225f        MOVEA.L  (A7)+,A1
+0af2: 544f        ADDQ.W  #2,A7
+0af4: 4ed1        JMP     (A1)
+
+0af6: 4e56        LINK    A6,#-50
+0afa: 41ee        LEA     -50(A6),A0
+0afe: 317c        MOVE.W  #0xfffb (-5),24(A0)
+0b04: 317c        MOVE.W  #0x8 (8),26(A0)
+0b0a: 216e        MOVE.L  8(A6),28(A0)
+0b10: a004        A_TRAP_0xa004
+0b12: 3d40        MOVE.W  D0,12(A6)
+0b16: 4e5e        UNLK    A6
+0b18: 225f        MOVEA.L  (A7)+,A1
+0b1a: 584f        ADDQ.W  #4,A7
+0b1c: 4ed1        JMP     (A1)
+
+0b1e: 4e56        LINK    A6,#-50
+0b22: 41ee        LEA     -50(A6),A0
+0b26: 317c        MOVE.W  #0xfffb (-5),24(A0)
+0b2c: 317c        MOVE.W  #0x8 (8),26(A0)
+0b32: 316e        MOVE.W  12(A6),22(A0)
+0b38: a005        A_TRAP_0xa005
+0b3a: 3d40        MOVE.W  D0,14(A6)
+0b3e: 226e        MOVEA.L  8(A6),A1
+0b42: 41e8        LEA     28(A0),A0
+0b46: 7016        MOVEQ   #22,D0
+0b48: a02e        A_TRAP_0xa02e
+0b4a: 4e5e        UNLK    A6
+0b4c: 225f        MOVEA.L  (A7)+,A1
+0b4e: 5c4f        ADDQ.W  #6,A7
+0b50: 4ed1        JMP     (A1)
+
+0b52: 4e56        LINK    A6,#-50
+0b56: 48e7        DC.W    0x48e7
+0b58: 3030        MOVE.W  110(A0,D4.W),D0
+0b5c: 000a        ORI.B  #0x78 (120),A2
+0b60: 028e        ANDI.L  #0x6a0000a6,A6
+0b66: 74fa        MOVEQ   #-6,D2
+0b68: 122e        MOVE.B  8(A6),D1
+0b6c: 6702        BEQ     0x0b70
+0b6e: 74f8        MOVEQ   #-8,D2
+0b70: 4eba        JSR     290(PC) [0xc94]
+0b74: 6658        BNE     0x0bce
+0b76: 5342        SUBQ.W  #1,D2
+0b78: 4eba        JSR     282(PC) [0xc94]
+0b7c: 6650        BNE     0x0bce
+0b7e: 4a28        TST.B   7(A0)
+0b82: 6600        BNE     0x0c0a
+0b86: 70ff        MOVEQ   #-1,D0
+0b88: 0828        DC.W    0x0828
+0b8a: 0006        ORI.B  #0x5 (5),D6
+0b8e: 663e        BNE     0x0bce
+0b90: 4eba        JSR     288(PC) [0xcb2]
+0b94: 6638        BNE     0x0bce
+0b96: 2038        MOVE.L  (0x28a).W,D0
+0b9a: 6e46        BGT     0x0be2
+0b9c: 7202        MOVEQ   #2,D1
+0b9e: 2078        MOVEA.L  (0x2ae).W,A0
+0ba2: 5048        ADDQ.W  #8,A0
+0ba4: 3010        MOVE.W  (A0),D0
+0ba6: 0c00        CMPI.B  #0xff (-1),D0
+0baa: 6706        BEQ     0x0bb2
+0bac: e048        DC.W    0xe048
+0bae: 665a        BNE     0x0c0a
+0bb0: 7201        MOVEQ   #1,D1
+0bb2: 594f        SUBQ.W  #4,A7
+0bb4: 2f3c        MOVE.L  #0x53455244,-(A7)
+0bba: 3f01        MOVE.W  D1,-(A7)
+0bbc: a9a0        _GetResource
+0bbe: 2617        MOVE.L  (A7),D3
+0bc0: 6610        BNE     0x0bd2
+0bc2: 584f        ADDQ.W  #4,A7
+0bc4: 3038        MOVE.W  (0xa60).W,D0
+0bc8: 6604        BNE     0x0bce
+0bca: 303c        MOVE.W  #0xff40 (-192),D0
+0bce: 4efa        JMP     116(PC) [0xc44]
+0bd2: a992        A_TRAP_0xa992
+0bd4: 2043        MOVEA.L  D3,A0
+0bd6: 08d0        DC.W    0x08d0
+0bd8: 0007        ORI.B  #0xc8 (-56),D7
+0bdc: 028a        ANDI.L  #0x4238028a,A2
+0be2: 2678        MOVEA.L  (0x28a).W,A3
+0be6: 2653        MOVEA.L  (A3),A3
+0be8: 70e9        MOVEQ   #-23,D0
+0bea: 0cab        CMPI.L  #0x53455244,4(A3)
+0bf2: 66da        BNE     0x0bce
+0bf4: 122e        MOVE.B  8(A6),D1
+0bf8: 0338        DC.W    0x0338
+0bfa: 028a        ANDI.L  #0x660c4eba,A2
+0c00: 00ee        DC.W    0x00ee
+0c02: 03f8        DC.W    0x03f8
+0c04: 028a        ANDI.L  #0x70014e93,A2
+0c0a: 7401        MOVEQ   #1,D2
+0c0c: 41ee        LEA     -50(A6),A0
+0c10: 43fa        LEA     274(PC) [0xd24 ; pstr='.AIn'],A1
+0c14: 4a2e        TST.B   8(A6)
+0c18: 6704        BEQ     0x0c1e
+0c1a: 43fa        LEA     275(PC) [0xd2f ; pstr='.BIn'],A1
+0c1e: 2149        MOVE.L  A1,18(A0)
+0c22: 4268        CLR.W   22(A0)
+0c26: 4228        CLR.B   27(A0)
+0c2a: a000        A_TRAP_0xa000
+0c2c: 6616        BNE     0x0c44
+0c2e: 4241        CLR.W   D1
+0c30: 1219        MOVE.B  (A1)+,D1
+0c32: d2c1        ADDA.W  D1,A1
+0c34: 51ca        DBF   D2,0x0c1e
+0c38: 4cdf        DC.W    0x4cdf
+0c3a: 0c0c        CMPI.B  #0x5e (94),A4
+0c3e: 205f        MOVEA.L  (A7)+,A0
+0c40: 544f        ADDQ.W  #2,A7
+0c42: 4ed0        JMP     (A0)
+0c44: 3d40        MOVE.W  D0,10(A6)
+0c48: 60ee        BRA     0x0c38
+
+0c4a: 4e56        LINK    A6,#-50
+0c4e: 48e7        DC.W    0x48e7
+0c50: 3030        MOVE.W  46(A0,D1.W),D0
+0c54: 0008        ORI.B  #0xba (-70),A0
+0c58: 0096        ORI.L  #0x4a78028e,(A6)
+0c5e: 6ad8        BPL     0x0c38
+0c60: 2038        MOVE.L  (0x28a).W,D0
+0c64: 6fd2        BLE     0x0c38
+0c66: c0b8        AND.L   (0x31a).W,D0
+0c6a: 2040        MOVEA.L  D0,A0
+0c6c: 2050        MOVEA.L  (A0),A0
+0c6e: 0ca8        CMPI.L  #0x53455244,4(A0)
+0c76: 66c0        BNE     0x0c38
+0c78: 03b8        DC.W    0x03b8
+0c7a: 028a        ANDI.L  #0x70004e90,A2
+0c80: 4a38        TST.B   (0x28a).W
+0c84: 66b2        BNE     0x0c38
+0c86: 2078        MOVEA.L  (0x28a).W,A0
+0c8a: a023        A_TRAP_0xa023
+0c8c: 70ff        MOVEQ   #-1,D0
+0c8e: 21c0        MOVE.L  D0,(0x28a).W
+0c92: 60a4        BRA     0x0c38
+0c94: 41ee        LEA     -50(A6),A0
+0c98: 3142        MOVE.W  D2,24(A0)
+0c9c: 317c        MOVE.W  #0x1 (1),26(A0)
+0ca2: a005        A_TRAP_0xa005
+0ca4: 6608        BNE     0x0cae
+0ca6: 2068        MOVEA.L  28(A0),A0
+0caa: 2050        MOVEA.L  (A0),A0
+0cac: 6002        BRA     0x0cb0
+0cae: 70ea        MOVEQ   #-22,D0
+0cb0: 4e75        RTS
+0cb2: 7000        MOVEQ   #0,D0
+0cb4: 2f02        MOVE.L  D2,-(A7)
+0cb6: 1438        MOVE.B  (0x1fb).W,D2
+0cba: 4a01        TST.B   D1
+0cbc: 6602        BNE     0x0cc0
+0cbe: e80a        DC.W    0xe80a
+0cc0: 0202        ANDI.B  #0xf (15),D2
+0cc4: 6708        BEQ     0x0cce
+0cc6: 5502        SUBQ.B  #2,D2
+0cc8: 6704        BEQ     0x0cce
+0cca: 709e        MOVEQ   #-98,D0
+0ccc: 601a        BRA     0x0ce8
+0cce: 1438        MOVE.B  (0x291).W,D2
+0cd2: 4a01        TST.B   D1
+0cd4: 6604        BNE     0x0cda
+0cd6: 1438        MOVE.B  (0x290).W,D2
+0cda: 0882        DC.W    0x0882
+0cdc: 0007        ORI.B  #0x8 (8),D7
+0ce0: 0a02        EORI.B  #0x2 (2),D2
+0ce4: 6702        BEQ     0x0ce8
+0ce6: 709f        MOVEQ   #-97,D0
+0ce8: 241f        MOVE.L  (A7)+,D2
+0cea: 4a40        TST.W   D0
+0cec: 4e75        RTS
+0cee: 70fa        MOVEQ   #-6,D0
+0cf0: 4a01        TST.B   D1
+0cf2: 6702        BEQ     0x0cf6
+0cf4: 70f8        MOVEQ   #-8,D0
+0cf6: 41ee        LEA     -50(A6),A0
+0cfa: 3140        MOVE.W  D0,24(A0)
+0cfe: a001        A_TRAP_0xa001
+0d00: 5368        SUBQ.W  #1,24(A0)
+0d04: a001        A_TRAP_0xa001
+0d06: 4a78        TST.W   (0x28e).W
+0d0a: 6a16        BPL     0x0d22
+0d0c: 40c0        DC.W    0x40c0
+0d0e: 007c        ORI.W  #0x600 (1536),#0x2078 (8312)
+0d14: 01dc        DC.W    0x01dc
+0d16: 10bc        MOVE.B  #0x9 (9),(A0)
+0d1a: 3e97        MOVE.W  (A7),(A7)
+0d1c: 10bc        MOVE.B  #0xa (10),(A0)
+0d20: 46c0        DC.W    0x46c0
+0d22: 4e75        RTS
+0d24: 042e        SUBI.B  #0x49 (73),28165(A6)
+0d2a: 2e41        MOVEA.L  D1,A7
+0d2c: 4f75        DC.W    0x4f75
+0d2e: 7404        MOVEQ   #4,D2
+0d30: 2e42        MOVEA.L  D2,A7
+0d32: 496e        DC.W    0x496e
+0d34: 052e        DC.W    0x052e
+0d36: 424f        CLR.W   A7
+0d38: 7574        DC.W    0x7574
+0d3a: 225f        MOVEA.L  (A7)+,A1
+0d3c: 301f        MOVE.W  (A7)+,D0
+0d3e: a146        A_TRAP_0xa146
+0d40: 2e88        MOVE.L  A0,(A7)
+0d42: 4ed1        JMP     (A1)
+0d44: 225f        MOVEA.L  (A7)+,A1
+0d46: 301f        MOVE.W  (A7)+,D0
+0d48: 205f        MOVEA.L  (A7)+,A0
+0d4a: a047        A_TRAP_0xa047
+0d4c: 4ed1        JMP     (A1)
+0d4e: 225f        MOVEA.L  (A7)+,A1
+0d50: 121f        MOVE.B  (A7)+,D1
+0d52: 301f        MOVE.W  (A7)+,D0
+0d54: 2f09        MOVE.L  A1,-(A7)
+0d56: 4a01        TST.B   D1
+0d58: 6706        BEQ     0x0d60
+0d5a: a746        A_TRAP_0xa746
+0d5c: 4efa        JMP     4(PC) [0xd62]
+0d60: a346        A_TRAP_0xa346
+0d62: 2f48        MOVE.L  A0,4(A7)
+0d66: 4e75        RTS
+0d68: 225f        MOVEA.L  (A7)+,A1
+0d6a: 121f        MOVE.B  (A7)+,D1
+0d6c: 301f        MOVE.W  (A7)+,D0
+0d6e: 205f        MOVEA.L  (A7)+,A0
+0d70: 2f09        MOVE.L  A1,-(A7)
+0d72: 4a01        TST.B   D1
+0d74: 6706        BEQ     0x0d7c
+0d76: a647        A_TRAP_0xa647
+0d78: 4efa        JMP     4(PC) [0xd7e]
+0d7c: a247        A_TRAP_0xa247
+0d7e: 4e75        RTS
+0d80: 2f7c        MOVE.L  #0x1f8,4(A7)
+0d88: 4e75        RTS
+0d8a: 41f8        LEA     (0x1f8).W,A0
+0d8e: 70ff        MOVEQ   #-1,D0
+0d90: a038        A_TRAP_0xa038
+0d92: 3f40        MOVE.W  D0,4(A7)
+0d96: 4e75        RTS
+0d98: 225f        MOVEA.L  (A7)+,A1
+0d9a: 205f        MOVEA.L  (A7)+,A0
+0d9c: 2f09        MOVE.L  A1,-(A7)
+0d9e: a039        A_TRAP_0xa039
+0da0: 3f40        MOVE.W  D0,4(A7)
+0da4: 4e75        RTS
+0da6: 225f        MOVEA.L  (A7)+,A1
+0da8: 205f        MOVEA.L  (A7)+,A0
+0daa: 20b8        MOVE.L  (0x20c).W,(A0)
+0dae: 4ed1        JMP     (A1)
+0db0: 205f        MOVEA.L  (A7)+,A0
+0db2: 201f        MOVE.L  (A7)+,D0
+0db4: 2f08        MOVE.L  A0,-(A7)
+0db6: a03a        A_TRAP_0xa03a
+0db8: 3f40        MOVE.W  D0,4(A7)
+0dbc: 4e75        RTS
+0dbe: 206f        MOVEA.L  4(A7),A0
+0dc2: a9c7        A_TRAP_0xa9c7
+0dc4: a03a        A_TRAP_0xa03a
+0dc6: 4cdf        DC.W    0x4cdf
+0dc8: 0300        DC.W    0x0300
+0dca: 4ed0        JMP     (A0)
+0dcc: 7000        MOVEQ   #0,D0
+0dce: 206f        MOVEA.L  4(A7),A0
+0dd2: 2038        MOVE.L  (0x20c).W,D0
+0dd6: a9c6        _SecondsToDate
+0dd8: 2e9f        MOVE.L  (A7)+,(A7)
+0dda: 4e75        RTS
+0ddc: 206f        MOVEA.L  8(A7),A0
+0de0: a9c7        A_TRAP_0xa9c7
+0de2: 4cdf        DC.W    0x4cdf
+0de4: 0302        DC.W    0x0302
+0de6: 2080        MOVE.L  D0,(A0)
+0de8: 2041        MOVEA.L  D1,A0
+0dea: 4ed0        JMP     (A0)
+0dec: 4cdf        DC.W    0x4cdf
+0dee: 0301        DC.W    0x0301
+0df0: 2f00        MOVE.L  D0,-(A7)
+0df2: 2009        MOVE.L  A1,D0
+0df4: a9c6        _SecondsToDate
+0df6: 4e75        RTS
+0df8: 201f        MOVE.L  (A7)+,D0
+0dfa: 225f        MOVEA.L  (A7)+,A1
+0dfc: 205f        MOVEA.L  (A7)+,A0
+0dfe: 2f00        MOVE.L  D0,-(A7)
+0e00: a03b        A_TRAP_0xa03b
+0e02: 2280        MOVE.L  D0,(A1)
+0e04: 4e75        RTS
+
+0e06: 4e56        LINK    A6,#0
+0e0a: 206e        MOVEA.L  16(A6),A0
+0e0e: 226e        MOVEA.L  12(A6),A1
+0e12: 7000        MOVEQ   #0,D0
+0e14: 1018        MOVE.B  (A0)+,D0
+0e16: 4840        DC.W    0x4840
+0e18: 1019        MOVE.B  (A1)+,D0
+0e1a: 4a2e        TST.B   8(A6)
+0e1e: 670e        BEQ     0x0e2e
+0e20: 4a2e        TST.B   10(A6)
+0e24: 6704        BEQ     0x0e2a
+0e26: a43c        A_TRAP_0xa43c
+0e28: 6010        BRA     0x0e3a
+0e2a: a03c        A_TRAP_0xa03c
+0e2c: 600c        BRA     0x0e3a
+0e2e: 4a2e        TST.B   10(A6)
+0e32: 6704        BEQ     0x0e38
+0e34: a63c        A_TRAP_0xa63c
+0e36: 6002        BRA     0x0e3a
+0e38: a23c        A_TRAP_0xa23c
+0e3a: 0a00        EORI.B  #0x1 (1),D0
+0e3e: 1d40        MOVE.B  D0,20(A6)
+0e42: 4e5e        UNLK    A6
+0e44: 205f        MOVEA.L  (A7)+,A0
+0e46: dffc        ADDA.L  #0xc,A7
+0e4c: 4ed0        JMP     (A0)
+0e4e: 225f        MOVEA.L  (A7)+,A1
+0e50: 121f        MOVE.B  (A7)+,D1
+0e52: 205f        MOVEA.L  (A7)+,A0
+0e54: 7000        MOVEQ   #0,D0
+0e56: 1018        MOVE.B  (A0)+,D0
+0e58: 2f09        MOVE.L  A1,-(A7)
+0e5a: 4a01        TST.B   D1
+0e5c: 6704        BEQ     0x0e62
+0e5e: a054        A_TRAP_0xa054
+0e60: 6002        BRA     0x0e64
+0e62: a254        A_TRAP_0xa254
+0e64: 4e75        RTS
+0e66: 226f        MOVEA.L  4(A7),A1
+0e6a: 206f        MOVEA.L  8(A7),A0
+0e6e: a96f        A_TRAP_0xa96f
+0e70: 205f        MOVEA.L  (A7)+,A0
+0e72: 504f        ADDQ.W  #8,A7
+0e74: 4ed0        JMP     (A0)
+0e76: 226f        MOVEA.L  4(A7),A1
+0e7a: 206f        MOVEA.L  8(A7),A0
+0e7e: a96e        A_TRAP_0xa96e
+0e80: 3f40        MOVE.W  D0,12(A7)
+0e84: 205f        MOVEA.L  (A7)+,A0
+0e86: 504f        ADDQ.W  #8,A7
+0e88: 4ed0        JMP     (A0)
+0e8a: 205f        MOVEA.L  (A7)+,A0
+0e8c: 2278        MOVEA.L  (0x2ae).W,A1
+0e90: 5049        ADDQ.W  #8,A1
+0e92: 3011        MOVE.W  (A1),D0
+0e94: 225f        MOVEA.L  (A7)+,A1
+0e96: 4251        CLR.W   (A1)
+0e98: 0c00        CMPI.B  #0xff (-1),D0
+0e9c: 6708        BEQ     0x0ea6
+0e9e: e058        DC.W    0xe058
+0ea0: 5200        ADDQ.B  #1,D0
+0ea2: 1340        MOVE.B  D0,1(A1)
+0ea6: e048        DC.W    0xe048
+0ea8: 225f        MOVEA.L  (A7)+,A1
+0eaa: 3280        MOVE.W  D0,(A1)
+0eac: 4ed0        JMP     (A0)
+0eae: 2078        MOVEA.L  (0x2ae).W,A0
+0eb2: d0fc        ADDA.W  #0xa (10),A0
+0eb6: 4ed0        JMP     (A0)
+0eb8: 2f7c        MOVE.L  #0x360,4(A7)
+0ec0: 4e75        RTS
+0ec2: 2f7c        MOVE.L  #0x308,4(A7)
+0eca: 4e75        RTS
+0ecc: 2f7c        MOVE.L  #0x356,4(A7)
+0ed4: 4e75        RTS
+0ed6: 2f7c        MOVE.L  #0x160,4(A7)
+0ede: 4e75        RTS
+0ee0: 2f7c        MOVE.L  #0x14a,4(A7)
+0ee8: 4e75        RTS
+
+0eea: 4e56        LINK    A6,#-50
+0eee: 41ee        LEA     -50(A6),A0
+0ef2: 316e        MOVE.W  8(A6),24(A0)
+0ef8: 317c        MOVE.W  #0x1 (1),26(A0)
+0efe: a005        A_TRAP_0xa005
+0f00: 2d68        MOVE.L  28(A0),10(A6)
+0f06: 4e5e        UNLK    A6
+0f08: 205f        MOVEA.L  (A7)+,A0
+0f0a: 544f        ADDQ.W  #2,A7
+0f0c: 4ed0        JMP     (A0)
+0f0e: 225f        MOVEA.L  (A7)+,A1
+0f10: 101f        MOVE.B  (A7)+,D0
+0f12: 205f        MOVEA.L  (A7)+,A0
+0f14: 6604        BNE     0x0f1a
+0f16: a000        A_TRAP_0xa000
+0f18: 6002        BRA     0x0f1c
+0f1a: a400        A_TRAP_0xa400
+0f1c: 3e80        MOVE.W  D0,(A7)
+0f1e: 4ed1        JMP     (A1)
+0f20: 225f        MOVEA.L  (A7)+,A1
+0f22: 101f        MOVE.B  (A7)+,D0
+0f24: 205f        MOVEA.L  (A7)+,A0
+0f26: 6604        BNE     0x0f2c
+0f28: a001        A_TRAP_0xa001
+0f2a: 6002        BRA     0x0f2e
+0f2c: a401        A_TRAP_0xa401
+0f2e: 3e80        MOVE.W  D0,(A7)
+0f30: 4ed1        JMP     (A1)
+0f32: 225f        MOVEA.L  (A7)+,A1
+0f34: 101f        MOVE.B  (A7)+,D0
+0f36: 205f        MOVEA.L  (A7)+,A0
+0f38: 6604        BNE     0x0f3e
+0f3a: a002        A_TRAP_0xa002
+0f3c: 6002        BRA     0x0f40
+0f3e: a402        A_TRAP_0xa402
+0f40: 3e80        MOVE.W  D0,(A7)
+0f42: 4ed1        JMP     (A1)
+0f44: 225f        MOVEA.L  (A7)+,A1
+0f46: 101f        MOVE.B  (A7)+,D0
+0f48: 205f        MOVEA.L  (A7)+,A0
+0f4a: 6604        BNE     0x0f50
+0f4c: a003        A_TRAP_0xa003
+0f4e: 6002        BRA     0x0f52
+0f50: a403        A_TRAP_0xa403
+0f52: 3e80        MOVE.W  D0,(A7)
+0f54: 4ed1        JMP     (A1)
+0f56: 225f        MOVEA.L  (A7)+,A1
+0f58: 101f        MOVE.B  (A7)+,D0
+0f5a: 205f        MOVEA.L  (A7)+,A0
+0f5c: 6604        BNE     0x0f62
+0f5e: a004        A_TRAP_0xa004
+0f60: 6002        BRA     0x0f64
+0f62: a404        A_TRAP_0xa404
+0f64: 3e80        MOVE.W  D0,(A7)
+0f66: 4ed1        JMP     (A1)
+0f68: 225f        MOVEA.L  (A7)+,A1
+0f6a: 101f        MOVE.B  (A7)+,D0
+0f6c: 205f        MOVEA.L  (A7)+,A0
+0f6e: 6604        BNE     0x0f74
+0f70: a005        A_TRAP_0xa005
+0f72: 6002        BRA     0x0f76
+0f74: a405        A_TRAP_0xa405
+0f76: 3e80        MOVE.W  D0,(A7)
+0f78: 4ed1        JMP     (A1)
+0f7a: 225f        MOVEA.L  (A7)+,A1
+0f7c: 101f        MOVE.B  (A7)+,D0
+0f7e: 205f        MOVEA.L  (A7)+,A0
+0f80: 6604        BNE     0x0f86
+0f82: a006        A_TRAP_0xa006
+0f84: 6002        BRA     0x0f88
+0f86: a406        A_TRAP_0xa406
+0f88: 3e80        MOVE.W  D0,(A7)
+0f8a: 4ed1        JMP     (A1)
+0f8c: 225f        MOVEA.L  (A7)+,A1
+0f8e: 101f        MOVE.B  (A7)+,D0
+0f90: 205f        MOVEA.L  (A7)+,A0
+0f92: 6604        BNE     0x0f98
+0f94: a007        A_TRAP_0xa007
+0f96: 6002        BRA     0x0f9a
+0f98: a407        A_TRAP_0xa407
+0f9a: 3e80        MOVE.W  D0,(A7)
+0f9c: 4ed1        JMP     (A1)
+0f9e: 225f        MOVEA.L  (A7)+,A1
+0fa0: 101f        MOVE.B  (A7)+,D0
+0fa2: 205f        MOVEA.L  (A7)+,A0
+0fa4: 6604        BNE     0x0faa
+0fa6: a014        A_TRAP_0xa014
+0fa8: 6002        BRA     0x0fac
+0faa: a414        A_TRAP_0xa414
+0fac: 3e80        MOVE.W  D0,(A7)
+0fae: 4ed1        JMP     (A1)
+0fb0: 225f        MOVEA.L  (A7)+,A1
+0fb2: 101f        MOVE.B  (A7)+,D0
+0fb4: 205f        MOVEA.L  (A7)+,A0
+0fb6: 6604        BNE     0x0fbc
+0fb8: a015        A_TRAP_0xa015
+0fba: 6002        BRA     0x0fbe
+0fbc: a415        A_TRAP_0xa415
+0fbe: 3e80        MOVE.W  D0,(A7)
+0fc0: 4ed1        JMP     (A1)
+0fc2: 225f        MOVEA.L  (A7)+,A1
+0fc4: 101f        MOVE.B  (A7)+,D0
+0fc6: 205f        MOVEA.L  (A7)+,A0
+0fc8: 6604        BNE     0x0fce
+0fca: a013        A_TRAP_0xa013
+0fcc: 6002        BRA     0x0fd0
+0fce: a413        A_TRAP_0xa413
+0fd0: 3e80        MOVE.W  D0,(A7)
+0fd2: 4ed1        JMP     (A1)
+0fd4: 225f        MOVEA.L  (A7)+,A1
+0fd6: 101f        MOVE.B  (A7)+,D0
+0fd8: 205f        MOVEA.L  (A7)+,A0
+0fda: 6604        BNE     0x0fe0
+0fdc: a008        A_TRAP_0xa008
+0fde: 6002        BRA     0x0fe2
+0fe0: a408        A_TRAP_0xa408
+0fe2: 3e80        MOVE.W  D0,(A7)
+0fe4: 4ed1        JMP     (A1)
+0fe6: 225f        MOVEA.L  (A7)+,A1
+0fe8: 101f        MOVE.B  (A7)+,D0
+0fea: 205f        MOVEA.L  (A7)+,A0
+0fec: 6604        BNE     0x0ff2
+0fee: a009        A_TRAP_0xa009
+0ff0: 6002        BRA     0x0ff4
+0ff2: a409        A_TRAP_0xa409
+0ff4: 3e80        MOVE.W  D0,(A7)
+0ff6: 4ed1        JMP     (A1)
+0ff8: 225f        MOVEA.L  (A7)+,A1
+0ffa: 101f        MOVE.B  (A7)+,D0
+0ffc: 205f        MOVEA.L  (A7)+,A0
+0ffe: 6604        BNE     0x1004
+1000: a00a        A_TRAP_0xa00a
+1002: 6002        BRA     0x1006
+1004: a40a        A_TRAP_0xa40a
+1006: 3e80        MOVE.W  D0,(A7)
+1008: 4ed1        JMP     (A1)
+100a: 225f        MOVEA.L  (A7)+,A1
+100c: 101f        MOVE.B  (A7)+,D0
+100e: 205f        MOVEA.L  (A7)+,A0
+1010: 6604        BNE     0x1016
+1012: a00b        A_TRAP_0xa00b
+1014: 6002        BRA     0x1018
+1016: a40b        A_TRAP_0xa40b
+1018: 3e80        MOVE.W  D0,(A7)
+101a: 4ed1        JMP     (A1)
+101c: 225f        MOVEA.L  (A7)+,A1
+101e: 101f        MOVE.B  (A7)+,D0
+1020: 205f        MOVEA.L  (A7)+,A0
+1022: 6604        BNE     0x1028
+1024: a00c        A_TRAP_0xa00c
+1026: 6002        BRA     0x102a
+1028: a40c        A_TRAP_0xa40c
+102a: 3e80        MOVE.W  D0,(A7)
+102c: 4ed1        JMP     (A1)
+102e: 225f        MOVEA.L  (A7)+,A1
+1030: 101f        MOVE.B  (A7)+,D0
+1032: 205f        MOVEA.L  (A7)+,A0
+1034: 6604        BNE     0x103a
+1036: a00d        A_TRAP_0xa00d
+1038: 6002        BRA     0x103c
+103a: a40d        A_TRAP_0xa40d
+103c: 3e80        MOVE.W  D0,(A7)
+103e: 4ed1        JMP     (A1)
+1040: 225f        MOVEA.L  (A7)+,A1
+1042: 101f        MOVE.B  (A7)+,D0
+1044: 205f        MOVEA.L  (A7)+,A0
+1046: 6604        BNE     0x104c
+1048: a041        A_TRAP_0xa041
+104a: 6002        BRA     0x104e
+104c: a441        A_TRAP_0xa441
+104e: 3e80        MOVE.W  D0,(A7)
+1050: 4ed1        JMP     (A1)
+1052: 225f        MOVEA.L  (A7)+,A1
+1054: 101f        MOVE.B  (A7)+,D0
+1056: 205f        MOVEA.L  (A7)+,A0
+1058: 6604        BNE     0x105e
+105a: a042        A_TRAP_0xa042
+105c: 6002        BRA     0x1060
+105e: a442        A_TRAP_0xa442
+1060: 3e80        MOVE.W  D0,(A7)
+1062: 4ed1        JMP     (A1)
+1064: 225f        MOVEA.L  (A7)+,A1
+1066: 101f        MOVE.B  (A7)+,D0
+1068: 205f        MOVEA.L  (A7)+,A0
+106a: 6604        BNE     0x1070
+106c: a043        A_TRAP_0xa043
+106e: 6002        BRA     0x1072
+1070: a443        A_TRAP_0xa443
+1072: 3e80        MOVE.W  D0,(A7)
+1074: 4ed1        JMP     (A1)
+1076: 225f        MOVEA.L  (A7)+,A1
+1078: 101f        MOVE.B  (A7)+,D0
+107a: 205f        MOVEA.L  (A7)+,A0
+107c: 6604        BNE     0x1082
+107e: a010        A_TRAP_0xa010
+1080: 6002        BRA     0x1084
+1082: a410        A_TRAP_0xa410
+1084: 3e80        MOVE.W  D0,(A7)
+1086: 4ed1        JMP     (A1)
+1088: 225f        MOVEA.L  (A7)+,A1
+108a: 101f        MOVE.B  (A7)+,D0
+108c: 205f        MOVEA.L  (A7)+,A0
+108e: 6604        BNE     0x1094
+1090: a011        A_TRAP_0xa011
+1092: 6002        BRA     0x1096
+1094: a411        A_TRAP_0xa411
+1096: 3e80        MOVE.W  D0,(A7)
+1098: 4ed1        JMP     (A1)
+109a: 225f        MOVEA.L  (A7)+,A1
+109c: 101f        MOVE.B  (A7)+,D0
+109e: 205f        MOVEA.L  (A7)+,A0
+10a0: 6604        BNE     0x10a6
+10a2: a012        A_TRAP_0xa012
+10a4: 6002        BRA     0x10a8
+10a6: a412        A_TRAP_0xa412
+10a8: 3e80        MOVE.W  D0,(A7)
+10aa: 4ed1        JMP     (A1)
+10ac: 225f        MOVEA.L  (A7)+,A1
+10ae: 101f        MOVE.B  (A7)+,D0
+10b0: 205f        MOVEA.L  (A7)+,A0
+10b2: 6604        BNE     0x10b8
+10b4: a018        A_TRAP_0xa018
+10b6: 6002        BRA     0x10ba
+10b8: a418        A_TRAP_0xa418
+10ba: 3e80        MOVE.W  D0,(A7)
+10bc: 4ed1        JMP     (A1)
+10be: 225f        MOVEA.L  (A7)+,A1
+10c0: 101f        MOVE.B  (A7)+,D0
+10c2: 205f        MOVEA.L  (A7)+,A0
+10c4: 6604        BNE     0x10ca
+10c6: a044        A_TRAP_0xa044
+10c8: 6002        BRA     0x10cc
+10ca: a444        A_TRAP_0xa444
+10cc: 3e80        MOVE.W  D0,(A7)
+10ce: 4ed1        JMP     (A1)
+10d0: 225f        MOVEA.L  (A7)+,A1
+10d2: 101f        MOVE.B  (A7)+,D0
+10d4: 205f        MOVEA.L  (A7)+,A0
+10d6: 6604        BNE     0x10dc
+10d8: a045        A_TRAP_0xa045
+10da: 6002        BRA     0x10de
+10dc: a445        A_TRAP_0xa445
+10de: 3e80        MOVE.W  D0,(A7)
+10e0: 4ed1        JMP     (A1)
+10e2: 225f        MOVEA.L  (A7)+,A1
+10e4: 205f        MOVEA.L  (A7)+,A0
+10e6: a00f        A_TRAP_0xa00f
+10e8: 3e80        MOVE.W  D0,(A7)
+10ea: 4ed1        JMP     (A1)
+10ec: 225f        MOVEA.L  (A7)+,A1
+10ee: 205f        MOVEA.L  (A7)+,A0
+10f0: a00e        A_TRAP_0xa00e
+10f2: 3e80        MOVE.W  D0,(A7)
+10f4: 4ed1        JMP     (A1)
+10f6: 225f        MOVEA.L  (A7)+,A1
+10f8: 205f        MOVEA.L  (A7)+,A0
+10fa: a017        A_TRAP_0xa017
+10fc: 3e80        MOVE.W  D0,(A7)
+10fe: 4ed1        JMP     (A1)
+1100: 225f        MOVEA.L  (A7)+,A1
+1102: 205f        MOVEA.L  (A7)+,A0
+1104: a035        A_TRAP_0xa035
+1106: 3e80        MOVE.W  D0,(A7)
+1108: 4ed1        JMP     (A1)
+110a: 225f        MOVEA.L  (A7)+,A1
+110c: 205f        MOVEA.L  (A7)+,A0
+110e: 301f        MOVE.W  (A7)+,D0
+1110: 4840        DC.W    0x4840
+1112: 301f        MOVE.W  (A7)+,D0
+1114: a04e        A_TRAP_0xa04e
+1116: 4ed1        JMP     (A1)
+
+1118: 4e56        LINK    A6,#-50
+111c: 41ee        LEA     -50(A6),A0
+1120: 216e        MOVE.L  14(A6),18(A0)
+1126: 316e        MOVE.W  12(A6),22(A0)
+112c: 4228        CLR.B   26(A0)
+1130: 4228        CLR.B   27(A0)
+1134: 42a8        CLR.L   28(A0)
+1138: a000        A_TRAP_0xa000
+113a: 226e        MOVEA.L  8(A6),A1
+113e: 32a8        MOVE.W  24(A0),(A1)
+1142: 3d40        MOVE.W  D0,18(A6)
+1146: 4e5e        UNLK    A6
+1148: 205f        MOVEA.L  (A7)+,A0
+114a: dffc        ADDA.L  #0xa,A7
+1150: 4ed0        JMP     (A0)
+
+1152: 4e56        LINK    A6,#-50
+1156: 41ee        LEA     -50(A6),A0
+115a: 316e        MOVE.W  8(A6),24(A0)
+1160: a001        A_TRAP_0xa001
+1162: 3d40        MOVE.W  D0,10(A6)
+1166: 4e5e        UNLK    A6
+1168: 205f        MOVEA.L  (A7)+,A0
+116a: 548f        ADDQ.L  #2,A7
+116c: 4ed0        JMP     (A0)
+116e: 51c1        SF     D1
+1170: 6002        BRA     0x1174
+1172: 50c1        ST     D1
+
+1174: 4e56        LINK    A6,#-50
+1178: 41ee        LEA     -50(A6),A0
+117c: 216e        MOVE.L  8(A6),32(A0)
+1182: 316e        MOVE.W  16(A6),24(A0)
+1188: 226e        MOVEA.L  12(A6),A1
+118c: 2151        MOVE.L  (A1),36(A0)
+1190: 4268        CLR.W   44(A0)
+1194: 42a8        CLR.L   46(A0)
+1198: 4a01        TST.B   D1
+119a: 6604        BNE     0x11a0
+119c: a002        A_TRAP_0xa002
+119e: 6002        BRA     0x11a2
+11a0: a003        A_TRAP_0xa003
+11a2: 3d40        MOVE.W  D0,18(A6)
+11a6: 226e        MOVEA.L  12(A6),A1
+11aa: 22a8        MOVE.L  40(A0),(A1)
+11ae: 4e5e        UNLK    A6
+11b0: 225f        MOVEA.L  (A7)+,A1
+11b2: dffc        ADDA.L  #0xa,A7
+11b8: 4ed1        JMP     (A1)
+
+11ba: 4e56        LINK    A6,#-50
+11be: 41ee        LEA     -50(A6),A0
+11c2: 316e        MOVE.W  14(A6),24(A0)
+11c8: 316e        MOVE.W  12(A6),26(A0)
+11ce: 4aae        TST.L   8(A6)
+11d2: 6710        BEQ     0x11e4
+11d4: 43e8        LEA     28(A0),A1
+11d8: 206e        MOVEA.L  8(A6),A0
+11dc: 7016        MOVEQ   #22,D0
+11de: a02e        A_TRAP_0xa02e
+11e0: 41ee        LEA     -50(A6),A0
+11e4: a004        A_TRAP_0xa004
+11e6: 3d40        MOVE.W  D0,16(A6)
+11ea: 4e5e        UNLK    A6
+11ec: 225f        MOVEA.L  (A7)+,A1
+11ee: 508f        ADDQ.L  #8,A7
+11f0: 4ed1        JMP     (A1)
+
+11f2: 4e56        LINK    A6,#-50
+11f6: 41ee        LEA     -50(A6),A0
+11fa: 316e        MOVE.W  14(A6),24(A0)
+1200: 316e        MOVE.W  12(A6),26(A0)
+1206: a005        A_TRAP_0xa005
+1208: 3d40        MOVE.W  D0,16(A6)
+120c: 41ee        LEA     -22(A6),A0
+1210: 226e        MOVEA.L  8(A6),A1
+1214: 7016        MOVEQ   #22,D0
+1216: a02e        A_TRAP_0xa02e
+1218: 4e5e        UNLK    A6
+121a: 225f        MOVEA.L  (A7)+,A1
+121c: 508f        ADDQ.L  #8,A7
+121e: 4ed1        JMP     (A1)
+
+1220: 4e56        LINK    A6,#-32
+1224: 41ee        LEA     -32(A6),A0
+1228: 316e        MOVE.W  8(A6),24(A0)
+122e: a006        A_TRAP_0xa006
+1230: 3d40        MOVE.W  D0,10(A6)
+1234: 4e5e        UNLK    A6
+1236: 225f        MOVEA.L  (A7)+,A1
+1238: 548f        ADDQ.L  #2,A7
+123a: 4ed1        JMP     (A1)
+
+123c: 4e56        LINK    A6,#-64
+1240: 41ee        LEA     -64(A6),A0
+1244: 216e        MOVE.L  16(A6),18(A0)
+124a: 316e        MOVE.W  20(A6),22(A0)
+1250: 4268        CLR.W   28(A0)
+1254: a007        A_TRAP_0xa007
+1256: 3d40        MOVE.W  D0,22(A6)
+125a: 226e        MOVEA.L  12(A6),A1
+125e: 32a8        MOVE.W  22(A0),(A1)
+1262: 2028        MOVE.L  48(A0),D0
+1266: e080        DC.W    0xe080
+1268: e280        DC.W    0xe280
+126a: c0e8        MULU    62(A0),D0
+126e: e380        DC.W    0xe380
+1270: e180        DC.W    0xe180
+1272: 226e        MOVEA.L  8(A6),A1
+1276: 2280        MOVE.L  D0,(A1)
+1278: 4e5e        UNLK    A6
+127a: 225f        MOVEA.L  (A7)+,A1
+127c: dffc        ADDA.L  #0xe,A7
+1282: 4ed1        JMP     (A1)
+
+1284: 4e56        LINK    A6,#-80
+1288: 41ee        LEA     -80(A6),A0
+128c: 216e        MOVE.L  14(A6),18(A0)
+1292: 316e        MOVE.W  12(A6),22(A0)
+1298: 4228        CLR.B   26(A0)
+129c: 4268        CLR.W   28(A0)
+12a0: a00c        A_TRAP_0xa00c
+12a2: 3d40        MOVE.W  D0,18(A6)
+12a6: 41e8        LEA     32(A0),A0
+12aa: 226e        MOVEA.L  8(A6),A1
+12ae: 7010        MOVEQ   #16,D0
+12b0: a02e        A_TRAP_0xa02e
+12b2: 4e5e        UNLK    A6
+12b4: 225f        MOVEA.L  (A7)+,A1
+12b6: dffc        ADDA.L  #0xa,A7
+12bc: 4ed1        JMP     (A1)
+
+12be: 4e56        LINK    A6,#-64
+12c2: 41ee        LEA     -64(A6),A0
+12c6: 216e        MOVE.L  12(A6),18(A0)
+12cc: a014        A_TRAP_0xa014
+12ce: 3d40        MOVE.W  D0,16(A6)
+12d2: 226e        MOVEA.L  8(A6),A1
+12d6: 32a8        MOVE.W  22(A0),(A1)
+12da: 4e5e        UNLK    A6
+12dc: 225f        MOVEA.L  (A7)+,A1
+12de: 508f        ADDQ.L  #8,A7
+12e0: 4ed1        JMP     (A1)
+
+12e2: 4e56        LINK    A6,#-64
+12e6: 41ee        LEA     -64(A6),A0
+12ea: 216e        MOVE.L  10(A6),18(A0)
+12f0: 316e        MOVE.W  8(A6),22(A0)
+12f6: a015        A_TRAP_0xa015
+12f8: 3d40        MOVE.W  D0,14(A6)
+12fc: 4e5e        UNLK    A6
+12fe: 225f        MOVEA.L  (A7)+,A1
+1300: 5c8f        ADDQ.L  #6,A7
+1302: 4ed1        JMP     (A1)
+
+1304: 4e56        LINK    A6,#-64
+1308: 41ee        LEA     -64(A6),A0
+130c: 316e        MOVE.W  8(A6),22(A0)
+1312: 216e        MOVE.L  10(A6),18(A0)
+1318: a00e        A_TRAP_0xa00e
+131a: 3d40        MOVE.W  D0,14(A6)
+131e: 4e5e        UNLK    A6
+1320: 225f        MOVEA.L  (A7)+,A1
+1322: 5c8f        ADDQ.L  #6,A7
+1324: 4ed1        JMP     (A1)
+
+1326: 4e56        LINK    A6,#-64
+132a: 41ee        LEA     -64(A6),A0
+132e: 316e        MOVE.W  8(A6),22(A0)
+1334: 216e        MOVE.L  10(A6),18(A0)
+133a: a017        A_TRAP_0xa017
+133c: 3d40        MOVE.W  D0,14(A6)
+1340: 4e5e        UNLK    A6
+1342: 225f        MOVEA.L  (A7)+,A1
+1344: 5c8f        ADDQ.L  #6,A7
+1346: 4ed1        JMP     (A1)
+
+1348: 4e56        LINK    A6,#-64
+134c: 41ee        LEA     -64(A6),A0
+1350: 316e        MOVE.W  8(A6),22(A0)
+1356: 216e        MOVE.L  10(A6),18(A0)
+135c: a013        A_TRAP_0xa013
+135e: 3d40        MOVE.W  D0,14(A6)
+1362: 4e5e        UNLK    A6
+1364: 225f        MOVEA.L  (A7)+,A1
+1366: 5c8f        ADDQ.L  #6,A7
+1368: 4ed1        JMP     (A1)
+
+136a: 4e56        LINK    A6,#-80
+136e: 41ee        LEA     -80(A6),A0
+1372: 216e        MOVE.L  18(A6),18(A0)
+1378: 316e        MOVE.W  16(A6),22(A0)
+137e: 4228        CLR.B   26(A0)
+1382: a008        A_TRAP_0xa008
+1384: 4a40        TST.W   D0
+1386: 6616        BNE     0x139e
+1388: 4268        CLR.W   28(A0)
+138c: a00c        A_TRAP_0xa00c
+138e: 2008        MOVE.L  A0,D0
+1390: 43e8        LEA     32(A0),A1
+1394: 22ee        MOVE.L  8(A6),(A1)+
+1398: 22ae        MOVE.L  12(A6),(A1)
+139c: a00d        A_TRAP_0xa00d
+139e: 3d40        MOVE.W  D0,22(A6)
+13a2: 4e5e        UNLK    A6
+13a4: 225f        MOVEA.L  (A7)+,A1
+13a6: dffc        ADDA.L  #0xe,A7
+13ac: 4ed1        JMP     (A1)
+
+13ae: 4e56        LINK    A6,#-50
+13b2: 41ee        LEA     -50(A6),A0
+13b6: 216e        MOVE.L  10(A6),18(A0)
+13bc: 316e        MOVE.W  8(A6),22(A0)
+13c2: 4228        CLR.B   26(A0)
+13c6: a009        A_TRAP_0xa009
+13c8: 3d40        MOVE.W  D0,14(A6)
+13cc: 4e5e        UNLK    A6
+13ce: 225f        MOVEA.L  (A7)+,A1
+13d0: 5c8f        ADDQ.L  #6,A7
+13d2: 4ed1        JMP     (A1)
+
+13d4: 4e56        LINK    A6,#-50
+13d8: 41ee        LEA     -50(A6),A0
+13dc: 216e        MOVE.L  14(A6),18(A0)
+13e2: 316e        MOVE.W  12(A6),22(A0)
+13e8: 4228        CLR.B   26(A0)
+13ec: 4228        CLR.B   27(A0)
+13f0: 42a8        CLR.L   28(A0)
+13f4: a00a        A_TRAP_0xa00a
+13f6: 3d40        MOVE.W  D0,18(A6)
+13fa: 226e        MOVEA.L  8(A6),A1
+13fe: 32a8        MOVE.W  24(A0),(A1)
+1402: 4e5e        UNLK    A6
+1404: 225f        MOVEA.L  (A7)+,A1
+1406: dffc        ADDA.L  #0xa,A7
+140c: 4ed1        JMP     (A1)
+
+140e: 4e56        LINK    A6,#-50
+1412: 41ee        LEA     -50(A6),A0
+1416: 216e        MOVE.L  14(A6),18(A0)
+141c: 316e        MOVE.W  12(A6),22(A0)
+1422: 4228        CLR.B   26(A0)
+1426: 216e        MOVE.L  8(A6),28(A0)
+142c: a00b        A_TRAP_0xa00b
+142e: 3d40        MOVE.W  D0,18(A6)
+1432: 4e5e        UNLK    A6
+1434: 225f        MOVEA.L  (A7)+,A1
+1436: dffc        ADDA.L  #0xa,A7
+143c: 4ed1        JMP     (A1)
+
+143e: 4e56        LINK    A6,#-80
+1442: 41ee        LEA     -80(A6),A0
+1446: 216e        MOVE.L  14(A6),18(A0)
+144c: 316e        MOVE.W  12(A6),22(A0)
+1452: 4228        CLR.B   26(A0)
+1456: 4268        CLR.W   28(A0)
+145a: a00c        A_TRAP_0xa00c
+145c: 43e8        LEA     32(A0),A1
+1460: 206e        MOVEA.L  8(A6),A0
+1464: 7010        MOVEQ   #16,D0
+1466: a02e        A_TRAP_0xa02e
+1468: 41ee        LEA     -80(A6),A0
+146c: a00d        A_TRAP_0xa00d
+146e: 3d40        MOVE.W  D0,18(A6)
+1472: 4e5e        UNLK    A6
+1474: 225f        MOVEA.L  (A7)+,A1
+1476: dffc        ADDA.L  #0xa,A7
+147c: 4ed1        JMP     (A1)
+
+147e: 4e56        LINK    A6,#-50
+1482: 41ee        LEA     -50(A6),A0
+1486: 216e        MOVE.L  10(A6),18(A0)
+148c: 316e        MOVE.W  8(A6),22(A0)
+1492: 4228        CLR.B   26(A0)
+1496: a041        A_TRAP_0xa041
+1498: 3d40        MOVE.W  D0,14(A6)
+149c: 4e5e        UNLK    A6
+149e: 225f        MOVEA.L  (A7)+,A1
+14a0: 5c8f        ADDQ.L  #6,A7
+14a2: 4ed1        JMP     (A1)
+
+14a4: 4e56        LINK    A6,#-50
+14a8: 41ee        LEA     -50(A6),A0
+14ac: 216e        MOVE.L  10(A6),18(A0)
+14b2: 316e        MOVE.W  8(A6),22(A0)
+14b8: 4228        CLR.B   26(A0)
+14bc: a042        A_TRAP_0xa042
+14be: 3d40        MOVE.W  D0,14(A6)
+14c2: 4e5e        UNLK    A6
+14c4: 225f        MOVEA.L  (A7)+,A1
+14c6: 5c8f        ADDQ.L  #6,A7
+14c8: 4ed1        JMP     (A1)
+
+14ca: 4e56        LINK    A6,#-50
+14ce: 41ee        LEA     -50(A6),A0
+14d2: 226e        MOVEA.L  8(A6),A1
+14d6: 2151        MOVE.L  (A1),36(A0)
+14da: 316e        MOVE.W  12(A6),24(A0)
+14e0: a010        A_TRAP_0xa010
+14e2: 3d40        MOVE.W  D0,14(A6)
+14e6: 22a8        MOVE.L  40(A0),(A1)
+14ea: 4e5e        UNLK    A6
+14ec: 225f        MOVEA.L  (A7)+,A1
+14ee: 5c8f        ADDQ.L  #6,A7
+14f0: 4ed1        JMP     (A1)
+
+14f2: 4e56        LINK    A6,#-50
+14f6: 41ee        LEA     -50(A6),A0
+14fa: 316e        MOVE.W  12(A6),24(A0)
+1500: a011        A_TRAP_0xa011
+1502: 3d40        MOVE.W  D0,14(A6)
+1506: 226e        MOVEA.L  8(A6),A1
+150a: 22a8        MOVE.L  28(A0),(A1)
+150e: 4e5e        UNLK    A6
+1510: 225f        MOVEA.L  (A7)+,A1
+1512: 5c8f        ADDQ.L  #6,A7
+1514: 4ed1        JMP     (A1)
+
+1516: 4e56        LINK    A6,#-50
+151a: 41ee        LEA     -50(A6),A0
+151e: 316e        MOVE.W  12(A6),24(A0)
+1524: 216e        MOVE.L  8(A6),28(A0)
+152a: a012        A_TRAP_0xa012
+152c: 3d40        MOVE.W  D0,14(A6)
+1530: 4e5e        UNLK    A6
+1532: 225f        MOVEA.L  (A7)+,A1
+1534: 5c8f        ADDQ.L  #6,A7
+1536: 4ed1        JMP     (A1)
+
+1538: 4e56        LINK    A6,#-50
+153c: 41ee        LEA     -50(A6),A0
+1540: 316e        MOVE.W  12(A6),24(A0)
+1546: a018        A_TRAP_0xa018
+1548: 3d40        MOVE.W  D0,14(A6)
+154c: 226e        MOVEA.L  8(A6),A1
+1550: 22a8        MOVE.L  46(A0),(A1)
+1554: 4e5e        UNLK    A6
+1556: 225f        MOVEA.L  (A7)+,A1
+1558: 5c8f        ADDQ.L  #6,A7
+155a: 4ed1        JMP     (A1)
+
+155c: 4e56        LINK    A6,#-50
+1560: 41ee        LEA     -50(A6),A0
+1564: 316e        MOVE.W  14(A6),24(A0)
+156a: 316e        MOVE.W  12(A6),44(A0)
+1570: 216e        MOVE.L  8(A6),46(A0)
+1576: a044        A_TRAP_0xa044
+1578: 3d40        MOVE.W  D0,16(A6)
+157c: 4e5e        UNLK    A6
+157e: 225f        MOVEA.L  (A7)+,A1
+1580: 508f        ADDQ.L  #8,A7
+1582: 4ed1        JMP     (A1)
+1584: 225f        MOVEA.L  (A7)+,A1
+1586: 7200        MOVEQ   #0,D1
+1588: 322f        MOVE.W  4(A7),D1
+158c: 2001        MOVE.L  D1,D0
+158e: 2078        MOVEA.L  (0x34e).W,A0
+1592: b050        CMP.W   (A0),D0
+1594: 640c        BCC     0x15a2
+1596: 2070        MOVEA.L  20(A0,D0.W),A0
+159a: 3028        MOVE.W  78(A0),D0
+159e: 7200        MOVEQ   #0,D1
+15a0: 6006        BRA     0x15a8
+15a2: 7000        MOVEQ   #0,D0
+15a4: 323c        MOVE.W  #0xffcd (-51),D1
+15a8: 2057        MOVEA.L  (A7),A0
+15aa: 3080        MOVE.W  D0,(A0)
+15ac: 5c4f        ADDQ.W  #6,A7
+15ae: 3e81        MOVE.W  D1,(A7)
+15b0: 4ed1        JMP     (A1)
+15b2: 225f        MOVEA.L  (A7)+,A1
+15b4: 101f        MOVE.B  (A7)+,D0
+15b6: 205f        MOVEA.L  (A7)+,A0
+15b8: 6606        BNE     0x15c0
+15ba: 7001        MOVEQ   #1,D0
+15bc: a260        A_TRAP_0xa260
+15be: 6004        BRA     0x15c4
+15c0: 7001        MOVEQ   #1,D0
+15c2: a660        A_TRAP_0xa660
+15c4: 3e80        MOVE.W  D0,(A7)
+15c6: 4ed1        JMP     (A1)
+15c8: 225f        MOVEA.L  (A7)+,A1
+15ca: 101f        MOVE.B  (A7)+,D0
+15cc: 205f        MOVEA.L  (A7)+,A0
+15ce: 6606        BNE     0x15d6
+15d0: 7002        MOVEQ   #2,D0
+15d2: a260        A_TRAP_0xa260
+15d4: 6004        BRA     0x15da
+15d6: 7002        MOVEQ   #2,D0
+15d8: a660        A_TRAP_0xa660
+15da: 3e80        MOVE.W  D0,(A7)
+15dc: 4ed1        JMP     (A1)
+15de: 225f        MOVEA.L  (A7)+,A1
+15e0: 101f        MOVE.B  (A7)+,D0
+15e2: 205f        MOVEA.L  (A7)+,A0
+15e4: 6604        BNE     0x15ea
+15e6: a215        A_TRAP_0xa215
+15e8: 6002        BRA     0x15ec
+15ea: a615        A_TRAP_0xa615
+15ec: 3e80        MOVE.W  D0,(A7)
+15ee: 4ed1        JMP     (A1)
+15f0: 225f        MOVEA.L  (A7)+,A1
+15f2: 101f        MOVE.B  (A7)+,D0
+15f4: 205f        MOVEA.L  (A7)+,A0
+15f6: 6604        BNE     0x15fc
+15f8: a214        A_TRAP_0xa214
+15fa: 6002        BRA     0x15fe
+15fc: a614        A_TRAP_0xa614
+15fe: 3e80        MOVE.W  D0,(A7)
+1600: 4ed1        JMP     (A1)
+1602: 225f        MOVEA.L  (A7)+,A1
+1604: 101f        MOVE.B  (A7)+,D0
+1606: 205f        MOVEA.L  (A7)+,A0
+1608: 6606        BNE     0x1610
+160a: 7005        MOVEQ   #5,D0
+160c: a260        A_TRAP_0xa260
+160e: 6004        BRA     0x1614
+1610: 7005        MOVEQ   #5,D0
+1612: a660        A_TRAP_0xa660
+1614: 3e80        MOVE.W  D0,(A7)
+1616: 4ed1        JMP     (A1)
+1618: 225f        MOVEA.L  (A7)+,A1
+161a: 101f        MOVE.B  (A7)+,D0
+161c: 205f        MOVEA.L  (A7)+,A0
+161e: 6606        BNE     0x1626
+1620: 7006        MOVEQ   #6,D0
+1622: a260        A_TRAP_0xa260
+1624: 6004        BRA     0x162a
+1626: 7006        MOVEQ   #6,D0
+1628: a660        A_TRAP_0xa660
+162a: 3e80        MOVE.W  D0,(A7)
+162c: 4ed1        JMP     (A1)
+162e: 225f        MOVEA.L  (A7)+,A1
+1630: 101f        MOVE.B  (A7)+,D0
+1632: 205f        MOVEA.L  (A7)+,A0
+1634: 6606        BNE     0x163c
+1636: 7007        MOVEQ   #7,D0
+1638: a260        A_TRAP_0xa260
+163a: 6004        BRA     0x1640
+163c: 7007        MOVEQ   #7,D0
+163e: a660        A_TRAP_0xa660
+1640: 3e80        MOVE.W  D0,(A7)
+1642: 4ed1        JMP     (A1)
+1644: 225f        MOVEA.L  (A7)+,A1
+1646: 101f        MOVE.B  (A7)+,D0
+1648: 205f        MOVEA.L  (A7)+,A0
+164a: 6606        BNE     0x1652
+164c: 7008        MOVEQ   #8,D0
+164e: a260        A_TRAP_0xa260
+1650: 6004        BRA     0x1656
+1652: 7008        MOVEQ   #8,D0
+1654: a660        A_TRAP_0xa660
+1656: 3e80        MOVE.W  D0,(A7)
+1658: 4ed1        JMP     (A1)
+165a: 206f        MOVEA.L  6(A7),A0
+165e: 4228        CLR.B   26(A0)
+1662: 225f        MOVEA.L  (A7)+,A1
+1664: 101f        MOVE.B  (A7)+,D0
+1666: 205f        MOVEA.L  (A7)+,A0
+1668: 6606        BNE     0x1670
+166a: 7009        MOVEQ   #9,D0
+166c: a260        A_TRAP_0xa260
+166e: 6004        BRA     0x1674
+1670: 7009        MOVEQ   #9,D0
+1672: a660        A_TRAP_0xa660
+1674: 3e80        MOVE.W  D0,(A7)
+1676: 4ed1        JMP     (A1)
+1678: 225f        MOVEA.L  (A7)+,A1
+167a: 101f        MOVE.B  (A7)+,D0
+167c: 205f        MOVEA.L  (A7)+,A0
+167e: 6606        BNE     0x1686
+1680: 700a        MOVEQ   #10,D0
+1682: a260        A_TRAP_0xa260
+1684: 6004        BRA     0x168a
+1686: 700a        MOVEQ   #10,D0
+1688: a660        A_TRAP_0xa660
+168a: 3e80        MOVE.W  D0,(A7)
+168c: 4ed1        JMP     (A1)
+168e: 225f        MOVEA.L  (A7)+,A1
+1690: 101f        MOVE.B  (A7)+,D0
+1692: 205f        MOVEA.L  (A7)+,A0
+1694: 6604        BNE     0x169a
+1696: a210        A_TRAP_0xa210
+1698: 6002        BRA     0x169c
+169a: a610        A_TRAP_0xa610
+169c: 3e80        MOVE.W  D0,(A7)
+169e: 4ed1        JMP     (A1)
+16a0: 225f        MOVEA.L  (A7)+,A1
+16a2: 101f        MOVE.B  (A7)+,D0
+16a4: 205f        MOVEA.L  (A7)+,A0
+16a6: 6606        BNE     0x16ae
+16a8: 7010        MOVEQ   #16,D0
+16aa: a260        A_TRAP_0xa260
+16ac: 6004        BRA     0x16b2
+16ae: 7010        MOVEQ   #16,D0
+16b0: a660        A_TRAP_0xa660
+16b2: 3e80        MOVE.W  D0,(A7)
+16b4: 4ed1        JMP     (A1)
+16b6: 225f        MOVEA.L  (A7)+,A1
+16b8: 101f        MOVE.B  (A7)+,D0
+16ba: 205f        MOVEA.L  (A7)+,A0
+16bc: 6606        BNE     0x16c4
+16be: 7011        MOVEQ   #17,D0
+16c0: a260        A_TRAP_0xa260
+16c2: 6004        BRA     0x16c8
+16c4: 7011        MOVEQ   #17,D0
+16c6: a660        A_TRAP_0xa660
+16c8: 3e80        MOVE.W  D0,(A7)
+16ca: 4ed1        JMP     (A1)
+16cc: 225f        MOVEA.L  (A7)+,A1
+16ce: 101f        MOVE.B  (A7)+,D0
+16d0: 205f        MOVEA.L  (A7)+,A0
+16d2: 6606        BNE     0x16da
+16d4: 700b        MOVEQ   #11,D0
+16d6: a260        A_TRAP_0xa260
+16d8: 6004        BRA     0x16de
+16da: 700b        MOVEQ   #11,D0
+16dc: a660        A_TRAP_0xa660
+16de: 3e80        MOVE.W  D0,(A7)
+16e0: 4ed1        JMP     (A1)
+16e2: 225f        MOVEA.L  (A7)+,A1
+16e4: 101f        MOVE.B  (A7)+,D0
+16e6: 205f        MOVEA.L  (A7)+,A0
+16e8: 6604        BNE     0x16ee
+16ea: a207        A_TRAP_0xa207
+16ec: 6002        BRA     0x16f0
+16ee: a607        A_TRAP_0xa607
+16f0: 3e80        MOVE.W  D0,(A7)
+16f2: 4ed1        JMP     (A1)
+16f4: 225f        MOVEA.L  (A7)+,A1
+16f6: 101f        MOVE.B  (A7)+,D0
+16f8: 205f        MOVEA.L  (A7)+,A0
+16fa: 6604        BNE     0x1700
+16fc: a200        A_TRAP_0xa200
+16fe: 6002        BRA     0x1702
+1700: a600        A_TRAP_0xa600
+1702: 3e80        MOVE.W  D0,(A7)
+1704: 4ed1        JMP     (A1)
+1706: 225f        MOVEA.L  (A7)+,A1
+1708: 101f        MOVE.B  (A7)+,D0
+170a: 205f        MOVEA.L  (A7)+,A0
+170c: 6604        BNE     0x1712
+170e: a20a        A_TRAP_0xa20a
+1710: 6002        BRA     0x1714
+1712: a60a        A_TRAP_0xa60a
+1714: 3e80        MOVE.W  D0,(A7)
+1716: 4ed1        JMP     (A1)
+1718: 225f        MOVEA.L  (A7)+,A1
+171a: 101f        MOVE.B  (A7)+,D0
+171c: 205f        MOVEA.L  (A7)+,A0
+171e: 6604        BNE     0x1724
+1720: a208        A_TRAP_0xa208
+1722: 6002        BRA     0x1726
+1724: a608        A_TRAP_0xa608
+1726: 3e80        MOVE.W  D0,(A7)
+1728: 4ed1        JMP     (A1)
+172a: 225f        MOVEA.L  (A7)+,A1
+172c: 101f        MOVE.B  (A7)+,D0
+172e: 205f        MOVEA.L  (A7)+,A0
+1730: 6604        BNE     0x1736
+1732: a209        A_TRAP_0xa209
+1734: 6002        BRA     0x1738
+1736: a609        A_TRAP_0xa609
+1738: 3e80        MOVE.W  D0,(A7)
+173a: 4ed1        JMP     (A1)
+173c: 225f        MOVEA.L  (A7)+,A1
+173e: 101f        MOVE.B  (A7)+,D0
+1740: 205f        MOVEA.L  (A7)+,A0
+1742: 6604        BNE     0x1748
+1744: a20b        A_TRAP_0xa20b
+1746: 6002        BRA     0x174a
+1748: a60b        A_TRAP_0xa60b
+174a: 3e80        MOVE.W  D0,(A7)
+174c: 4ed1        JMP     (A1)
+174e: 225f        MOVEA.L  (A7)+,A1
+1750: 101f        MOVE.B  (A7)+,D0
+1752: 205f        MOVEA.L  (A7)+,A0
+1754: 6604        BNE     0x175a
+1756: a242        A_TRAP_0xa242
+1758: 6002        BRA     0x175c
+175a: a642        A_TRAP_0xa642
+175c: 3e80        MOVE.W  D0,(A7)
+175e: 4ed1        JMP     (A1)
+1760: 225f        MOVEA.L  (A7)+,A1
+1762: 101f        MOVE.B  (A7)+,D0
+1764: 205f        MOVEA.L  (A7)+,A0
+1766: 6604        BNE     0x176c
+1768: a241        A_TRAP_0xa241
+176a: 6002        BRA     0x176e
+176c: a641        A_TRAP_0xa641
+176e: 3e80        MOVE.W  D0,(A7)
+1770: 4ed1        JMP     (A1)
+1772: 225f        MOVEA.L  (A7)+,A1
+1774: 101f        MOVE.B  (A7)+,D0
+1776: 205f        MOVEA.L  (A7)+,A0
+1778: 6604        BNE     0x177e
+177a: a20c        A_TRAP_0xa20c
+177c: 6002        BRA     0x1780
+177e: a60c        A_TRAP_0xa60c
+1780: 3e80        MOVE.W  D0,(A7)
+1782: 4ed1        JMP     (A1)
+1784: 225f        MOVEA.L  (A7)+,A1
+1786: 101f        MOVE.B  (A7)+,D0
+1788: 205f        MOVEA.L  (A7)+,A0
+178a: 6604        BNE     0x1790
+178c: a20d        A_TRAP_0xa20d
+178e: 6002        BRA     0x1792
+1790: a60d        A_TRAP_0xa60d
+1792: 3e80        MOVE.W  D0,(A7)
+1794: 4ed1        JMP     (A1)
+1796: 225f        MOVEA.L  (A7)+,A1
+1798: 101f        MOVE.B  (A7)+,D0
+179a: 205f        MOVEA.L  (A7)+,A0
+179c: 6604        BNE     0x17a2
+179e: a212        A_TRAP_0xa212
+17a0: 6002        BRA     0x17a4
+17a2: a612        A_TRAP_0xa612
+17a4: 3e80        MOVE.W  D0,(A7)
+17a6: 4ed1        JMP     (A1)
+17a8: 225f        MOVEA.L  (A7)+,A1
+17aa: 201f        MOVE.L  (A7)+,D0
+17ac: 305f        MOVEA.W  (A7)+,A0
+17ae: a02f        A_TRAP_0xa02f
+17b0: 3e80        MOVE.W  D0,(A7)
+17b2: 4ed1        JMP     (A1)
+17b4: 221f        MOVE.L  (A7)+,D1
+17b6: 225f        MOVEA.L  (A7)+,A1
+17b8: 201f        MOVE.L  (A7)+,D0
+17ba: 305f        MOVEA.W  (A7)+,A0
+17bc: 2f01        MOVE.L  D1,-(A7)
+17be: a12f        A_TRAP_0xa12f
+17c0: 2288        MOVE.L  A0,(A1)
+17c2: 3f40        MOVE.W  D0,4(A7)
+17c6: 4e75        RTS
+17c8: 225f        MOVEA.L  (A7)+,A1
+17ca: 205f        MOVEA.L  (A7)+,A0
+17cc: 301f        MOVE.W  (A7)+,D0
+17ce: a030        A_TRAP_0xa030
+17d0: 5240        ADDQ.W  #1,D0
+17d2: 1e80        MOVE.B  D0,(A7)
+17d4: 4ed1        JMP     (A1)
+17d6: 225f        MOVEA.L  (A7)+,A1
+17d8: 205f        MOVEA.L  (A7)+,A0
+17da: 301f        MOVE.W  (A7)+,D0
+17dc: a031        A_TRAP_0xa031
+17de: 4a40        TST.W   D0
+17e0: 6704        BEQ     0x17e6
+17e2: 4217        CLR.B   (A7)
+17e4: 6004        BRA     0x17ea
+17e6: 1ebc        MOVE.B  #0x1 (1),(A7)
+17ea: 4ed1        JMP     (A1)
+17ec: 4a78        TST.W   (0x28e).W
+17f0: 6b24        BMI     0x1816
+17f2: 205f        MOVEA.L  (A7)+,A0
+17f4: 301f        MOVE.W  (A7)+,D0
+17f6: 2f08        MOVE.L  A0,-(A7)
+
+17f8: 4e56        LINK    A6,#-32
+17fc: 41ee        LEA     -32(A6),A0
+1800: 317c        MOVE.W  #0xfffc (-4),24(A0)
+1806: 317c        MOVE.W  #0x2 (2),26(A0)
+180c: 3140        MOVE.W  D0,28(A0)
+1810: a204        A_TRAP_0xa204
+1812: 4e5e        UNLK    A6
+1814: 4e75        RTS
+1816: 205f        MOVEA.L  (A7)+,A0
+1818: 301f        MOVE.W  (A7)+,D0
+181a: 2f08        MOVE.L  A0,-(A7)
+181c: 0c39        CMPI.B  #0xff (-1),(0x400009).L
+1824: 6724        BEQ     0x184a
+1826: 40e7        DC.W    0x40e7
+1828: 007c        ORI.W  #0x300 (768),#0x1239 (4665)
+182e: 00ef        DC.W    0x00ef
+1830: fffe        DC.W    0xfffe
+1832: 0241        ANDI.W  #0xf8 (248),D1
+1836: 0240        ANDI.W  #0x7 (7),D0
+183a: 11c0        MOVE.B  D0,(0x260).W
+183e: 8240        OR.W   D0,D1
+1840: 13c1        MOVE.B  D1,(0xeffffe).L
+1846: 46df        DC.W    0x46df
+1848: 4e75        RTS
+184a: 0240        ANDI.W  #0x7 (7),D0
+184e: 11c0        MOVE.B  D0,(0x260).W
+1852: e348        DC.W    0xe348
+1854: 1239        MOVE.B  (0xfcdd81).L,D1
+185a: 0201        ANDI.B  #0xf1 (-15),D1
+185e: 8200        OR.B   D0,D1
+1860: 13c1        MOVE.B  D1,(0xfcdd81).L
+1866: 4e75        RTS
+1868: 205f        MOVEA.L  (A7)+,A0
+186a: 225f        MOVEA.L  (A7)+,A1
+186c: 4219        CLR.B   (A1)+
+186e: 12b8        MOVE.B  (0x260).W,(A1)
+1872: 4ed0        JMP     (A0)
+1874: 2078        MOVEA.L  (0xe4).W,A0
+1878: b1f8        CMPA.L  (0x2ae).W,A0
+187c: 651e        BCS     0x189c
+187e: 703a        MOVEQ   #58,D0
+1880: a322        A_TRAP_0xa322
+1882: 6600        BNE     0x1956
+1886: a029        A_TRAP_0xa029
+1888: 21c8        MOVE.L  A0,(0xe4).W
+188c: 2250        MOVEA.L  (A0),A1
+188e: 2378        MOVE.L  (0x33c).W,52(A1)
+1894: 43fa        LEA     258(PC) [0x1998],A1
+1898: 21c9        MOVE.L  A1,(0x33c).W
+189c: 2250        MOVEA.L  (A0),A1
+189e: 4a69        TST.W   16(A1)
+18a2: 6f7e        BLE     0x1922
+18a4: 222f        MOVE.L  4(A7),D1
+18a8: 6b72        BMI     0x191c
+18aa: 50e9        ST     57(A1)
+18ae: 3229        MOVE.W  50(A1),D1
+18b2: 2408        MOVE.L  A0,D2
+18b4: 48e7        DC.W    0x48e7
+18b6: 6000        BRA     -0x3d67
+18ba: 4cdf        DC.W    0x4cdf
+18bc: 0006        ORI.B  #0x40 (64),D6
+18c0: 6600        BNE     0x1956
+18c4: 7000        MOVEQ   #0,D0
+18c6: 0641        ADDI.W  #0xc (12),D1
+18ca: 3001        MOVE.W  D1,D0
+18cc: a024        A_TRAP_0xa024
+18ce: 6600        BNE     0x1956
+18d2: a029        A_TRAP_0xa029
+18d4: 21c8        MOVE.L  A0,(0xe4).W
+18d8: 2250        MOVEA.L  (A0),A1
+18da: 2078        MOVEA.L  (0x27a).W,A0
+18de: 2149        MOVE.L  A1,8(A0)
+18e2: 2149        MOVE.L  A1,12(A0)
+18e6: 2042        MOVEA.L  D2,A0
+18e8: 2050        MOVEA.L  (A0),A0
+18ea: 1028        MOVE.B  56(A0),D0
+18ee: 8129        OR.B   D0,56(A1)
+18f2: 2042        MOVEA.L  D2,A0
+18f4: a023        A_TRAP_0xa023
+18f6: 3341        MOVE.W  D1,50(A1)
+18fa: 08a9        DC.W    0x08a9
+18fc: 0000        ORI.B  #0x38 (56),D0
+1900: 6708        BEQ     0x190a
+1902: 4269        CLR.W   16(A1)
+1906: 4eba        JSR     156(PC) [0x19a4]
+190a: 51e9        SF     57(A1)
+190e: d2c1        ADDA.W  D1,A1
+1910: 700c        MOVEQ   #12,D0
+1912: 92c0        SUBA.W  D0,A1
+1914: 41ef        LEA     4(A7),A0
+1918: a02e        A_TRAP_0xa02e
+191a: 603e        BRA     0x195a
+191c: 3028        MOVE.W  16(A0),D0
+1920: 6efa        BGT     0x191c
+1922: 2049        MOVEA.L  A1,A0
+1924: 317c        MOVE.W  #0x3a (58),50(A0)
+192a: 216f        MOVE.L  8(A7),36(A0)
+1930: 216f        MOVE.L  12(A7),32(A0)
+1936: 317c        MOVE.W  #0xfffc (-4),24(A0)
+193c: 222f        MOVE.L  4(A7),D1
+1940: 6a04        BPL     0x1946
+1942: a003        A_TRAP_0xa003
+1944: 600e        BRA     0x1954
+1946: 2141        MOVE.L  D1,28(A0)
+194a: 43fa        LEA     88(PC) [0x19a4],A1
+194e: 2149        MOVE.L  A1,12(A0)
+1952: a403        A_TRAP_0xa403
+1954: 4a40        TST.W   D0
+1956: 6702        BEQ     0x195a
+1958: 6108        BSR     0x1962
+195a: 225f        MOVEA.L  (A7)+,A1
+195c: defc        ADDA.W  #0xc (12),A7
+1960: 4ed1        JMP     (A1)
+1962: 2078        MOVEA.L  (0xe4).W,A0
+1966: b1f8        CMPA.L  (0x2ae).W,A0
+196a: 6410        BCC     0x197c
+196c: 2250        MOVEA.L  (A0),A1
+196e: 21e9        MOVE.L  52(A1),(0x33c).W
+1974: a023        A_TRAP_0xa023
+1976: 31f8        MOVE.W  (0x2ae).W,(0xe4).W
+197c: 4e75        RTS
+
+197e: 4e56        LINK    A6,#-32
+1982: 41ee        LEA     -32(A6),A0
+1986: 317c        MOVE.W  #0xfffc (-4),24(A0)
+198c: a206        A_TRAP_0xa206
+198e: 4278        CLR.W   (0x280).W
+1992: 61ce        BSR     0x1962
+1994: 4e5e        UNLK    A6
+1996: 4e75        RTS
+1998: 61e4        BSR     0x197e
+199a: 2038        MOVE.L  (0x33c).W,D0
+199e: 6ff6        BLE     0x1996
+19a0: 2040        MOVEA.L  D0,A0
+19a2: 4ed0        JMP     (A0)
+19a4: 48e7        DC.W    0x48e7
+19a6: e0c0        DC.W    0xe0c0
+19a8: 2078        MOVEA.L  (0xe4).W,A0
+19ac: 2050        MOVEA.L  (A0),A0
+19ae: 4a28        TST.B   57(A0)
+19b2: 6706        BEQ     0x19ba
+19b4: 50e8        ST     56(A0)
+19b8: 6062        BRA     0x1a1c
+19ba: 3028        MOVE.W  50(A0),D0
+19be: 2228        MOVE.L  28(A0),D1
+19c2: 670c        BEQ     0x19d0
+19c4: 2241        MOVEA.L  D1,A1
+19c6: 48e7        DC.W    0x48e7
+19c8: 8080        OR.L   D0,D0
+19ca: 4e91        JSR     (A1)
+19cc: 4cdf        DC.W    0x4cdf
+19ce: 0101        DC.W    0x0101
+19d0: 0c40        CMPI.W  #0x3a (58),D0
+19d4: 6746        BEQ     0x1a1c
+19d6: 2248        MOVEA.L  A0,A1
+19d8: 41e8        LEA     58(A0),A0
+19dc: 2358        MOVE.L  (A0)+,28(A1)
+19e0: 2358        MOVE.L  (A0)+,36(A1)
+19e4: 2358        MOVE.L  (A0)+,32(A1)
+19e8: 337c        MOVE.W  #0xfffc (-4),24(A1)
+19ee: 7246        MOVEQ   #70,D1
+19f0: 9041        SUB.W   D1,D0
+19f2: 6712        BEQ     0x1a06
+19f4: 3200        MOVE.W  D0,D1
+19f6: 48c0        DC.W    0x48c0
+19f8: 2248        MOVEA.L  A0,A1
+19fa: 92fc        SUBA.W  #0xc (12),A1
+19fe: a02e        A_TRAP_0xa02e
+1a00: 0641        ADDI.W  #0x3a (58),D1
+1a04: 6002        BRA     0x1a08
+1a06: 723a        MOVEQ   #58,D1
+1a08: 2078        MOVEA.L  (0xe4).W,A0
+1a0c: 2050        MOVEA.L  (A0),A0
+1a0e: 3141        MOVE.W  D1,50(A0)
+1a12: 43fa        LEA     -112(PC) [0x19a4],A1
+1a16: 2149        MOVE.L  A1,12(A0)
+1a1a: a403        A_TRAP_0xa403
+1a1c: 4cdf        DC.W    0x4cdf
+1a1e: 0307        DC.W    0x0307
+1a20: 4e75        RTS
+1a22: 225f        MOVEA.L  (A7)+,A1
+1a24: 50d7        ST     (A7)
+1a26: 2078        MOVEA.L  (0xe4).W,A0
+1a2a: b1f8        CMPA.L  (0x2ae).W,A0
+1a2e: 6408        BCC     0x1a38
+1a30: 2050        MOVEA.L  (A0),A0
+1a32: 4a68        TST.W   16(A0)
+1a36: 5fd7        SLE     (A7)
+1a38: 4417        DC.W    0x4417
+1a3a: 4ed1        JMP     (A1)
+1a3c: 226f        MOVEA.L  4(A7),A1
+1a40: 4251        CLR.W   (A1)
+1a42: 2078        MOVEA.L  (0xaec).W,A0
+1a46: a025        A_TRAP_0xa025
+1a48: 4a80        TST.L   D0
+1a4a: 6f0e        BLE     0x1a5a
+1a4c: 2050        MOVEA.L  (A0),A0
+1a4e: 226f        MOVEA.L  8(A7),A1
+1a52: 3298        MOVE.W  (A0)+,(A1)
+1a54: 226f        MOVEA.L  4(A7),A1
+1a58: 3290        MOVE.W  (A0),(A1)
+1a5a: 205f        MOVEA.L  (A7)+,A0
+1a5c: 504f        ADDQ.W  #8,A7
+1a5e: 4ed0        JMP     (A0)
+1a60: 48e7        DC.W    0x48e7
+1a62: 0030        ORI.B  #0x6f (111),12(A0,D0.W)
+1a68: 42a9        CLR.L   2(A1)
+1a6c: 2078        MOVEA.L  (0xaec).W,A0
+1a70: a025        A_TRAP_0xa025
+1a72: 4a80        TST.L   D0
+1a74: 6f26        BLE     0x1a9c
+1a76: 2450        MOVEA.L  (A0),A2
+1a78: 544a        ADDQ.W  #2,A2
+1a7a: 322f        MOVE.W  16(A7),D1
+1a7e: b25a        CMP.W   (A2)+,D1
+1a80: 6e1a        BGT     0x1a9c
+1a82: 5341        SUBQ.W  #1,D1
+1a84: 6d16        BLT     0x1a9c
+1a86: 204a        MOVEA.L  A2,A0
+1a88: 7002        MOVEQ   #2,D0
+1a8a: d028        ADD.B   8(A0),D0
+1a8e: 0240        ANDI.W  #0xfffe (-2),D0
+1a92: 5040        ADDQ.W  #8,D0
+1a94: d4c0        ADDA.W  D0,A2
+1a96: a02e        A_TRAP_0xa02e
+1a98: 5341        SUBQ.W  #1,D1
+1a9a: 60e8        BRA     0x1a84
+1a9c: 4cdf        DC.W    0x4cdf
+1a9e: 0c00        CMPI.B  #0x5f (95),D0
+1aa2: 5c4f        ADDQ.W  #6,A7
+1aa4: 4ed0        JMP     (A0)
+1aa6: 2078        MOVEA.L  (0xaec).W,A0
+1aaa: a025        A_TRAP_0xa025
+1aac: 4a80        TST.L   D0
+1aae: 6f28        BLE     0x1ad8
+1ab0: 2050        MOVEA.L  (A0),A0
+1ab2: 5448        ADDQ.W  #2,A0
+1ab4: 322f        MOVE.W  4(A7),D1
+1ab8: b258        CMP.W   (A0)+,D1
+1aba: 6e1c        BGT     0x1ad8
+1abc: 5341        SUBQ.W  #1,D1
+1abe: 6d18        BLT     0x1ad8
+1ac0: 6712        BEQ     0x1ad4
+1ac2: 7002        MOVEQ   #2,D0
+1ac4: d028        ADD.B   8(A0),D0
+1ac8: 0240        ANDI.W  #0xfffe (-2),D0
+1acc: 5040        ADDQ.W  #8,D0
+1ace: d0c0        ADDA.W  D0,A0
+1ad0: 5341        SUBQ.W  #1,D1
+1ad2: 60ea        BRA     0x1abe
+1ad4: 42a8        CLR.L   2(A0)
+1ad8: 205f        MOVEA.L  (A7)+,A0
+1ada: 544f        ADDQ.W  #2,A7
+1adc: 4ed0        JMP     (A0)
+1ade: a061        A_TRAP_0xa061
+1ae0: 2f40        MOVE.L  D0,4(A7)
+1ae4: 4e75        RTS
+1ae6: a162        A_TRAP_0xa162
+1ae8: 226f        MOVEA.L  4(A7),A1
+1aec: 2288        MOVE.L  A0,(A1)
+1aee: 226f        MOVEA.L  8(A7),A1
+1af2: 2280        MOVE.L  D0,(A1)
+1af4: 225f        MOVEA.L  (A7)+,A1
+1af6: 504f        ADDQ.W  #8,A7
+1af8: 4ed1        JMP     (A1)
+1afa: a065        A_TRAP_0xa065
+1afc: 2f40        MOVE.L  D0,4(A7)
+1b00: 4e75        RTS
+1b02: a166        A_TRAP_0xa166
+1b04: 2f48        MOVE.L  A0,4(A7)
+1b08: 4e75        RTS
+1b0a: 225f        MOVEA.L  (A7)+,A1
+1b0c: 205f        MOVEA.L  (A7)+,A0
+1b0e: a069        A_TRAP_0xa069
+1b10: 1e80        MOVE.B  D0,(A7)
+1b12: 4ed1        JMP     (A1)
+1b14: 225f        MOVEA.L  (A7)+,A1
+1b16: 101f        MOVE.B  (A7)+,D0
+1b18: 205f        MOVEA.L  (A7)+,A0
+1b1a: a06a        A_TRAP_0xa06a
+1b1c: 4ed1        JMP     (A1)
+
+1b1e: 4e56        LINK    A6,#0
+1b22: 206e        MOVEA.L  16(A6),A0
+1b26: 226e        MOVEA.L  12(A6),A1
+1b2a: 7000        MOVEQ   #0,D0
+1b2c: 1018        MOVE.B  (A0)+,D0
+1b2e: 4840        DC.W    0x4840
+1b30: 1019        MOVE.B  (A1)+,D0
+1b32: 4a2e        TST.B   8(A6)
+1b36: 670e        BEQ     0x1b46
+1b38: 4a2e        TST.B   10(A6)
+1b3c: 6704        BEQ     0x1b42
+1b3e: a050        A_TRAP_0xa050
+1b40: 6010        BRA     0x1b52
+1b42: a050        A_TRAP_0xa050
+1b44: 600c        BRA     0x1b52
+1b46: 4a2e        TST.B   10(A6)
+1b4a: 6704        BEQ     0x1b50
+1b4c: a050        A_TRAP_0xa050
+1b4e: 6002        BRA     0x1b52
+1b50: a050        A_TRAP_0xa050
+1b52: 3d40        MOVE.W  D0,20(A6)
+1b56: 4e5e        UNLK    A6
+1b58: 205f        MOVEA.L  (A7)+,A0
+1b5a: dffc        ADDA.L  #0xc,A7
+1b60: 4ed0        JMP     (A0)
+1b62: 225f        MOVEA.L  (A7)+,A1
+1b64: 205f        MOVEA.L  (A7)+,A0
+1b66: 321f        MOVE.W  (A7)+,D1
+1b68: 201f        MOVE.L  (A7)+,D0
+1b6a: 2f09        MOVE.L  A1,-(A7)
+1b6c: 2f00        MOVE.L  D0,-(A7)
+1b6e: 3f01        MOVE.W  D1,-(A7)
+1b70: 1010        MOVE.B  (A0),D0
+1b72: 3f00        MOVE.W  D0,-(A7)
+1b74: a942        A_TRAP_0xa942
+1b76: 4e75        RTS
+1b78: 225f        MOVEA.L  (A7)+,A1
+1b7a: 205f        MOVEA.L  (A7)+,A0
+1b7c: 321f        MOVE.W  (A7)+,D1
+1b7e: 201f        MOVE.L  (A7)+,D0
+1b80: 2f09        MOVE.L  A1,-(A7)
+1b82: 2f08        MOVE.L  A0,-(A7)
+1b84: 4267        CLR.W   -(A7)
+1b86: 2f00        MOVE.L  D0,-(A7)
+1b88: 3f01        MOVE.W  D1,-(A7)
+1b8a: 486f        PEA     6(A7)
+1b8e: a941        A_TRAP_0xa941
+1b90: 301f        MOVE.W  (A7)+,D0
+1b92: 205f        MOVEA.L  (A7)+,A0
+1b94: 1080        MOVE.B  D0,(A0)
+1b96: 4e75        RTS
+1b98: 6118        BSR     0x1bb2
+1b9a: a9db        A_TRAP_0xa9db
+1b9c: 2e9f        MOVE.L  (A7)+,(A7)
+1b9e: 4e75        RTS
+1ba0: 6110        BSR     0x1bb2
+1ba2: a9d6        A_TRAP_0xa9d6
+1ba4: 60f6        BRA     0x1b9c
+1ba6: 610a        BSR     0x1bb2
+1ba8: a9d5        A_TRAP_0xa9d5
+1baa: 60f0        BRA     0x1b9c
+1bac: 6104        BSR     0x1bb2
+1bae: a9d7        A_TRAP_0xa9d7
+1bb0: 60ea        BRA     0x1b9c
+1bb2: 206f        MOVEA.L  8(A7),A0
+1bb6: 4a68        TST.W   164(A0)
+1bba: 6b08        BMI     0x1bc4
+1bbc: 225f        MOVEA.L  (A7)+,A1
+1bbe: 2f28        MOVE.L  160(A0),-(A7)
+1bc2: 4ed1        JMP     (A1)
+1bc4: 4cdf        DC.W    0x4cdf
+1bc6: 0301        DC.W    0x0301
+1bc8: 4ed0        JMP     (A0)
+1bca: 42af        CLR.L   4(A7)
+1bce: 3f78        MOVE.W  (0xab0).W,6(A7)
+1bd4: 4e75        RTS
+1bd6: 31ef        MOVE.W  6(A7),(0xab0).W
+1bdc: 2e9f        MOVE.L  (A7)+,(A7)
+1bde: 4e75        RTS
+1be0: 594f        SUBQ.W  #4,A7
+1be2: 2f38        MOVE.L  (0xab4).W,-(A7)
+1be6: 2f3c        MOVE.L  #0x54455854,-(A7)
+1bec: 42a7        CLR.L   -(A7)
+1bee: a9fd        A_TRAP_0xa9fd
+1bf0: 201f        MOVE.L  (A7)+,D0
+1bf2: 3f40        MOVE.W  D0,4(A7)
+1bf6: 31c0        MOVE.W  D0,(0xab0).W
+1bfa: 6a04        BPL     0x1c00
+1bfc: 4278        CLR.W   (0xab0).W
+1c00: 4e75        RTS
+1c02: 2078        MOVEA.L  (0xab4).W,A0
+1c06: a029        A_TRAP_0xa029
+1c08: 594f        SUBQ.W  #4,A7
+1c0a: 3038        MOVE.W  (0xab0).W,D0
+1c0e: 48c0        DC.W    0x48c0
+1c10: 2f00        MOVE.L  D0,-(A7)
+1c12: 2f3c        MOVE.L  #0x54455854,-(A7)
+1c18: 2f10        MOVE.L  (A0),-(A7)
+1c1a: a9fe        A_TRAP_0xa9fe
+1c1c: 544f        ADDQ.W  #2,A7
+1c1e: 3f5f        MOVE.W  (A7)+,4(A7)
+1c22: 2078        MOVEA.L  (0xab4).W,A0
+1c26: a02a        A_TRAP_0xa02a
+1c28: 4e75        RTS
+1c2a: 201f        MOVE.L  (A7)+,D0
+1c2c: 225f        MOVEA.L  (A7)+,A1
+1c2e: 2b5f        MOVE.L  (A7)+,20(A5)
+1c32: 2251        MOVEA.L  (A1),A1
+1c34: 41fa        LEA     10(PC) [0x1c40],A0
+1c38: 2348        MOVE.L  A0,42(A1)
+1c3c: 2040        MOVEA.L  D0,A0
+1c3e: 4ed0        JMP     (A0)
+1c40: 2f02        MOVE.L  D2,-(A7)
+1c42: 4227        CLR.B   -(A7)
+1c44: 206d        MOVEA.L  20(A5),A0
+1c48: 4e90        JSR     (A0)
+1c4a: 101f        MOVE.B  (A7)+,D0
+1c4c: 241f        MOVE.L  (A7)+,D2
+1c4e: 4a00        TST.B   D0
+1c50: 4e75        RTS
+1c52: 201f        MOVE.L  (A7)+,D0
+1c54: 225f        MOVEA.L  (A7)+,A1
+1c56: 2b5f        MOVE.L  (A7)+,24(A5)
+1c5a: 2251        MOVEA.L  (A1),A1
+1c5c: 41fa        LEA     10(PC) [0x1c68],A0
+1c60: 2348        MOVE.L  A0,38(A1)
+1c64: 2040        MOVEA.L  D0,A0
+1c66: 4ed0        JMP     (A0)
+1c68: 4227        CLR.B   -(A7)
+1c6a: 2f08        MOVE.L  A0,-(A7)
+1c6c: 3f00        MOVE.W  D0,-(A7)
+1c6e: 206d        MOVEA.L  24(A5),A0
+1c72: 4e90        JSR     (A0)
+1c74: 4a1f        TST.B   (A7)+
+1c76: 4e75        RTS
+
+1c78: 4e56        LINK    A6,#0
+1c7c: 594f        SUBQ.W  #4,A7
+1c7e: 2f3c        MOVE.L  #0x53545223,-(A7)
+1c84: 3f2e        MOVE.W  10(A6),-(A7)
+1c88: a9a0        _GetResource
+1c8a: 226e        MOVEA.L  12(A6),A1
+1c8e: 4211        CLR.B   (A1)
+1c90: 201f        MOVE.L  (A7)+,D0
+1c92: 6720        BEQ     0x1cb4
+1c94: 2040        MOVEA.L  D0,A0
+1c96: 2050        MOVEA.L  (A0),A0
+1c98: 3018        MOVE.W  (A0)+,D0
+1c9a: 322e        MOVE.W  8(A6),D1
+1c9e: b240        CMP.W   D0,D1
+1ca0: 6e12        BGT     0x1cb4
+1ca2: 7000        MOVEQ   #0,D0
+1ca4: 5341        SUBQ.W  #1,D1
+1ca6: 6706        BEQ     0x1cae
+1ca8: 1018        MOVE.B  (A0)+,D0
+1caa: d1c0        ADDA.L  D0,A0
+1cac: 60f6        BRA     0x1ca4
+1cae: 1010        MOVE.B  (A0),D0
+1cb0: 5240        ADDQ.W  #1,D0
+1cb2: a02e        A_TRAP_0xa02e
+1cb4: 4e5e        UNLK    A6
+1cb6: 205f        MOVEA.L  (A7)+,A0
+1cb8: 508f        ADDQ.L  #8,A7
+1cba: 4ed0        JMP     (A0)
+
+1cbc: 4e56        LINK    A6,#0
+1cc0: 594f        SUBQ.W  #4,A7
+1cc2: 2f3c        MOVE.L  #0x50415423,-(A7)
+1cc8: 3f2e        MOVE.W  10(A6),-(A7)
+1ccc: a9a0        _GetResource
+1cce: 226e        MOVEA.L  12(A6),A1
+1cd2: 201f        MOVE.L  (A7)+,D0
+1cd4: 671c        BEQ     0x1cf2
+1cd6: 2040        MOVEA.L  D0,A0
+1cd8: 2050        MOVEA.L  (A0),A0
+1cda: 3018        MOVE.W  (A0)+,D0
+1cdc: 322e        MOVE.W  8(A6),D1
+1ce0: 6f10        BLE     0x1cf2
+1ce2: b240        CMP.W   D0,D1
+1ce4: 6e0c        BGT     0x1cf2
+1ce6: 5341        SUBQ.W  #1,D1
+1ce8: 6704        BEQ     0x1cee
+1cea: 5048        ADDQ.W  #8,A0
+1cec: 60f8        BRA     0x1ce6
+1cee: 7008        MOVEQ   #8,D0
+1cf0: a02e        A_TRAP_0xa02e
+1cf2: 4e5e        UNLK    A6
+1cf4: 205f        MOVEA.L  (A7)+,A0
+1cf6: 508f        ADDQ.L  #8,A7
+1cf8: 4ed0        JMP     (A0)
+1cfa: 205f        MOVEA.L  (A7)+,A0
+1cfc: 225f        MOVEA.L  (A7)+,A1
+1cfe: 32b8        MOVE.W  (0x102).W,(A1)
+1d02: 225f        MOVEA.L  (A7)+,A1
+1d04: 32b8        MOVE.W  (0x104).W,(A1)
+1d08: 4ed0        JMP     (A0)
+1d0a: 205f        MOVEA.L  (A7)+,A0
+1d0c: 11df        MOVE.B  (A7)+,(0xbf4).W
+1d10: 4ed0        JMP     (A0)
+1d12: 7401        MOVEQ   #1,D2
+1d14: 205f        MOVEA.L  (A7)+,A0
+1d16: 3f02        MOVE.W  D2,-(A7)
+1d18: 2f08        MOVE.L  A0,-(A7)
+1d1a: adea        A_TRAP_0xadea
+1d1c: 7403        MOVEQ   #3,D2
+1d1e: 4efa        JMP     -12(PC) [0x1d14]
+1d22: 7402        MOVEQ   #2,D2
+1d24: 4efa        JMP     -18(PC) [0x1d14]
+1d28: 7404        MOVEQ   #4,D2
+1d2a: 4efa        JMP     -24(PC) [0x1d14]
+1d2e: 7402        MOVEQ   #2,D2
+1d30: 205f        MOVEA.L  (A7)+,A0
+1d32: 3f02        MOVE.W  D2,-(A7)
+1d34: 2f08        MOVE.L  A0,-(A7)
+1d36: ade9        A_TRAP_0xade9
+1d38: 7404        MOVEQ   #4,D2
+1d3a: 4efa        JMP     -12(PC) [0x1d30]
+1d3e: 7400        MOVEQ   #0,D2
+1d40: 4efa        JMP     -18(PC) [0x1d30]
+1d44: 7406        MOVEQ   #6,D2
+1d46: 4efa        JMP     -24(PC) [0x1d30]
+1d4a: 343c        MOVE.W  #0x8 (8),D2
+1d4e: 4efa        JMP     -32(PC) [0x1d30]
+1d52: 343c        MOVE.W  #0xa (10),D2
+1d56: 4efa        JMP     -40(PC) [0x1d30]
+1d5a: 7406        MOVEQ   #6,D2
+1d5c: 205f        MOVEA.L  (A7)+,A0
+1d5e: 3f02        MOVE.W  D2,-(A7)
+1d60: 2f08        MOVE.L  A0,-(A7)
+1d62: aded        A_TRAP_0xaded
+1d64: 7408        MOVEQ   #8,D2
+1d66: 4efa        JMP     -12(PC) [0x1d5c]
+1d6a: 7400        MOVEQ   #0,D2
+1d6c: 4efa        JMP     -18(PC) [0x1d5c]
+1d70: 740e        MOVEQ   #14,D2
+1d72: 4efa        JMP     -24(PC) [0x1d5c]
+1d76: 7402        MOVEQ   #2,D2
+1d78: 4efa        JMP     -30(PC) [0x1d5c]
+1d7c: 7410        MOVEQ   #16,D2
+1d7e: 4efa        JMP     -36(PC) [0x1d5c]
+1d82: 7404        MOVEQ   #4,D2
+1d84: 4efa        JMP     -42(PC) [0x1d5c]
+1d88: 343c        MOVE.W  #0xa (10),D2
+1d8c: 4efa        JMP     6(PC) [0x1d94]
+1d90: 343c        MOVE.W  #0xc (12),D2
+1d94: 205f        MOVEA.L  (A7)+,A0
+1d96: 3f02        MOVE.W  D2,-(A7)
+1d98: 2f08        MOVE.L  A0,-(A7)
+1d9a: aded        A_TRAP_0xaded
+1d9c: 343c        MOVE.W  #0xa (10),D2
+1da0: 4efa        JMP     6(PC) [0x1da8]
+1da4: 343c        MOVE.W  #0xc (12),D2
+1da8: 226f        MOVEA.L  4(A7),A1
+1dac: 206f        MOVEA.L  8(A7),A0
+1db0: 4240        CLR.W   D0
+1db2: 4241        CLR.W   D1
+1db4: 1018        MOVE.B  (A0)+,D0
+1db6: 1219        MOVE.B  (A1)+,D1
+1db8: 2f48        MOVE.L  A0,8(A7)
+1dbc: 2f49        MOVE.L  A1,4(A7)
+1dc0: 205f        MOVEA.L  (A7)+,A0
+1dc2: 3f00        MOVE.W  D0,-(A7)
+1dc4: 3f01        MOVE.W  D1,-(A7)
+1dc6: 3f02        MOVE.W  D2,-(A7)
+1dc8: 2f08        MOVE.L  A0,-(A7)
+1dca: aded        A_TRAP_0xaded
+1dcc: 206f        MOVEA.L  8(A7),A0
+1dd0: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1dd4: a9ee        A_TRAP_0xa9ee
+1dd6: 206f        MOVEA.L  4(A7),A0
+1dda: 2080        MOVE.L  D0,(A0)
+1ddc: 4efa        JMP     16(PC) [0x1dee]
+1de0: 206f        MOVEA.L  4(A7),A0
+1de4: 202f        MOVE.L  8(A7),D0
+1de8: 3f3c        MOVE.W  #0x0 (0),-(A7)
+1dec: a9ee        A_TRAP_0xa9ee
+1dee: 205f        MOVEA.L  (A7)+,A0
+1df0: 504f        ADDQ.W  #8,A7
+1df2: 4ed0        JMP     (A0)
+1df4: 6134        BSR     0x1e2a
+1df6: 6132        BSR     0x1e2a
+1df8: 6130        BSR     0x1e2a
+1dfa: 612e        BSR     0x1e2a
+1dfc: 612c        BSR     0x1e2a
+1dfe: 612a        BSR     0x1e2a
+1e00: 6128        BSR     0x1e2a
+1e02: 6126        BSR     0x1e2a
+1e04: 6124        BSR     0x1e2a
+1e06: 6122        BSR     0x1e2a
+1e08: 6120        BSR     0x1e2a
+1e0a: 611e        BSR     0x1e2a
+1e0c: 611c        BSR     0x1e2a
+1e0e: 611a        BSR     0x1e2a
+1e10: 6118        BSR     0x1e2a
+1e12: 6116        BSR     0x1e2a
+1e14: 6114        BSR     0x1e2a
+1e16: 6112        BSR     0x1e2a
+1e18: 6110        BSR     0x1e2a
+1e1a: 610e        BSR     0x1e2a
+1e1c: 610c        BSR     0x1e2a
+1e1e: 610a        BSR     0x1e2a
+1e20: 6108        BSR     0x1e2a
+1e22: 6106        BSR     0x1e2a
+1e24: 6104        BSR     0x1e2a
+1e26: 6102        BSR     0x1e2a
+1e28: 4e71        DC.W    0x4e71
+1e2a: 43fa        LEA     -54(PC) [0x1df6],A1
+1e2e: 201f        MOVE.L  (A7)+,D0
+1e30: 9089        SUB.L   A1,D0
+1e32: d080        ADD.L   D0,D0
+1e34: 205f        MOVEA.L  (A7)+,A0
+1e36: 3f00        MOVE.W  D0,-(A7)
+1e38: 2f08        MOVE.L  A0,-(A7)
+1e3a: ade7        A_TRAP_0xade7
+1e3c: 0000        ORI.B  #0x0 (0),D0
+
+1e40: 4e56        LINK    A6,#-20
+1e44: 3d6e        MOVE.W  10(A6),-18(A6)
+1e4a: 302e        MOVE.W  8(A6),D0
+1e4e: 5240        ADDQ.W  #1,D0
+1e50: b06e        CMP.W   -18(A6),D0
+1e54: 6f00        BLE     0x1eac
+1e58: 2f2e        MOVE.L  14(A6),-(A7)
+1e5c: 3f2e        MOVE.W  -18(A6),-(A7)
+1e60: 486e        PEA     -20(A6)
+1e64: 486e        PEA     -16(A6)
+1e68: 486e        PEA     -8(A6)
+1e6c: a98d        _GetDItem
+1e6e: 2d6e        MOVE.L  -16(A6),-12(A6)
+1e74: 302e        MOVE.W  -18(A6),D0
+1e78: b06e        CMP.W   12(A6),D0
+1e7c: 6700        BEQ     0x1e88
+1e80: 2f2e        MOVE.L  -12(A6),-(A7)
+1e84: 4267        CLR.W   -(A7)
+1e86: a963        _SetCtlValue
+1e88: 302e        MOVE.W  -18(A6),D0
+1e8c: b06e        CMP.W   12(A6),D0
+1e90: 6600        BNE     0x1e9e
+1e94: 2f2e        MOVE.L  -12(A6),-(A7)
+1e98: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1e9c: a963        _SetCtlValue
+1e9e: 302e        MOVE.W  -18(A6),D0
+1ea2: 5240        ADDQ.W  #1,D0
+1ea4: 3d40        MOVE.W  D0,-18(A6)
+1ea8: 6000        BRA     0x1e4a
+1eac: 4e5e        UNLK    A6
+1eae: 205f        MOVEA.L  (A7)+,A0
+1eb0: 4fef        LEA     10(A7),A7
+1eb4: 4ed0        JMP     (A0)
+1eb6: 0000        ORI.B  #0x0 (0),D0
+
+1eba: 4e56        LINK    A6,#0
+1ebe: 2f2d        MOVE.L  -242(A5),-(A7)
+1ec2: 4267        CLR.W   -(A7)
+1ec4: a93a        A_TRAP_0xa93a
+1ec6: 2f2d        MOVE.L  -238(A5),-(A7)
+1eca: 4267        CLR.W   -(A7)
+1ecc: a93a        A_TRAP_0xa93a
+1ece: 2f2d        MOVE.L  -234(A5),-(A7)
+1ed2: 4267        CLR.W   -(A7)
+1ed4: a93a        A_TRAP_0xa93a
+1ed6: 2f2d        MOVE.L  -230(A5),-(A7)
+1eda: 4267        CLR.W   -(A7)
+1edc: a93a        A_TRAP_0xa93a
+1ede: 2f2d        MOVE.L  -226(A5),-(A7)
+1ee2: 4267        CLR.W   -(A7)
+1ee4: a93a        A_TRAP_0xa93a
+1ee6: a937        _DrawMenuBar
+1ee8: 4e5e        UNLK    A6
+1eea: 4e75        RTS
+1eec: 0000        ORI.B  #0x0 (0),D0
+
+1ef0: 4e56        LINK    A6,#0
+1ef4: 598f        SUBQ.L  #4,A7
+1ef6: 3f3c        MOVE.W  #0x1b5e (7006),-(A7)
+1efa: 42a7        CLR.L   -(A7)
+1efc: 2f3c        MOVE.L  #0xffffffff,-(A7)
+1f02: a97c        _GetNewDialog
+1f04: 2b5f        MOVE.L  (A7)+,-282(A5)
+1f08: 2f2d        MOVE.L  -282(A5),-(A7)
+1f0c: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1f10: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1f14: 3f3c        MOVE.W  #0x6 (6),-(A7)
+1f18: 4ead        JSR     50(A5) [CODE_1+0x1e40]
+1f1c: 226e        MOVEA.L  8(A6),A1
+1f20: 32bc        MOVE.W  #0x1b5d (7005),(A1)
+1f24: 2f2d        MOVE.L  -242(A5),-(A7)
+1f28: 4267        CLR.W   -(A7)
+1f2a: a939        A_TRAP_0xa939
+1f2c: 2f2d        MOVE.L  -242(A5),-(A7)
+1f30: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1f34: a93a        A_TRAP_0xa93a
+1f36: 2f2d        MOVE.L  -242(A5),-(A7)
+1f3a: 3f3c        MOVE.W  #0x2 (2),-(A7)
+1f3e: a939        A_TRAP_0xa939
+1f40: 2f2d        MOVE.L  -238(A5),-(A7)
+1f44: 4267        CLR.W   -(A7)
+1f46: a93a        A_TRAP_0xa93a
+1f48: 2f2d        MOVE.L  -234(A5),-(A7)
+1f4c: 4267        CLR.W   -(A7)
+1f4e: a939        A_TRAP_0xa939
+1f50: 2f2d        MOVE.L  -230(A5),-(A7)
+1f54: 4267        CLR.W   -(A7)
+1f56: a93a        A_TRAP_0xa93a
+1f58: 2f2d        MOVE.L  -226(A5),-(A7)
+1f5c: 4267        CLR.W   -(A7)
+1f5e: a93a        A_TRAP_0xa93a
+1f60: a937        _DrawMenuBar
+1f62: 2f2d        MOVE.L  -282(A5),-(A7)
+1f66: a915        _ShowWindow
+1f68: 4e5e        UNLK    A6
+1f6a: 2e9f        MOVE.L  (A7)+,(A7)
+1f6c: 4e75        RTS
+1f6e: 0000        ORI.B  #0x0 (0),D0
+
+1f72: 4e56        LINK    A6,#0
+1f76: 4267        CLR.W   -(A7)
+1f78: a938        _HiliteMenu
+1f7a: 598f        SUBQ.L  #4,A7
+1f7c: 3f3c        MOVE.W  #0x1 (1),-(A7)
+1f80: 42a7        CLR.L   -(A7)
+1f82: 2f3c        MOVE.L  #0xffffffff,-(A7)
+1f88: a9bd        _GetNewWindow
+1f8a: 2b5f        MOVE.L  (A7)+,-210(A5)
+1f8e: 2f2d        MOVE.L  -210(A5),-(A7)
+1f92: a873        _SetPort
+1f94: 4267        CLR.W   -(A7)
+1f96: a887        _TextFont
+1f98: 3f3c        MOVE.W  #0xc (12),-(A7)
+1f9c: a88a        _TextSize
+1f9e: 4e5e        UNLK    A6
+1fa0: 4e75        RTS
+1fa2: 0000        ORI.B  #0x0 (0),D0
+
+1fa6: 4e56        LINK    A6,#0
+1faa: 598f        SUBQ.L  #4,A7
+1fac: 3f3c        MOVE.W  #0x9c (156),-(A7)
+1fb0: 2f2d        MOVE.L  -210(A5),-(A7)
+1fb4: a9be        _GetNewControl
+1fb6: 2b5f        MOVE.L  (A7)+,-218(A5)
+1fba: 2f2d        MOVE.L  -210(A5),-(A7)
+1fbe: a969        _DrawControls
+1fc0: 422d        CLR.B   -2149(A5)
+1fc4: 4a2d        TST.B   -2149(A5)
+1fc8: 6600        BNE     0x2084
+1fcc: 558f        SUBQ.L  #2,A7
+1fce: 3f3c        MOVE.W  #0xffff (-1),-(A7)
+1fd2: 486d        PEA     -2210(A5)
+1fd6: a970        _GetNextEvent
+1fd8: 4a1f        TST.B   (A7)+
+1fda: 6700        BEQ     0x2080
+1fde: 0c6d        CMPI.W  #0x1 (1),-2210(A5)
+1fe4: 6600        BNE     0x2080
+1fe8: 558f        SUBQ.L  #2,A7
+1fea: 2f2d        MOVE.L  -2200(A5),-(A7)
+1fee: 486d        PEA     -214(A5)
+1ff2: a92c        A_TRAP_0xa92c
+1ff4: 301f        MOVE.W  (A7)+,D0
+1ff6: 0c40        CMPI.W  #0x1 (1),D0
+1ffa: 6600        BNE     0x2008
+1ffe: 3f3c        MOVE.W  #0x1 (1),-(A7)
+2002: a9c8        _SysBeep
+2004: 6000        BRA     0x2080
+2008: 0c40        CMPI.W  #0x0 (0),D0
+200c: 6600        BNE     0x201a
+2010: 3f3c        MOVE.W  #0x1 (1),-(A7)
+2014: a9c8        _SysBeep
+2016: 6000        BRA     0x2080
+201a: 0c40        CMPI.W  #0x3 (3),D0
+201e: 6600        BNE     0x2080
+2022: 202d        MOVE.L  -214(A5),D0
+2026: b0ad        CMP.L   -210(A5),D0
+202a: 6600        BNE     0x2080
+202e: 2b6d        MOVE.L  -2200(A5),-2440(A5)
+2034: 486d        PEA     -2440(A5)
+2038: a871        A_TRAP_0xa871
+203a: 558f        SUBQ.L  #2,A7
+203c: 2f2d        MOVE.L  -2440(A5),-(A7)
+2040: 2f2d        MOVE.L  -210(A5),-(A7)
+2044: 486d        PEA     -222(A5)
+2048: a96c        _FindControl
+204a: 3b5f        MOVE.W  (A7)+,-2132(A5)
+204e: 202d        MOVE.L  -222(A5),D0
+2052: b0ad        CMP.L   -218(A5),D0
+2056: 57c0        SEQ     D0
+2058: 4400        DC.W    0x4400
+205a: 0c6d        CMPI.W  #0xa (10),-2132(A5)
+2060: 57c1        SEQ     D1
+2062: 4401        DC.W    0x4401
+2064: c001        AND.B   D1,D0
+2066: 6700        BEQ     0x2080
+206a: 2f2d        MOVE.L  -218(A5),-(A7)
+206e: 3f3c        MOVE.W  #0xa (10),-(A7)
+2072: a95d        A_TRAP_0xa95d
+2074: 1b7c        MOVE.B  #0x1 (1),-2149(A5)
+207a: 2f2d        MOVE.L  -210(A5),-(A7)
+207e: a914        _DisposeWindow
+2080: 6000        BRA     0x1fc4
+2084: 4e5e        UNLK    A6
+2086: 4e75        RTS
+2088: 0000        ORI.B  #0x0 (0),D0
+
+208c: 4e56        LINK    A6,#0
+2090: 206e        MOVEA.L  12(A6),A0
+2094: 4250        CLR.W   (A0)
+2096: 206e        MOVEA.L  8(A6),A0
+209a: 4250        CLR.W   (A0)
+209c: 206e        MOVEA.L  16(A6),A0
+20a0: 3010        MOVE.W  (A0),D0
+20a2: b06e        CMP.W   20(A6),D0
+20a6: 6600        BNE     0x20b8
+20aa: 206e        MOVEA.L  12(A6),A0
+20ae: 3010        MOVE.W  (A0),D0
+20b0: 5240        ADDQ.W  #1,D0
+20b2: 226e        MOVEA.L  12(A6),A1
+20b6: 3280        MOVE.W  D0,(A1)
+20b8: 206e        MOVEA.L  16(A6),A0
+20bc: 3028        MOVE.W  2(A0),D0
+20c0: b06e        CMP.W   20(A6),D0
+20c4: 6600        BNE     0x20d6
+20c8: 206e        MOVEA.L  12(A6),A0
+20cc: 3010        MOVE.W  (A0),D0
+20ce: 5240        ADDQ.W  #1,D0
+20d0: 226e        MOVEA.L  12(A6),A1
+20d4: 3280        MOVE.W  D0,(A1)
+20d6: 206e        MOVEA.L  16(A6),A0
+20da: 3028        MOVE.W  4(A0),D0
+20de: b06e        CMP.W   20(A6),D0
+20e2: 6600        BNE     0x20f4
+20e6: 206e        MOVEA.L  12(A6),A0
+20ea: 3010        MOVE.W  (A0),D0
+20ec: 5240        ADDQ.W  #1,D0
+20ee: 226e        MOVEA.L  12(A6),A1
+20f2: 3280        MOVE.W  D0,(A1)
+20f4: 206e        MOVEA.L  16(A6),A0
+20f8: 3028        MOVE.W  6(A0),D0
+20fc: b06e        CMP.W   20(A6),D0
+2100: 6600        BNE     0x2112
+2104: 206e        MOVEA.L  12(A6),A0
+2108: 3010        MOVE.W  (A0),D0
+210a: 5240        ADDQ.W  #1,D0
+210c: 226e        MOVEA.L  12(A6),A1
+2110: 3280        MOVE.W  D0,(A1)
+2112: 206e        MOVEA.L  16(A6),A0
+2116: 3028        MOVE.W  8(A0),D0
+211a: b06e        CMP.W   20(A6),D0
+211e: 6600        BNE     0x2130
+2122: 206e        MOVEA.L  12(A6),A0
+2126: 3010        MOVE.W  (A0),D0
+2128: 5240        ADDQ.W  #1,D0
+212a: 226e        MOVEA.L  12(A6),A1
+212e: 3280        MOVE.W  D0,(A1)
+2130: 206e        MOVEA.L  16(A6),A0
+2134: 3028        MOVE.W  10(A0),D0
+2138: b06e        CMP.W   20(A6),D0
+213c: 6600        BNE     0x214e
+2140: 206e        MOVEA.L  12(A6),A0
+2144: 3010        MOVE.W  (A0),D0
+2146: 5240        ADDQ.W  #1,D0
+2148: 226e        MOVEA.L  12(A6),A1
+214c: 3280        MOVE.W  D0,(A1)
+214e: 206e        MOVEA.L  16(A6),A0
+2152: 3028        MOVE.W  12(A0),D0
+2156: b06e        CMP.W   20(A6),D0
+215a: 6600        BNE     0x216c
+215e: 206e        MOVEA.L  8(A6),A0
+2162: 3010        MOVE.W  (A0),D0
+2164: 5240        ADDQ.W  #1,D0
+2166: 226e        MOVEA.L  8(A6),A1
+216a: 3280        MOVE.W  D0,(A1)
+216c: 206e        MOVEA.L  16(A6),A0
+2170: 3028        MOVE.W  14(A0),D0
+2174: b06e        CMP.W   20(A6),D0
+2178: 6600        BNE     0x218a
+217c: 206e        MOVEA.L  8(A6),A0
+2180: 3010        MOVE.W  (A0),D0
+2182: 5240        ADDQ.W  #1,D0
+2184: 226e        MOVEA.L  8(A6),A1
+2188: 3280        MOVE.W  D0,(A1)
+218a: 206e        MOVEA.L  16(A6),A0
+218e: 3028        MOVE.W  16(A0),D0
+2192: b06e        CMP.W   20(A6),D0
+2196: 6600        BNE     0x21a8
+219a: 206e        MOVEA.L  8(A6),A0
+219e: 3010        MOVE.W  (A0),D0
+21a0: 5240        ADDQ.W  #1,D0
+21a2: 226e        MOVEA.L  8(A6),A1
+21a6: 3280        MOVE.W  D0,(A1)
+21a8: 206e        MOVEA.L  16(A6),A0
+21ac: 3028        MOVE.W  18(A0),D0
+21b0: b06e        CMP.W   20(A6),D0
+21b4: 6600        BNE     0x21c6
+21b8: 206e        MOVEA.L  8(A6),A0
+21bc: 3010        MOVE.W  (A0),D0
+21be: 5240        ADDQ.W  #1,D0
+21c0: 226e        MOVEA.L  8(A6),A1
+21c4: 3280        MOVE.W  D0,(A1)
+21c6: 206e        MOVEA.L  16(A6),A0
+21ca: 3028        MOVE.W  20(A0),D0
+21ce: b06e        CMP.W   20(A6),D0
+21d2: 6600        BNE     0x21e4
+21d6: 206e        MOVEA.L  8(A6),A0
+21da: 3010        MOVE.W  (A0),D0
+21dc: 5240        ADDQ.W  #1,D0
+21de: 226e        MOVEA.L  8(A6),A1
+21e2: 3280        MOVE.W  D0,(A1)
+21e4: 206e        MOVEA.L  16(A6),A0
+21e8: 3028        MOVE.W  22(A0),D0
+21ec: b06e        CMP.W   20(A6),D0
+21f0: 6600        BNE     0x2202
+21f4: 206e        MOVEA.L  8(A6),A0
+21f8: 3010        MOVE.W  (A0),D0
+21fa: 5240        ADDQ.W  #1,D0
+21fc: 226e        MOVEA.L  8(A6),A1
+2200: 3280        MOVE.W  D0,(A1)
+2202: 4e5e        UNLK    A6
+2204: 205f        MOVEA.L  (A7)+,A0
+2206: 4fef        LEA     14(A7),A7
+220a: 4ed0        JMP     (A0)
+220c: 0000        ORI.B  #0x0 (0),D0
+
+2210: 4e56        LINK    A6,#0
+2214: 487a        PEA     18(PC) [0x2228 ; pstr='Copyright 1987 by George Lott']
+2218: 486d        PEA     -850(A5)
+221c: 3f3c        MOVE.W  #0xff (255),-(A7)
+2220: 4ead        JSR     154(A5) [CODE_1+0x11a]
+2224: 4e5e        UNLK    A6
+2226: 4e75        RTS
+2228: 1d43        MOVE.B  D3,28528(A6)
+222c: 7972        DC.W    0x7972
+222e: 6967        BVS     0x2297
+2230: 6874        BVC     0x22a6
+2232: 2031        MOVE.L  56(A1,D3.L),D0
+2236: 3720        MOVE.W  -(A0),-(A3)
+2238: 6279        BHI     0x22b3
+223a: 2047        MOVEA.L  D7,A0
+223c: 656f        BCS     0x22ad
+223e: 7267        MOVEQ   #103,D1
+2240: 6520        BCS     0x2262
+2242: 4c6f        DC.W    0x4c6f
+2244: 7474        MOVEQ   #116,D2
+2246: 0000        ORI.B  #0x0 (0),D0
+
+224a: 4e56        LINK    A6,#0
+224e: 4ead        JSR     170(A5) [CODE_3+0xe5c]
+2252: 486d        PEA     170(A5) [CODE_3+0xe5c]
+2256: a9f1        A_TRAP_0xa9f1
+2258: 486d        PEA     162(A5) [CODE_2+0x8]
+225c: a9f1        A_TRAP_0xa9f1
+225e: 4a2d        TST.B   -243(A5)
+2262: 6600        BNE     0x23ae
+2266: a9b4        _SystemEvent
+2268: 302d        MOVE.W  -324(A5),D0
+226c: b06d        CMP.W   -326(A5),D0
+2270: 6c00        BGE     0x238c
+2274: 4ead        JSR     602(A5) [CODE_6+0x340]
+2278: 486d        PEA     602(A5) [CODE_6+0x340]
+227c: a9f1        A_TRAP_0xa9f1
+227e: 4a2d        TST.B   -254(A5)
+2282: 6600        BNE     0x22c0
+2286: 4ead        JSR     906(A5) [CODE_14+0x105c]
+228a: 486d        PEA     906(A5) [CODE_14+0x105c]
+228e: a9f1        A_TRAP_0xa9f1
+2290: 486d        PEA     754(A5) [CODE_11+0xf6c]
+2294: a9f1        A_TRAP_0xa9f1
+2296: 486d        PEA     866(A5) [CODE_13+0xf72]
+229a: a9f1        A_TRAP_0xa9f1
+229c: 486d        PEA     810(A5) [CODE_12+0x10b4]
+22a0: a9f1        A_TRAP_0xa9f1
+22a2: 486d        PEA     730(A5) [CODE_9+0x1b2]
+22a6: a9f1        A_TRAP_0xa9f1
+22a8: 486d        PEA     242(A5) [CODE_5+0x1c88]
+22ac: a9f1        A_TRAP_0xa9f1
+22ae: 486d        PEA     690(A5) [CODE_7+0xe88]
+22b2: a9f1        A_TRAP_0xa9f1
+22b4: 486d        PEA     706(A5) [CODE_8+0x2f8]
+22b8: a9f1        A_TRAP_0xa9f1
+22ba: 486d        PEA     738(A5) [CODE_10+0x42]
+22be: a9f1        A_TRAP_0xa9f1
+22c0: 4a2d        TST.B   -243(A5)
+22c4: 6700        BEQ     0x22e4
+22c8: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+22cc: 3f3c        MOVE.W  #0x32 (50),-(A7)
+22d0: 3f3c        MOVE.W  #0x32 (50),-(A7)
+22d4: a893        _MoveTo
+22d6: 487a        PEA     234(PC) [0x23c2 ; pstr='Okay. Then quit if you can`t take it, loser.']
+22da: a884        _DrawString
+22dc: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+22e0: 6000        BRA     0x23be
+22e4: 4aad        TST.L   -1692(A5)
+22e8: 6c00        BGE     0x232e
+22ec: 1b7c        MOVE.B  #0x1 (1),-243(A5)
+22f2: 4ead        JSR     66(A5) [CODE_1+0x1f72]
+22f6: 3f3c        MOVE.W  #0x32 (50),-(A7)
+22fa: 3f3c        MOVE.W  #0x32 (50),-(A7)
+22fe: a893        _MoveTo
+2300: 487a        PEA     238(PC) [0x23f0 ; pstr='You lose!!!  You ran out of money and your creditors']
+2304: a884        _DrawString
+2306: 3f3c        MOVE.W  #0x32 (50),-(A7)
+230a: 3f3c        MOVE.W  #0x46 (70),-(A7)
+230e: a893        _MoveTo
+2310: 487a        PEA     276(PC) [0x2426 ; pstr='and enemies ran you out of town on a rail after they']
+2314: a884        _DrawString
+2316: 3f3c        MOVE.W  #0x32 (50),-(A7)
+231a: 3f3c        MOVE.W  #0x5a (90),-(A7)
+231e: a893        _MoveTo
+2320: 487a        PEA     314(PC) [0x245c ; pstr='tarred and feathered you.  Better luck next time.']
+2324: a884        _DrawString
+2326: 4ead        JSR     74(A5) [CODE_1+0x1fa6]
+232a: 6000        BRA     0x23be
+232e: 4ead        JSR     1530(A5) [CODE_18+0x42]
+2332: 486d        PEA     1530(A5) [CODE_18+0x42]
+2336: a9f1        A_TRAP_0xa9f1
+2338: 486d        PEA     1322(A5) [CODE_16+0x22f8]
+233c: a9f1        A_TRAP_0xa9f1
+233e: 4ead        JSR     1730(A5) [CODE_21+0x295a]
+2342: 486d        PEA     1730(A5) [CODE_21+0x295a]
+2346: a9f1        A_TRAP_0xa9f1
+2348: 4a2d        TST.B   -243(A5)
+234c: 6700        BEQ     0x2354
+2350: 6000        BRA     0x23be
+2354: 4ead        JSR     1754(A5) [CODE_22+0x1110]
+2358: 486d        PEA     1754(A5) [CODE_22+0x1110]
+235c: a9f1        A_TRAP_0xa9f1
+235e: 4ead        JSR     1538(A5) [CODE_19+0x42]
+2362: 486d        PEA     1538(A5) [CODE_19+0x42]
+2366: a9f1        A_TRAP_0xa9f1
+2368: 486d        PEA     1330(A5) [CODE_17+0x42]
+236c: a9f1        A_TRAP_0xa9f1
+236e: 486d        PEA     1050(A5) [CODE_15+0x42]
+2372: a9f1        A_TRAP_0xa9f1
+2374: 4ead        JSR     1546(A5) [CODE_20+0x1726]
+2378: 486d        PEA     1546(A5) [CODE_20+0x1726]
+237c: a9f1        A_TRAP_0xa9f1
+237e: 302d        MOVE.W  -324(A5),D0
+2382: 5240        ADDQ.W  #1,D0
+2384: 3b40        MOVE.W  D0,-324(A5)
+2388: 6000        BRA     0x23aa
+238c: 202d        MOVE.L  -1692(A5),D0
+2390: b0ad        CMP.L   -1736(A5),D0
+2394: 6f00        BLE     0x23a0
+2398: 4ead        JSR     1834(A5) [CODE_23+0xd6]
+239c: 6000        BRA     0x23a4
+23a0: 4ead        JSR     1826(A5) [CODE_23+0x8]
+23a4: 1b7c        MOVE.B  #0x1 (1),-243(A5)
+23aa: 6000        BRA     0x225e
+23ae: 487a        PEA     222(PC) [0x248e ; pstr='Copyright 1987 by George Lott']
+23b2: 486d        PEA     -850(A5)
+23b6: 3f3c        MOVE.W  #0xff (255),-(A7)
+23ba: 4ead        JSR     154(A5) [CODE_1+0x11a]
+23be: 4e5e        UNLK    A6
+23c0: 4e75        RTS
+23c2: 2c4f        MOVEA.L  A7,A6
+23c4: 6b61        BMI     0x2427
+23c6: 792e        DC.W    0x792e
+23c8: 2054        MOVEA.L  (A4),A0
+23ca: 6865        BVC     0x2431
+23cc: 6e20        BGT     0x23ee
+23ce: 7175        DC.W    0x7175
+23d0: 6974        BVS     0x2446
+23d2: 2069        MOVEA.L  26144(A1),A0
+23d6: 796f        DC.W    0x796f
+23d8: 7520        DC.W    0x7520
+23da: 6361        BLS     0x243d
+23dc: 6e60        BGT     0x243e
+23de: 7420        MOVEQ   #32,D2
+23e0: 7461        MOVEQ   #97,D2
+23e2: 6b65        BMI     0x2449
+23e4: 2069        MOVEA.L  29740(A1),A0
+23e8: 206c        MOVEA.L  28531(A4),A0
+23ec: 6572        BCS     0x2460
+23ee: 2e00        MOVE.L  D0,D7
+23f0: 3459        MOVEA.W  (A1)+,A2
+23f2: 6f75        BLE     0x2469
+23f4: 206c        MOVEA.L  28531(A4),A0
+23f8: 6521        BCS     0x241b
+23fa: 2121        MOVE.L  -(A1),-(A0)
+23fc: 2020        MOVE.L  -(A0),D0
+23fe: 596f        SUBQ.W  #4,29984(A7)
+2402: 7261        MOVEQ   #97,D1
+2404: 6e20        BGT     0x2426
+2406: 6f75        BLE     0x247d
+2408: 7420        MOVEQ   #32,D2
+240a: 6f66        BLE     0x2472
+240c: 206d        MOVEA.L  28526(A5),A0
+2410: 6579        BCS     0x248b
+2412: 2061        MOVEA.L  -(A1),A0
+2414: 6e64        BGT     0x247a
+2416: 2079        MOVEA.L  (0x6f757220).L,A0
+241c: 6372        BLS     0x2490
+241e: 6564        BCS     0x2484
+2420: 6974        BVS     0x2496
+2422: 6f72        BLE     0x2496
+2424: 7300        DC.W    0x7300
+2426: 3461        MOVEA.W  -(A1),A2
+2428: 6e64        BGT     0x248e
+242a: 2065        MOVEA.L  -(A5),A0
+242c: 6e65        BGT     0x2493
+242e: 6d69        BLT     0x2499
+2430: 6573        BCS     0x24a5
+2432: 2072        MOVEA.L  110(A2,D6.W),A0
+2436: 2079        MOVEA.L  (0x6f75206f).L,A0
+243c: 7574        DC.W    0x7574
+243e: 206f        MOVEA.L  26144(A7),A0
+2442: 746f        MOVEQ   #111,D2
+2444: 776e        DC.W    0x776e
+2446: 206f        MOVEA.L  28192(A7),A0
+244a: 6120        BSR     0x246c
+244c: 7261        MOVEQ   #97,D1
+244e: 696c        BVS     0x24bc
+2450: 2061        MOVEA.L  -(A1),A0
+2452: 6674        BNE     0x24c8
+2454: 6572        BCS     0x24c8
+2456: 2074        MOVEA.L  101(A4,D6.L),A0
+245a: 7900        DC.W    0x7900
+245c: 3174        MOVE.W  114(A4,D6.W),29285(A0)
+2462: 6420        BCC     0x2484
+2464: 616e        BSR     0x24d4
+2466: 6420        BCC     0x2488
+2468: 6665        BNE     0x24cf
+246a: 6174        BSR     0x24e0
+246c: 6865        BVC     0x24d3
+246e: 7265        MOVEQ   #101,D1
+2470: 6420        BCC     0x2492
+2472: 796f        DC.W    0x796f
+2474: 752e        DC.W    0x752e
+2476: 2020        MOVE.L  -(A0),D0
+2478: 4265        CLR.W   -(A5)
+247a: 7474        MOVEQ   #116,D2
+247c: 6572        BCS     0x24f0
+247e: 206c        MOVEA.L  30051(A4),A0
+2482: 6b20        BMI     0x24a4
+2484: 6e65        BGT     0x24eb
+2486: 7874        MOVEQ   #116,D4
+2488: 2074        MOVEA.L  109(A4,D6.L),A0
+248c: 652e        BCS     0x24bc
+248e: 1d43        MOVE.B  D3,28528(A6)
+2492: 7972        DC.W    0x7972
+2494: 6967        BVS     0x24fd
+2496: 6874        BVC     0x250c
+2498: 2031        MOVE.L  56(A1,D3.L),D0
+249c: 3720        MOVE.W  -(A0),-(A3)
+249e: 6279        BHI     0x2519
+24a0: 2047        MOVEA.L  D7,A0
+24a2: 656f        BCS     0x2513
+24a4: 7267        MOVEQ   #103,D1
+24a6: 6520        BCS     0x24c8
+24a8: 4c6f        DC.W    0x4c6f
+24aa: 7474        MOVEQ   #116,D2
+24ac: 4ead        JSR     122(A5) [CODE_1+0x4b2]
+24b0: 4ead        JSR     42(A5) [CODE_1+0x224a]
+24b4: a9f4        _ExitToShell

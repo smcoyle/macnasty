@@ -1,0 +1,13 @@
+/target
+__pycache__/
+*.pyc
+/assets/
+/reference/jumpman/
+/reference/Worms.forth
+/src/bin/jumpman/
+/src/audio.rs
+/src/game.rs
+/src/gfx.rs
+/src/main.rs
+/src/screen.rs
+/saves/
