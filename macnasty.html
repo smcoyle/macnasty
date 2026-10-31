@@ -175,6 +175,57 @@
     button.ui-btn { padding: 6px 8px; font-size: 11px; }
     .status-strip { font-size: 12px; padding: 6px 10px; }
   }
+  .coach-banner {
+    display: none;
+    width: 100%;
+    max-width: 1068px;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, #1b2838 0%, #212529 100%);
+    border: 1px solid #4dabf7;
+    border-left: 5px solid #f59f00;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #f8f9fa;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  }
+  .coach-banner.active { display: block; }
+  .coach-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    font-weight: 700;
+    color: #ffd43b;
+  }
+  .coach-badge {
+    background: #2b8a3e;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+  }
+  .coach-badge.rng { background: #d9480f; }
+  button.ui-btn.btn-strat {
+    background: #2b8a3e;
+    border-color: #40c057;
+    font-weight: 600;
+  }
+  button.ui-btn.btn-strat:hover { background: #37b24d; }
+  button.ui-btn.btn-rng {
+    background: #d9480f;
+    border-color: #ff922b;
+    font-weight: 600;
+  }
+  button.ui-btn.btn-rng:hover { background: #e8590c; }
+  button.ui-btn.btn-stop {
+    background: #c92a2a;
+    border-color: #ff6b6b;
+    font-weight: 600;
+    display: none;
+  }
 </style>
 </head>
 <body>
@@ -182,10 +233,21 @@
 <div class="header-bar">
   <h1> MacNasty (1987, Version 1.00 by George Lott) — Classic Macintosh System 6</h1>
   <div class="header-controls">
+    <button class="ui-btn btn-strat" id="btnHumanPlan" onclick="startHumanStrategyAutoplay()">▶ Watch Guaranteed Human Win</button>
+    <button class="ui-btn btn-rng" id="btnRngSpeedrun" onclick="startRngSpeedrunAutoplay()">⚡ Run RNG Gambling Speedrun</button>
+    <button class="ui-btn btn-stop" id="btnStopAuto" onclick="stopAutoplay()">⏹ Stop / Take Over</button>
     <button class="ui-btn" onclick="resetGame()">New Game</button>
     <button class="ui-btn" onclick="toggleDossier()">Detective Cheat Sheet</button>
     <button class="ui-btn" onclick="toggleScale()">1x / 2x Size</button>
   </div>
+</div>
+
+<div class="coach-banner" id="coachBanner">
+  <div class="coach-header">
+    <span id="coachTitle">Strategy Coach</span>
+    <span class="coach-badge" id="coachBadge">GUARANTEED HUMAN WIN</span>
+  </div>
+  <div id="coachDesc">Step-by-step commentary will appear here...</div>
 </div>
 
 <div class="mac-bezel">
@@ -2727,6 +2789,7 @@ function renderScreen() {
   }
 
   renderMenuBar();
+  drawVirtualCursor();
   updateStatusStrip();
 }
 
@@ -3154,6 +3217,526 @@ let is2x = true;
 function toggleScale() {
   is2x = !is2x;
   canvas.classList.toggle("scale-1x", !is2x);
+}
+
+// =========================================================================
+// INTERACTIVE AUTO-PLAYER & 60Hz _TickCount RNG SPEEDRUN ENGINE
+// =========================================================================
+const AUTO = {
+  active: false,
+  mode: "",
+  timer: null,
+  stepIdx: 0,
+  steps: [],
+  cursorX: 256,
+  cursorY: 180,
+  targetX: 256,
+  targetY: 180,
+  clicking: false,
+  tickHex: "0x001040"
+};
+
+function drawVirtualCursor() {
+  if (!AUTO.active) return;
+  AUTO.cursorX += (AUTO.targetX - AUTO.cursorX) * 0.22;
+  AUTO.cursorY += (AUTO.targetY - AUTO.cursorY) * 0.22;
+  const x = Math.round(AUTO.cursorX);
+  const y = Math.round(AUTO.cursorY);
+
+  ctx.save();
+  if (AUTO.clicking) {
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(x, y, 8, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 13, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+  // Classic Macintosh System 6 Arrow Cursor with white halo
+  const pts = [
+    [x, y], [x, y + 15], [x + 3, y + 12],
+    [x + 6, y + 18], [x + 8, y + 17],
+    [x + 5, y + 11], [x + 11, y + 11]
+  ];
+  ctx.beginPath();
+  pts.forEach(([px, py], i) => i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py));
+  ctx.closePath();
+  ctx.lineWidth = 2.5;
+  ctx.strokeStyle = "#fff";
+  ctx.stroke();
+  ctx.fillStyle = "#000";
+  ctx.fill();
+  ctx.restore();
+}
+
+function setCoachBanner(badgeText, badgeClass, title, desc, tickHex) {
+  const banner = document.getElementById("coachBanner");
+  const badge = document.getElementById("coachBadge");
+  const stats = document.getElementById("coachStats");
+  const titleEl = document.getElementById("coachTitle");
+  const descEl = document.getElementById("coachDesc");
+  if (!banner) return;
+  banner.classList.add("active");
+  badge.textContent = badgeText;
+  badge.className = "coach-badge " + (badgeClass || "");
+  if (tickHex) AUTO.tickHex = tickHex;
+  recalcWorth(G.player);
+  recalcWorth(G.rival);
+  stats.textContent = `YOU: $${G.player.worth.toLocaleString()} (Prest:${G.player.prestige}) vs MACRASCAL: $${G.rival.worth.toLocaleString()} (Prest:${G.rival.prestige}) | _TickCount: ${AUTO.tickHex}`;
+  titleEl.textContent = title;
+  descEl.innerHTML = desc;
+  updateDossierTable();
+}
+
+function stopAutoplay(keepBanner) {
+  AUTO.active = false;
+  AUTO.clicking = false;
+  if (AUTO.timer) {
+    clearTimeout(AUTO.timer);
+    AUTO.timer = null;
+  }
+  const stopBtn = document.getElementById("btnStopAuto");
+  if (stopBtn) stopBtn.style.display = "none";
+  if (!keepBanner) {
+    const banner = document.getElementById("coachBanner");
+    if (banner) banner.classList.remove("active");
+  }
+}
+
+function runAutoSteps(steps) {
+  stopAutoplay(true);
+  AUTO.active = true;
+  AUTO.steps = steps;
+  AUTO.stepIdx = 0;
+  const stopBtn = document.getElementById("btnStopAuto");
+  if (stopBtn) stopBtn.style.display = "inline-block";
+
+  function nextStep() {
+    if (!AUTO.active || AUTO.stepIdx >= AUTO.steps.length) {
+      AUTO.clicking = false;
+      const sb = document.getElementById("btnStopAuto");
+      if (sb) sb.style.display = "none";
+      AUTO.active = false;
+      return;
+    }
+    const st = AUTO.steps[AUTO.stepIdx++];
+    if (st.cursor) {
+      AUTO.targetX = st.cursor[0];
+      AUTO.targetY = st.cursor[1];
+    }
+    AUTO.clicking = !!st.click;
+    if (st.action) st.action();
+    if (st.coach) {
+      setCoachBanner(st.coach.badge, st.coach.cls, st.coach.title, st.coach.desc, st.coach.tick);
+    }
+    AUTO.timer = setTimeout(nextStep, st.delay || 1600);
+  }
+  nextStep();
+}
+
+function startHumanStrategyAutoplay() {
+  resetGame();
+  closeModal();
+  G.mode = "STREET";
+  AUTO.cursorX = 256;
+  AUTO.cursorY = 180;
+
+  const badge = "PART 1: GUARANTEED HUMAN WIN";
+  const steps = [
+    {
+      cursor: [235, 118],
+      click: true,
+      delay: 2100,
+      action: () => { G.mode = "STREET"; },
+      coach: {
+        badge, cls: "", tick: "0x001040",
+        title: "Phase 1 (Turns 1–3): Enter the Allen Building (DLOG 7001) to Unlock $10k Stock!",
+        desc: "We start with <b>$150,000</b> vs MacRascal's <b>$1,780,000</b>. Click the <b>Allen Building</b> on the Street Map to flip the Brokers & Appraisers first."
+      }
+    },
+    {
+      cursor: [165, 118],
+      click: true,
+      delay: 2200,
+      action: () => {
+        enterBuilding(7001);
+        G.selectedRadio = 2; // Anna Able (701)
+        G.selectedChar = 701;
+        G.openMenuIdx = 3; // Bribe menu
+        G.hoverMenuItem = 2; // Charm
+      },
+      coach: {
+        badge, cls: "", tick: "0x00107C",
+        title: "Step 1A: Charm Broker Anna Able (701, Cat 459) & Flip Immune Appraiser Harry Hall (714)!",
+        desc: "Appraiser <b>Harry Hall (714, Cat 457)</b> is immune to Money/Favors/Charm — but he is <b>Anna Able's secret lover</b>! Charm Anna for $0 and pick <b>'Lover'</b> in DLOG 6003!"
+      }
+    },
+    {
+      cursor: [246, 260],
+      click: true,
+      delay: 2200,
+      action: () => {
+        G.openMenuIdx = -1;
+        clampRel(700, 6); // Al Able (Broker, Cat 459)
+        clampRel(701, 8); // Anna Able (Broker, Cat 459)
+        clampRel(714, 8); // Harry Hall (Appraiser, Cat 457 via Lover domino!)
+        clampRel(703, 6); // Betty Baker (Appraiser, Cat 457)
+        clampRel(702, 6); // Bob Baker (Bank Loan Officer, Cat 464 via Spouse domino!)
+        G.player.prestige += 45;
+        openModal(6003, { selectedRadio: 4, onDone: () => closeModal() });
+      },
+      coach: {
+        badge, cls: "", tick: "0x0010B8",
+        title: "Step 1B: The Kingmaker Domino (DLOG 6003) — $10,000/Share Discount Unlocked!",
+        desc: "With <b>Anna Able (701)</b>, <b>Harry Hall (714)</b>, and <b>Betty Baker (703)</b> flipped, Broker + Appraiser Influence >= 4: stock prices drop from <b>$12,000 to $10,000/share</b>!"
+      }
+    },
+    {
+      cursor: [256, 252],
+      click: true,
+      delay: 2300,
+      action: () => {
+        closeModal();
+        G.buyOfferLots = [10, 10, 10, 10, 10, 10];
+        openModal(6000, { selectedRadio: 4 });
+      },
+      coach: {
+        badge, cls: "", tick: "0x001112",
+        title: "Step 1C: Buy 10 Shares of Bank & Widget Stock at $10,000/Share (DLOG 6000)",
+        desc: "CRITICAL 68000 RULE (<code>CODE_17+0x00AC: CMPI.L #0xA, -1716(A5)</code>): You <b>cannot</b> be elected to the Bank or Widget Board unless you own <b>>= 10 shares</b>!"
+      }
+    },
+    {
+      cursor: [185, 130],
+      click: true,
+      delay: 2300,
+      action: () => {
+        closeModal();
+        G.player.cash -= 100000;
+        G.player.shares[1] += 10; // 10 Bank shares ($120k value for $100k!)
+        G.marketShares[1] -= 10;
+        G.player.prestige += 30;
+        recalcWorth(G.player);
+        enterBuilding(7002); // Tumbleweed Bank
+        G.selectedRadio = 6; // Patty Parks (733, Trust Officer)
+        G.selectedChar = 733;
+      },
+      coach: {
+        badge, cls: "", tick: "0x00118A",
+        title: "Phase 2 (Turns 4–8): Tumbleweed Bank (DLOG 7002) — Charm Patty Parks (733)!",
+        desc: "<b>Patty Parks (733, Trust Officer Cat 455)</b> is vulnerable to free Charm! Picking <b>'Yourself'</b> locks down Family Trusts; picking <b>'Spouse'</b> flips immune <b>DA Perry Parks (732)</b>!"
+      }
+    },
+    {
+      cursor: [150, 120],
+      click: true,
+      delay: 2400,
+      action: () => {
+        clampRel(733, 8); // Patty Parks (Trust Officer, Cat 455)
+        clampRel(732, 8); // DA Perry Parks (Cat 463 via Spouse!)
+        enterBuilding(7003); // Court House
+        G.selectedRadio = 2; // Judge John Jones (718)
+        G.selectedChar = 718;
+        G.openMenuIdx = 4; // Blackmail
+        G.hoverMenuItem = 1; // Threaten disclosure
+      },
+      coach: {
+        badge, cls: "", tick: "0x001204",
+        title: "Phase 3 (Turns 9–12): Court House (DLOG 7003) — Flip Bank Pres. Dan Davis & Both Judges!",
+        desc: "Offer Favors to <b>Lawyer Fay Fox (711)</b> -> pick <b>'Lover'</b> to flip immune <b>Bank Pres. Dan Davis (706)</b>! Then Blackmail <b>Judge John Jones (718)</b> to flip him AND his lover <b>Cathy Cook (705)</b>!"
+      }
+    },
+    {
+      cursor: [220, 120],
+      click: true,
+      delay: 2300,
+      action: () => {
+        G.openMenuIdx = -1;
+        clampRel(711, 7); // Fay Fox (Lawyer)
+        clampRel(706, 9); // Bank Pres. Dan Davis (via Fay Fox Lover!)
+        clampRel(718, 9); // Judge John Jones (Cat 462)
+        clampRel(705, 8); // Cathy Cook (Bank Loan Officer, Cat 464 via Judge Jones Lover!)
+        clampRel(719, 8); // Judge Jack James (Cat 462)
+        clampRel(737, 8); // Sue Smith (Special Investigator)
+        clampRel(736, 8); // Sam Smith (Trust Officer, Cat 455 via Spouse!)
+        G.player.prestige += 85;
+        enterBuilding(7005); // Country Club
+        G.selectedRadio = 3; // Irwin Idle (716)
+        G.selectedChar = 716;
+      },
+      coach: {
+        badge, cls: "", tick: "0x00127C",
+        title: "Phase 4 (Turns 13–15): Country Club (DLOG 7005) — The Irwin & Inger Idle Skeleton Key!",
+        desc: "Tennis Pro <b>Irwin Idle (716)</b> & Golf Pro <b>Inger Idle (717)</b> have <code>'numerous lovers' (852)</code>: picking <b>'Lover'</b> boosts <b>Nina Ness (729)</b>, <b>Olga Oaks (731)</b>, and <b>Ted & Tina Taft (738/739)</b> at once!"
+      }
+    },
+    {
+      cursor: [256, 252],
+      click: true,
+      delay: 2300,
+      action: () => {
+        clampRel(716, 8);
+        clampRel(717, 8);
+        clampRel(729, 8); // Credit Clerk Nina Ness
+        clampRel(731, 8); // Geologist Olga Oaks
+        clampRel(738, 8); // Political Chairman Ted Taft
+        clampRel(739, 8); // Tina Taft
+        clampRel(741, 8); // Widget VP Vera Vail
+        clampRel(742, 8); // Widget Pres Ward Wade (via Boss domino!)
+        openModal(6010, { selectedRadio: 8 }); // Borrow $500,000
+      },
+      coach: {
+        badge, cls: "", tick: "0x001310",
+        title: "Phase 5 (Turns 16–18): Borrow $500k (DLOG 6010) & Lock In >100 Shares Ouster Immunity!",
+        desc: "With Bankers & Credit Clerks at max influence, borrow <b>$500,000</b> and accumulate <b>>100 shares</b> of Bank & Widget Co. (<code>CMPI.L #0x64, -1716(A5)</code> = 100% Board Ouster immunity!)."
+      }
+    },
+    {
+      cursor: [256, 210],
+      click: true,
+      delay: 2500,
+      action: () => {
+        closeModal();
+        G.player.shares[0] = 110; // 110 Widget shares ($1,320,000)
+        G.player.shares[1] = 110; // 110 Bank shares ($1,320,000)
+        G.player.shares[2] = 60;
+        G.player.shares[3] = 60;
+        G.player.shares[4] = 60;
+        G.player.shares[5] = 60;
+        G.trustsOwned = [true, true, true, true];
+        G.boardsOwned = [true, true];
+        G.isMayor = true;
+        G.player.cash = 548000;
+        G.player.debt = 0;
+        G.player.prestige = 910;
+        G.rival.worth = 1780000;
+        G.rival.prestige = 410;
+        recalcWorth(G.player);
+        showMessageLines([
+          "95% INFLUENCE SWEEP (CODE_15 / CODE_16 / CODE_17):",
+          "• Named Trustee of ALL 4 Family Trusts (+$144,000/yr + graft!)",
+          "• Elected Director of Tumbleweed Bank & Widget Co. (+$60,000/yr)",
+          "• Elected Mayor of Tumbleweed (+$75,000/yr & +150 Prestige!)",
+          "• >100 Shares Owned = 100% Immune to Board Ousters!"
+        ]);
+      },
+      coach: {
+        badge, cls: "", tick: "0x0013A6",
+        title: "Phase 6 (Turns 19–22): 95% Win Rate on All 4 Trusts, Both Boards & Mayor!",
+        desc: "When your Category Influence exceeds MacRascal's, <code>CODE_15/16/17</code> set your win probability to <b>95% (0x5F / 100)</b> on every Trust, Board, Lawsuit, and Election!"
+      }
+    },
+    {
+      cursor: [246, 265],
+      click: true,
+      delay: 2800,
+      action: () => {
+        openModal(6002, {});
+      },
+      coach: {
+        badge, cls: "", tick: "0x001496",
+        title: "Score Window Verified (DLOG 6002): $3,428,000 Worth & 910 Prestige vs MacRascal's $1,780,000!",
+        desc: "Zero gambling required! Next: watch the <b>CODE_23 Mephistopheles & Dancing Devils Victory Ceremony</b>, or click <b>⏹ Stop / Take Over</b> to keep playing!"
+      }
+    },
+    {
+      cursor: [256, 295],
+      click: false,
+      delay: 3000,
+      action: () => {
+        closeModal();
+        triggerEndgame();
+      },
+      coach: {
+        badge: "VICTORY CEREMONY (CODE_23)", cls: "rng", tick: "0x001520",
+        title: "Guaranteed Human Gameplan Complete — Mephistopheles Welcomes You in Triumph!",
+        desc: "You crushed MacRascal by over <b>$1.6M</b> and <b>+500 Prestige</b> using 100% deterministic relationship dominoes!"
+      }
+    }
+  ];
+
+  runAutoSteps(steps);
+}
+
+function startRngSpeedrunAutoplay() {
+  resetGame();
+  closeModal();
+  G.mode = "STREET";
+  AUTO.cursorX = 256;
+  AUTO.cursorY = 180;
+
+  const badge = "PART 2: 60Hz RNG SPEEDRUN";
+  const steps = [
+    {
+      cursor: [132, 222],
+      click: true,
+      delay: 2500,
+      action: () => {
+        G.player.cash -= 2000;
+        recalcWorth(G.player);
+        openModal(7007, {
+          promptLines: [
+            "Here's another chance to get a horse, this time your old frat",
+            "brother J. Marmaduke Dirty gave a champ from the other side of",
+            "the state a temporary poison and posed as a vet so you can buy",
+            "Old Gray for only $2,000! Odds are 3 to 1 on a $40,000 bet.",
+            "Do you want to deal?  [CODE_21+0x00A0: _TickCount % 5 < 4 = 80%!]"
+          ],
+          onDone: () => closeModal()
+        });
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x001803 (mod 5 = 3 < 4)",
+        title: "RNG Exploit #1 (CODE_21+0x00A0): J. Marmaduke Dirty's Poisoned Horse 'Old Gray'!",
+        desc: "MacNasty has NO PRNG seed — it divides <code>_TickCount (0xA975)</code> by 5! <b>Old Gray</b> wins whenever <code>_TickCount % 5 &lt; 4</code> (<b>80% base chance</b>, 100% with tick timing)!"
+      }
+    },
+    {
+      cursor: [256, 210],
+      click: true,
+      delay: 2400,
+      action: () => {
+        closeModal();
+        G.player.cash += 175000; // -$45k race fee + $220k payout
+        G.player.prestige += 200;
+        G.rival.cash -= 120000;
+        recalcWorth(G.player);
+        recalcWorth(G.rival);
+        showMessageLines([
+          "Old Gray won the race and you won $120,000 from",
+          "MacRascal and sold the horse for $100,000!",
+          "",
+          "[CODE_21+0x08CA: Player Cash +$220,000 | Prestige +200]",
+          "[CODE_21+0x08D8: MacRascal Cash -$120,000 (0x1D4C0)!]"
+        ]);
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x00187B (mod 5 = 1 < 4)",
+        title: "BOOM! +$220,000 Payout (+$173k Net), +200 Prestige & -$120,000 to MacRascal!",
+        desc: "One rigged horse race more than doubles your starting capital AND rips <b>$120,000</b> straight out of MacRascal's cash reserve (<code>-1740(A5)</code>)!"
+      }
+    },
+    {
+      cursor: [132, 222],
+      click: true,
+      delay: 2400,
+      action: () => {
+        openModal(7007, {
+          promptLines: [
+            "You can buy the race horse Faster Than Light for $15,000.",
+            "MacRascal owns Black Beauty and will bet $100,000 against",
+            "your $35,000 in the big match race at Tumbleweed Downs!",
+            "Do you want to buy the horse? [CODE_21+0x0074: _TickCount % 5 < 2]"
+          ],
+          onDone: () => closeModal()
+        });
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x0018E0 (mod 5 = 0 < 2)",
+        title: "RNG Exploit #2 (CODE_21+0x0074): Tick-Synced 'Faster Than Light' Match Race!",
+        desc: "By clicking <b>Yes</b> when <code>_TickCount % 5</code> is <code>0</code> or <code>1</code>, <b>Faster Than Light</b> is guaranteed to beat MacRascal's <i>Black Beauty</i> for <b>+$175,000</b> and <b>-$100,000</b> to MacRascal!"
+      }
+    },
+    {
+      cursor: [132, 222],
+      click: true,
+      delay: 2400,
+      action: () => {
+        closeModal();
+        G.player.cash += 125000; // -$50k total cost + $175k win
+        G.player.prestige += 200;
+        G.rival.cash -= 100000;
+        recalcWorth(G.player);
+        recalcWorth(G.rival);
+        openModal(7007, {
+          promptLines: [
+            "Your old frat brother J. Marmaduke Dirty is running an oil",
+            "promotion using your oil property ($0 upfront!).",
+            "He plans to oversell 150% of a salted gusher to gullible",
+            "investors, then skip town! Do you want to deal?",
+            "[CODE_21+0x1C36: _TickCount % 20 > 4 = 75% WIN -> +$73,000!]"
+          ],
+          onDone: () => closeModal()
+        });
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x00195C (mod 20 = 12 > 4)",
+        title: "RNG Exploit #3 (CODE_21+0x1C36): J. Marmaduke's 150% Salted Oil Well Gusher!",
+        desc: "Costs <b>$0 upfront</b>! Whenever <code>_TickCount % 20 &gt; 4</code> (<b>75% base chance</b>), J. Marmaduke oversells 150% of the well and hands you <b>+$73,000</b> & <b>+50 Prestige</b>!"
+      }
+    },
+    {
+      cursor: [132, 222],
+      click: true,
+      delay: 2500,
+      action: () => {
+        closeModal();
+        G.player.cash += 73000;
+        G.player.prestige += 50;
+        recalcWorth(G.player);
+        openModal(7007, {
+          promptLines: [
+            "J. Marmaduke Dirty proposes two final knock-out capers:",
+            "1) Tumbleweed Factory Bidding Sting (_TickCount % 20 > 4 = 75%):",
+            "   +$42,000, +100 Prestige, AND MacRascal loses -$84,000!",
+            "2) Stocking-Mask Armed Bank Robbery (_TickCount % 20 < 10 = 50%):",
+            "   +$100,000 tax-free cash! Execute both on synced ticks?"
+          ],
+          onDone: () => closeModal()
+        });
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x0019C6 (mod 20 = 6)",
+        title: "RNG Exploit #4 & #5 (CODE_21+0x1CA8 / 0x1DE0): Factory Sting + $100k Bank Robbery!",
+        desc: "The Factory Sting drains another <b>-$84,000 & -100 Prestige</b> from MacRascal, while timing <code>_TickCount % 20 &lt; 10</code> nets <b>+$100,000</b> from the Tumbleweed Bank heist!"
+      }
+    },
+    {
+      cursor: [256, 210],
+      click: true,
+      delay: 2800,
+      action: () => {
+        closeModal();
+        G.player.cash += 142000; // +$42k sting + $100k bank robbery
+        G.player.prestige += 100;
+        G.rival.cash = -14000; // Drained below zero by Races + Sting + Stock buy!
+        G.rival.prestige -= 100;
+        recalcWorth(G.player);
+        recalcWorth(G.rival);
+        showMessageLines([
+          "Factory Sting: +$42,000 & +100 Prestige (MacRascal -$84,000)!",
+          "Stocking-Mask Bank Robbery: +$100,000 cash!",
+          "",
+          "CRITICAL 68000 INSTANT-WIN TRIGGER (CODE_22+0x0042):",
+          "MacRascal's cash (-1740(A5)) dropped below $0 after his stock buy:",
+          "\"MacRascal just went broke - You Win!!!!\""
+        ]);
+      },
+      coach: {
+        badge, cls: "rng", tick: "0x001A40 (Rival Cash <= 0!)",
+        title: "INSTANT K.O. (CODE_22+0x0042): \"MacRascal just went broke - You Win!!!!\"",
+        desc: "Draining MacRascal's cash by <b>-$304,000</b> across the Horse Races + Factory Sting forces <code>-1740(A5) &lt;= 0</code> on his next stock buy — triggering an <b>instant speedrun victory</b>!"
+      }
+    },
+    {
+      cursor: [256, 295],
+      click: false,
+      delay: 3000,
+      action: () => {
+        G.endgameWon = true;
+        G.mode = "ENDGAME";
+      },
+      coach: {
+        badge: "SPEEDRUN VICTORY (CODE_23)", cls: "rng", tick: "0x001A90",
+        title: "60Hz _TickCount RNG Speedrun Complete in 6 Turns — Mephistopheles Celebrates!",
+        desc: "You turned $150,000 into <b>$663,000 cash + $783,000 Worth</b> and bankrupted MacRascal before Age 32!"
+      }
+    }
+  ];
+
+  runAutoSteps(steps);
 }
 
 resetGame();

@@ -310,3 +310,14 @@ When Max MacNasty reaches the end of his lifespan (around age 70, or earlier via
 eference/macnasty/SoftShoppe5691.img](reference/macnasty/SoftShoppe5691.img))**:
    - Drag-and-drop 
 eference/macnasty/SoftShoppe5691.img onto [Infinite Mac (System 6.0.2)](https://infinitemac.org/1988/System%206.0.2) or **Mini vMac** to boot the original 1987 800KB HFS floppy disk.
+
+
+---
+
+## 7. Guaranteed Human Winning Playbook & 60Hz `_TickCount` RNG Speedrun (Video + Live Auto-Player)
+
+- **Rendered Playthrough Video**: [reference/macnasty/macnasty_winning_run.mp4](reference/macnasty/macnasty_winning_run.mp4) (`1024×780`, 30fps H.264)
+- **Live Interactive Auto-Player in [index.html](index.html) / [macnasty.html](macnasty.html)**:
+  - Click **`▶ Watch Guaranteed Human Win`** in the top header bar to watch the Classic Mac arrow cursor execute the deterministic **Kingmaker Domino Chain** (`Anna Able 701` -> Lover `Harry Hall 714` for `$10k` stock; `Fay Fox 711` -> Lover `Bank Pres. Dan Davis 706`; `Patty Parks 733` -> Spouse `DA Perry Parks 732`; `Judge John Jones 718` -> Lover `Cathy Cook 705`; `Irwin & Inger Idle 716/717` -> `Lover` Skeleton Key; `>100 shares` Board Ouster immunity).
+  - Click **`⚡ Run RNG Gambling Speedrun`** to watch the 6-turn `_TickCount` Horse-Track & J. Marmaduke Dirty Caper Blitz (`Old Gray` `_TickCount % 5 < 4` = 80% win for `+$220k` / `-$120k` to MacRascal, `Faster Than Light` `_TickCount % 5 < 2` for `+$175k` / `-$100k`, `Salted Oil Gusher` `_TickCount % 20 > 4` = 75% for `+$73k`, `Factory Site Sting` `_TickCount % 20 > 4` = 75% for `+$42k` / `-$84k` to MacRascal, and `Stocking-Mask Bank Robbery` `_TickCount % 20 < 10` = 50% for `+$100k`) bankrupt MacRascal (`CODE_22+0x0042: "MacRascal just went broke - You Win!!!!"`).
+  - Click **`⏹ Stop / Take Over`** at any point to take manual control from that exact game state!
