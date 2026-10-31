@@ -26,10 +26,10 @@ html_template = r"""<!DOCTYPE html>
     --text: #e9ecef;
     --muted: #adb5bd;
   }
-  * { box-sizing: border-box; user-select: none; -webkit-user-select: none; }
+  * { box-sizing: border-box; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
   body {
     margin: 0;
-    padding: 16px;
+    padding: 12px;
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -37,13 +37,16 @@ html_template = r"""<!DOCTYPE html>
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   .header-bar {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     align-items: center;
     justify-content: space-between;
-    width: 1024px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1068px;
     margin-bottom: 10px;
     padding: 8px 14px;
     background: var(--panel);
@@ -51,14 +54,15 @@ html_template = r"""<!DOCTYPE html>
     border: 1px solid #373a40;
   }
   .header-bar h1 {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     font-weight: 600;
     letter-spacing: 0.3px;
   }
   .header-controls {
     display: flex;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
     align-items: center;
   }
   button.ui-btn {
@@ -66,17 +70,20 @@ html_template = r"""<!DOCTYPE html>
     color: #fff;
     border: 1px solid #5c5f66;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 12px;
     cursor: pointer;
+    touch-action: manipulation;
   }
-  button.ui-btn:hover { background: #495057; }
+  button.ui-btn:hover, button.ui-btn:active { background: #495057; }
+  button.ui-btn:disabled { opacity: 0.4; cursor: default; }
   .mac-bezel {
     background: #d8d4c8;
-    padding: 18px 22px 24px 22px;
+    padding: 16px 20px 22px 20px;
     border-radius: 16px;
     box-shadow: 0 18px 50px rgba(0,0,0,0.65), inset 0 2px 3px rgba(255,255,255,0.7);
     border: 2px solid #aba698;
+    max-width: 100%;
   }
   .crt-frame {
     background: #000;
@@ -86,42 +93,80 @@ html_template = r"""<!DOCTYPE html>
   }
   canvas#macScreen {
     display: block;
-    width: 1024px;
-    height: 684px;
+    width: min(1024px, calc(100vw - 76px));
+    height: auto;
+    aspect-ratio: 512 / 342;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     cursor: default;
     background: #fff;
+    touch-action: none;
+  }
+  canvas#macScreen.scale-1x {
+    width: min(512px, calc(100vw - 76px));
+  }
+  .quick-bar {
+    width: 100%;
+    max-width: 1068px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: var(--panel);
+    border-radius: 8px;
+    border: 1px solid #373a40;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .quick-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    padding-right: 8px;
+    border-right: 1px solid #373a40;
+  }
+  .quick-group:last-child { border-right: none; padding-right: 0; }
+  .quick-label {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 2px;
   }
   .status-strip {
-    width: 1024px;
-    max-width: 100%;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 1068px;
+    margin-top: 8px;
     padding: 8px 14px;
     background: var(--panel);
     border-radius: 8px;
     border: 1px solid #373a40;
     font-size: 13px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     justify-content: space-between;
     color: var(--muted);
   }
   .status-strip b { color: var(--text); }
   #dossierDrawer {
     display: none;
-    width: 1024px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1068px;
     margin-top: 12px;
     padding: 14px;
     background: var(--panel);
     border-radius: 8px;
     border: 1px solid #373a40;
-    max-height: 360px;
+    max-height: 380px;
     overflow-y: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     font-size: 12px;
   }
   table.dossier-table {
     width: 100%;
+    min-width: 680px;
     border-collapse: collapse;
   }
   table.dossier-table th, table.dossier-table td {
@@ -131,6 +176,19 @@ html_template = r"""<!DOCTYPE html>
   }
   table.dossier-table th { color: var(--accent); position: sticky; top: 0; background: var(--panel); }
   .lover-tag { color: #ff6b6b; font-weight: bold; }
+  @media (max-width: 768px) {
+    body { padding: 6px; }
+    .header-bar { padding: 6px 10px; margin-bottom: 6px; }
+    .header-bar h1 { font-size: 13px; }
+    .mac-bezel { padding: 6px 6px 10px 6px; border-radius: 10px; }
+    canvas#macScreen, canvas#macScreen.scale-1x {
+      width: calc(100vw - 36px);
+    }
+    .quick-bar { padding: 6px 8px; margin-top: 6px; }
+    .quick-group { border-right: none; padding-right: 0; }
+    button.ui-btn { padding: 6px 8px; font-size: 11px; }
+    .status-strip { font-size: 12px; padding: 6px 10px; }
+  }
 </style>
 </head>
 <body>
@@ -139,7 +197,7 @@ html_template = r"""<!DOCTYPE html>
   <h1> MacNasty (1987, Version 1.00 by George Lott) — Classic Macintosh System 6</h1>
   <div class="header-controls">
     <button class="ui-btn" onclick="resetGame()">New Game</button>
-    <button class="ui-btn" onclick="toggleDossier()">Toggle Detective Cheat Sheet</button>
+    <button class="ui-btn" onclick="toggleDossier()">Detective Cheat Sheet</button>
     <button class="ui-btn" onclick="toggleScale()">1x / 2x Size</button>
   </div>
 </div>
@@ -147,6 +205,40 @@ html_template = r"""<!DOCTYPE html>
 <div class="mac-bezel">
   <div class="crt-frame">
     <canvas id="macScreen" width="512" height="342"></canvas>
+  </div>
+</div>
+
+<div class="quick-bar" id="quickBar">
+  <div class="quick-group">
+    <span class="quick-label">Nav:</span>
+    <button class="ui-btn" id="qBtnStreet" onclick="handleMenuAction('leave_building')">Street Map</button>
+    <button class="ui-btn" id="qBtnScore" onclick="handleMenuAction('score')">Score</button>
+    <button class="ui-btn" id="qBtnPass" onclick="handleMenuAction('pass')">Pass Turn</button>
+  </div>
+  <div class="quick-group">
+    <span class="quick-label">Info:</span>
+    <button class="ui-btn" id="qBtnPublic" onclick="handleMenuAction('info_public')">Public Facts</button>
+    <button class="ui-btn" id="qBtnRumors" onclick="handleMenuAction('info_rumors')">Rumors</button>
+    <button class="ui-btn" id="qBtnDet" onclick="handleMenuAction('info_detective')">Detective ($500)</button>
+  </div>
+  <div class="quick-group">
+    <span class="quick-label">Bribe:</span>
+    <button class="ui-btn" id="qBtnMoney" onclick="handleMenuAction('bribe_money')">$ Money</button>
+    <button class="ui-btn" id="qBtnFavor" onclick="handleMenuAction('bribe_favors')">Favors</button>
+    <button class="ui-btn" id="qBtnCharm" onclick="handleMenuAction('bribe_charm')">Charm</button>
+    <button class="ui-btn" id="qBtnSeduce" onclick="handleMenuAction('bribe_seduce')">Seduce ($300)</button>
+  </div>
+  <div class="quick-group">
+    <span class="quick-label">Blackmail:</span>
+    <button class="ui-btn" id="qBtnBlackmail" onclick="handleMenuAction('bm_threaten')">Threaten</button>
+    <button class="ui-btn" id="qBtnBmRumors" onclick="handleMenuAction('bm_rumors')">Start Rumor</button>
+    <button class="ui-btn" id="qBtnSpouse" onclick="handleMenuAction('bm_spouse')">Spouse Secret</button>
+  </div>
+  <div class="quick-group">
+    <span class="quick-label">Property:</span>
+    <button class="ui-btn" id="qBtnBuy" onclick="handleMenuAction('buy')">Buy Stock</button>
+    <button class="ui-btn" id="qBtnSell" onclick="handleMenuAction('sell')">Sell Stock</button>
+    <button class="ui-btn" id="qBtnBorrow" onclick="handleMenuAction('borrow')">Borrow</button>
   </div>
 </div>
 
@@ -404,6 +496,13 @@ function updateMenus() {
   MENUS[3].items.forEach(it => it.enabled = inBldg);
   MENUS[4].items.forEach(it => it.enabled = inBldg);
   MENUS[5].items.forEach(it => it.enabled = inBldg);
+
+  const setBtn = (id, en) => { const el = document.getElementById(id); if (el) el.disabled = !en; };
+  setBtn("qBtnStreet", inBldg);
+  setBtn("qBtnScore", inMapOrBldg);
+  setBtn("qBtnPass", inMapOrBldg);
+  ["qBtnPublic", "qBtnRumors", "qBtnDet", "qBtnMoney", "qBtnFavor", "qBtnCharm", "qBtnSeduce", "qBtnBlackmail", "qBtnBmRumors", "qBtnSpouse"].forEach(id => setBtn(id, inBldg));
+  ["qBtnBuy", "qBtnSell", "qBtnBorrow"].forEach(id => setBtn(id, inMapOrBldg));
 }
 
 function showMessageLines(lines, nextCb = null) {
@@ -1553,17 +1652,26 @@ function updateStatusStrip() {
     `Cash: <b>$${G.player.cash.toLocaleString()}</b> | Worth: <b>$${G.player.worth.toLocaleString()}</b> | Debt: <b>$${G.player.debt.toLocaleString()}</b> | Prestige: <b>${G.player.prestige}</b> | Age: <b>${G.age}</b>`;
 }
 
-// Mouse Interaction on the 512x342 Canvas
+// Mouse & Touch Interaction on the 512x342 Canvas
 function getCanvasCoords(ev) {
   const r = canvas.getBoundingClientRect();
+  const pt = (ev.touches && ev.touches.length > 0) ? ev.touches[0] :
+             ((ev.changedTouches && ev.changedTouches.length > 0) ? ev.changedTouches[0] : ev);
   return {
-    x: Math.floor((ev.clientX - r.left) * (512 / r.width)),
-    y: Math.floor((ev.clientY - r.top) * (342 / r.height))
+    x: Math.floor((pt.clientX - r.left) * (512 / r.width)),
+    y: Math.floor((pt.clientY - r.top) * (342 / r.height))
   };
 }
 
-canvas.addEventListener("mousemove", (ev) => {
+function handlePointerMove(ev) {
   const { x, y } = getCanvasCoords(ev);
+  if (G.mode === "MODAL" && G.modal && G.modal.dlogId === "BRIBE_MONEY" && ev.buttons === 1) {
+    const wx = 85, wy = 80;
+    if (x >= wx + 20 && x <= wx + 320 && y >= wy + 70 && y <= wy + 115) {
+      const pct = Math.max(0, Math.min(1, (x - (wx + 32)) / 260));
+      G.modal.scrollVal = Math.round((pct * 10000) / 100) * 100;
+    }
+  }
   if (G.openMenuIdx >= 0) {
     // Check if hovering over another menu title
     if (y < 20) {
@@ -1585,9 +1693,23 @@ canvas.addEventListener("mousemove", (ev) => {
       }
     }
   }
-});
+}
 
-canvas.addEventListener("mousedown", (ev) => {
+canvas.addEventListener("mousemove", handlePointerMove);
+canvas.addEventListener("touchmove", (ev) => {
+  ev.preventDefault();
+  const { x, y } = getCanvasCoords(ev);
+  if (G.mode === "MODAL" && G.modal && G.modal.dlogId === "BRIBE_MONEY") {
+    const wx = 85, wy = 80;
+    if (x >= wx + 15 && x <= wx + 325 && y >= wy + 65 && y <= wy + 120) {
+      const pct = Math.max(0, Math.min(1, (x - (wx + 32)) / 260));
+      G.modal.scrollVal = Math.round((pct * 10000) / 100) * 100;
+    }
+  }
+  handlePointerMove(ev);
+}, { passive: false });
+
+function handlePointerDown(ev) {
   const { x, y } = getCanvasCoords(ev);
 
   // 1. Check if clicking inside an open dropdown menu
@@ -1673,7 +1795,13 @@ canvas.addEventListener("mousedown", (ev) => {
       }
     }
   }
-});
+}
+
+canvas.addEventListener("mousedown", handlePointerDown);
+canvas.addEventListener("touchstart", (ev) => {
+  ev.preventDefault();
+  handlePointerDown(ev);
+}, { passive: false });
 
 function enterBuilding(dlogId) {
   G.currentBuilding = dlogId;
@@ -1743,7 +1871,9 @@ function handleModalClick(x, y) {
 
   for (const it of ditl) {
     const r = it.rect;
-    if (lx >= r.l && lx <= r.r && ly >= r.t && ly <= r.b) {
+    // Allow generous touch target on radio buttons (including their adjacent text label)
+    const extraRight = it.kind === 6 ? 85 : 4;
+    if (lx >= r.l - 4 && lx <= r.r + extraRight && ly >= r.t - 2 && ly <= r.b + 2) {
       if (md.dlogId === 7008) {
         // Shareware intro dialog: 1=Yes (show address), 2=No (start game)
         closeModal();
@@ -1936,8 +2066,7 @@ function toggleDossier() {
 let is2x = true;
 function toggleScale() {
   is2x = !is2x;
-  canvas.style.width = is2x ? "1024px" : "512px";
-  canvas.style.height = is2x ? "684px" : "342px";
+  canvas.classList.toggle("scale-1x", !is2x);
 }
 
 resetGame();
@@ -1956,4 +2085,8 @@ html_out = html_template.replace("__RSRC_B64__", rsrc_b64).replace("__CHARS_JSON
 with open(out_html_path, "w", encoding="utf-8") as f:
     f.write(html_out)
 
-print(f"Wrote {out_html_path} ({len(html_out):,} bytes)")
+index_html_path = r"C:\Users\scoyl\Dropbox\HOBBY_CODE\wrms\index.html"
+with open(index_html_path, "w", encoding="utf-8") as f:
+    f.write(html_out)
+
+print(f"Wrote {out_html_path} and {index_html_path} ({len(html_out):,} bytes)")
